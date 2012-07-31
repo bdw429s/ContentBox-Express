@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="494" height="392" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="#FDFEF6" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<frameChart is3D="false" isTransposed="false" seriesTitle="" decoration="None"
+				font="Arial-11" foreground="black" isMultiline="false">
+				<frame topRatio="50" topSeries="0" xDepth="12" yDepth="11"
+					xTilt="0" type="Simple" outline="blue" lightColor="#F4F4F4"
+					darkColor="#E6E6E6" frameSize="6" dashSize="4" xAxisInside="true"
+					leftAxisPlacement="Default" rightAxisPlacement="Default" isHGridVisible="true" isVGridVisible="false"
+					isHStripVisible="false" isVStripVisible="false" gridColor="light_gray" stripColor="#64AACCEE">
+					<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+						imageLocation=""/>
+				</frame>
+				<xAxis type="Category" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Parallel"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</xAxis>
+				<yAxis type="Scale" isVisible="true" isAbsolute="true" scaleMin="0"
+					scaleMax="450" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis>
+				<yAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis2>
+				<topYAxis type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</topYAxis>
+				<topYAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</topYAxis2>
+				<dataLabels style="None" placement="Outside" decoration="None" background="#00000000"
+					font="Arial-12" isMultiline="false">
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="true" isVisible="true"
+					placement="Top" valign="Middle" halign="Center" decoration="Shadow"
+					background="#00000000" isMultiline="false"
+				/>
+				<elements place="Clustered" shape="Bar" markerSize="0" shapeSize="80"
+					lineWidth="4" drawOutline="true" drawShadow="true" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25" stageDelay="0" replayDelay="-1"/>
+					<morph morph="Grow" stage="Cols"/>
+				</elements>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					decoration="Shadow" background="#00000000" font="Arial-16-bold" isMultiline="true">
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Standard" paint="Shade" isVertical="true" min="47"
+					max="83" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</frameChart>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>2000</COL>
+<COL>2001</COL>
+<COL>2002</COL>
+<COL>2003</COL>
+<COL>2004</COL>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+<ROW col0="150.0" col1="300.0" col2="250.0" col3="230.0" col4="250.0">Sample 1:</ROW>
+<ROW col0="200.0" col1="400.0" col2="400.0" col3="280.0" col4="300.0">Sample 2:</ROW>
+<ROW col0="250.0" col1="500.0" col2="550.0" col3="330.0" col4="350.0">Sample 3:</ROW>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

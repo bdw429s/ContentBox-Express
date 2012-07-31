@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>About web services</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nWeb Services overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > Web Services overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right">&#160;</p>
+<hr align="left" width="100.145%" size="1" />
+<h1>Web services overview</h1>
+<p style="font-weight: bold;"><span style="font-weight: bold;"><b>Data &amp; Services &gt; Web Services</b></span></p>
+<h5>&#160;</h5>
+<p>Web services let you publish and consume remote application functionality over the Internet. With a web service, you can make a request to the remote application to perform an action. You can use the ColdFusion Administrator to register web services so that clients do not have to specify the entire WSDL URL when they reference the web service. Also, the first time a client references a ColdFusion web service, ColdFusion automatically registers it in the Administrator.</p>
+<p>&#160;</p>
+<p>For more information on publishing and consuming web services through ColdFusion, see <span style="font-style: italic;"><i>ColdFusion Developer's Guide</i></span>.</p>
+<h3 class="Procedure">Add a web service</h3>
+<ol>
+<li class="p-NumList">
+<p class="NumList">In the Web Service Name box, enter the name of the web service.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">In the WSDL URL box, enter the URL for the Web Services Description Language (WSDL).</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Enter a user name and password.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Click Add Web Service. Your Web Service Name appears in the list of Active ColdFusion Web Services.</p>
+</li>
+</ol>
+<h3 class="Procedure">Edit a web service</h3>
+<ol>
+<li class="p-NumList">
+<p class="NumList">In the Active ColdFusion Web Services area, click the web service name.<br />
+The ColdFusion Administrator displays the web service in the top portion of the window.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Modify settings.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Click Update Web Service.</p>
+</li>
+</ol>
+<h3 class="Procedure">View WSDL for a web service</h3>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>In the Active ColdFusion Web Services area, click the WSDL URL.<br />
+The ColdFusion Administrator opens the WSDL in a new browser window.</p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

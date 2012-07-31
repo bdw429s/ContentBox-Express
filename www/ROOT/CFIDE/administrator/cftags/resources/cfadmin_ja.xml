@@ -1,0 +1,642 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: CFAdmin
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="cfadmin_about">ColdFusion Administrator について</cfcase>
+<cfcase value="coldfusionmx">Scorpio</cfcase>
+<cfcase value="version6">バージョン :</cfcase>
+<cfcase value="ssnumabout">シリアル番号 :</cfcase>
+<cfcase value="copyright_cont"><cfoutput>
+Copyright 1997-2010 Adobe Systems Incorporated. All Rights Reserved.
+Adobe, the Adobe logo, and ColdFusion are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries.
+Protected by U.S. patents 5,200,740; 5,233,336; 5,255,357; 5,929,866; 5,943,063; 6,754,382; 7,071,941; 7,305,617. Patents Pending in the U.S. and/or other countries. <BR>
+
+Adobeip##0000862<BR>
+
+Portions utilize Microsoft Windows Media Technologies. Copyright 1999-2004 Microsoft Corporation. All Rights Reserved.
+Portions include technology used under license from Autonomy, and are copyrighted.
+This Product includes code licensed from RSA Data Security
+Notices, terms and conditions pertaining to third party software are located at http://www.adobe.com/go/thirdparty/ and incorporated by reference herein.
+
+                              </cfoutput></cfcase>
+<cfcase value="ContributingMembers">寄与メンバー</cfcase>
+<cfcase value="feature_not_available_msg">この機能は、このエディションの ColdFusion サーバーでは使用できません。</cfcase>
+<cfcase value="launchmigrationwizard">
+別のウィンドウで、インストール後のセットアップウィザードを起動するようになりました。<br/> ウィザードが表示されない場合は、ポップアップウィンドウがソフトウェアをブロックしていると考えられます。<br/> ここをクリックして、セットアップウィザードを起動してください。 <a href="setup/index.cfm">ウィザードの起動</a>
+</cfcase>
+<cfcase value="copyrightinforhp"><cfoutput>
+Copyright &copy; 1995-2010 Adobe Systems, Inc. All rights reserved. U.S. Patents Pending.
+<hr noshade="true" size="1" />
+サードパーティ製ソフトウェアのライセンスに関する注意事項とその他の条件は <a href="http://www.adobe.com/go/thirdparty/#CALLER.golocale#" style="color:##C35617" target="extwebsite" class="copyrightLink">http://www.adobe.com/go/thirdparty_jp/</a> に記載し、この参照をもって本内容に含まれることとします。
+</cfoutput></cfcase>
+<cfcase value="ibmcopyright"> &reg; IBM と WebSphere は、合衆国および諸国における IBM Corp. の商標または登録商標です。</cfcase>
+<cfcase value="forbidden_pagename">禁止</cfcase>
+<cfcase value="forbidden_pageHeader">禁止ページ</cfcase>
+<cfcase value="forbidden_message">このページにアクセスできるのは、ルート管理ユーザーのみです。システム管理者に連絡してください。</cfcase>
+<cfcase value="forbidden_message1">要求されたページにアクセスする権限がありません。管理者にお問い合わせください。</cfcase>
+<cfcase value="cfadmin_title">ColdFusion Administrator</cfcase>
+<cfcase value="productname_ibm_extended"><cfoutput>Adobe &reg; ColdFusion for #CALLER.getEdition()#&reg;、WebSphere Application Server 製品ファミリーのメンバー</cfoutput></cfcase>
+<cfcase value="productname_extended"><cfoutput>Adobe &reg; #CALLER.productName#&reg;</cfoutput></cfcase>
+<cfcase value="cfmx">ColdFusion</cfcase>
+<cfcase value="home_pageHeader">ColdFusion Administrator へようこそ</cfcase>
+<cfcase value="daysleft"><cfoutput>お試し期間に、あと <font color="ff6600">#CALLER.days#</font> 日残っています</cfoutput></cfcase>
+<cfcase value="trialtextifedition">
+ColdFusion デベロッパー版をトライアルモードで使用しています。トライアルモードには複数の IP アドレスからアクセスでき、30 日のお試し期間中、ColdFusion エンタープライズ版のフル機能を評価できます。<br/><br/>
+</cfcase>
+<cfcase value="trialtext"><cfoutput>
+お試し期間に、あと <font color="ff6600">#CALLER.days#</font> 日残っています。お試し期間後、ソフトウェアは自動的にトライアルモードを解除します。その後、ローカルマシンともう 2 つの IP アドレスからデベロッパー版にアクセスして、スタンドアローンのワークステーション上で ColdFusion アプリケーションを開発できます。<br/><br/>ColdFusion アプリケーションをデプロイするために、ColdFusion エディションのいずれかのライセンスをご購入いただくか、ColdFusion ホスティングサービスをご利用いただく必要があります
+</cfoutput></cfcase>
+<cfcase value="hpdevdescifedition">
+<b>ColdFusion デベロッパー版</b>を使用しています。この無料版には ColdFusion エンタープライズ版の機能がありますが、ローカルマシンともう 2 つの IP アドレスからのみアクセスできます。デベロッパー版を使用して、スタンドアローンワークステーション上で ColdFusion アプリケーションを学び、開発できます。ColdFusion アプリケーションをデプロイするために、ColdFusion エディションのいずれかのライセンスをご購入いただくか、ColdFusion ホスティングサービスをご利用いただく必要があります
+</cfcase>
+<cfcase value="cfmarketingheader"><cfoutput>
+                        <p style="font-size:24px; font-weight:bold; color:##999999;">Create better Internet applications quickly and easily</p><strong>Thank you for trying ColdFusion 9</strong><br />
+                        You've just made your life as a developer a little easier! We're confident you'll find that Adobe&reg; ColdFusion&reg; 9 software will help you create compelling Internet applications while solving day-to-day developer challenges. Now you can quickly deliver rich and engaging application experiences to your users. We encourage you to explore
+the new and enhanced capabilities with these helpful tips and demonstrations.
+</cfoutput></cfcase>
+<cfcase value="cfmarketingdemo">
+<strong>今すぐお試し</strong><br/>マルチメディアデモを使用すると、<br/>製品を最大限に<br/>体験できます。<br/>
+                        </cfcase>
+<cfcase value="cfmarketingviewdemos">デモの表示</cfcase>
+<cfcase value="cfmarketinghighlights"><strong>機能のハイライト</strong><br/>ハイライトページを使用すると、<br/>ColdFusion 9 の新機能を<br/>すばやく学習できます。<br/></cfcase>
+<cfcase value="cfmarketingviewfeatures">新機能の表示</cfcase>
+<cfcase value="cfmarketingbuy"><strong>購入</strong><br/>購入オプションの<br/>詳細について<br/><br/></cfcase>
+<cfcase value="cfmarketingbuynow">今すぐ購入</cfcase>
+<cfcase value="enttextifeditionStandard">
+<p>ColdFusion スタンダード版により、単一のサーバーでパワフルな Web サイトとアプリケーションを管理できます。管理設定が簡単で、PDF や FlashPaper のドキュメント生成、強力な新機能、リッチフラッシュフォームなど、ColdFusion の RAD 開発機能のすべてを搭載しており、小中規模のビジネスに最適です。</p>
+
+<p>1 つか複数のサーバー、または、既存の J2EE サーバーで複数の Web サイトとアプリケーションを管理する場合は、ColdFusion エンタープライズ版が適しています。エンタープライズ版には、ColdFusion スタンダード版の全機能に加えて、複数のアプリケーション環境を管理するための特殊機能が提供されているので、重要なビジネスアプリケーションを実装する際のスケーラビリティと信頼性を高めることができます。</p>
+
+</cfcase>
+<cfcase value="enttext">
+ColdFusion の他のエディションや機能についてお知りになりたい方は、次のリンクをクリックしてください。
+</cfcase>
+<cfcase value="enttextifeditionEnterprise">
+ColdFusion エンタープライズ版は、1 台または複数台のサーバー、あるいは既存の J2EE サーバー
+で複数の Web サイトとアプリケーションを提供するためのソリューションです。
+エンタープライズ版には、ColdFusion スタンダード版の全機能に加えて、複数のアプリケーション
+環境を管理するための特殊機能が組み込まれているので、重要なビジネスアプリケーションを実装
+する際のスケーラビリティと信頼性を高めることができます。まったく新しくなったエンタープライズマネージャ
+を使用すると、1 台の物理サーバー上にある複数の独立したアプリケーションやアプリケーションクラスタの設定と
+管理が容易になります。電子メールや全文検索などの機能では、パフォーマンスに優れたマルチスレッドアーキ
+テクチャが採用され、いっそう柔軟な設定が可能になっています。
+また、ColdFusion エンタープライズ版は、他のエンタープライズクラスのシステムやデータベースと組み合わせて
+使用でき、ColdFusion アプリケーションを標準の J2EE EAR/WAR ファイルとして WebSphere や WebLogic などの
+代表的 J2EE アプリケーションサーバーにデプロイできます。
+</cfcase>
+<cfcase value="defaulttextifedition">
+ColdFusion のライセンスバージョンを使用して、最短時間で ColdFusion アプリケーションの構築、テスト、デプロイを行うことができます。
+</cfcase>
+<cfcase value="defaulttext">
+ColdFusion の他のエディションや機能についてお知りになりたい方は、次のリンクをクリックしてください。
+</cfcase>
+<cfcase value="cfresources">ColdFusion のリソース</cfcase>
+<cfcase value="resourceHeaderText">製品内および外部サイトにある有益なリソースへのリンクを次に示します。</cfcase>
+<cfcase value="gettingStartedURL">http://www.adobe.com/go/cf9_getstarted</cfcase>
+<cfcase value="devCenterURL">http://www.adobe.com/go/cf9_devcenter</cfcase>
+<cfcase value="techNotesURL">http://www.adobe.com/go/cf9_prod_technotes</cfcase>
+<cfcase value="releaseNotesURL">http://www.adobe.com/go/cf9_releasenotes</cfcase>
+<cfcase value="editionsURL">http://www.adobe.com/go/cf9_editions</cfcase>
+<cfcase value="systemReqURL">http://www.adobe.com/go/cf9_sysreqs</cfcase>
+<cfcase value="prodInfoURL">http://www.adobe.com/go/prod_prodinfo</cfcase>
+<cfcase value="prodSupportURL">http://www.adobe.com/go/prod_support</cfcase>
+<cfcase value="prodDocURL">http://www.adobe.com/go/cf9_prod_doc</cfcase>
+<cfcase value="prodTrainingURL">http://www.adobe.com/go/prod_training</cfcase>
+<cfcase value="cfBooksURL">http://www.adobe.com/support/documentation/en/coldfusion/index.html</cfcase>
+<cfcase value="reportBuilderURL">http://www.adobe.com/go/report_builder</cfcase>
+<cfcase value="cfExtURL">http://www.adobe.com/go/cf_extensions</cfcase>
+<cfcase value="prodUpdatesURL">http://www.adobe.com/go/prod_produpdates</cfcase>
+<cfcase value="cfHotfixesURL">http://www.adobe.com/go/cf_hotfixes</cfcase>
+<cfcase value="techArticlesURL">http://www.adobe.com/go/prod_techarticles</cfcase>
+<cfcase value="devExchangeURL">http://www.adobe.com/go/prod_developersexchange</cfcase>
+<cfcase value="newsLetterURL">http://www.adobe.com/go/prod_newsletters</cfcase>
+<cfcase value="userGroupsURL">http://www.adobe.com/go/prod_usergroups</cfcase>
+<cfcase value="cfHostingURL">http://www.adobe.com/go/cf_hosting</cfcase>
+<cfcase value="securityZoneURL">http://www.adobe.com/go/prod_securityzone</cfcase>
+<cfcase value="securityNoteURL">http://www.adobe.com/go/prod_securitynote</cfcase>
+<cfcase value="hpgetstart">ファーストステップ</cfcase>
+<cfcase value="hpgetstartwin">ファーストステップ</cfcase>
+<cfcase value="hpexwin">サンプルアプリケーション</cfcase>
+<cfcase value="cfdevcenter">ColdFusion デベロッパーセンターファーストステップ</cfcase>
+<cfcase value="hpprodinfo">製品情報</cfcase>
+<cfcase value="aboutcoldfusion">ColdFusion について</cfcase>
+<cfcase value="documentation">マニュアル</cfcase>
+<cfcase value="knowledge_base">テクニカルノート</cfcase>
+<cfcase value="release_notes">リリースノート</cfcase>
+<cfcase value="producteditions">製品のエディション</cfcase>
+<cfcase value="systemrequirements">必要なシステム条件</cfcase>
+<cfcase value="prodlnews">最新の製品情報</cfcase>
+<cfcase value="hptechsup">テクニカルサポートとトレーニング</cfcase>
+<cfcase value="cfmxtechnotes">ColdFusion テクニカルノート</cfcase>
+<cfcase value="supcenter">ColdFusion サポートセンター</cfcase>
+<cfcase value="hplatedoc">追加のマニュアル</cfcase>
+<cfcase value="hptrainingbooks">オンライン / クラスのトレーニング</cfcase>
+<cfcase value="hpbooks">ColdFusion 書籍</cfcase>
+<cfcase value="additionalheader">その他のインストーラ</cfcase>
+<cfcase value="CFReportBuilderInstall">ColdFusion Report Builder</cfcase>
+<cfcase value="DWExtensionsInstall">Eclipse 用の ColdFusion 拡張機能</cfcase>
+<cfcase value="hpprodup">製品アップデート</cfcase>
+<cfcase value="checkprodup">製品更新のチェック</cfcase>
+<cfcase value="checkhotfix">ホットフィックスのチェック</cfcase>
+<cfcase value="hpcommunity">コミュニティ</cfcase>
+<cfcase value="hptechart">ColdFusion 開発センター</cfcase>
+<cfcase value="hpdevex">CF 開発者エクスチェンジ</cfcase>
+<cfcase value="hpnewsletters">ニュースレター</cfcase>
+<cfcase value="hpusergroups">ユーザーグループ</cfcase>
+<cfcase value="learnhosting">ColdFusion ホストパートナー情報</cfcase>
+<cfcase value="hpseczone">セキュリティゾーン</cfcase>
+<cfcase value="keepsecure">サーバーを安全に保つ方法</cfcase>
+<cfcase value="secemail">セキュリティ情報を受け取る方法</cfcase>
+<cfcase value="frmnavttle">ナビゲーション</cfcase>
+<cfcase value="frmresttle">リソースリンク</cfcase>
+<cfcase value="frmmainttle">メインウィンドウ</cfcase>
+<cfcase value="frmtopttle">トップウィンドウのナビゲーション</cfcase>
+<cfcase value="browser_warning">
+ColdFusion Administrator では、フレームをサポートするブラウザが必要です。<br/>HTML 3.0 準拠かそれ以降のブラウザを入手してください。
+</cfcase>
+<cfcase value="default_pagename">ColdFusion Administrator</cfcase>
+<cfcase value="ld_electdoc"><cfoutput><p class="sentance">オンラインマニュアルはこのシステムにインストールされていません。</p> <p class="sentance"><a href="#CALLER.doclink#" target="Adobe website">ここをクリック</a>すると、Adobe.com のオンラインマニュアルが開きます。<br/><br/>
+
+</p></cfoutput></cfcase>
+<cfcase value="ld_exmples"><cfoutput><p class="sentance">サンプルは現在インストールされていません。</p> <p class="sentance"><a href="http://www.adobe.com/go/prod_examples_jp" target="Adobe website">ここをクリック</a>すると、ColdFusion 用のサンプルアプリケーションがダウンロードされます。<br/></p></cfoutput></cfcase>
+<cfcase value="cfadmin_login">ColdFusion Administrator ログイン</cfcase>
+<cfcase value="coldfusionVer">ColdFusion</cfcase>
+<cfcase value="required_userid">ユーザー名が必要です</cfcase>
+<cfcase value="label_userid">ユーザー名</cfcase>
+<cfcase value="required_password">パスワードが必要です</cfcase>
+<cfcase value="label_password">パスワード</cfcase>
+<cfcase value="null_user_id">ユーザー名が必要です。もう一度入力してください。</cfcase>
+<cfcase value="invalid_userid_or_password">無効なユーザー名またはパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="invalid_password">無効なパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="password_button">ログイン</cfcase>
+<cfcase value="copyright_cont1">Adobe、Adobe ロゴ、ColdFusion、Adobe ColdFusion は合衆国および諸国における Adobe Systems Incorporated の商標または登録商標です。その他すべての商標はそれぞれの所有者の所有物です。</cfcase>
+<cfcase value="cfcbrowser_login">コンポーネントブラウザログイン</cfcase>
+<cfcase value="componentbrowser">コンポーネントブラウザ</cfcase>
+<cfcase value="enterrdsoradminpasswordlogin">RDS または Admin のパスワードを以下に入力してください</cfcase>
+<cfcase value="configAndSettingsWizard">設定の移行ウィザード</cfcase>
+<cfcase value="configAndSettingsWizardDesc">
+ColdFusion のインストールに成功しました。このウィザードは残りのサーバー設定手順をご案内します。また、必要に応じて、以前のバージョンの ColdFusion の設定を移行します。</cfcase>
+<cfcase value="configAndSettingsWizardSecurity">サーバーのセキュリティを確保するために、ColdFusion Administrator パスワードを入力してください。</cfcase>
+<cfcase value="Coldfusionadministrator">ColdFusion Administrator</cfcase>
+<cfcase value="navserver">サーバー :&nbsp;</cfcase>
+<cfcase value="navbarwelcome">ユーザー :&nbsp;</cfcase>
+<cfcase value="l10n_nav_settings">設定</cfcase>
+<cfcase value="l10n_nav_serversettings">サーバーの設定</cfcase>
+<cfcase value="l10n_nav_limits">リクエストの調整</cfcase>
+<cfcase value="l10n_nav_caching">キャッシュ機能</cfcase>
+<cfcase value="l10n_nav_cvariables">クライアント変数</cfcase>
+<cfcase value="l10n_nav_mvariables">メモリ変数</cfcase>
+<cfcase value="l10n_nav_mappings">マッピング</cfcase>
+<cfcase value="l10n_nav_mailserver">メール</cfcase>
+<cfcase value="l10n_nav_charting">チャート</cfcase>
+<cfcase value="l10n_nav_fonts">フォント管理</cfcase>
+<cfcase value="l10n_nav_documents">ドキュメント</cfcase>
+<cfcase value="l10n_nav_java">Java と JVM</cfcase>
+<cfcase value="l10n_nav_serversum">設定要約</cfcase>
+<cfcase value="l10n_nav_data">データソース</cfcase>
+<cfcase value="l10n_nav_verity">ColdFusion コレクション</cfcase>
+<cfcase value="l10n_nav_k2server">Verity K2 サーバー</cfcase>
+<cfcase value="l10n_nav_solrserver">Solr サーバー</cfcase>
+<cfcase value="l10n_nav_migrate_verity">Verity コレクションの移行</cfcase>
+<cfcase value="l10n_nav_webservices">Web サービス</cfcase>
+<cfcase value="l10n_nav_flexintegration">Flex 統合</cfcase>
+<cfcase value="l10n_nav_debugset">デバッグ出力の設定</cfcase>
+<cfcase value="l10n_nav_dbugip">デバッグする IP アドレス</cfcase>
+<cfcase value="l10n_nav_linedebugger">デバッガの設定</cfcase>
+<cfcase value="l10n_nav_logset">ロギングの設定</cfcase>
+<cfcase value="l10n_nav_log">ログファイル</cfcase>
+<cfcase value="l10n_nav_sched">スケジュールされたタスク</cfcase>
+<cfcase value="l10n_nav_sysprobe">システムプローブ</cfcase>
+<cfcase value="l10n_nav_anyzr">コードアナライザ</cfcase>
+<cfcase value="l10n_nav_scanner">ライセンススキャナー</cfcase>
+<cfcase value="l10n_nav_servermonitor">サーバーモニタ</cfcase>
+
+<cfcase value="l10n_nav_servermonitorsettings">監視の設定</cfcase>
+<cfcase value="l10n_nav_multiservermonitor">マルチサーバーモニタ</cfcase>
+<cfcase value="l10n_nav_applets">Java アプレット</cfcase>
+<cfcase value="l10n_nav_cfx">CFX タグ</cfcase>
+<cfcase value="l10n_nav_customtag">カスタムタグのパス</cfcase>
+<cfcase value="l10n_nav_corba">CORBA コネクタ</cfcase>
+<cfcase value="l10n_nav_gatewayset">設定</cfcase>
+<cfcase value="l10n_nav_gatewaytypes">ゲートウェイタイプ</cfcase>
+<cfcase value="l10n_nav_gateways">ゲートウェイインスタンス</cfcase>
+<cfcase value="l10n_nav_adminpass">Administrator</cfcase>
+<cfcase value="l10n_nav_studiopass">RDS</cfcase>
+<cfcase value="l10n_nav_ressec">リソースセキュリティ</cfcase>
+<cfcase value="l10n_nav_sandbox">サンドボックスセキュリティ</cfcase>
+<cfcase value="l10n_nav_usermanager">ユーザーマネージャ</cfcase>
+<cfcase value="l10n_nav_userpassword">パスワードの変更</cfcase>
+<cfcase value="l10n_nav_allowedIPAddress">使用できる IP アドレス</cfcase>
+<cfcase value="l10n_car_files">ColdFusion アーカイブ</cfcase>
+<cfcase value="l10n_j2ee_archives">J2EE アーカイブ</cfcase>
+<cfcase value="l10n_app_installer">アプリケーションインストーラ</cfcase>
+<cfcase value="l10n_nav_dataserv">データとサービス</cfcase>
+<cfcase value="l10n_nav_debug">デバッグとロギング</cfcase>
+<cfcase value="l10n_nav_monitoring">ColdFusion サーバーの監視</cfcase>
+<cfcase value="l10n_nav_exten">拡張機能</cfcase>
+<cfcase value="l10n_nav_eventgateways">イベントゲートウェイ</cfcase>
+<cfcase value="security">セキュリティ</cfcase>
+<cfcase value="l10n_nav_packaging">パッケージとデプロイ</cfcase>
+<cfcase value="iman">インスタンスマネージャ</cfcase>
+<cfcase value="cluman">クラスタマネージャ</cfcase>
+<cfcase value="l10n_nav_entman">エンタープライズマネージャ</cfcase>
+<cfcase value="mm_extensions">Adobe</cfcase>
+<cfcase value="custom_extensions">カスタム拡張機能</cfcase>
+<cfcase value="expandall">すべてを拡張</cfcase>
+<cfcase value="Collapseall">すべてをたたむ</cfcase>
+<cfcase value="version_information">システム情報</cfcase>
+<cfcase value="help">ヘルプ</cfcase>
+<cfcase value="resources">情報源</cfcase>
+<cfcase value="logout">ログアウト</cfcase>
+<cfcase value="doc_addCFSnippets">サンプルデータソース 'cfsnippets' の追加に成功しました。</cfcase>
+<cfcase value="doc_addCompanyInfo">サンプルデータソース 'CompanyInfo' の追加に成功しました。</cfcase>
+<cfcase value="doc_addExampleApp">サンプルデータソース 'exampleapps' の追加に成功しました。</cfcase>
+<cfcase value="doc_title_exampleApps">サンプルアプリケーション</cfcase>
+<cfcase value="back">戻る</cfcase>
+<cfcase value="next">次へ</cfcase>
+<cfcase value="install_examples">
+サンプルアプリケーションをインストールしますか。[はい] を選択すると、サンプルアプリケーションおよび『アプリケーション構築の基礎』マニュアルのチュートリアル関連ファイルがインストールされます。セキュリティ上の理由で、サンプルアプリケーションを本番サーバー上にインストールしないようにしてください。
+</cfcase>
+<cfcase value="makeSelect_clickNext">
+選択し、[次へ] をクリックしてください。
+</cfcase>
+<cfcase value="examples_yes"><b>はい</b>、サンプルアプリケーションをインストールします。</cfcase>
+<cfcase value="examples_no"><b>いいえ</b>、サンプルアプリケーションをインストールしません。</cfcase>
+<cfcase value="cant_install_examples">
+サンプルアプリケーションを ODBC サポートのない Windows 上にインストールすることはできません。
+</cfcase>
+<cfcase value="doc_title_systemconfig">システム設定</cfcase>
+<cfcase value="jvmLibraryPath_description">
+ColdFusion の機能によっては、たとえば J2EE サーバーのライブラリパスの修正など、追加の設定手順が必要な場合があります。ご使用のアプリケーションサーバーに必要な手順については、『ColdFusion のインストールと使用』、または、Adobe Web サイトの「<a href="http://www.adobe.com/go/cf_j2ee_jp/" target="_blank">ColdFusion J2EE サポートセンター</a>」を参照してください。
+</cfcase>
+<cfcase value="jvmLibraryPath_description_1">
+'CFXNeo.dll' ファイルが system32 フォルダに存在することを検出しました。<br/>ColdFusion が適切に動作するには、このファイルを手動で削除する必要があります。状況によっては、ファイルを削除する前に ColdFusion サービスを停止する必要があります。
+</cfcase>
+<cfcase value="jvmLibraryPath_description_2">
+'cfregistry.dll' ファイルが system32 フォルダに存在することを検出しました。<br/>ColdFusion が適切に動作するには、このファイルを手動で削除する必要があります。状況によっては、ファイルを削除する前に ColdFusion サービスを停止する必要があります。
+</cfcase>
+<cfcase value="envVar_checksystem32">cfregisty.dll または CFXNeo.dll がフォルダ内に存在するかどうかを調べるために、winnt/system32 ファイルへアクセスする際のエラー。いずれかが存在する場合は、そのファイルを削除してください。</cfcase>
+<cfcase value="finish_changefilepermissions">cfusion/lib ファイルのアクセス許可を変更する際のエラー。</cfcase>
+<cfcase value="finish_registerdll">TypeViewer.dll を登録できませんでした。</cfcase>
+<cfcase value="finish_deployadminhelp">cfadmin ヘルプの解凍とデプロイを行うことができませんでした。</cfcase>
+<cfcase value="finish_deploycfdocfileshelp">cfdoc ファイルの解凍とデプロイを行うことができませんでした。</cfcase>
+<cfcase value="finish_gettingstarted">『ファーストステップ』とサンプルアプリケーションをインストールできませんでした</cfcase>
+<cfcase value="odbc_uninstall">ODBC サービスを削除できませんでした。サービスが存在しないようです。</cfcase>
+<cfcase value="odbc_install">ODBC サービスをインストールできませんでした。</cfcase>
+<cfcase value="finish_deletedbfiles"><cfoutput>ファイル '#CALLER.accessSamples#' または '#CALLER.pbSamples#' を削除できませんでした。</cfoutput></cfcase>
+<cfcase value="finish_deletefile"><cfoutput>ファイル '#CALLER.fname#' を削除できませんでした。</cfoutput></cfcase>
+<cfcase value="finish_deleteZips"><cfoutput>'#CALLER.zips#' から ZIP ファイルを削除できませんでした。</cfoutput></cfcase>
+<cfcase value="doc_title_cfmigration">ColdFusion の移行</cfcase>
+<cfcase value="exporting_applets">アプレットのエクスポート中</cfcase>
+<cfcase value="mig_skip">スキップ</cfcase>
+<cfcase value="mig_back">戻る</cfcase>
+<cfcase value="mig_continue">次へ</cfcase>
+<cfcase value="mig_skip_warn">移行をスキップしてよろしいですか。</cfcase>
+<cfcase value="mig_intro">
+これからデータソース、カスタムタグ、Verity コレクションなど、
+既存の設定とリソースを移行します。
+メモ : この手順をスキップすると、これらのリソースを
+必要とするアプリケーションは、ColdFusion Administrator 内で
+リソースを定義するまで、正しく実行されません。
+<br /><br /> 
+続行する前に追加のデータが必要な場合は、
+いつでも移行ウィザードを停止して変更できます。終了したら、
+設定ファイル (neo-*.xml) を &lt;oldColdFusionRoot&gt;/lib から
+&lt;newColdFusionRoot&gt;/lib にコピーしてください。停止後、準備が整ったら、
+ColdFusion Administrator を再起動してください。ウィザードは停止した場所から続行します。
+<br /><br /> 
+</cfcase>
+<cfcase value="settingsFilesMissing">設定ファイルは存在しません。</cfcase>
+<cfcase value="doc_title_mx6export">Coldfusion8 の移行 : 設定のエクスポート</cfcase>
+<cfcase value="mig_exportCharting">チャート</cfcase>
+<cfcase value="mig_exportClientStore">クライアントストア</cfcase>
+<cfcase value="mig_exportDatasources">データソース</cfcase>
+<cfcase value="mig_exportDebugging">デバッグ</cfcase>
+<cfcase value="mig_exportLogging">ロギング</cfcase>
+<cfcase value="mig_exportMail">メール</cfcase>
+<cfcase value="mig_export_Metric">測定値</cfcase>
+<cfcase value="mig_exportProbes">プローブ</cfcase>
+<cfcase value="mig_exportRuntime">ランタイム</cfcase>
+<cfcase value="mig_exportscheduledTasks">スケジュールされたタスク</cfcase>
+<cfcase value="mig_exportSecuritySandboxes">セキュリティサンドボックス</cfcase>
+<cfcase value="mig_exportVerity">Verity コレクション</cfcase>
+<cfcase value="mig_exportWebServices">Web サービス</cfcase>
+<cfcase value="mig_exportEventGateways">イベントゲートウェイ</cfcase>
+<cfcase value="mig_exportDocument">フォント</cfcase>
+<cfcase value="mig_exportWatcher">Watcher の設定</cfcase>
+<cfcase value="miglog_export_Charting">ColdFusion チャート設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_ClientStore">ColdFusion クライアント設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Datasources">データソースをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Debugging">ColdFusion デバッグ設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Logging">ColdFusion ロギング設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Mail">ColdFusion メール設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Metric">ColdFusion 測定値設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Probes">ColdFusion プローブをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_Runtime">ColdFusion ランタイム設定をエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_scheduledTasks">ColdFusion のスケジュールされたタスクをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_security">ColdFusion セキュリティサンドボックスをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_veritycollections">Verity コレクションをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_webservices">Web サービスをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_eventgateways">イベントゲートウェイをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_document">フォントをエクスポートできませんでした。</cfcase>
+<cfcase value="miglog_export_watcher">Watcher 設定をエクスポートできませんでした。</cfcase>
+<cfcase value="mig_exportStatus">
+以前の ColdFusion インストールから、以下の項目のエクスポートに成功しました。</cfcase>
+<cfcase value="mig_exportFailStatus">
+以下の項目のエクスポートに失敗しました。詳細については、cfusion\log フォルダにある migration.log ファイルを参照してください。
+</cfcase>
+<cfcase value="mig_import">
+[次へ] をクリックして続行してください
+</cfcase>
+<cfcase value="doc_title_cf7migration">ColdFusion7 Migration</cfcase>
+<cfcase value="mig_importCharting">チャート</cfcase>
+<cfcase value="mig_importClientStore">クライアントストア</cfcase>
+<cfcase value="mig_importDatasources">データソース</cfcase>
+<cfcase value="mig_importDebugging">デバッグ</cfcase>
+<cfcase value="mig_importLogging">ロギング</cfcase>
+<cfcase value="mig_importMail">メール</cfcase>
+<cfcase value="mig_importProbes">プローブ</cfcase>
+<cfcase value="mig_importRuntime">ランタイム</cfcase>
+<cfcase value="mig_importScheduledTasks">スケジュールされたタスク</cfcase>
+<cfcase value="mig_importSecuritySandboxes">セキュリティサンドボックス</cfcase>
+<cfcase value="mig_importVerity">Verity コレクション</cfcase>
+<cfcase value="mig_importWebServices">Web サービス</cfcase>
+<cfcase value="mig_importEventGateways">イベントゲートウェイ</cfcase>
+<cfcase value="mig_importdocument">フォント</cfcase>
+<cfcase value="mig_importwatch">Watcher サービス</cfcase>
+<cfcase value="miglog_import_Charting">ColdFusion チャート設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_ClientStore">ColdFusion クライアント設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Datasources">データソースをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Dsn">以下のデータソースをインポートできませんでした。 </cfcase>
+<cfcase value="miglog_import_Debugging">ColdFusion デバッグ設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Logging">ColdFusion ロギング設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Mail">ColdFusion メール設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Probes">ColdFusion プローブをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_Runtime">ColdFusion ランタイム設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_ScheduledTasks">ColdFusion のスケジュールされたタスクをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_security">ColdFusion セキュリティサンドボックスをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_mailsettings">メール設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_veritycollections">Verity コレクションをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_webservices">Web サービスをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_eventgateways">イベントゲートウェイをインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_document">フォント設定をインポートできませんでした。</cfcase>
+<cfcase value="miglog_import_watcher">Watcher 設定をインポートできませんでした。</cfcase>
+<cfcase value="maxpooledstmtDB_migration">メモ : DB2、Informix、Oracle、Microsoft SQL Server、MySQL (DataDirect)、Sybase ドライバの場合は、[プールされるステートメントの最大数] の値が 100 に設定されます。</cfcase>
+<cfcase value="mig_importStatus">
+以下の項目の移行に成功しました。</cfcase>
+<cfcase value="mig_importFailStatus">
+以下の項目のインポートに失敗しました。詳細については、cfusion\log フォルダにある migration.log ファイルを参照してください。
+</cfcase>
+<cfcase value="migrationImport_inst">
+ColdFusion の移行を続行する場合は、[次へ] をクリックしてください。
+</cfcase>
+<cfcase value="importingSettings">
+ColdFusion 設定のインポート中。時間のかかる場合があります。
+</cfcase>
+<cfcase value="mig_exportMonitoring">監視中</cfcase>
+<cfcase value="miglog_export_Monitoring">ColdFusion サーバーの監視設定をエクスポートできませんでした。</cfcase>
+<cfcase value="doc_title_cf8migration">ColdFusion8 Migration</cfcase>
+<cfcase value="mig_importMonitoring">監視中</cfcase>
+<cfcase value="miglog_import_Monitoring">ColdFusion の監視設定をインポートできませんでした。</cfcase>
+<cfcase value="finish_title1">移行が完了しました</cfcase>
+<cfcase value="finish_title2">セットアップが完了しました</cfcase>
+<cfcase value="finish_migration">移行が完了しました</cfcase>
+<cfcase value="mig_uninstallCF">
+移行ウィザードは ColdFusion 設定の移行にすべて成功しました。以前のバージョンの ColdFusion はまだ削除されていません。アンインストーラを使用して、旧バージョンを削除してください。
+</cfcase>
+<cfcase value="mig_restart">
+メモ :以下の変更を有効にするために、ColdFusion を再起動する必要があります。
+</cfcase>
+<cfcase value="mig_restartForSandbox">
+<li>制限されたタグをデフォルトのサンドボックス内に移行しました。</li>
+</cfcase>
+<cfcase value="mig_veritynote">
+ColdFusion 移行ウィザードにより、デフォルトのコレクションフォルダ内に同じ名前の Verity コレクションが作成されました。これらのコレクションは空です。インデックスを再作成する必要があります。これらのコレクションを他の場所に移動したい場合は、まず ColdFusion Administrator を使用してそれらを削除し、それから、希望の場所でコレクションを再作成してください。<br/> Verity の新機能については、<a href="http://www.adobe.com/go/prod_doc_jp/" target="_blank">ColdFusion マニュアル</a>を参照してください。
+</cfcase>
+<cfcase value="mig_cf7veritynote">
+デフォルトの Verity コレクションディレクトリの下に作成されたコレクションをすべて移行しました。他のディレクトリの下にコレクションを作成した場合、またはスタンドアローンの Verity サーバーを実行している場合は、コレクションを再作成する必要があります。<br>Verity の新機能については、ColdFusion マニュアルを参照してください。
+</cfcase>
+<cfcase value="mig_sandboxsecurityenabled">
+ColdFusion サンドボックスセキュリティが有効ではありません。ColdFusion Administrator でサンドボックスセキュリティを有効にする必要があります。すべてのサンドボックスが移行されます。
+</cfcase>
+<cfcase value="mig_corba_useorb">
+すべての CORBA コネクタを移行しました。ColdFusion クラスパスに CORBA ORB が存在しない場合は、ColdFusion を正しく再起動するために CORBA ORB を手動で追加してください。
+</cfcase>
+<cfcase value="mig_filesnote">
+ColdFusion により、該当する設定が更新されました。ただし、以前の Web ルートディレクトリの下にあるその他のデータファイル (データベース、カスタムタグ、CFX タグ、フォントなど) は移行されておらず、対応する設定はまだ元の位置を指しています。このようなファイルがある場合は、以前のインストールディレクトリを削除する前に、必ずそれらを移動し、設定を更新してください。
+</cfcase>
+<cfcase value="mig_clickokexperience">
+<a href="../gettingstarted/experience/index.cfm">[OK]</a> をクリックすると、「ColdFusion ファーストステップ」が開きます。
+</cfcase>
+<cfcase value="mig_clickokadmin">
+<a href="index.cfm">ここをクリック</a>すると、ColdFusion Administrator が起動します。 
+</cfcase>
+<cfcase value="mig_clickok_href">
+<a href="index.cfm">OK</a> をクリックすると、ColdFusion Administrator が開きます。
+</cfcase>
+<cfcase value="finish_setup">セットアップが完了しました</cfcase>
+<cfcase value="mig_clickok">
+[OK] をクリックすると、ColdFusion Administrator が開きます。
+</cfcase>
+<cfcase value="odbc_title">ODBC サービス</cfcase>
+<cfcase value="odbc_inst">
+Microsoft Access などの ODBC データソースを ColdFusion と併用しますか。
+</cfcase>
+<cfcase value="odbc_yes"><b>はい</b>、ODBC サービスをインストールします。</cfcase>
+<cfcase value="odbc_no"><b>いいえ</b>、ODBC サービスをインストールしません。</cfcase>
+<cfcase value="odbc_desc">
+ColdFusion には MDAC バージョン 2.6 sp2 かそれ以降が必要です。古いバージョンがインストールされていることが検出されました。<br/><br/> 次の Microsoft Web サイトから最新のバージョンをダウンロードしてインストールしてください。<br/> <a href="http://www.microsoft.com/data" target="_blank">www.microsoft.com/data</a> <br/><br/>また、Windows Update を実行して、Microsoft Jet ドライバのバージョンが最新であることも確認してください。
+</cfcase>
+<cfcase value="odbc_MDAC_yes"><b>はい</b>、MDAC 2.6 sp2 をインストールします。</cfcase>
+<cfcase value="odbc_MDAC_no"><b>いいえ</b>、MDAC 2.6 sp2 をインストールしません。</cfcase>
+<cfcase value="rds_pw_required">RDS を有効にする場合は、パスワードを入力する必要があります。</cfcase>
+<cfcase value="rds_pw_mismatch">RDS パスワードとその確認が一致する必要があります。</cfcase>
+<cfcase value="security_title">RDS 設定</cfcase>
+<cfcase value="security_nords">Remote Development Service はインストールされなかったか、無効化されています。[次へ] をクリックして続行してください。</cfcase>
+<cfcase value="Rds_desc">
+Adobe のツールで開発するときに ColdFusion Remote Development Service (RDS) を使用すると、リモートでこのサーバーに接続して、開発作業を行うことができます。<br/><br/> これが本番サーバーの場合は、RDS を無効にすることをお勧めします。<br/><br/>メモ : RDS を無効にすると、ColdFusion Administrator でディレクトリをブラウズするアプレットと、レポートデザイナーの機能の一部も無効になります。
+</cfcase>
+<cfcase value="Rds_desc2">
+Adobe のツールで開発するときに ColdFusion Remote Development Service (RDS) を使用すると、リモートでこのサーバーに接続して、開発作業を行うことができます。<br/><br/> これが本番サーバーの場合は、RDS を無効にすることをお勧めします。RDS を無効にする方法については、『ColdFusion の設定と管理』を参照してください。<br/><br/>メモ : RDS を無効にすると、ColdFusion MX Administrator でディレクトリをブラウズするアプレットと、レポートデザイナーの機能の一部も無効になります。
+</cfcase>
+<cfcase value="RdsInstallInstruction">
+RDS 設定手順については、『<a href="http://www.adobe.com/go/proddoc_getdoc_jp">ColdFusion のインストールと使用</a>』を参照してください。
+</cfcase>
+<cfcase value="disableRds_desc">
+RDS サービスの無効化
+</cfcase>
+<cfcase value="rdspassword_desc">
+Remote Development Service (RDS) 用のパスワードを入力し、[次へ] をクリックしてください。
+</cfcase>
+<cfcase value="password">パスワード</cfcase>
+<cfcase value="confirm">確認</cfcase>
+<cfcase value="serial_invalid">無効なシリアル番号が入力されました。</cfcase>
+<cfcase value="serial_title">シリアル番号</cfcase>
+<cfcase value="submit">送信</cfcase>
+<cfcase value="trial">トライアルモードで継続</cfcase>
+<cfcase value="serial_desc">
+ColdFusion へようこそ。このウィザードは、インストールを完了するために必要な手順をガイドします。
+</cfcase>
+<cfcase value="serial_enter">
+ColdFusion のライセンスを購入された場合は、そのシリアル番号を入力してください。
+</cfcase>
+<cfcase value="serial_number">シリアル番号</cfcase>
+<cfcase value="trial_desc">ライセンスを購入していない場合は、トライアル版を 30 日間使用できます。</cfcase>
+<cfcase value="configServer_title">サーバーの設定中</cfcase>
+<cfcase value="setup_pleasewait">
+サーバーの設定中。お待ちください。時間のかかる場合があります。
+</cfcase>
+<cfcase value="setup_refreshscreen">
+数分してもこの画面が自動的に更新されない場合は、<a href="index.cfm?configserver=true">ここ</a>をクリックしてください。
+</cfcase>
+<cfcase value="wrapper_rdssetup">RDS セットアップ</cfcase>
+<cfcase value="wrapper_odbcsetup">ODBC セットアップ</cfcase>
+<cfcase value="wrapper_exampleapps">サンプルアプリケーション</cfcase>
+<cfcase value="wrapper_envsettings">システム設定</cfcase>
+<cfcase value="wrapper_configserver">サーバーの設定</cfcase>
+<cfcase value="wrapper_migration">移行</cfcase>
+<cfcase value="wrapper_exportsettings">エクスポート設定</cfcase>
+<cfcase value="wrapper_importsettings">インポート設定</cfcase>
+<cfcase value="wrapper_mxmigration">MX 移行</cfcase>
+<cfcase value="wrapper_finish">終了</cfcase>
+<cfcase value="ok">OK</cfcase>
+<cfcase value="dontMigratetitle">移行しない</cfcase>
+<cfcase value="tryagain">ウィザードの再実行</cfcase>
+<cfcase value="endWizard">ウィザードの終了</cfcase>
+<cfcase value="mig_db2NeedMoreInfo">
+太字の情報は、このデータソースの移行に必要です。この情報をすべて入力し、[次へ] をクリックすると続行します。[移行しない] をクリックすると、このデータソースの移行がスキップされます。<br/><br/>必要とされる初期化引数と接続引数の追加情報については、次のリンクにある Adobe テクニカルノートを参照してください :<a href="http://www.adobe.com/go/coldfusion_tn18337_jp" target="_blank">18337</a>
+</cfcase>
+<cfcase value="database">データベース</cfcase>
+<cfcase value="database_title">データソースに対応するデータベース名を入力してください。</cfcase>
+<cfcase value="server">サーバー</cfcase>
+<cfcase value="server_title">データベースが置かれているサーバーの IP アドレスまたはホスト名を入力してください。</cfcase>
+<cfcase value="port">ポート</cfcase>
+<cfcase value="port_title">データベースサーバーにアクセスするために使用されるポートを入力してください。</cfcase>
+<cfcase value="username">ユーザー名</cfcase>
+<cfcase value="username_title">データベースが認証を必要とする場合は、ユーザー名を入力してください。</cfcase>
+<cfcase value="password_title">データベースが認証を必要とする場合は、ユーザー名に対応するパスワードを入力してください。</cfcase>
+<cfcase value="initArgs">初期化引数</cfcase>
+<cfcase value="args">接続引数</cfcase>
+<cfcase value="back_title">戻る</cfcase>
+<cfcase value="skip_title">移行しない</cfcase>
+<cfcase value="continue_title">次へ</cfcase>
+<cfcase value="mig_informix73OtherWarning"><cfoutput>
+データソース <b>#CALLER.item.name#</b> を移行できません。このデータソースを引き続き使用する場合は、移行ウィザードの完了後、ColdFusion Administrator でそれをデータソースとして追加する必要があります。これには、サードパーティのドライバが必要である可能性があります。
+</cfoutput></cfcase>
+<cfcase value="skipOK_title">OK</cfcase>
+<cfcase value="mig_informix73OtherWarning_informix"><cfoutput>
+Informix 7 のデータソース <b>#item.name#CALLER.</b> を移行できません。
+このデータソースを引き続き使用する場合は、移行ウィザードの完了後、
+ColdFusion Administrator を使用して手動で追加する必要があります。
+これには、サードパーティのドライバが必要になる可能性があります。
+</cfoutput></cfcase>
+<cfcase value="mig_informixNeedMoreInfo">
+ColdFusion では、Informix バージョン 9 のデータソースのみがサポートされます。 
+</cfcase>
+<cfcase value="mig_informixNeedMoreInfoWin">
+Informix の他のバージョンの場合は、Windows 上の ODBC ソケットドライバを使用して、データソースが登録されます。
+</cfcase>
+<cfcase value="mig_informixNeedMoreInfoUnix">
+Informix 7 のデータソースは移行されません。Informix 7 のデータソースを使用するために、Informix 7 をサポートするサードパーティの JDBC ドライバを入手する必要があります。
+</cfcase>
+<cfcase value="mig_informixdbinstructions">
+この Informix データソースのバージョンを指示してください。[移行しない] をクリックすると、このデータソースの移行がスキップされます。
+</cfcase>
+<cfcase value="dbversion">Informix バージョン</cfcase>
+<cfcase value="mig_mssqlNeedMoreInfo">
+このデータソースは、現在、Microsoft SQL Server へアクセスするための「信頼できる接続」を使用しています。ColdFusion では「信頼できる接続」はサポートされません。データベース用のユーザー名とパスワードを入力し、[次へ] をクリックしてください。[移行しない] をクリックすると、このデータソースの移行がスキップされます。
+</cfcase>
+<cfcase value="mig_oleMSAccessNeedMoreInfo">
+ColdFusion では OLE データソースはサポートされませんが、この Microsoft Access データソースを JDBC データソースとして移行することができます。OLE 特有のシンタックスによっては正しく機能しないものがありますので、ご注意ください。
+</cfcase>
+<cfcase value="mig_oldDbSQLInstruction">
+[次へ] をクリックして続行してください。[移行しない] をクリックすると、このデータソースの移行がスキップされます。
+</cfcase>
+<cfcase value="datasourcename">CF データソース名</cfcase>
+<cfcase value="datasourcename_title">ColdFusion データソース名</cfcase>
+<cfcase value="DatabaseFile">データベースファイル</cfcase>
+<cfcase value="UseDefaultUsername">デフォルトのユーザー名を使用</cfcase>
+<cfcase value="UseTrustedConnection_title"></cfcase>
+<cfcase value="CFusername">ColdFusion ユーザー名</cfcase>
+<cfcase value="CFpassword">ColdFusion パスワード</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="mig_oledbOtherWarning"><cfoutput>
+タイプ '#CALLER.item.provider#' の '#CALLER.item.name#' という名前の OleDb をサポートできません。
+</cfoutput></cfcase>
+<cfcase value="mig_olemssqlNeedMoreInfo">
+ColdFusion では OLE データソースはサポートされません。これが Microsoft SQL Server 7 またはそれ以降のデータベースである場合、ColdFusion では、このデータソースを通常の JDBC データソースとして登録できます。OLE 特有のシンタックスによっては機能しないものがありますので、ご注意ください。
+</cfcase>
+<cfcase value="mig_informix73OtherWarning_oracle"><cfoutput>
+Oracle 7.3 のデータソース <b>#item.name#CALLER.</b> を移行できません。
+このデータソースを引き続き使用する場合は、移行ウィザードの完了後、
+ColdFusion Administrator を使用して手動で追加する必要があります。
+これには、サードパーティのドライバが必要になる可能性があります。
+</cfoutput></cfcase>
+<cfcase value="mig_oracleNeedMoreInfo">
+太字の情報は、このデータソースの移行に必要です。この情報をすべて入力し、[次へ] をクリックすると続行します。[移行しない] をクリックすると、このデータソースの移行がスキップされます。<br/><br/> メモ :tnsnames.ora ファイル内で SID 値を見つけることができます。
+</cfcase>
+<cfcase value="SID">SID 名</cfcase>
+<cfcase value="sid_title">データソースに対応するシステム識別子を入力してください。</cfcase>
+<cfcase value="username1">ユーザー名</cfcase>
+<cfcase value="mig_sybaseNeedMoreInfo">
+この db を適切に移行するために、追加情報が必要です。以下の空欄に入力するか、「データソースのスキップ」を押すと、このデータソースは移行されません。
+</cfcase>
+<cfcase value="mig_portwarning"><cfoutput>
+このデータソース [#CALLER.dsn#] のポート設定がデフォルト値に設定されている可能性があります。  <br/>
+</cfoutput></cfcase>
+<cfcase value="mig_informix73OtherWarning_unixbase"><cfoutput>
+MERANT dBase/FoxPro のデータソース <b>#item.name#CALLER.</b> を移行できません。
+このデータソースを引き続き使用する場合は、移行ウィザードの完了後、
+ColdFusion Administrator を使用して手動で追加する必要があります。
+これには、サードパーティのドライバが必要になる可能性があります。
+</cfoutput></cfcase>
+<cfcase value="mig_informix73OtherWarning_unix"><cfoutput>
+MERANT Text Driver のデータソース <b>#item.name#CALLER.</b> を移行できません。
+このデータソースを引き続き使用する場合は、移行ウィザードの完了後、
+ColdFusion Administrator を使用して手動で追加する必要があります。
+これには、サードパーティのドライバが必要になる可能性があります。
+</cfoutput></cfcase>
+<cfcase value="mig_dbinstructions">
+このデータソースの移行をスキップする場合は、[移行しない] をクリックしてください。
+</cfcase>
+<cfcase value="mig_informix73OtherWarning_unixpostgres"><cfoutput>
+Postgresql のデータソース <b>#item.name#CALLER.</b> を移行できません。
+このデータソースを引き続き使用する場合は、移行ウィザードの完了後、
+ColdFusion Administrator を使用して手動で追加する必要があります。
+これには、サードパーティのドライバが必要になる可能性があります。
+<br />
+詳細については、
+<a href="http://www.adobe.com/jp/support/coldfusion/ts/documents/tn18338.htm">
+テクニカルノート 18338</a> を参照してください。
+</cfoutput></cfcase>
+<cfcase value="doc_errorUnzippingExampleApp"><cfoutput>サンプルアプリケーションコードを解凍する際のエラーです - ファイル #CALLER.fp1# をディレクトリ #CALLER.server.coldfusion.rootdir# に、ファイル #CALLER.fp2# をディレクトリ #CALLER.wwwroot# に解凍してください。</cfoutput></cfcase>
+<cfcase value="doc_addCFSnippetsError">サンプルデータソース 'cfsnippets' を追加する際のエラー。</cfcase>
+<cfcase value="doc_addCompanyInfoError">サンプルデータソース 'CompanyInfo' を追加する際のエラー。</cfcase>
+<cfcase value="doc_addExampleAppError">サンプルデータソース 'exampleapps' を追加する際のエラー。</cfcase>
+<cfcase value="doc_errorCreatingExampleDsns">サンプルデータソースを作成する際のエラー</cfcase>
+<cfcase value="finish_deploycfdocexampleappserror">cfdoc サンプルアプリケーションの解凍とデプロイを行うことができませんでした。</cfcase>
+<cfcase value="rds_enable_error"><cfoutput>
+RDS を有効にできません。<br/>#CALLER.CFCATCH.Message#<br/>#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="rds_pw_error"><cfoutput>
+RDS パスワードを設定できません。<br/>#CALLER.CFCATCH.Message#<br/>#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="license_error"><cfoutput>
+シリアル番号を設定できません。<br/>#CALLER.CFCATCH.Message#<br/>#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="doc_title_wizarderror">セットアップウィザードエラー</cfcase>
+<cfcase value="fatalWizarderror">
+セットアップウィザードのエラーが発生しました。多くの問題が原因のようです。詳細については、migration.log ファイルを参照してください。次のいずれかの手順を実行して、作業を続行します。<ul><li>セットアップウィザードを再実行し、エラーの原因となった手順をスキップしてください。</li> <li>セットアップウィザードを直ちに停止し、ColdFusion Administrator を開いてください。</li></ul>
+</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

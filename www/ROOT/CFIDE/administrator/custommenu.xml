@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<menu>
+<!--  To use the xml custom menu extension simply copy and modify the following example <menu> block.  Treat menuitem as you would an anchor tag.  The submenu label attribtute will be shown as a top-level button on the menu.
+	The first menuitem is an example of targetting the main content frame.
+	The second menuitem is an example of opening up new window.
+	The third menuitem is an example of using javascript to open up new windows with size specifications or tabs
+
+	<submenu label="Custom Server Settings">
+		<menuitem href="settings/server_settings.cfm" target="content">Settings</menuitem>
+		<menuitem href="settings/limits.cfm" target="_blank">Request Tuning</menuitem>
+		<menuitem href="javascript:var newwin = window.open('settings/caching.cfm','newwin','height=200,width=400,status=yes,toolbar=no,resizable=yes,titlebar=no');" target="_self">Caching</menuitem>
+	</submenu>
+-->
+</menu>

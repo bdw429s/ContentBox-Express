@@ -1,0 +1,78 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: logviewer
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="coldfusion_log_viewer">ColdFusion Log Viewer</cfcase>
+<cfcase value="copyright">Copyright (c) 1995-2006 Adobe Software LLC. All rights reserved. </cfcase>
+<cfcase value="pagename_logviewer">Log Viewer</cfcase>
+<cfcase value="dont_commit">Do not commit changes and return to previous page.</cfcase>
+<cfcase value="click_array_to_return">Click arrow on left to return to the log file list.</cfcase>
+<cfcase value="Launch Filter">Launch Filter</cfcase>
+<cfcase value="search_limit">Search within limit reached.</cfcase>
+<cfcase value="show_severity">Show Severity</cfcase>
+<cfcase value="fatlgvw">Fatal</cfcase>
+<cfcase value="erlgvw">Error</cfcase>
+<cfcase value="wrlgvw">Warning</cfcase>
+<cfcase value="inflgvw">Information</cfcase>
+<cfcase value="help">Help</cfcase>
+<cfcase value="keywords">Keywords</cfcase>
+<cfcase value="find">Find</cfcase>
+<cfcase value="exact_phrase">exact phrase</cfcase>
+<cfcase value="any_word">any word</cfcase>
+<cfcase value="all_words">all words</cfcase>
+<cfcase value="applications">Applications</cfcase>
+<cfcase value="threadids">ThreadIDs</cfcase>
+<cfcase value="most_recent">Most recent</cfcase>
+<cfcase value="anytime">Anytime</cfcase>
+<cfcase value="last_6_hours">Last 6 hours</cfcase>
+<cfcase value="last_12_hours">Last 12 hours</cfcase>
+<cfcase value="last_24_hours">Last 24 hours</cfcase>
+<cfcase value="last_2_days">Last 2 days</cfcase>
+<cfcase value="last_3_days">Last 3 days</cfcase>
+<cfcase value="last_1_week">Last 1 week</cfcase>
+<cfcase value="last_2_weeks">Last 2 weeks</cfcase>
+<cfcase value="last_1_month">Last 1 month</cfcase>
+<cfcase value="last_3_months">Last 3 months</cfcase>
+<cfcase value="specify_date_range">(or specify time/date range below)</cfcase>
+<cfcase value="date_range">Date Range</cfcase>
+<cfcase value="to">to</cfcase>
+<cfcase value="time_span">Time Span</cfcase>
+<cfcase value="search_within">Search within:</cfcase>
+<cfcase value="yes">Yes</cfcase>
+<cfcase value="no">No</cfcase>
+<cfcase value="show_matches">Show Matches</cfcase>
+<cfcase value="hide_matches">Hide Matches</cfcase>
+<cfcase value="select_no_more">Please select no more than four log files to concatenate.</cfcase>
+<cfcase value="bad_log_file_name">Your log file name includes incorrect characters, such as a space.</cfcase>
+<cfcase value="could_not_combine">For some reason we are not able to combine these logs files together. Please try searching each one seperatly.</cfcase>
+<cfcase value="searching_files">Searching files</cfcase>
+<cfcase value="searching_file">Searching file</cfcase>
+<cfcase value="view_raw_data">View Raw Data</cfcase>
+<cfcase value="compact_view">Compact View</cfcase>
+<cfcase value="Previous">Previous</cfcase>
+<cfcase value="of">of</cfcase>
+<cfcase value="Next">Next</cfcase>
+<cfcase value="Date">Date</cfcase>
+<cfcase value="Time">Time</cfcase>
+<cfcase value="Severity">Severity</cfcase>
+<cfcase value="ThreadID">ThreadID</cfcase>
+<cfcase value="Application_Name">Application Name</cfcase>
+<cfcase value="l10n_znext">Next</cfcase>
+<cfcase value="l10n_zprevious">Previous</cfcase>
+<cfcase value="logvw_searchfiles">Searching file(s)</cfcase>
+<cfcase value="file_exceeded_error">This file has exceeded the log viewer limits.</cfcase>
+<cfcase value="error_accessing">There is an error accessing the log file. This could be caused by an incorrect log file name, or the log file does not exists anymore. Or your ODBC log file driver has a configuration problem.</cfcase>
+<cfcase value="error_displaying">There is an Error displaying your selected log files. This could be caused from selecting log files of different types and mixing ColdFusion logs with non-ColdFusion logs. To view multiple log files please <a href='javascript:history.back()'>go back</a> and choose log files of the same type.</cfcase>
+<cfcase value="error_reading_log_file">There is an error accessing this log file. Please verify that this file still exists and is not locked by another application.</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

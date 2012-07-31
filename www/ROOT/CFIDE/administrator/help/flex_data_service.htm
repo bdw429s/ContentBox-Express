@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Flex data service</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nFlex Integration");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > Flex Integration<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right">&#160;</p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Flex integration</h1>
+<p>Use this page to specify which Flex integration features to enable, 
+ and which IP addresses can perform Data Service operations. If you enable 
+ Adobe LiveCycle Data Services support, but do not specify any IP addresses, 
+ only processes on the local computer can connect to the LiveCycle Data 
+ Services server in ColdFusion.</p>
+<p>&#160;</p>
+<table width="98.685%" cellspacing="0">
+	<col style="width: 21.314%;" />
+	<col style="width: 70.504%;" />
+	<col style="width: 8.182%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p>Enable 
+		 Flash Remoting support</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 to enable Flash clients to connect to this ColdFusion server and 
+		 invoke methods in ColdFusion components (CFCs).</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: normal;"><b><span style="font-weight: normal;">Enable 
+		 Remote Adobe LiveCycle Data Management access</span></b></p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 to enable a LiveCycle Data Services ES server to connect to this 
+		 ColdFusion server and invoke methods in CFCs to fill, sync, get, 
+		 or count records in a result set used in a Flex application.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p>Server 
+		 Identity</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies the 
+		 ColdFusion server on which you want to enable LiveCycle Data Management 
+		 ES support.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p>Enable 
+		 RMI over SSL for Data Management</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Encrypt communication 
+		 between ColdFusion and Flex by enabling Secure Sockets Layer (SSL).</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 IP Addresses Where LiveCycle Data Services ES Is Running</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies which 
+		 LiveCycle Data Services ES servers can connect to the LiveCycle 
+		 Data Services ES support in ColdFusion. If you do not specify 
+		 a list of allowed IP addresses, only processes on the local computer 
+		 can connect to the LiveCycle Data Services ES support in ColdFusion.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>None</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p>View 
+		 or Remove selected IP addresses where LiveCycle Data Services 
+		 ES are running &#160;</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>Lists the IP 
+		 addresses where LiveCycle Data Services ES are running. Click 
+		 Remove Selected to remove any IP address from the list.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;"><p>&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h3 class="Procedure"><a name="add" id="add" title="add"></a>Add an IP address</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">On the Flex Integration &#160;page, 
+	 enter an IP address for the connection to the LiveCycle Data Services 
+	 support in ColdFusion.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Add.</p></li>
+</ol>
+<h3 class="Procedure"><a name="remove" id="remove" title="remove"></a>Remove an IP address</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">Select an IP address from 
+	 the list.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Remove Selected. The 
+	 address no longer appears in the list.</p></li>
+</ol>
+<p class="NumList">&#160;</p>
+<p class="NumList" style="margin-left: 6pt;">To use SSL, you must create 
+ a keystore file. The keystore is a self-signed certificate. (You do not 
+ need a certificate signed by a Certificate Authority, although if you 
+ do use one, you do not need to configure Flex as indicated in the following 
+ steps.) The information in the keystore is encrypted and can be accessed 
+ only with the password that you specify. To create the keystore, you use 
+ the Java keytool utility, which is included in your Java Runtime Environment 
+ (JRE).</p>
+<p class="NumList" style="margin-left: 6pt;">&#160;</p>
+<p class="NumList" style="margin-left: 6pt; font-weight: bold;">Enable 
+ SSL, you do the following</p>
+<ol type="disc">
+	<li class="p-NumList"><p class="NumList">Create the keystore.</p></li>
+	<li class="p-NumList"><p class="NumList">Configure Flex.</p></li>
+	<li class="p-NumList"><p class="NumList">Enable SSL in the ColdFusion 
+	 Administrator.</p></li>
+</ol>
+<p class="NumList">&#160;</p>
+<p class="NumList" style="margin-left: 6pt; font-weight: bold;">Create 
+ the keystore</p>
+<ol type="1">
+	<li class="p-NumList"><p class="NumList">Generate the SSL server (ColdFusion) 
+	 keystore file by using the keytool utility, with a command similar 
+	 to the following:</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24pt; font-size: 8pt; font-family: 'Courier New', monospace;">keytool 
+ -genkey -v -alias FlexAssembler -dname &quot;cn=FlexAssembler&quot; -keystore 
+ cf.keystore -keypass mypassword -storepass mypassword</p>
+<p class="NumList" style="margin-left: 24pt;">The following table describes 
+ the parameters of the keytool utility that you use:</p>
+<p class="NumList" style="margin-left: 6pt;">&#160;</p>
+<table cellspacing="0" width="64.9%">
+	<col style="width: 14.294%;" />
+	<col style="width: 85.706%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Parameter</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 85.706%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-alias</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p 
+			 class="NumList" style="margin-left: 6pt;">The name of the 
+		 keystore entry. You can use any name for this, as long as you 
+		 are consistent when referring to it.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-dname</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 Distinguished Name, which contains the Common Name (cn) of the 
+		 server.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-keystore</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 location of the keystore file.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-keypass</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 password for your private key.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-storepass</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 password for the keystore. The encrypted storepass is stored in 
+		 ColdFuison configuration files.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-rfc</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>Generates 
+		 the certificate in the printable encoding format.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-file</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 name of the keystore file.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 14.294%; padding-right: 10px; 
+			 padding-left: 10px;"><p>-v</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 85.706%; padding-right: 10px; padding-left: 10px;"><p>Generates 
+		 detailed certificate information.</p></td>
+	</tr>
+</table>
+<p class="NumList" style="margin-left: 6pt;">&#160;</p>
+<p class="NumList" style="margin-left: 6pt;">Next, you place the certificate 
+ you created in the file that the JVM uses to decide what certificates 
+ to trust. The file in which you put the certificate, (usually named cacerts), 
+ is located in the JRE, under the lib/security folder.</p>
+<p class="NumList" style="margin-left: 6pt; font-weight: bold;">&#160;</p>
+<p class="NumList" style="margin-left: 6pt; font-weight: bold;">Configure 
+ Flex</p>
+<ol type="disc">
+	<li class="p-NumList"><p class="NumList">Export the keystore to a certificate 
+	 by using the keytool utility, with a command similar to the following: 
+	 <span style="margin-left: 24pt; font-family: 'Courier New', monospace; 
+			 font-size: 8pt;"><font size="1" style="font-size:8pt;"><br />
+	keytool -export -v -alias FlexAssembler -keystore cf.keystore -rfc 
+	 -file cf.cer</font></span></p></li>
+	<li class="p-NumList"><p class="NumList">Import the certificate into 
+	 the JRE cacerts file for your server by using the keytool utility, 
+	 with a command similar to the following:<span style="margin-left: 6pt; 
+													 font-family: 'Courier New', monospace; 
+													 font-size: 8pt;"><font size="1" style="font-size:8pt;"><br />
+	keytool -import -v -alias FlexAssembler -file cf.cer -keystore C:\fds2\UninstallerData\jre\lib\security\cacerts</font></span></p></li>
+</ol>
+<p class="NumList" style="margin-left: 6pt;">&#160;</p>
+<p class="NumList" style="margin-left: 6pt;">The previous example specifies 
+ the location of the keystore for LiveCycle Data Services ES with integrated 
+ JRun, installed using the default settings. If you are using a different 
+ server, specify the location of the cacerts file for the JRE that you 
+ are using. For example, if you are using JBoss, you specify the keystore 
+ location as $JAVA_HOME/jre/lib/security/cacerts.</p>
+<p class="NumList" style="margin-left: 6pt;">&#160;</p>
+<p class="NumList" style="margin-left: 6pt; font-weight: bold;">Enable 
+ SSL in the ColdFusion Administrator</p>
+<ol type="disc">
+	<li class="p-NumList"><p class="NumList">In the ColdFusion Administrator, 
+	 select Data &amp; Services &gt; Flex Integration, and specify the 
+	 keystore file in the Full Path to Keystore text box.</p></li>
+	<li class="p-NumList"><p class="NumList">Specify the keystore password 
+	 in the Keystore password text box.</p></li>
+	<li class="p-NumList"><p class="NumList">Select the Enable RMI over 
+	 SSL for Data Management option, and then click Submit Changes.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 6pt;">If you specify an invalid 
+ keystore file or password, ColdFusion does not enable SSL, and disables 
+ LiveCycle Data Management Support.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

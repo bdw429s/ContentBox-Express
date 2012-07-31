@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 30, 2001 9:57:10 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Start and stop ColdFusion MX</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addButton("show",BTN_TEXT,"Show TOC","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide TOC","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("what_s_new_in_this_release.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h5 style="font-weight: normal;" align="right"><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Overview</a></h5>
+<hr align="left" width="100.145%" size="1" />
+<h2>Start and stop ColdFusion</h2>
+<p><span style="font-weight: bold;"><b>Note:</b></span> This discussion does not apply when deploying ColdFusion on a J2EE server.</p>
+<p>&#160;</p>
+<p>During installation, you typically start ColdFusion services and processes, and configure them to start and run whenever you start your system. After you perform any of the following actions in the ColdFusion Administrator, stop and restart ColdFusion services:</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>Enable or disable security.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Change any option in the Java and JVM Settings page.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Enable performance monitoring options, which enable you to use the native Windows performance monitor.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<p><a name="WindowsNT" id="WindowsNT" title="WindowsNT"></a>During setup, ColdFusion is installed as a <a href="coldfusion_mx_services_in_windows.htm" title="coldfusion_mx_services_in_windows.htm">set of system services</a>, which typically start automatically at system startup.</p>
+<h3 class="Procedure">Stop or start ColdFusion server services manually</h3>
+<ol>
+<li class="p-NumList">
+<p class="NumList">Open the Services control panel window.<br />
+If a service is running, its status is Started. If it is not running, no status appears.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">To stop a service, select it and click Stop.<br />
+A prompt asks you to verify that you want to stop the service; click Yes.<br />
+The status of the service is no longer Started.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">To start a service, select it and click Start. Its status is Started.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">To restart a service: select it and click Restart. This is identical to stopping and starting a service.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Click Close. The Services window closes.</p>
+</li>
+</ol>
+<h3 class="Procedure">Configure ColdFusion server to start automatically or manually</h3>
+<ol>
+<li class="p-NumList">
+<p class="NumList">In t<span style="margin-bottom: 0;">he Services control panel window, double-click a service. The window for the service opens.</span></p>
+</li>
+<li class="p-NumList">
+<p class="NumList" style="margin-bottom: 0;">For Startup Type, select <span style="font-weight: bold;"><b>Automatic</b></span> or Manual.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList" style="margin-bottom: 0;">Click OK. The configuration is saved.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList" style="margin-bottom: 0;">Click Close. The Services window closes.</p>
+</li>
+</ol>
+<p>&#160;</p>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Services and processes overview</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="coldfusion_mx_services_in_windows.htm" title="coldfusion_mx_services_in_windows.htm">ColdFusion services in Windows</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="coldfusion_processes_on_unix.htm" title="coldfusion_processes_on_unix.htm">ColdFusion processes on UNIX</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

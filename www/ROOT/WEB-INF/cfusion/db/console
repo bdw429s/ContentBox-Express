@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# If this command doesn't work for you, please see
+# the PointBase documentation for different JVM examples.
+# When prompted, use jdbc:pointbase:server://localhost:9192/sample as the URL for sample database,
+#     jdbc:pointbase:server://localhost:9292/compass as the URL for the compass travel database,
+#     jdbc:pointbase:server://localhost:9392/smarticket as the URL for the smarticket database,
+#     or jdbc:pointbase:server://localhost:9692/worldmusic as the URL for the worldmusic database.
+
+
+java -classpath "../servers/lib/pbclient42RE.jar:./lib/pbtools42RE.jar" com.pointbase.tools.toolsConsole com.pointbase.jdbc.jdbcUniversalDriver

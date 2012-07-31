@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<!-- ====================================================================== 
+********************************************************************************
+Copyright 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp
+www.coldbox.org | www.luismajano.com | www.ortussolutions.com
+********************************************************************************
+     Author: Luis Majano
+                                                                     
+     ====================================================================== -->
+<project name="contentbox.express.refactor" default="do.refactor" basedir=".">
+    <description>
+    	ContentBox Express Edition
+    </description>
+		
+	<!-- Refactor the coldbox Code-->
+	<target name="do.refactor" description="refactor the code">
+		
+		<replaceregexp match='index="[^"]*"' replace="" flags="ig" byline="true">
+		  <fileset dir="model">
+		  	<include name="**/*.cfc" />
+		  </fileset>
+		</replaceregexp>
+		
+	</target>
+
+</project>

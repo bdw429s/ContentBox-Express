@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Setting per application settings</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nSet per application settings");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Set per application settings<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Set per application settings</h1>
+<p>You can set the following on a per-application basis:</p>
+<ul type="disc">
+	<li class="p"><p>Mappings</p></li>
+	<li class="p"><p>Custom tag paths</p></li>
+</ul>
+<p>&#160;</p>
+<p>These settings override the server-side settings in the ColdFusion Administrator 
+ for the specified application only. Specifying per application settings 
+ does not change the server-wide settings. To set per application settings, 
+ you must first enable per application settings on the Settings page of 
+ the ColdFusion Administrator. You then set the mappings or custom tag 
+ paths in the Application.cfc file.</p>
+<p>&#160;</p>
+<p>Custom Tags in per application settings override those defined in the 
+ ColdFusion Administrator. For example, if you have two custom tags of 
+ the same name and they are in different locations in the Administrator 
+ and per-application settings, the one in the per application settings 
+ is taken first.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> Per application settings 
+ are supported in applications that use an Application.cfc file only, not 
+ in applications that use an Application.cfm file. The per application 
+ settings do not work if you have disabled application variables on the 
+ Memory Variables page of the Administrator.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Set the mappings per application</p>
+<ol type="1">
+	<li class="p"><p>Select the Enable Per App Settings option on the Settings 
+	 page of the ColdFusion Administrator.</p></li>
+	<li class="p"><p>Include code similar to the following in your Application.cfc 
+	 file:</p></li>
+</ol>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">&lt;cfset 
+ THIS.mappings[&quot;MyMap&quot;]=&quot;c:\inetpub\myStuff&quot;&gt;</p>
+<p style="margin-left: 40px;">or</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">&lt;cfset 
+ StructInsert(THIS.mappings, &quot;MyMap&quot;, &quot;c:\inetpub\myStuff&quot;)&gt;</p>
+<p style="margin-left: 40px;">&#160;</p>
+<p style="font-weight: bold;">Set the custom tag paths per application</p>
+<ol type="1">
+	<li class="p"><p>Select the Enable Per App Settings option on the Settings 
+	 page of the ColdFusion Administrator.</p></li>
+	<li class="p"><p>Include code similar to the following in your Application.cfc 
+	 file:</p></li>
+</ol>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">&lt;cfset 
+ customtagpaths = &quot;c:\mapped1,c:\mapped2&quot;&gt;</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">&lt;cfset 
+ customtagpaths = ListAppend(customtagpaths,&quot;c:\mapped3&quot;)&gt;</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">&lt;cfset 
+ This.customtagpaths = customtagpaths&gt;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

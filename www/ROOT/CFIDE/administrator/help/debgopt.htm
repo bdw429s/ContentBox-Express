@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 27, 2001 8:52:07 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Configure debugging settings</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Debugging & Logging\nDebugging\nDebug output settings page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_debugging_settings.htm\">Debugging & Logging<\/a> > <a href=\"overview_of_debugging_settings.htm\">Debugging<\/a> > Debug output settings page<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_debugging_settings.htm" title="overview_of_debugging_settings.htm">Debugging 
+ Settings Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Debug output settings page</h1>
+<h5>Debugging &amp; Logging &gt; Debug Output Settings</h5>
+<p style="font-weight: bold;">&#160;</p>
+<p>Use this page to specify debugging settings, as the following table 
+ describes:</p>
+<p>&#160;</p>
+<table cellspacing="0">
+	<col style="width: 21.621%;" />
+	<col style="width: 61.576%;" />
+	<col style="width: 16.803%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 61.576%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 16.803%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Robust Exception Information</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Lets 
+		 visitors view detailed information in the exceptions page, including 
+		 the template’s physical path and URI, the line number and snippet, 
+		 the SQL statement used (if any), the data source name (if any), 
+		 and the Java stack trace.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable AJAX Debug Log Window</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Allows 
+		 display of the AJAX debug log window when the cfdebug flag is 
+		 passed in the URL. If you diable this option, the AJAX debug log 
+		 window does not display, even if the cfdebug flag is specified.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Request Debugging Output</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Enables 
+		 the ColdFusion debugging service.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Select Debugging Output Format</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 one of the following formats:</p>
+		<ul type="disc">
+			<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>classic.cfm</b></span> &#160;The format available 
+			 in ColdFusion 5 and earlier. It provides a basic view and 
+			 few browser restrictions.</p></li>
+			<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>dockable.cfm</b></span> &#160;A dockable 
+			 tree-based debugging panel. This format is limited to Internet 
+			 Explorer 4 and later and Netscape 6 and later.</p></li>
+		</ul></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>classic.cfm</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Report Execution Times</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Highlights 
+		 in red the names of templates that exceed the specified time. 
+		 There are two template modes:</p>
+		<ul type="disc">
+			<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>summary</b></span> 
+			 &#160;Reports template data sorted by time.</p></li>
+			<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>tree</b></span> 
+			 &#160;Reports template data in a hierarchy view.</p></li>
+		</ul></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled; 
+		 250; summary</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>General Debug Information</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 general information about the ColdFusion version, template, time 
+		 stamp, user locale, user agent, user IP, and host name.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Database Activity</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 the database activity for the SQL Query events and Stored Procedure 
+		 events in the debugging output.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Exception Information</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 all ColdFusion exceptions raised for the request in the debugging 
+		 output.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Tracing Information</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 trace event information in the debugging output. Use the <span 
+		 style="font-family: 'Courier New', monospace;">cftrace</span> 
+		 tag to track program flow and efficiency.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Timer Information</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 output from the <span style="font-family: 'Courier New', monospace;">cftimer</span> 
+		 tag.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Flash Form Compile Errors and Messages</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>(Development 
+		 use only) Causes ColdFusion to display ActionScript errors in 
+		 the browser when compiling Flash forms, and affects the display 
+		 time of the page.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Variables</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 information about application, CGI, client, cookie, form, request, 
+		 server, session, and URL variables in the debugging output.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled 
+		 for CGI, client, cookie, form, session, and URL variables</p>
+		<p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a name="Enable" id="Enable" title="Enable"></a>Enable 
+		 Performance Monitoring</p>
+		<p style="font-style: italic;">Not enabled in J2EE versions</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p>Shows 
+		 information about a running ColdFusion Server in the standard 
+		 Windows NT Performance Monitor application. On non-Windows platforms, 
+		 the cfstat command-line utility shows the same information.</p>
+		<p>&#160;</p>
+		<p>If you disable this option, performance data is not be available 
+		 in the Server Reports and the Microsoft Performance Monitor.</p>
+		<p>&#160;</p>
+		<p style="font-weight: bold;">Notes:</p>
+		<ul type="disc">
+			<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>CP/SEC</b></span> 
+			 is deprecated and returns a value of -1 for both Now and Hi.</p></li>
+			<li class="p" style="margin-left: -20px;"><p>When you run the 
+			 cfstat utility, the <span style="font-weight: bold;"><b>-h</b></span> 
+			 and <span style="font-weight: bold;"><b>-p</b></span> switches are 
+			 no longer necessary.</p></li>
+			<li class="p" style="margin-left: -20px;"><p style="font-weight: normal;">Restart 
+			 ColdFusion when you change this setting.</p></li>
+		</ul></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 21.621%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-style: normal; color: #000000;">Enable 
+		 CFSTAT</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 61.576%; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: normal;">Specifies whether to enable the 
+		 cfstat command-line utility, which provides real-time performance 
+		 metrics for ColdFusion.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 16.803%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+</table>
+<p style="margin-left: 60px; text-indent: -60px;">&#160;</p>
+<p><span style="font-weight: bold;"><b>Notes:</b></span></p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>When you enable any of 
+	 these options, debug output appears for all users. However, you can 
+	 restrict output to selected IP addresses. For details, see <a href="rstrdebug.htm" title="rstrdebug.htm">Configure 
+	 debugging IP addresses</a>.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Some settings require 
+	 that you restart ColdFusion before changes can take effect.</p></li>
+</ul>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="rstrdebug.htm" title="rstrdebug.htm">Configure 
+	 debugging IP addresses</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_coldfusion_performance_monitoring.htm" title="overview_of_coldfusion_performance_monitoring.htm">Performance 
+	 monitoring overview</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

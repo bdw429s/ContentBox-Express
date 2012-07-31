@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 9, 2001 3:02:43 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>CORBA Connectors</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Extensions\nCORBA Connectors page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"javaapplet.htm\">Extensions<\/a> > CORBA Connectors page<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" width="100.435%" size="1" align="left" />
+<h1>CORBA Connectors page</h1>
+<h5>Extensions &gt; CORBA Connectors</h5>
+<p>&#160;</p>
+<p>Use this page to register, edit, and delete CORBA connectors. You must register CORBA connectors before using them in your ColdFusion applications. You must also restart the server when you are finished with the CORBA Connector configuration.</p>
+<h3 class="Procedure">Add a CORBA Connector</h3>
+<ol type="1">
+<li class="p-NumList">
+<p class="NumList">Click Register CORBA Connector on the CORBA Connectors page.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">On the CORBA Connector page, specify the following information:</p>
+</li>
+</ol>
+<p>&#160;</p>
+<table style="margin-left: 24px;" cellspacing="0" width="66.135%">
+<col style="width: 30.842%;" />
+<col style="width: 69.158%;" />
+<tr valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 30.842%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Option</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 69.158%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 30.842%; padding-right: 10px; padding-left: 10px;">
+<p>ORB Name</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 69.158%; padding-right: 10px; padding-left: 10px;">
+<p>A name for the CORBA Connector.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 30.842%; padding-right: 10px; padding-left: 10px;">
+<p>ORB Class Name</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 69.158%; padding-right: 10px; padding-left: 10px;">
+<p>The class name of the connector. Enter the following:<span style="font-family: 'Courier New', monospace;">
+<br />
+coldfusion.runtime.corba.VisibrokerConnector</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 30.842%; padding-right: 10px; padding-left: 10px;">
+<p>Classpath</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 69.158%; padding-right: 10px; padding-left: 10px;">
+<p>(Optional) The class path for the library that contains the connector.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 30.842%; padding-right: 10px; padding-left: 10px;">
+<p>ORB Property File</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 69.158%; padding-right: 10px; padding-left: 10px;">
+<p>The file that contains the Java properties for this connector.</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<ol start="3">
+<li class="p-NumList">
+<p class="NumList">To save the CORBA Connector information, click Submit.</p>
+</li>
+</ol>
+<p>&#160;</p>
+<h5><a name="Related" id="Related" title="Related"></a>Related topics</h5>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="jvmandjava.htm" title="jvmandjava.htm">Set Java and JVM preferences</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="addeditjavaapplet.htm" title="addeditjavaapplet.htm">Register Java applets</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="addeditcftag.htm" title="addeditcftag.htm">Register CFX tags</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="customtag.htm" title="customtag.htm">Add custom tag paths</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Extensions
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="applets_edit_pagename">Add/Edit Registered Java Applet</cfcase>
+<cfcase value="applets_pageHeader"><h2 class="pageHeader">Extensions &gt; Java Applets &gt; Add/Edit Applet</h2></cfcase>
+<cfcase value="LEFT">LEFT</cfcase>
+<cfcase value="RIGHT">RIGHT</cfcase>
+<cfcase value="BOTTOM">BOTTOM</cfcase>
+<cfcase value="TOP">TOP</cfcase>
+<cfcase value="TEXTTOP">TEXTTOP</cfcase>
+<cfcase value="MIDDLE">MIDDLE</cfcase>
+<cfcase value="ABSMIDDLE">ABSMIDDLE</cfcase>
+<cfcase value="BASELINE">BASELINE</cfcase>
+<cfcase value="ABSBOTTOM">ABSBOTTOM</cfcase>
+<cfcase value="l10n_editjavaapplet">Add/Edit Registered Java Applet</cfcase>
+<cfcase value="applets_name">Applet Name</cfcase>
+<cfcase value="applet_name_Required">Applet name required</cfcase>
+<cfcase value="applets_code">Code</cfcase>
+<cfcase value="applet_code_Required">Applet code required</cfcase>
+<cfcase value="applets_codebase">Code Base</cfcase>
+<cfcase value="applet_codebase_Required">Applet code base required</cfcase>
+<cfcase value="applets_archive">Archive</cfcase>
+<cfcase value="applets_method">Method</cfcase>
+<cfcase value="applets_height">Height</cfcase>
+<cfcase value="applets_width">Width</cfcase>
+<cfcase value="applets_vspace">VSpace</cfcase>
+<cfcase value="applets_hspace">HSpace</cfcase>
+<cfcase value="applets_align">Align</cfcase>
+<cfcase value="applets_nsmessage">Not Supported Message</cfcase>
+<cfcase value="applets_parameters">Applet Parameters</cfcase>
+<cfcase value="applets_parameter_name">Parameter Name</cfcase>
+<cfcase value="applets_value">Value</cfcase>
+<cfcase value="delete_param">Delete Parameter</cfcase>
+<cfcase value="add">Add</cfcase>
+<cfcase value="cancel">Cancel</cfcase>
+<cfcase value="submit">Submit</cfcase>
+<cfcase value="applets_pagename">Java Applets</cfcase>
+<cfcase value="pageHeader_javaapplets">Extensions &gt; Java Applets</cfcase>
+<cfcase value="applets_welcome">
+ColdFusion has several Java applets that you access using the cfform tag. 
+You can register your own applets and add them to your cfform forms using 
+the cfapplet tag. Before you can use the cfapplet tag to place a Java applet 
+in your cfform, you must register the applet in the ColdFusion Administrator. 
+</cfcase>
+<cfcase value="delete_applet_confirmation">Are you sure you want to delete this applet?</cfcase>
+<cfcase value="applet_register_button">Register New Applet</cfcase>
+<cfcase value="applet_registered">Registered Java Applets</cfcase>
+<cfcase value="applet_actions">Actions</cfcase>
+<cfcase value="applet_applet">Applet</cfcase>
+<cfcase value="applet_code">Code</cfcase>
+<cfcase value="applet_method">Method</cfcase>
+<cfcase value="applet_codebase">Code Base</cfcase>
+<cfcase value="edit_applet">Edit Applet</cfcase>
+<cfcase value="delete_applet">Delete Applet</cfcase>
+<cfcase value="noappletsfound">No applets found.</cfcase>
+<cfcase value="pagenameq1">CFX Tags</cfcase>
+<cfcase value="pageHeader_cfxtags">Extensions &gt; CFX Tags</cfcase>
+<cfcase value="cfx_welcome">
+CFX tags are custom tags written against the ColdFusion Application Programming
+Interface (API) to extend and enhance CFML. You build CFX tags by using C++ as a
+DLL on Windows platforms and as shared objects (.so/sl) on UNIX platforms.
+Java CFXs are built by extending the java interfaces defined within the cfx.jar
+file.
+</cfcase>
+<cfcase value="javacfx_register_button">Register Java CFX</cfcase>
+<cfcase value="cppcfx_register_button">Register C++ CFX</cfcase>
+<cfcase value="delete_cfx_confirmation">Are you sure you want to delete cfx tag?</cfcase>
+<cfcase value="cfx_registered_tags">Registered CFX Tags</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="tag_name">Tag Name</cfcase>
+<cfcase value="type">Type</cfcase>
+<cfcase value="description">Description</cfcase>
+<cfcase value="edit_cfx">Edit CFX</cfcase>
+<cfcase value="delete_cfx">Delete CFX</cfcase>
+<cfcase value="nocfxsfound">No CFX tags found.</cfcase>
+<cfcase value="pagename_cpptag">Add/Edit C++ CFX Tag</cfcase>
+<cfcase value="cfxcpp_pageHeader">Extensions &gt; CFX Tags &gt; Manage C++ CFX</cfcase>
+<cfcase value="l10n_blurb_cpp">Enter the tag name (after the cfx_ prefix) and the path to the .dll, .so, or .sl server library.<br />
+See the online Help for additional information.</cfcase>
+<cfcase value="l10n_editjavacfx">Add/Edit C++ CFX Tag</cfcase>
+<cfcase value="server_library">Server Library</cfcase>
+<cfcase value="button_browse">Browse Server</cfcase>
+<cfcase value="procedure">Procedure</cfcase>
+<cfcase value="keep_library_loaded">Keep Library Loaded</cfcase>
+<cfcase value="check_box_library_ram">Check this box to retain the library in RAM.</cfcase>
+<cfcase value="javapagetitle">Add/Edit Java CFX Tag</cfcase>
+<cfcase value="cfxjava_pageHeader">Extensions &gt; CFX Tags &gt; Manage Java CFX</cfcase>
+<cfcase value="l10n_blurb_java">
+Enter the tag name (after the cfx_ prefix) and the class name (without the .class extension) that implements the interface. The class file should be accessible from the server Class Path.
+</cfcase>
+<cfcase value="l10n_editjava_cfx">Add/Edit Java CFX Tag</cfcase>
+<cfcase value="class_name">Class Name</cfcase>
+<cfcase value="corba_pagename">CORBA Connectors</cfcase>
+<cfcase value="pageHeader_corbaconnectors">Extensions > Corba Connectors</cfcase>
+<cfcase value="corba_welcome">
+ColdFusion dynamically loads the ORB Java libraries using a connector. You can add a connector and specify the location of the library. Each of these connectors depends on the vendor's runtime library. You can also specify the ORB initialization options via a property file.
+</cfcase>
+<cfcase value="corba_changes_tip">
+<b>Note:</b> Changes to the connector setting take effect after the server is restarted.
+</cfcase>
+<cfcase value="corba_buttons_register">
+Register CORBA Connector
+</cfcase>
+<cfcase value="delete_corba_confirmation">
+Are you sure you want to delete this corba object?
+</cfcase>
+<cfcase value="corba_registered">Registered CORBA Connectors</cfcase>
+<cfcase value="l0n_actions">Actions</cfcase>
+<cfcase value="corba_name">Name</cfcase>
+<cfcase value="l10n_dllpath">Classpath</cfcase>
+<cfcase value="edit">Edit</cfcase>
+<cfcase value="delete">Delete</cfcase>
+<cfcase value="corba_buttons_submit">Select ORB Connector</cfcase>
+<cfcase value="noorbsregistered">No ORBs have been registered.</cfcase>
+<cfcase value="corba_no_name">
+Please enter an ORB name.
+</cfcase>
+<cfcase value="corba_invalid_name">
+ORB names are restricted to alphanumeric characters.
+</cfcase>
+<cfcase value="corba_edit_pagename">CORBA Connector</cfcase>
+<cfcase value="editcorba_pageHeader">Extensions &gt; CFX Tags &gt; Manage Corba</cfcase>
+<cfcase value="corba_edit">Edit CORBA Connector:</cfcase>
+<cfcase value="corba_new">New CORBA Connector</cfcase>
+<cfcase value="l10n_corbaconnector">CORBA Connector</cfcase>
+<cfcase value="corba_orb_name">ORB Name</cfcase>
+<cfcase value="corba_class_name">ORB Class Name</cfcase>
+<cfcase value="corba_class_path">Classpath</cfcase>
+<cfcase value="corba_button_browse">Browse Server</cfcase>
+<cfcase value="corba_ptoperty_file">ORB Property File</cfcase>
+<cfcase value="sbzmet">Submit</cfcase>
+<cfcase value="cazlbtn">Cancel</cfcase>
+<cfcase value="ct_pagename">Custom Tag Paths</cfcase>
+<cfcase value="pageHeader_customtagpaths">Extensions > Custom Tag Paths</cfcase>
+<cfcase value="ct_path">
+Custom tags extend the functionality of the ColdFusion Markup Language (CFML).
+The default custom tag path is under the installation directory. You can
+specify other paths to your custom tags here.</cfcase>
+<cfcase value="ct_register">Register New Custom Tag Paths</cfcase>
+<cfcase value="ct_newpath">New Path</cfcase>
+<cfcase value="button_add_path">Add Path</cfcase>
+<cfcase value="button_edit_path">Edit Path</cfcase>
+<cfcase value="delete_customtagpath_confirmation">
+Are you sure you want to delete this custom tag path?
+</cfcase>
+<cfcase value="tagpaths">Current Custom Tag Paths</cfcase>
+<cfcase value="cf_path">Path</cfcase>
+<cfcase value="ct_nopathsfound">No custom tag paths found.</cfcase>
+<cfcase value="flex_pagename">Flex integration</cfcase>
+<cfcase value="pageHeader_flexintegration">Data & Services &gt; Flex Integration</cfcase>
+<cfcase value="enableFlashRem">Enable Flash Remoting support</cfcase>
+<cfcase value="enableFlashRem_desc">
+Lets a Flash client connect to this ColdFusion server and invoke ColdFusion Components (CFCs).
+NOTE: Disabling this feature also disables ColdFusion server monitoring and multiserver monitoring.
+</cfcase>
+<cfcase value="enableFlexDS">Enable Remote Adobe LiveCycle Data Management access</cfcase>
+<cfcase value="enableFlexDS_desc">
+Lets LiveCycle Data Services ES connect to this ColdFusion server through RMI
+and use CFCs to read and update data that supports a
+Flex application. If you are not using this feature, disable it.
+This does not affect LiveCycle Data Services ES integrated in to the ColdFusion installation.
+</cfcase>
+<cfcase value="serverIdentity">Server Identity</cfcase>
+<cfcase value="serverIdentity_info">
+If you are running more than one instance of ColdFusion on this machine, you must
+configure each instance with a unique ID.
+</cfcase>
+<cfcase value="enablermissl">Enable RMI over SSL for Data Management</cfcase>
+<cfcase value="enablermissl_desc">
+Lets you use Secure Socket Layer (SSL) encryption for the RMI communication between Flex and ColdFusion.
+This is not required unless you are transmitting authentication information or confidential
+data between Flex and ColdFusion over an unsecured network. You must provide a keystore file and keystore password.
+For instructions on how to create a keystore file, see the online Help.
+</cfcase>
+<cfcase value="keystorePath">Full path to keystore</cfcase>
+<cfcase value="keystorePwd">Keystore password</cfcase>
+<cfcase value="selectIP">Select IP addresses where LiveCycle Data Services are running</cfcase>
+<cfcase value="fdsip_welcometext">
+To secure the LiveCycle Data Services ES integration point,
+the hosts that are allowed to perform Data Management operations are restricted.
+If you are running LiveCycle Data Services ES on a different computer, specify its IP address here.
+By default, only the local computer can perform Data Management operations in ColdFusion.
+</cfcase>
+<cfcase value="ip_address">IP Address</cfcase>
+<cfcase value="add_button">Add</cfcase>
+<cfcase value="fdsviewdeleteIP">View or Remove selected IP addresses where LiveCycle Data Services ES are running</cfcase>
+<cfcase value="remove_button">Remove Selected</cfcase>
+<cfcase value="webservice_pagename">Web Services</cfcase>
+<cfcase value="webservices_pageheader">Data &amp; Services &gt; Web Services</cfcase>
+<cfcase value="webservice_welcome">
+ColdFusion lets you register web services so that you do not have to specify the entire 
+Web Services Description Language (WSDL) URL when invoking the web service. 
+ColdFusion automatically registers WSDL URLs the first time they are referenced.
+</cfcase>
+<cfcase value="l10n_aewebservices">Add / Edit ColdFusion Web Service</cfcase>
+<cfcase value="webservice_logical_path">Web Service Name</cfcase>
+<cfcase value="webservice_name_required">Please enter in a name for the web service.</cfcase>
+<cfcase value="webservice_dir_path">WSDL URL</cfcase>
+<cfcase value="webservice_dir_path_required">Please enter in a valid URL to a wsdl file.</cfcase>
+<cfcase value="webservice_username">Username</cfcase>
+<cfcase value="webservice_username_optional">Please enter username [optional]</cfcase>
+<cfcase value="webservice_password">Password</cfcase>
+<cfcase value="webservice_password_optional">Please enter password [optional]</cfcase>
+<cfcase value="button_webservice_update">Update Web Service</cfcase>
+<cfcase value="button_webservice_delete">Delete Web Service</cfcase>
+<cfcase value="button_webservice_add">Add Web Service</cfcase>
+<cfcase value="l10n_awservices">Active ColdFusion Web Services</cfcase>
+<cfcase value="webservice_path">Web Service Name</cfcase>
+<cfcase value="webservice_wsdl_url">WSDL URL</cfcase>
+<cfcase value="webservice_edit">Edit</cfcase>
+<cfcase value="webservice_refresh">Refresh</cfcase>
+<cfcase value="webservice_delete">Delete</cfcase>
+<cfcase value="no_webservice">No Web Services are available.</cfcase>
+<cfcase value="applets_error_noname">
+You need to give the applet a name.
+</cfcase>
+<cfcase value="applets_error_nocodebase">
+You need to specify a valid Codebase in order to proceed.
+</cfcase>
+<cfcase value="applets_error_nocode_or_archive">
+You need to specify a valid Code or Archive attribute in order to proceed.
+</cfcase>
+<cfcase value="applet_error_delete_old"><cfoutput>
+Unable to update requested applet as the old entry could not be removed.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="applet_error_edit"><cfoutput>
+Unable to update requested applet.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="applet_error_delete"><cfoutput>
+Unable to delete applet '#CALLER.applet#'.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="applet_error_get"><cfoutput>
+Unable to retrieve a list of registered applets.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="cfx_error_get"><cfoutput>
+Unable to retrieve a list of cfx tags.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="nativecfxiniterror">
+You must configure your application server to enable native CFX support. For
+instructions, see "Configuring ColdFusion" in the "Configuring and
+Administering ColdFusion" book for your application server.
+</cfcase>
+<cfcase value="cfx_invalid_tagname_error">
+The cfx name is invalid.<br />
+</cfcase>
+<cfcase value="cfx_error_update"><cfoutput>
+There has been an error updating/creating your cfx<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="corba_error_delete"><cfoutput>
+Unable to delete requested ORB #URL.orb#.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="corba_error_apply"><cfoutput>
+Unable to apply default ORB settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="corba_error_get"><cfoutput>
+Unable to retrieve a list of registered ORB connectors.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="corba_error_edit"><cfoutput>
+Unable to update requested ORB #FORM.name#.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="corba_error_orbget"><cfoutput>
+Unable to retrieve requested ORB #CALLER.name#.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="ct_error_add"><cfoutput>
+Unable to add custom tag path #CALLER.newPath#.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ct_error_add1"><cfoutput>
+Unable to add custom tag path.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_req_keystore_pass">
+    You must provide a keystore file and a password
+    </cfcase>
+<cfcase value="error_flexassembler"><cfoutput>
+Error attempting to update settings:<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format.
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format. <br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="fdsip_error_remove"><cfoutput>
+An error occurred attempting to remove the requested IP(s).
+from the Flex Data Management configuration.<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="fdsip_error_get"><cfoutput>
+An error occurred attempting to retrieve a list of restricted IP addresses
+from the Flex Data Management configuration.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_create">
+Error creating web service. Please ensure that you have
+entered a correct Web Service name or URL.
+</cfcase>
+<cfcase value="map_error_delete"><cfoutput>
+Unable to delete webservice.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_refresh"><cfoutput>
+Unable to refresh webservice.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

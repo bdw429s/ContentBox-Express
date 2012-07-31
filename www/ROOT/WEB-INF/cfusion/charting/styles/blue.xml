@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameChart autoAdjust="false" is3D="false" isInterpolated="true">
+		<frame xDepth="6" yDepth="6" outline="#333333" lightColor="white"
+			leftAxisPlacement="Front" rightAxisPlacement="Front" stripColor="#CCCCCC"/>
+		<xAxis>
+			<labelStyle isHideOverlapped="true" orientation="Horizontal"/>
+			<titleStyle font="Arial-12-bold" isMultiline="false"/>
+		</xAxis>
+		<yAxis scaleMin="0">
+			<titleStyle font="Arial-12-bold"/>
+			<dateTimeStyle majorUnit="Year" minorUnit="Year"/>
+			<labelFormat style="Pattern" pattern="#,##0.########"/>
+		</yAxis>
+		<yAxis2>
+			<titleStyle font="Arial-12-bold"/>
+		</yAxis2>
+		<topYAxis>
+			<titleStyle font="Arial-12-bold"/>
+		</topYAxis>
+		<topYAxis2>
+			<titleStyle font="Arial-12-bold"/>
+		</topYAxis2>
+		<dataLabels foreground="black"/>
+		<legend isVisible="false" showColumnLegend="true">
+			<decoration style="None"/>
+		</legend>
+		<elements action="" drawOutline="false">
+			<morph morph="Grow"/>
+			<series index="0">
+				<paint color="#0066CC"/>
+			</series>
+			<series index="1">
+				<paint color="#6699CC"/>
+			</series>
+			<series index="2">
+				<paint color="#99CCFF"/>
+			</series>
+			<series index="3">
+				<paint color="#034379"/>
+			</series>
+			<series index="4">
+				<paint color="#42A6DD"/>
+			</series>
+			<series index="5">
+				<paint color="#0F79C2"/>
+			</series>
+			<series index="6">
+				<paint color="#055597"/>
+			</series>
+			<series index="7">
+				<paint color="#B0AEAA"/>
+			</series>
+			<series index="8">
+				<paint color="#D7D6D4"/>
+			</series>
+			<series index="9">
+				<paint color="#EBEBE9"/>
+			</series>
+			<series index="10">
+				<paint color="#757573"/>
+			</series>
+			<series index="11">
+				<paint color="#3B3A39"/>
+			</series>
+			<series index="12">
+				<paint color="#989795"/>
+			</series>
+			<series index="13">
+				<paint color="#A4A3A3"/>
+			</series>
+			<series index="14">
+				<paint color="#CC0000"/>
+			</series>
+			<series index="15">
+				<paint color="#FF6666"/>
+			</series>
+			<series index="16">
+				<paint color="#FFCCCC"/>
+			</series>
+			<series index="17">
+				<paint color="#993333"/>
+			</series>
+			<series index="18">
+				<paint color="#330000"/>
+			</series>
+			<series index="19">
+				<paint color="#996666"/>
+			</series>
+			<series index="20">
+				<paint color="#CC9999"/>
+			</series>
+			<series index="21">
+				<paint color="#CCCC99"/>
+			</series>
+			<series index="22">
+				<paint color="#99987B"/>
+			</series>
+			<series index="23">
+				<paint color="#434436"/>
+			</series>
+			<series index="24">
+				<paint color="#E4DCBA"/>
+			</series>
+			<series index="25">
+				<paint color="#60604D"/>
+			</series>
+			<series index="26">
+				<paint color="#BEB998"/>
+			</series>
+			<series index="27">
+				<paint color="#7D7D64"/>
+			</series>
+		</elements>
+		<popup background="#C8FFFFFF" foreground="#333333"/>
+		<paint paint="Plain"/>
+		<insets left="5" top="5" right="5" bottom="5"/>
+</frameChart>

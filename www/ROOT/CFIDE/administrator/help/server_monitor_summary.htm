@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Server Monitor Summary</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nServer Monitor Summary");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Server Monitor Summary<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings 
+ Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Server Monitor Summary</h1>
+<p style="font-weight: bold;">Server Monitoring &gt; Server Monitor</p>
+<p>&#160;</p>
+<p>The Summary page appears when you start the ColdFusion Server Monitor. 
+ It provides an indication of the overall performance of the server. It 
+ displays the following reports:</p>
+<p>&#160;</p>
+<ul type="disc">
+	<li class="p"><p>JVM memory status</p></li>
+	<li class="p"><p>One of three reports. By default, the Server Monitor 
+	 display the Average response time report. You can also view the Requests 
+	 per Second report, or the Requests Running and Queued report. You 
+	 switch between reports by clicking the left and right arrows in the 
+	 top left and top right corners of the report.</p></li>
+	<li class="p"><p>Slowest active requests</p></li>
+	<li class="p"><p>Alerts</p></li>
+	<li class="p"><p>Last error</p></li>
+</ul>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 27.572%;" />
+	<col style="width: 72.428%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Report</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 72.428%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>JVM memory status</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Indicates 
+		 the amount of memory in megabytes that the Java Virtual Machine 
+		 (JVM) is using. The JVM is specified on the Java and JVM page 
+		 of the ColdFusion Administrator. The graph is updated in real 
+		 time. The time is the local time of the ColdFusion server. You 
+		 can view the memory usage since starting the Server Monitor, for 
+		 the most recent minute, or for the most recent 5 minutes by selecting 
+		 Entire Data, Last minute, or Last 5 minutes, respectively, from 
+		 the drop-down list in the upper-right corner of the report</p>
+		<p>&#160;</p>
+		<p>JVM memory status is estimated and may vary from actual JVM 
+		 memory status. The total amount of memory that the server is using 
+		 includes not only the sum of all the scopes and request memory, 
+		 but also data that ColdFusion stores for performance optimization 
+		 such as template classes, data source information, and the like.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Average response time</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Indicates 
+		 the total response time divided by the number of requests. You 
+		 can view the average response time since starting the Server Monitor, 
+		 for the most recent minute, or for the most recent five minutes 
+		 by selecting All Data, Last minute, or Last 5 minutes, respectively, 
+		 from the drop-down list in the upper-right corner of the report.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Requests per second</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Indicates 
+		 the number of requests processed per second. Requests include 
+		 browser requests, CFC HTTP requests, &#160;web services, gateways, 
+		 and Flash remoting.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Running and queued requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Indicates 
+		 the requests that are running and requests that are waiting to 
+		 be processed in the queue. Requests include browser requests, 
+		 CFC HTTP requests, &#160;web services, gateways, and Flash remoting.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Slowest active requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Lists 
+		 the slowest active requests that are slower than the threshold 
+		 set on Slowest Requests page. The number of requests in the list 
+		 depends on the report size set on the Slowest Requests page.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Alerts</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Lists 
+		 any alerts. To specify when an alert is generated, select Alerts 
+		 &gt; Alert Configuration. Alerts indicate whether your server 
+		 is approaching a hung state or if is running slowly.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 27.572%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Last error</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 72.428%; padding-right: 10px; padding-left: 10px;"><p>Lists 
+		 the most recent error generated by any application on the server 
+		 that is in the included paths specified on the Filter Settings 
+		 page.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>In addition, the Summary page lists the other reports available. To 
+ view a different report, click on its name in the navigation panel on 
+ the left. The available reports are:</p>
+<p>&#160;</p>
+<ul type="disc">
+	<li class="p"><p>Requests with errrors</p></li>
+	<li class="p"><p>Requests that timed out</p></li>
+	<li class="p"><p>Requests slower than 20 seconds</p></li>
+	<li class="p"><p>Requests that use more than 40 KB</p></li>
+	<li class="p"><p>Sessions that exceed 4 KB</p></li>
+	<li class="p"><p>Queries slower than 10 seconds on average</p></li>
+	<li class="p"><p>Queries that exceed 20 KB</p></li>
+	<li class="p"><p>JVM Memory (used/max) MB</p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

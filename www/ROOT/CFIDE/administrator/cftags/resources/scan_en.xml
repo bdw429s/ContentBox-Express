@@ -1,0 +1,32 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: scanner
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="scan_pagename">Debugging &amp; Logging &gt; License Scanner</cfcase>
+<cfcase value="pageHeader_licensescanner">Debugging &amp; Logging &gt; License Scanner</cfcase>
+<cfcase value="scan_found_word">Found</cfcase>
+<cfcase value="scan_machines_using">machines using identical serial numbers that may not be license compliant</cfcase>
+<cfcase value="no_machines">There are no machines on this subnet using a ColdFusion license</cfcase>
+<cfcase value="scan_machines_using_volume">machines using a volume license</cfcase>
+<cfcase value="scan_machine_label">Machine</cfcase>
+<cfcase value="scan_ip_label">IP Address(es)</cfcase>
+<cfcase value="scan_edition_label">Edition</cfcase>
+<cfcase value="scan_build_label">Build</cfcase>
+<cfcase value="inCompliance_header">The following machines are license compliant</cfcase>
+<cfcase value="scan_run_scan_now">Run Scanner Now</cfcase>
+<cfcase value="scan_click">The License Scanner searches your local subnet to find other running instances of ColdFusion.</cfcase>
+<cfcase value="launch_scanner">
+Click the button on the right to run the ColdFusion scanner
+  </cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

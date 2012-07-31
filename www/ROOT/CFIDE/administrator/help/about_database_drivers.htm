@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="02 15, 2002 7:53:38 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>About database drivers</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nData Sources\nDatabase drivers overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"overview_of_coldfusion_data_sources.htm\">Data Sources<\/a> > Database drivers overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="about_coldfusion_data_sources.htm" title="about_coldfusion_data_sources.htm">Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Database drivers overview</h1>
+<p>JDBC drivers have four types. In general, Type 4 drivers, also known 
+ as native-protocol/all-Java drivers, offer superior performance to other 
+ JDBC driver types. ColdFusion 9 Enterprise Edition includes a wide variety 
+ of Type 4 drivers, and the Standard Edition includes a Type 4 driver for 
+ Microsoft SQL Server. ColdFusion also supplies Type 3 drivers for Microsoft 
+ Access and for the ODBC Socket, and a Type 2 driver for use with Microsoft 
+ Access Unicode databases.</p>
+<p>&#160;</p>
+<p>The following table describes the JDBC drivers for ColdFusion, and provides 
+ links to procedures for connecting to data sources using those drivers:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="63.711%">
+	<col style="width: 75.584%;" />
+	<col style="width: 24.416%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Driver</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.416%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;" align="center">Type</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="connect_to_apache_derby_client.htm" title="connect_to_apache_derby_client.htm">Apache 
+		 Derby Client</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="connect_to_apache_derby_embedded.htm" title="connect_to_apache_derby_embedded.htm">Apache 
+		 Derby Embedded</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="db2_universal_db_connect_to.htm" title="db2_universal_db_connect_to.htm">DB2 
+		 Universal Database</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="informix_connect_to.htm" title="informix_connect_to.htm">Informix</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;"><a href="connect_through_jndi.htm" title="connect_through_jndi.htm">J2EE 
+		 datasource (JNDI)</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="access_connect_to.htm" title="access_connect_to.htm">Microsoft 
+		 Access</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">3</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="access_unicode_connect_to.htm" title="access_unicode_connect_to.htm">Microsoft 
+		 Access with Unicode</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">2</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="sqlsvr_connect_to.htm" title="sqlsvr_connect_to.htm">Microsoft 
+		 SQL Server</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="mysql_connect_to.htm" title="mysql_connect_to.htm">MySQL</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4/5, DataDirect</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="odbc_socket_connect_to.htm" title="odbc_socket_connect_to.htm">ODBC 
+		 Socket</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">3</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="oracle_connect_to.htm" title="oracle_connect_to.htm">Oracle</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="other_connect_to.htm" title="other_connect_to.htm">Other</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="connect_to_postgresql.htm" title="connect_to_postgresql.htm">Connect 
+		 to PostgreSQL</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.584%; padding-right: 10px; 
+			 padding-left: 10px;"><p><a href="sybase_connect_to.htm" title="sybase_connect_to.htm">Sybase</a></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 24.416%; padding-right: 10px; padding-left: 10px;"><p 
+			 align="center">4</p></td>
+	</tr>
+</table>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_coldfusion_data_sources.htm" title="overview_of_coldfusion_data_sources.htm">Data 
+	 Sources overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="about_the_data_sources_page.htm" title="about_the_data_sources_page.htm">About 
+	 the Data Sources page</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="create_a_data_source.htm" title="create_a_data_source.htm">Create 
+	 a data source</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verify_coldfusion_data_sources.htm" title="verify_coldfusion_data_sources.htm">Verify 
+	 a data source</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Verity 
+	 Collections overview</a></p></li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

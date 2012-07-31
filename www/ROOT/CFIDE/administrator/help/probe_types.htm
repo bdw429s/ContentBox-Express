@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 10, 2001 4:18:30 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Types of probes</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Debugging & Logging\nSystem Probes\nSystem Probes overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_debugging_settings.htm\">Debugging & Logging<\/a> > <a href=\"probe_types.htm\">System Probes<\/a> > System Probes overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr align="left" width="100.145%" size="1" />
+<h2>System probes overview</h2>
+<p>A ColdFusion system probe is a test program that verifies the availability of a specific URL or string in an HTTP response. &#160;&#160;</p>
+<p>&#160;</p>
+<p>In order for a ColdFusion system probe to verify the availability and integrity of a resource in your website, it requests a URL at a specified frequency. The probe then scans the returned HTML page for a match of a specified search string. Depending on the results of that scan and match, the probe test succeeds or fails:</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><span style="font-weight: bold;"><b>Test succeeds</b></span> when the returned page contains the anticipated search string within the time-out interval specified. Inbound HTTP requests are then continuously sent to the server for which the probe exists, and an OK status appears on the System Probe page.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><span style="font-weight: bold;"><b>Test fails</b></span> when a probe validation test fails, as a result of a URL failure, a time-out, or the anticipated search string does not match, you can instruct ColdFusion to do any or all of the following:</p>
+</li>
+<li class="p">
+<p>Send an e-mail notification.</p>
+</li>
+<li class="p">
+<p>Execute a program to run when it detects a failure.</p>
+</li>
+</ul>
+<p>&#160;</p>
+<h5><a name="Related" id="Related" title="Related"></a>Related topics</h5>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="adding_probes.htm" title="adding_probes.htm">Add or edit system probes</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="about_the_coldfusion_probe_page.htm" title="about_the_coldfusion_probe_page.htm">About the System Probes page</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

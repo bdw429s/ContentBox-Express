@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Connect through JNDI</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nData Sources\nConnect through JNDI");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"overview_of_coldfusion_data_sources.htm\">Data Sources<\/a> > Connect through JNDI<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="about_coldfusion_data_sources.htm" title="about_coldfusion_data_sources.htm">Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Connect through JNDI</h1>
+<p>Use the settings in the following table to connect ColdFusion to a data 
+ source stored in JNDI. J2EE applications servers use JNDI to stored references 
+ to external resources, such as database connections.</p>
+<p>&#160;</p>
+<p>This option is available when ColdFusion is deployed on a J2EE application 
+ server.</p>
+<p>&#160;</p>
+<table cellspacing="0">
+	<col style="width: 15.305%;" />
+	<col style="width: 84.695%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 84.695%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>CF Data Source Name</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 data source name (DSN) that ColdFusion uses to connect to the 
+		 data source.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>JNDI Name</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 JNDI location in which the J2EE application server stores the 
+		 data source.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Username</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 user name that ColdFusion passes to JNDI to connect to JNDI if 
+		 a ColdFusion application does not supply a user name (for example, 
+		 in a <span style="font-family: 'Courier New', monospace;">cfquery</span> 
+		 tag).</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Password</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 password that ColdFusion passes to JNDI to connect to the data 
+		 source if a ColdFusion application does not supply a password 
+		 (for example, in a <span style="font-family: 'Courier New', monospace;">cfquery</span> 
+		 tag).</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Description</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>(Optional) 
+		 A description for this connection.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>JNDI Environment settings</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 additional parameters that ColdFusion uses when connecting to 
+		 the JNDI InitialContext object. Use a comma-separated list of 
+		 name/value pairs. For example, if you must specify a user name 
+		 and password to connect to JNDI, specify the following:</p>
+		<p>SECURITY_PRINCIPAL=&quot;myusername&quot;,SECURITY_CREDENTIALS=&quot;mypassword&quot;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>CLOB</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 to return the entire contents of any CLOB/Text columns in the 
+		 database for this data source. If not selected, ColdFusion retrieves 
+		 the amount specified in the Long Text Buffer setting.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>BLOB</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 to return the entire contents of any BLOB/Image columns in the 
+		 database for this data source. If not selected, ColdFusion retrieves 
+		 the amount specified in the BLOB Buffer setting.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Long Text Buffer (chr)</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 default buffer size, used if the CLOB option is not selected. 
+		 The default value is 64000 bytes.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>BLOB Buffer (bytes)</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 default buffer size, used if the BLOB option is not selected. 
+		 The default value is 64000 bytes.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 18.003%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Disable Autogenerated Keys</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 81.997%; padding-right: 10px; padding-left: 10px;"><p>Disables 
+		 the autogeneration of keys for data sources</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 15.305%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Allowed SQL</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 84.695%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 SQL operations that can interact with the current data source.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

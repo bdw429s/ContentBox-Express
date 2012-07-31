@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Using the Server Monitor to improve server performance</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addButton("show",BTN_TEXT,"Show TOC","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide TOC","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("what_s_new_in_this_release.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h1>Using the Server Monitor to improve server performance</h1>
+<p><span style="font-weight: bold;"><b>To find bottlenecks in your application during development</b></span>:</p>
+<ol type="1">
+<li class="p">
+<p>Turn on monitoring, profiling and memory tracking.</p>
+</li>
+<li class="p">
+<p>Turn the Slowest Request and Requests By Memory Usage report thresholds to zero.</p>
+</li>
+<li class="p">
+<p>Run your templates.</p>
+</li>
+<li class="p">
+<p>For each request find:</p>
+</li>
+</ol>
+<ol type="disc">
+<li style="list-style:none;display: inline">
+<ul type="disc">
+<li class="p">
+<p>The slowest tags and functions in the Slowest Requests report.</p>
+</li>
+<li class="p">
+<p>The largest variables from the Requests By Memory Usage report.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>&#160;</p>
+<p>Factors that influence performance include:</p>
+<ul type="disc">
+<li class="p">
+<p><a href="#JVM_memory_usage" title="#JVM_memory_usage">JVM memory usage</a></p>
+</li>
+<li class="p">
+<p><a href="#JVM_memory_usage" title="#JVM_memory_usage">Variable memory usage</a></p>
+</li>
+<li class="p">
+<p><a href="using_the_server_monitor_to_improve_server_performance.htm" title="using_the_server_monitor_to_improve_server_performance.htm">Request handling</a></p>
+</li>
+<li class="p">
+<p><a href="#Caching" title="#Caching">Caching</a></p>
+</li>
+<li class="p">
+<p><a href="#Database_response_time" title="#Database_response_time">Database response time</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="JVM_memory_usage" id="JVM_memory_usage" title="JVM_memory_usage"></a>JVM memory usage</p>
+<p>Because ColdFusion is an Enterprise Java Application, the Java Virtual Machine is the software component that most influences performance. Different Java Virtual Machines from different vendors and different versions of the same Java Virtual Machine from the same vendor have different performance characteristics. You may benefit from changing the Java Virtual Machine that you are using with ColdFusion.</p>
+<p>&#160;</p>
+<p>ColdFusion contains an embedded version of &#160;JRun 4 as the application server and the Sun 1.5 version of the Java Virtual Machine. By contrast, ColdFusion for J2EE running on IBM WebSphere Application Server uses the JVM that WebSphere is configured to use. You may find significant benefit by updating or switching the JVM you are using.</p>
+<p>&#160;</p>
+<p>To configure the ColdFusion to use a different JVM, edit the <span style="font-style: italic;"><i>cf_root</i></span>/runtime/lib/jvm.config file with a text editor by modifying the value of java.home to point to the root directory of the JVM you want to use. Alternatively, you can switch to a different JVM in the ColdFusion Administrator on the Java and JVM Settings page.</p>
+<p>&#160;</p>
+<p>Because switching the JVM changes the software environment significantly, you should first do so in a development or testing environment and fully test your ColdFusion applications before making the change on a production server.</p>
+<p>&#160;</p>
+<p>Memory management is performed by the Java Virtual Machine and can have significant impact on your performance depending on how you configure the JVM. The most important settings for the JVM are the initial heap size and maximum heap size. The initial heap size represents the amount of memory that the JVM use on startup; the maximum heap size represents the amount of memory that the JVM can use. You can modify these settings in the ColdFusion Administrator on the Java and JVM Settings page. The Initial Memory Size setting specifies the initial heap size; the Maximum Memory Size setting specifies the maximum heap size. The JVM arguments for initial heap size and maximum heap size are -XmsNm and -XmxNm respectively, where N is the size of the heap in megabytes. These JVM arguments are stored in the jvm.config file, in the value of the java.args setting.</p>
+<p>&#160;</p>
+<p>The default maximum heap size is set to 512MB in ColdFusion. For best performance, set the initial heap size and the maximum heap size to the same value. Determining the optimal size for the heap to run the applications on your ColdFusion server results in improved performance. Setting the value too high can result in poorer performance because of the higher degree of garbage collection and internal memory management required for the larger heap. Conversely, setting the heap size too small can result in a java.lang.OutOfMemoryError error if your application tries to use more memory than is available to it.</p>
+<p>&#160;</p>
+<p>The best way to find the optimal heap size is to run your application under simulated peak load with a large heap and monitor how much memory your application actually uses. If you find that your application uses only 180 MB of memory, for example, you might see performance benefit from reducing your heap size to 256MB.</p>
+<p>&#160;</p>
+<p>The java.lang.OutOfMemoryError error can occur in other, more complicated, conditions. One common cause of the error is objects filling up the heap's permanent generation, which defaults to 64MB in size. You can increase the value, for example, to 128MB, by adding the following JVM argument to the Java and JVM Settings page of the ColdFusion Administrator:</p>
+<p>-XX:MaxPermSize=128m.</p>
+<p>&#160;</p>
+<p>Physical hardware memory is an important consideration when determining the optimal heap size. Setting the maximum heap size to a value that exceeds the amount of free physical memory causes severe performance degradation. For example, if you have only 512 MB of physical memory, you should not set the maximum heap size to 512 MB. Because the operating system and other running applications use memory, much less than 512 MB of memory is available for the JVM process. This underscores the importance of having hardware that meets the requirements of your software application. For best results, run on server hardware with 1GB or more of physical memory.</p>
+<p>&#160;</p>
+<p>The <a href="server_monitor_summary.htm" title="server_monitor_summary.htm">Server Monitor Summary page</a> monitors the JVM’s memory usage. Use this information when determining the optimal heap size.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Variable_memory_usage" id="Variable_memory_usage" title="Variable_memory_usage"></a>Variable memory usage</p>
+<p>You should configure client variable storage to use Cookies or an RDBMS for best performance when using client variables; this is done on the Client Variables page of the ColdFusion Administrator.</p>
+<p>Wherever possible, it is best to fully scope your variable names, especially when using the isdefined() function. For example, &lt;cfif isdefined("variables.myvariable")&gt; performs much better than &lt;cfif isdefined("myvariable")&gt;.</p>
+<p>&#160;</p>
+<p>To monitor the memory usage by variables, view the reports in the <a href="memory_usage.htm" title="memory_usage.htm">Memory Usage</a> section of the Server Monitor.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Request_handling" id="Request_handling" title="Request_handling"></a>Request handling</p>
+<p>The Simultaneous Requests setting on the Settings page of the ColdFusion Administrator has the largest impact on how well an application performans under load. This setting dictates how many threads are used to simultaneously process incoming requests. For most applications, a good starting point for the optimal value for this setting is 3 per processor; you can set a dual processor machine to 6 simultaneous requests. To find the optimal value for this setting, test your application under load with different values until you find the one that provides the best performance under load. While testing your application, you can view the average response time on the <a href="server_monitor_summary.htm" title="server_monitor_summary.htm">Server Monitor Summary</a> page and the reports in the <a href="request_statistics.htm" title="request_statistics.htm">Request Statistics</a> section.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Caching" id="Caching" title="Caching"></a>Caching</p>
+<p>You can turn on the trusted cache setting on the Caching page of the ColdFusion Administrator for production applications so that the server does not check the file system to see if the CFML source code has changed since it was last compiled. This setting provides the benefit of minimalizing system I/O, which has a major impact on performance. You should set the template cache size on the Caching page of the ColdFusion Administrator to be roughly equal to the number ColdFusion templates that are normally used. To monitor how your settings affect performance, use the <a href="request_statistics.htm#Template_Cache_Status_page" title="request_statistics.htm#Template_Cache_Status_page">Template Cache Status page</a> in the Request Statistics section of the Server Monitor.</p>
+<p>&#160;</p>
+<p>In addition, you should use caching wherever possible in your application. The cfcache tag is available as one mechanism. Database query caching can also provide significant performance and scalability improvements. Database caching is accomplished with the cachedwithin and cachedafter attributes of database tags that support them, such as the cfquery tag. You can also accomplish caching by storing data in persistent scopes such as session, making it available for longer than a single request.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Database_response_time" id="Database_response_time" title="Database_response_time"></a>Database response time</p>
+<p>Wherever possible, it's best to allow database servers to handle data manipulation. Adding SQL code to handle this work is much more efficient than doing string manipulations or doing in-memory queries (query of queries). Additionally, stored procedures generally provide a higher level of performance than regular SQL queries. Converting queries in cfquery calls to stored procedures and using the cfstoredproc tag typically improves performance. View database response time information in the <a href="server_monitor_database.htm" title="server_monitor_database.htm">Database section</a> of the Server Monitor.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

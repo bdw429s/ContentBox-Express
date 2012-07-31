@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 9, 2001 3:28:39 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Configure logging settings</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Debugging & Logging\nLogging\nLogging Settings page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_debugging_settings.htm\">Debugging & Logging<\/a> > <a href=\"logsettings.htm\">Logging<\/a> > Logging Settings page<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" width="100.435%" size="1" align="left" />
+<h1>Logging Settings page</h1>
+<h5>Debugging &amp; Logging &gt; Logging Settings</h5>
+<p style="font-weight: bold;">&#160;</p>
+<p>Use the Logging Settings page to enable or disable administrative logging options, as the following table describes:</p>
+<p>&#160;</p>
+<div align="left" >
+<table cellspacing="0" width="100%">
+<col style="width: 23.46%;" />
+<col style="width: 52.908%;" />
+<col style="width: 23.632%;" />
+<tr valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; margin-right: 29px;">Option</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; margin-left: 0px;">Description</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Default</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px;">Log directory</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px;">Select this option to change the location where ColdFusion log files are written.</p>
+<p style="margin-left: 0px;">&#160;</p>
+<p style="margin-left: 0px;"><span style="font-weight: bold;"><b>Caution:</b></span> The location that you specify in this field must have sufficient disk space and security privileges for the ColdFusion system service.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p><span style="font-style: italic;"><i>cf_root</i></span>/logs (server configuration)</p>
+<p><span style="font-style: italic;"><i>cf_webapp_root</i></span>/WEB-INF/cfusion/logs (J2EE configuration)</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">Maximum file size (KB)</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Set the maximum file size for log files. When a file reaches this size, ColdFusion automatically archives it.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">5000</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">Maximum number of archives</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Set the maximum number of log archives to create. After reaching this limit, ColdFusion deletes files in order of oldest to newest.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">10</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">(UNIX only) Use operating system logging facilities</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Select this option to log messages using the UNIX syslog logging facility. ColdFusion also writes log messages to the standard ColdFusion log files.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">Disabled</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">Log slow pages taking longer than [n] seconds</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Specify the number of seconds that ColdFusion waits before logging the names of pages that take longer than the specified interval to process. Logging slow pages can help you diagnose potential problems in your ColdFusion applications. ColdFusion writes entries to server.log.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">Disabled; 30</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">Log all CORBA calls</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Select this option to log all CORBA calls.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">Disabled</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.46%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-right: 29px; text-decoration: none;">Enable logging for scheduled tasks</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 52.908%; padding-right: 10px; padding-left: 10px;">
+<p style="margin-left: 0px; text-decoration: none;">Select this option to log ColdFusion Executive task scheduling.</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 23.632%; padding-right: 10px; padding-left: 10px;">
+<p style="text-decoration: none;">Disabled</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&#160;</p>
+<h5><a name="Related" id="Related" title="Related"></a>Related topics</h5>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="filter.htm" title="filter.htm">Filter log content</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

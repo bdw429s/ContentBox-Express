@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 8" />
+<title>Solr Collections</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nColdFusion Collections\nSolr Collections\nSolr Server Overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"crevercllx.htm\">ColdFusion Collections<\/a> > <a href=\"solr_collections.htm\">Solr Collections<\/a> > Solr Server Overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="crevercllx.htm" title="crevercllx.htm">Create a ColdFusion Collection</a></p>
+<p align="right">&#160;</p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Solr Server overview</h1>
+<p>&#160;</p>
+<p>Solr is a full-text search engine, based on Lucene, that contains the 
+ following features:</p>
+<p>&#160;</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>XML/HTTP Interfaces</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Loose schema to define types and fields</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Web Administration Interface</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Extensive Caching</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Index Replication</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Extensible Open Architecture</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Written in Java5, deployable as a 
+ WAR</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Support for stemming</p>
+<p>&#160;</p>
+<p>The Solr server instance runs as a separate server, which you can start 
+ or stop as a service. You can configure your Solr collection for indexing 
+ and search capabilities using ColdFusion Administrator. </p>
+<p>&#160;</p>
+<h2><a name="Configure_Solr_Server" title="Configure_Solr_Server"></a>Configure Solr Server</h2>
+<p>To configure the Solr server in ColdFusion Administrator:</p>
+<p class="NumList">&#160;</p>
+<p style=" margin-left: 24px; text-indent: -24px;">1.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Click 
+ Data &amp; Services &gt; Solr Server.</p>
+<p style=" margin-left: 24px; text-indent: -24px;">2.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>On 
+ the Solr Server page, specify the following:</p>
+<p style=" margin-left: 20px;"><span class="rls-2-Bullets"><span style="font-family:Wingdings">&#167;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Solr 
+ Host Name: Specify a local or remote server that you want to configure.</p>
+<p style=" margin-left: 20px;"><span class="rls-2-Bullets"><span style="font-family:Wingdings">&#167;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Solr 
+ Home: The path of the directory where Solr Server is installed. For example, 
+ C:\ColdFusion9\solr\multicore</p>
+<p style=" margin-left: 24px; text-indent: -24px;">3.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>To 
+ add advance configuration settings for Solr, click the Show Advanced Settings 
+ button.</p>
+<p style=" margin-left: 24px; text-indent: -24px;">4.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Specify 
+ the following:</p>
+<p style=" margin-left: 20px;"><span class="rls-2-Bullets"><span style="font-family:Wingdings">&#167;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Solr 
+ Admin Port: Port number of the Solr Server.</p>
+<p style=" margin-left: 20px;"><span class="rls-2-Bullets"><span style="font-family:Wingdings">&#167;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Solr 
+ WebApp: Name of Web Application where Solr Server is hosted.</p>
+<p style=" margin-left: 20px;"><span class="rls-2-Bullets"><span style="font-family:Wingdings">&#167;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Solr 
+ Buffer Limit: Specify the limit that Solr uses to buffer the search.</p>
+<p class="NumList">&#160;</p>
+<p class="NumList">&#160;</p>
+<h5><a name="related" id="related" title="related"></a> Related Topics</h5>
+<ul type="disc">
+	<li style="margin-left: -20px;"><p><a href="manage_solr_collections.htm" title="manage_solr_collections.htm">Manage 
+	 Solr collections</a></p></li>
+	<li style="margin-left: -20px;"><p><a href="crevercllx.htm" title="crevercllx.htm">Create 
+	 a ColdFusion Collections</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Extensions
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="doc_title">Example Applications</cfcase>
+<cfcase value="back">back</cfcase>
+<cfcase value="next">next</cfcase>
+<cfcase value="language_select">Please select a language for the online help in the ColdFusion Administrator and for the example applications (if applicable).</cfcase>
+<cfcase value="language">Language</cfcase>
+<cfcase value="install_examples">Would you like to install the example applications? For security reasons, the example applications should not be installed on production servers.</cfcase>
+<cfcase value="examples_yes"><b>Yes</b>, I want to install the example applications.</cfcase>
+<cfcase value="examples_no"><b>No</b>, I do not want to install the example applications.</cfcase>
+<cfcase value="cant_install_examples">Example applications cannot be installed on Windows without ODBC support.</cfcase>
+<cfcase value="finish_title">Finish Setup</cfcase>
+<cfcase value="ok">Ok</cfcase>
+<cfcase value="finish_desc">Finishing setup:</cfcase>
+<cfcase value="install_odbc">Installing ODBC datasource support...</cfcase>
+<cfcase value="install_help">Installing administrator help...</cfcase>
+<cfcase value="installing_examples">Installing example applications...</cfcase>
+<cfcase value="register_dll">Installing windows libraries...</cfcase>
+<cfcase value="finish_setup">Finishing setup wizard...</cfcase>
+<cfcase value="setup_complete">Setup complete.</cfcase>
+<cfcase value="odbc_title">ODBC</cfcase>
+<cfcase value="odbc_desc">Would you like to install support for ODBC data sources, such as Microsoft Access? If you select "Yes," ColdFusion MX installs an additional driver and set of services for connecting to ODBC.</cfcase>
+<cfcase value="odbc_yes"><b>Yes</b>, I want to install the ODBC services.</cfcase>
+<cfcase value="odbc_no"><b>No</b>, I do not want to install the ODBC services.</cfcase>
+<cfcase value="admin_pw_required">You must supply an administrator password.</cfcase>
+<cfcase value="admin_pw_mismatch">The administrator password and confirm must match.</cfcase>
+<cfcase value="rds_pw_required">If you enable RDS you must supply a password.</cfcase>
+<cfcase value="rds_pw_mismatch">The RDS password and confirm must match.</cfcase>
+<cfcase value="security_title">Security Settings</cfcase>
+<cfcase value="admin_pw_label">ColdFusion MX administrator password</cfcase>
+<cfcase value="password">password</cfcase>
+<cfcase value="confirm">confirm</cfcase>
+<cfcase value="security_nords">The Remote Development Services were not installed. Click next to continue.</cfcase>
+<cfcase value="security_desc">Please enter a password for the Remote Development Services (RDS). If you wish to disable RDS, please consult the installation guide.</cfcase>
+<cfcase value="enableRDS">Enable RDS</cfcase>
+<cfcase value="serial_invalid">You entered an invalid serial number.</cfcase>
+<cfcase value="serial_title">Serial Number</cfcase>
+<cfcase value="submit">Submit</cfcase>
+<cfcase value="trial">Continue in Trial Mode</cfcase>
+<cfcase value="serial_desc">Welcome to ColdFusion MX. This wizard will guide you through the steps necessary to complete your installation.</cfcase>
+<cfcase value="serial_enter">If you purchased a license for ColdFusion MX, please enter your serial number.</cfcase>
+<cfcase value="serial_number">Serial number</cfcase>
+<cfcase value="trial_desc">If you did not purchase a license, you can use the Trial Edition for 30 days.</cfcase>
+<cfcase value="error_label">Error</cfcase>
+<cfcase value="setup_errors">Setup encountered errors while installing files.</cfcase>
+<cfcase value="admin_pw_error"><cfoutput>
+Unable to set admin password.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="rds_pw_error"><cfoutput>
+Unable to set RDS password.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="rds_config_error"><cfoutput>
+Unable to configure RDS service.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="license_error"><cfoutput>
+Unable to set serial number.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

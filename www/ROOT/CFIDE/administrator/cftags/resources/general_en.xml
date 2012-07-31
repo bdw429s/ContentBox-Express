@@ -1,0 +1,318 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: General
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="default_pagename">ColdFusion Administrator</cfcase>
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="lic_dev">Developer</cfcase>
+<cfcase value="lic_eva">Evaluation</cfcase>
+<cfcase value="lic_pro">Professional</cfcase>
+<cfcase value="lic_standard">Standard</cfcase>
+<cfcase value="lic_ent">Enterprise</cfcase>
+<cfcase value="productname_ibm">ColdFusion for IBM WebSphere</cfcase>
+<cfcase value="productname_mx">ColdFusion</cfcase>
+<cfcase value="productname_j2ee">ColdFusion for J2EE</cfcase>
+<cfcase value="productname_standalone">ColdFusion</cfcase>
+<cfcase value="cfmxtrial"><cfoutput>#CALLER.productName# Trial Edition</cfoutput></cfcase>
+<cfcase value="cfmxdeved"><cfoutput>#CALLER.productName# Developer Edition</cfoutput></cfcase>
+<cfcase value="cfmxedued"><cfoutput>#CALLER.productName# #CALLER.getEdition()#</cfoutput></cfcase>
+<cfcase value="cfmxcomed"><cfoutput>#CALLER.productName# #CALLER.getEdition()#</cfoutput></cfcase>
+<cfcase value="fd_selectdir">Select Directory on the Server</cfcase>
+<cfcase value="fs_selectfile">Select File on the Server</cfcase>
+<cfcase value="button_cancel">Cancel</cfcase>
+<cfcase value="button_apply">Apply</cfcase>
+<cfcase value="fd_caption">ColdFusion Server</cfcase>
+<cfcase value="fd_applet_tip">
+This applet displays a file-tree of the server to enable the user to browse its contents.
+Your browser is not configured correctly to use java applets.  Please install the Java Runtime Environment (JRE) and be sure to install the browser plugins.
+</cfcase>
+<cfcase value="fd_pagename">Browse Server</cfcase>
+<cfcase value="cfadmin_about">About ColdFusion Administrator</cfcase>
+<cfcase value="coldfusionmx">Scorpio</cfcase>
+<cfcase value="version6">Version:</cfcase>
+<cfcase value="ssnumabout">Serial number:</cfcase>
+<cfcase value="copyright_cont"><cfoutput>
+Copyright 1997-2010 Adobe Systems Incorporated. All Rights Reserved.
+Adobe, the Adobe logo, and ColdFusion are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries.
+Protected by U.S. patents 5,200,740; 5,233,336; 5,255,357; 5,929,866; 5,943,063; 6,754,382; 7,071,941; 7,305,617. Patents Pending in the U.S. and/or other countries. <BR>
+
+Adobeip##0000862<BR>
+
+Portions utilize Microsoft Windows Media Technologies. Copyright 1999-2004 Microsoft Corporation. All Rights Reserved.
+Portions include technology used under license from Autonomy, and are copyrighted.
+This Product includes code licensed from RSA Data Security
+Notices, terms and conditions pertaining to third party software are located at http://www.adobe.com/go/thirdparty/ and incorporated by reference herein.
+
+                              </cfoutput></cfcase>
+<cfcase value="ContributingMembers">Contributing Members</cfcase>
+<cfcase value="feature_not_available_msg">This feature is not available in this edition of the ColdFusion server.</cfcase>
+<cfcase value="launchmigrationwizard">
+ColdFusion has launched the post-install setup wizard in a separate window. <br />
+If you don't see it, most likely because of pop-up window blocking software. <br />
+Please click here to launch the setup wizard. <a href="setup/index.cfm">Launch Wizard</a>
+</cfcase>
+<cfcase value="copyrightinforhp"><cfoutput>
+Copyright &copy; 1995-2010 Adobe Systems, Inc. All rights reserved. U.S. Patents Pending.
+<hr noshade="true" size="1" />
+Notices, terms and conditions pertaining to third party software are located at <a href="http://www.adobe.com/go/thirdparty/#CALLER.golocale#" style="color:##C35617" target="extwebsite" class="copyrightLink">http://www.adobe.com/go/thirdparty/</a> and incorporated by reference herein.
+</cfoutput></cfcase>
+<cfcase value="ibmcopyright"> &reg; IBM and WebSphere are trademarks or registered trademarks of IBM Corp. in the United States, other countries, or both.</cfcase>
+<cfcase value="forbidden_pagename">Forbidden</cfcase>
+<cfcase value="forbidden_pageHeader">Forbidden Page</cfcase>
+<cfcase value="forbidden_message">Only the root administrative user can access this page. Please contact your administrator.</cfcase>
+<cfcase value="forbidden_message1">You do not have permission to access the requested page. Please contact your administrator.</cfcase>
+<cfcase value="cfadmin_title">ColdFusion Administrator</cfcase>
+<cfcase value="productname_ibm_extended"><cfoutput>Adobe &reg; ColdFusion for #getEdition()#CALLER. &reg;, a member of the WebSphere Application Server product family</cfoutput></cfcase>
+<cfcase value="productname_extended"><cfoutput>Adobe &reg; #productName#CALLER. &reg;</cfoutput></cfcase>
+<cfcase value="cfmx">ColdFusion</cfcase>
+<cfcase value="home_pageHeader">Welcome to the ColdFusion Administrator</cfcase>
+<cfcase value="daysleft"><cfoutput>You have <font color="ff6600">#days#CALLER.</font> days remaining in your trial period</cfoutput></cfcase>
+<cfcase value="trialtextifedition">
+You are using the ColdFusion Developer Edition in Trial Mode. Trial Mode lets you access the server from multiple IP addresses and enables you to evaluate the full capabilities of ColdFusion Enterprise for a 30-day trial period <br /><br />
+</cfcase>
+<cfcase value="trialtext"><cfoutput>
+You have <font color="ff6600">#days#CALLER.</font> days remaining in your trial period. At the end of the trial, the software will automatically turn off Trial Mode.  At that time you will be able to access the Developer Edition from your local machine and two additional IP addresses and develop ColdFusion applications on your standalone workstation.
+<br /><br />
+To deploy your ColdFusion applications, you will need to purchase a license to the ColdFusion Edition of your choice or utilize ColdFusion hosting services
+</cfoutput></cfcase>
+<cfcase value="hpdevdescifedition">
+You are using the <b>ColdFusion Developer Edition</b>. This free edition provides the features of ColdFusion Enterprise, but can only be accessed from the local machine and two additional IP addresses.  The Developer Edition enables you to learn and develop ColdFusion applications on your standalone workstation. To deploy your ColdFusion applications, you will need to purchase a license to the ColdFusion Edition of your choice or utilize ColdFusion hosting services.
+</cfcase>
+<cfcase value="cfmarketingheader"><cfoutput>
+                        <p style="font-size:24px; font-weight:bold; color:##999999;">Create better Internet applications quickly and easily</p><strong>Thank you for trying ColdFusion 9</strong><br />
+                        You've just made your life as a developer a little easier! We're confident you'll find that Adobe&reg; ColdFusion&reg; 9 software will help you create compelling Internet applications while solving day-to-day developer challenges. Now you can quickly deliver rich and engaging application experiences to your users. We encourage you to explore
+the new and enhanced capabilities with these helpful tips and demonstrations.
+</cfoutput></cfcase>
+<cfcase value="cfmarketingdemo">
+                        <strong>Jump-start your trial</strong><br />Multimedia demonstrations<br />help you maximize your<br />evaluation experience.<br />
+                        </cfcase>
+<cfcase value="cfmarketingviewdemos">View demos</cfcase>
+<cfcase value="cfmarketinghighlights"><strong>Feature highlights</strong><br />The highlights page is the<br />quickest way to learn<br />what's new in ColdFusion 9.<br /></cfcase>
+<cfcase value="cfmarketingviewfeatures">View new features</cfcase>
+<cfcase value="cfmarketingbuy"><strong>Ready to buy?</strong><br />Get more information on<br />purchasing options.<br /><br /></cfcase>
+<cfcase value="cfmarketingbuynow">Buy now</cfcase>
+<cfcase value="enttextifeditionStandard">
+<p>ColdFusion Standard is the solution for delivering a
+powerful website or application on a single server.  It features
+all of the RAD development capabilities of ColdFusion, powerful
+new features such as PDF and FlashPaper document generation, rich flash
+forms and more � in an easy to manage configuration that is ideal
+for small to medium sized businesses.</p>
+
+<p>To deliver multiple websites and applications on one or more servers,
+or on existing J2EE application server installations, consider ColdFusion
+Enterprise Edition. It features all of the capabilities of ColdFusion Standard,
+and special features for managing multiapplication environments by enabling highly
+scalable, reliable implementations of your important business applications.</p>
+
+</cfcase>
+<cfcase value="enttext">
+To learn more about different editions and capabilities of ColdFusion, click the following links.
+</cfcase>
+<cfcase value="enttextifeditionEnterprise">
+ColdFusion Enterprise is the solution for delivering multiple websites and applications 
+on one or more servers, or on existing J2EE application server installations. 
+It features all of the capabilities of ColdFusion Standard, and special features 
+for managing multiapplication environments by enabling highly scalable, reliable 
+implementations of your important business applications. An all-new Enterprise 
+Manager allows easy configuration and management of multiple isolated applications 
+or application clusters on a single physical server. E-mail, full-text search, and 
+other features use a high-performance multithreaded architecture and have more 
+flexible configuration options. The Enterprise Edition also enables you to use ColdFusion 
+with your other enterprise-class systems and databases, and to deploy ColdFusion applications 
+as standard J2EE EAR/WAR files on leading J2EE application servers, such as WebSphere or WebLogic.
+</cfcase>
+<cfcase value="defaulttextifedition">
+You can use your licensed version of ColdFusion to build, test, and deploy ColdFusion applications in record time.
+</cfcase>
+<cfcase value="defaulttext">
+To learn more about different editions and capabilities of ColdFusion, click the following links.
+</cfcase>
+<cfcase value="cfresources">ColdFusion Resources</cfcase>
+<cfcase value="resourceHeaderText">The following are links to helpful resources within the product as well as on external sites.</cfcase>
+<cfcase value="gettingStartedURL">http://www.adobe.com/go/cf9_getstarted</cfcase>
+<cfcase value="devCenterURL">http://www.adobe.com/go/cf9_devcenter</cfcase>
+<cfcase value="techNotesURL">http://www.adobe.com/go/cf9_prod_technotes</cfcase>
+<cfcase value="releaseNotesURL">http://www.adobe.com/go/cf9_releasenotes</cfcase>
+<cfcase value="editionsURL">http://www.adobe.com/go/cf9_editions</cfcase>
+<cfcase value="systemReqURL">http://www.adobe.com/go/cf9_sysreqs</cfcase>
+<cfcase value="prodInfoURL">http://www.adobe.com/go/prod_prodinfo</cfcase>
+
+<cfcase value="cfBugTrackerURL">http://www.adobe.com/go/CF_bugs</cfcase>
+
+<cfcase value="builderBugTrackerURL">http://www.adobe.com/go/CFB_bugs</cfcase>
+
+<cfcase value="bugtrackerzone">Logging Bugs</cfcase>
+<cfcase value="prodSupportURL">http://www.adobe.com/go/prod_support</cfcase>
+<cfcase value="prodDocURL">http://www.adobe.com/go/cf9_prod_doc</cfcase>
+<cfcase value="prodTrainingURL">http://www.adobe.com/go/prod_training</cfcase>
+<cfcase value="cfBooksURL">http://www.adobe.com/support/documentation/en/coldfusion/index.html</cfcase>
+<cfcase value="reportBuilderURL">http://www.adobe.com/go/report_builder</cfcase>
+<cfcase value="cfExtURL">http://www.adobe.com/go/cf_extensions</cfcase>
+<cfcase value="prodUpdatesURL">http://www.adobe.com/go/prod_produpdates</cfcase>
+<cfcase value="cfHotfixesURL">http://www.adobe.com/go/cf_hotfixes</cfcase>
+<cfcase value="techArticlesURL">http://www.adobe.com/go/prod_techarticles</cfcase>
+<cfcase value="devExchangeURL">http://www.adobe.com/go/prod_developersexchange</cfcase>
+<cfcase value="newsLetterURL">http://www.adobe.com/go/prod_newsletters</cfcase>
+<cfcase value="userGroupsURL">http://www.adobe.com/go/prod_usergroups</cfcase>
+<cfcase value="cfHostingURL">http://www.adobe.com/go/cf_hosting</cfcase>
+<cfcase value="securityZoneURL">http://www.adobe.com/go/prod_securityzone</cfcase>
+<cfcase value="securityNoteURL">http://www.adobe.com/go/prod_securitynote</cfcase>
+<cfcase value="hpgetstart">Getting Started</cfcase>
+<cfcase value="hpgetstartwin">Getting Started Experience</cfcase>
+<cfcase value="hpexwin">Example Applications</cfcase>
+<cfcase value="cfdevcenter">ColdFusion Developer Center Getting Started</cfcase>
+<cfcase value="hpprodinfo">Product Information</cfcase>
+<cfcase value="aboutcoldfusion">About ColdFusion</cfcase>
+<cfcase value="documentation">Documentation</cfcase>
+<cfcase value="knowledge_base">TechNotes</cfcase>
+<cfcase value="release_notes">Release Notes</cfcase>
+<cfcase value="producteditions">Product Editions</cfcase>
+<cfcase value="systemrequirements">System Requirements</cfcase>
+<cfcase value="prodlnews">Latest product information</cfcase>
+
+<cfcase value="cfbugtracker">ColdFusion Bug Tracker</cfcase>
+
+<cfcase value="cfbuilderbugtracker">ColdFusion Builder Bug Tracker</cfcase>
+<cfcase value="hptechsup">Technical Support and Training</cfcase>
+<cfcase value="cfmxtechnotes">ColdFusion TechNotes</cfcase>
+<cfcase value="supcenter">ColdFusion Support Center</cfcase>
+<cfcase value="hplatedoc">Additional Documentation</cfcase>
+<cfcase value="hptrainingbooks">Online/classroom training</cfcase>
+<cfcase value="hpbooks">ColdFusion Books</cfcase>
+<cfcase value="additionalheader">Additional Installers</cfcase>
+<cfcase value="CFReportBuilderInstall">ColdFusion Report Builder</cfcase>
+<cfcase value="DWExtensionsInstall">ColdFusion Extensions for Eclipse</cfcase>
+<cfcase value="hpprodup">Product Updates</cfcase>
+<cfcase value="checkprodup">Check for product updates</cfcase>
+<cfcase value="checkhotfix">Check for hot fixes</cfcase>
+<cfcase value="hpcommunity">Community</cfcase>
+<cfcase value="hptechart">ColdFusion Development Center</cfcase>
+<cfcase value="hpdevex">ColdFusion Developers Exchange</cfcase>
+<cfcase value="hpnewsletters">Newsletters</cfcase>
+<cfcase value="hpusergroups">User groups</cfcase>
+<cfcase value="learnhosting">Find a ColdFusion hosting partner</cfcase>
+<cfcase value="hpseczone">Security Zone</cfcase>
+<cfcase value="keepsecure">Learn how to keep your server secure</cfcase>
+<cfcase value="secemail">Sign up to receive security bulletins</cfcase>
+<cfcase value="frmnavttle">Navigation</cfcase>
+<cfcase value="frmresttle">Resource links</cfcase>
+<cfcase value="frmmainttle">Main window</cfcase>
+<cfcase value="frmtopttle">Top window navigation</cfcase>
+<cfcase value="browser_warning">
+The ColdFusion Administrator requires a browser that supports frames.<br />
+Please obtain a browser that is HTML 3.0-compliant or better.
+</cfcase>
+<cfcase value="ld_electdoc"><cfoutput><p class="sentance">Electronic documentation is not installed on this system.</p>
+<p class="sentance"><a href="#doclink#CALLER." target="Adobe website">Click here</a> to browse the online documentation from Adobe.com<br /><br />
+
+</p></cfoutput></cfcase>
+<cfcase value="ld_exmples"><cfoutput><p class="sentance">Examples are not currently installed.</p>
+<p class="sentance"><a href="http://www.adobe.com/go/prod_examples#golocale#CALLER." target="Adobe website">Click here</a> to download example applications for ColdFusion.<br /></p></cfoutput></cfcase>
+<cfcase value="cfadmin_login">ColdFusion Administrator Login</cfcase>
+<cfcase value="coldfusionVer">ColdFusion</cfcase>
+<cfcase value="required_userid">User Name Required</cfcase>
+<cfcase value="label_userid">User name</cfcase>
+<cfcase value="required_password">Password Required</cfcase>
+<cfcase value="label_password">Password</cfcase>
+<cfcase value="null_user_id">User name required. Please try again.</cfcase>
+<cfcase value="invalid_userid_or_password">Invalid User name or Password. Please try again.</cfcase>
+<cfcase value="invalid_password">Invalid Password. Please try again.</cfcase>
+<cfcase value="password_button">Login</cfcase>
+<cfcase value="copyright_cont1">Adobe, the Adobe logo, ColdFusion, and Adobe ColdFusion are trademarks or registered trademarks of Adobe Systems Incorporated in the United States and/or other countries.  All other trademarks are the property of their respective owners.</cfcase>
+<cfcase value="cfcbrowser_login">Component Browser Login</cfcase>
+<cfcase value="componentbrowser">Component Browser</cfcase>
+<cfcase value="enterrdsoradminpasswordlogin">Enter your RDS or Admin password below</cfcase>
+<cfcase value="configAndSettingsWizard">Configuration and Settings Migration Wizard</cfcase>
+<cfcase value="configAndSettingsWizardDesc">
+ColdFusion has been successfully installed. This wizard will guide you through the remaining server configuration steps and, if applicable, migrate settings from a previous version of ColdFusion.</cfcase>
+<cfcase value="configAndSettingsWizardSecurity">To guarantee the security of your server, please enter your ColdFusion Administrator password.</cfcase>
+<cfcase value="Coldfusionadministrator">ColdFusion Administrator</cfcase>
+<cfcase value="navserver">Server:&nbsp;</cfcase>
+<cfcase value="navbarwelcome">User:&nbsp;</cfcase>
+<cfcase value="l10n_nav_settings">Settings</cfcase>
+<cfcase value="l10n_nav_serversettings">Server Settings</cfcase>
+<cfcase value="l10n_nav_limits">Request Tuning</cfcase>
+<cfcase value="l10n_nav_caching">Caching</cfcase>
+<cfcase value="l10n_nav_cvariables">Client Variables</cfcase>
+<cfcase value="l10n_nav_mvariables">Memory Variables</cfcase>
+<cfcase value="l10n_nav_mappings">Mappings</cfcase>
+<cfcase value="l10n_nav_mailserver">Mail</cfcase>
+<cfcase value="l10n_nav_charting">Charting</cfcase>
+<cfcase value="l10n_nav_fonts">Font Management</cfcase>
+<cfcase value="l10n_nav_documents">Document</cfcase>
+<cfcase value="l10n_nav_java">Java and JVM</cfcase>
+<cfcase value="l10n_nav_serversum">Settings Summary</cfcase>
+<cfcase value="l10n_nav_data">Data Sources</cfcase>
+<cfcase value="l10n_nav_verity">ColdFusion Collections</cfcase>
+<cfcase value="l10n_nav_k2server">Verity K2 Server</cfcase>
+<cfcase value="l10n_nav_solrserver">Solr Server</cfcase>
+<cfcase value="l10n_nav_migrate_verity">Migrate Verity Collections</cfcase>
+<cfcase value="l10n_nav_webservices">Web Services</cfcase>
+<cfcase value="l10n_nav_flexintegration">Flex Integration</cfcase>
+<cfcase value="l10n_nav_debugset">Debug Output Settings</cfcase>
+<cfcase value="l10n_nav_dbugip">Debugging IP Addresses</cfcase>
+<cfcase value="l10n_nav_linedebugger">Debugger Settings</cfcase>
+<cfcase value="l10n_nav_logset">Logging Settings</cfcase>
+<cfcase value="l10n_nav_log">Log Files</cfcase>
+<cfcase value="l10n_nav_sched">Scheduled Tasks</cfcase>
+<cfcase value="l10n_nav_sysprobe">System Probes</cfcase>
+<cfcase value="l10n_nav_anyzr">Code Analyzer</cfcase>
+<cfcase value="l10n_nav_scanner">License Scanner</cfcase>
+<cfcase value="l10n_nav_servermonitor">Server Monitor</cfcase>
+
+<cfcase value="l10n_nav_servermonitorsettings">Monitoring Settings</cfcase>
+<cfcase value="l10n_nav_multiservermonitor">Multiserver Monitor</cfcase>
+<cfcase value="l10n_nav_applets">Java Applets</cfcase>
+<cfcase value="l10n_nav_cfx">CFX Tags</cfcase>
+<cfcase value="l10n_nav_customtag">Custom Tag Paths</cfcase>
+<cfcase value="l10n_nav_corba">CORBA Connectors</cfcase>
+<cfcase value="l10n_nav_gatewayset">Settings</cfcase>
+<cfcase value="l10n_nav_gatewaytypes">Gateway Types</cfcase>
+<cfcase value="l10n_nav_gateways">Gateway Instances</cfcase>
+<cfcase value="l10n_nav_adminpass">Administrator</cfcase>
+<cfcase value="l10n_nav_studiopass">RDS</cfcase>
+<cfcase value="l10n_nav_ressec">Resource Security</cfcase>
+<cfcase value="l10n_nav_sandbox">Sandbox Security</cfcase>
+<cfcase value="l10n_nav_usermanager">User Manager</cfcase>
+<cfcase value="l10n_nav_userpassword">Change Password</cfcase>
+<cfcase value="l10n_nav_allowedIPAddress">Allowed IP Addresses</cfcase>
+<cfcase value="l10n_car_files">ColdFusion Archives</cfcase>
+<cfcase value="l10n_j2ee_archives">J2EE Archives</cfcase>
+<cfcase value="l10n_app_installer">Application Installer</cfcase>
+<cfcase value="l10n_nav_dataserv">Data &amp;  Services</cfcase>
+<cfcase value="l10n_nav_debug">Debugging &amp;  Logging</cfcase>
+<cfcase value="l10n_nav_monitoring">Server Monitoring</cfcase>
+<cfcase value="l10n_nav_exten">Extensions</cfcase>
+<cfcase value="l10n_nav_eventgateways">Event Gateways</cfcase>
+<cfcase value="security">Security</cfcase>
+<cfcase value="l10n_nav_packaging">Packaging &amp; Deployment</cfcase>
+<cfcase value="iman">Instance Manager</cfcase>
+<cfcase value="cluman">Cluster Manager</cfcase>
+<cfcase value="l10n_nav_entman">Enterprise Manager</cfcase>
+<cfcase value="mm_extensions">Adobe</cfcase>
+<cfcase value="custom_extensions">Custom Extensions</cfcase>
+<cfcase value="expandall">Expand All</cfcase>
+<cfcase value="Collapseall">Collapse All</cfcase>
+<cfcase value="version_information">System Information</cfcase>
+<cfcase value="help">Help</cfcase>
+<cfcase value="resources">Resources</cfcase>
+<cfcase value="logout">LOGOUT</cfcase>
+<cfcase value="errormsg_goback">Go Back</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

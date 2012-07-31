@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 8" />
+<title>Server Monitor Request statistics</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nServer Monitor Request statistics");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Server Monitor Request statistics<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings 
+ Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Server Monitor Request Statistics</h1>
+<p style="font-weight: bold;">About request handling</p>
+<p>The Simultaneous Requests setting on the Settings page of the ColdFusion 
+ Administrator has the largest impact on how well an application performs 
+ under load. This setting dictates how many threads are used to simultaneously 
+ process incoming requests. For most applications, a good starting point 
+ for the optimal value for this setting is 3 per processor; you can set 
+ a dual processor machine to 6 simultaneous requests. To find the optimal 
+ value for this setting, test your application under load with different 
+ values until you find the one that provides the best performance under 
+ load. While testing your application, you can view the average response 
+ time on the Server Monitor Summary page and the reports in the Request 
+ Statistics section.</p>
+<p>&#160;</p>
+<p>The total number of requests, including queued and running requests 
+ reflect the total number of requests actually running or queued in the 
+ server. This means that the queue number includes the sum of all queues. 
+ The running number does not include those requests that are waiting in 
+ a request specific queue.</p>
+<p>&#160;</p>
+<p>The Request Statistics section contains the following pages:</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Active Requests page</p>
+<p>The Active Requests page lists all currently active requests that take 
+ longer to load than the request interval for reports specified on the 
+ Refresh Interval page. Requests include browser requests, CFC HTTP requests, 
+ &#160;web services, gateways, and Flash remoting. You can view a list, 
+ a detailed view, or a graph of active requests. The detailed view includes 
+ the CFML stack trace, which you can use to find where a long running request 
+ is blocked and deadlocked requests. To abort a request, click the orange 
+ Abort Request button to the left of the request. To see all request graphs 
+ in one view, click the Chart button. The report displays graphs that indicate 
+ the following:</p>
+<p>&#160;</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Average server response time - Data 
+ is the average for a minute. A low average response time indicates a server 
+ that is operating efficiently.</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Requests per second - Data is the 
+ average for a minute. A high number of request per second indicates a 
+ server that is operating efficiently.</p>
+<p style="margin-left: 24px; text-indent: -24px;"><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Running 
+ and queued requests (on standalone configurations) - The graph indicates 
+ the number of requests currently being processed by the server and the 
+ number of requests awaiting allocation of an application server thread 
+ to begin execution. If the graph indicates that there is a large number 
+ of queued requests, you may want to increase the size of the thread pool. 
+ Alternatively, if ColdFusion is deployed in a cluster, you may want to 
+ add a server instance for more efficient load balancing</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> The Server Monitor includes 
+ FDS Data Management Assemblers as Flash Remoting requests.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Active ColdFusion Threads</p>
+<p>The Active ColdFusion Threads page lists all currently active threads 
+ launched by the cfthread tag.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Slowest Requests page</p>
+<p>The Slowest Requests page lists the slowest requests. You can specify 
+ the threshold that determines whether a request appears on this page. 
+ The lower the threshold, the more requests appear on the list. &#160;You 
+ can view a list or a detailed view of the slowest requests. The detailed 
+ view includes the CFML stack trace.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Slowest ColdFusion Threads page</p>
+<p>The Slowest ColdFusion Threads page lists the slowest threads launced 
+ by the cfthread tag. You can specify the threshold that determines whether 
+ a thread appears on this page. The lower the threshold, the more threads 
+ appear on the list. You can view a list or a detailed view of the slowest 
+ requests. The detailed view includes the CFML stack trace.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Active Sessions page</p>
+<p>The Active Sessions page lists all active sessions. You can view a list, 
+ a detailed view, or a graph of active sessions. The graph displays the 
+ active sessions and the number of users logged in to the server.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Cumulative Server Usage page</p>
+<p>The Cumulative Server Usage page lists the requests that have cumulatively 
+ used the most CPU time on the server. Even if a request executes rapidly, 
+ if it may execute frequently, it can consume a large proportion of CPU 
+ time. Tuning requests with high cumulative server time can provide server-wide 
+ performance benefits. You can view a list, a detailed view, or a graph 
+ of cumulative server usage.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Highest Hit Counts page</p>
+<p>The Highest Hit Counts page lists the requests that have the highest 
+ hit count. You can view a list or a graph of requests with the highest 
+ hit count.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Template_Cache_Status_page" title="Template_Cache_Status_page"></a>Template 
+ Cache Status page</p>
+<p>The Template Cache status page shows information about the template 
+ cache to indicate how well it is performing. The template cache is where 
+ ColdFusion stores compiled CFM and CFC templates in memory. When a template 
+ is executed for the first time, it is compiled to Java bytecode, and then 
+ stored in the template cache. As long as the template is unchanged, ColdFusion 
+ uses the compiled form of the template stored in the template cache. The 
+ Template Cache status page lets you monitor cache hit ratio, which indicates 
+ the number of cache hits in relation to the number of cache misses. Cache 
+ hits are the templates retrieved from the cache. Cache misses are the 
+ templates that must be compiled before being placed in the cache.</p>
+<p>&#160;</p>
+<p>A well performing server should have more cache hits than misses, which 
+ is a high cache hit ratio. If the cache hit ratio is too low, you may 
+ want to increase the cache size by selecting Server Settings &gt; Caching 
+ in the ColdFusion Administrator. The Template Cache page also lets you 
+ monitor the number of templates in the cache, and the estimated memory 
+ that the cache occupies.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> The template cache count 
+ includes both the Least Recently Used (LRU) cache and the soft cache. 
+ As a result, the count can exceed the number configured in the ColdFusion 
+ Administrator.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Request Throttle Data page</p>
+<p>The Request Throttle Data page lists all requests that have been throttled 
+ by the ColdFusion server. Requests are throttled when ColdFusion queues 
+ them because there is not enough total memory available to handle them. 
+ Requests smaller than the specified limit are neither queued nor counted 
+ as part of the total memory. Requests larger than the specified limit 
+ are counted as part of total memory and are queued if the request throttle 
+ memory size has been exceeded. The default value is 4 MB. You can change 
+ the throttle threshold and memory by selecting Server Settings &gt; Settings 
+ in the ColdFusion Administrator.</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

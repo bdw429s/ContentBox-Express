@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<ftstdata>
+<topic name="About ColdFusion data sources" url="about_coldfusion_data_sources.htm" />
+<topic name="About database drivers" url="about_database_drivers.htm" />
+<topic name="About Java settings for ColdFusion MX" url="about_java_settings_for_coldfusion_mx.htm" />
+<topic name="About logical aliases for physical directories" url="about_logical_aliases_for_physical_directories.htm" />
+<topic name="About simultaneous request tuning" url="about_simultaneous_request_tuning.htm" />
+<topic name="About the Cluster Manager page" url="about_the_cluster_manager.htm" />
+<topic name="System Probes" url="about_the_coldfusion_probe_page.htm" />
+<topic name="Data Sources" url="about_the_data_sources_page.htm" />
+<topic name="About the Instance Manager page" url="about_the_server_manager_page.htm" />
+<topic name="Connect to Microsoft Access" url="access_connect_to.htm" />
+<topic name="Connect to Microsoft Access with Unicode" url="access_unicode_connect_to.htm" />
+<topic name="Add ColdFusion instance" url="add_coldfusion_instance.htm" />
+<topic name="Register CFX tags" url="addeditcftag.htm" />
+<topic name="Register or modify Java applets" url="addeditjavaapplet.htm" />
+<topic name="Add or edit scheduled tasks" url="addedittask.htm" />
+<topic name="Adding and editing J2EE archives" url="adding_and_editing_j2ee_archives.htm" />
+<topic name="Add or edit system probes" url="adding_probes.htm" />
+<topic name="Analyze server activity in log files" url="analyze_server_activity_in_log_files.htm" />
+<topic name="Applets tab" url="applets_tab.htm" />
+<topic name="Apply server settings" url="appserset.htm" />
+<topic name="Archive Information tab" url="archive_information_tab.htm" />
+<topic name="Archive Summary tab" url="archive_summary_tab.htm" />
+<topic name="Archive To Do List tab" url="archive_to_do_list_tab.htm" />
+<topic name="CFX Tags" url="cftags.htm" />
+<topic name="CFX Tags tab" url="cfx_tags_tab.htm" />
+<topic name="Change ColdFusion MX user account" url="change_coldfusion_user_account.htm" />
+<topic name="Change password" url="change_password.htm" />
+<topic name="Set charting preferences" url="charting.htm" />
+<topic name="Change Administrator password" url="chgadpwrd.htm" />
+<topic name="Client variable planning" url="client_variable_planning.htm" />
+<topic name="Use the Code Analyzer" url="code_anal.htm" />
+<topic name="About the Code Analyzer results" url="code_anal_results.htm" />
+<topic name="ColdFusion MX services in Windows" url="coldfusion_mx_services_in_windows.htm" />
+<topic name="ColdFusion MX processes on UNIX" url="coldfusion_processes_on_unix.htm" />
+<topic name="Configure mail settings" url="conadmail.htm" />
+<topic name="Configure the Performance Monitor" url="configure_the_performance_monitor.htm" />
+<topic name="Connect through JNDI" url="connect_through_jndi.htm" />
+<topic name="Connect to Apache Derby Client" url="connect_to_apache_derby_client.htm" />
+<topic name="Connect to Apache Derby Embedded" url="connect_to_apache_derby_embedded.htm" />
+<topic name="Connect to PostgreSQL" url="connect_to_postgresql.htm" />
+<topic name="Use connection string options" url="conxstringopt.htm" />
+<topic name="CORBA Connectors" url="corbaext.htm" />
+<topic name="Create a data source" url="create_a_data_source.htm" />
+<topic name="Create an archive definition" url="creating_site_archive.htm" />
+<topic name="Create mappings" url="crelogmap.htm" />
+<topic name="Create a Verity collection" url="crevercllx.htm" />
+<topic name="Custom Tag Paths" url="customtag.htm" />
+<topic name="Data Sources tab" url="data_sources_tab.htm" />
+<topic name="Connect to DB2 Universal Database" url="db2_universal_db_connect_to.htm" />
+<topic name="Configure debugging settings" url="debgopt.htm" />
+<topic name="Delete an archive definition" url="delete_archive_definition.htm" />
+<topic name="Directory Mappings tab" url="directory_mappings_tab.htm" />
+<topic name="Documentation" url="documentation.htm" />
+<topic name="About the Edit Cluster page" url="edit_cluster_page.htm" />
+<topic name="Enable performance monitoring" url="enable_performance_monitoring.htm" />
+<topic name="Event Gateway Overview" url="event_gateway_overview.htm" />
+<topic name="Event Gateway Settings" url="event_gateway_settings.htm" />
+<topic name="Gateway Types" url="event_gateway_types.htm" />
+<topic name="Gateway Instances" url="event_gateways.htm" />
+<topic name="Event Gateways tab" url="event_gateways_tab.htm" />
+<topic name="Examples" url="examples.htm" />
+<topic name="Files and Directories tab" url="files_directories_tab.htm" />
+<topic name="Log Filter" url="filter.htm" />
+<topic name="Flex data service" url="flex_data_service.htm" />
+<topic name="Font management" url="font_management.htm" />
+<topic name="Font management overview" url="font_management_overview.htm" />
+<topic name="Build an archive" url="generating_archive.htm" />
+<topic name="System information" url="idcfinf.htm" />
+<topic name="Connect to Informix" url="informix_connect_to.htm" />
+<topic name="J2EE archive" url="j2ee_archive.htm" />
+<topic name="J2EE Packaging overview" url="j2ee_packaging_overview.htm" />
+<topic name="Java Applets" url="javaapplet.htm" />
+<topic name="Set Java and JVM preferences" url="jvmandjava.htm" />
+<topic name="Key features of the ColdFusion MX Administrator" url="key_features_of_coldfusion_administrator.htm" />
+<topic name="Keywords" url="keywords.htm" />
+<topic name="Layout of the ColdFusion MX Administrator" url="layout_of_the_coldfusion_administrator.htm" />
+<topic name="License Scanner" url="license_scanner.htm" />
+<topic name="Log file columns" url="log_file_columns.htm" />
+<topic name="Log files" url="logfiles.htm" />
+<topic name="Configure logging settings" url="logsettings.htm" />
+<topic name="Types of logs" url="logtypes.htm" />
+<topic name="Log Viewer" url="logviewer.htm" />
+<topic name="Manage Verity collections" url="manage_verity_collections.htm" />
+<topic name="Memory Usage" url="memory_usage.htm" />
+<topic name="Manage client variables" url="mgeclivar.htm" />
+<topic name="Migrate client variable data" url="migclivar.htm" />
+<topic name="Manage memory variables" url="mngmemvar.htm" />
+<topic name="Modify an archive definition" url="modifying_a_site_archive.htm" />
+<topic name="Multi Server monitor" url="multi_server_monitor.htm" />
+<topic name="Connect to MySQL" url="mysql_connect_to.htm" />
+<topic name="Connect to ODBC Socket" url="odbc_socket_connect_to.htm" />
+<topic name="Online Help" url="online_help.htm" />
+<topic name="Connect to Oracle" url="oracle_connect_to.htm" />
+<topic name="Connect to other data sources" url="other_connect_to.htm" />
+<topic name="Basic configuration overview" url="overview_of_basic_configuration.htm" />
+<topic name="Basic troubleshooting overview" url="overview_of_basic_troubleshooting.htm" />
+<topic name="Data sources overview" url="overview_of_coldfusion_data_sources.htm" />
+<topic name="Performance monitoring overview" url="overview_of_coldfusion_performance_monitoring.htm" />
+<topic name="Debugging settings overview" url="overview_of_debugging_settings.htm" />
+<topic name="Optional configuration overview" url="overview_of_optional_configuration.htm" />
+<topic name="Server Settings overview" url="overview_of_server_settings.htm" />
+<topic name="Services and processes overview" url="overview_of_services_and_processes.htm" />
+<topic name="Archiving and deployment overview" url="overview_of_site_archiving.htm" />
+<topic name="Verity collections overview" url="overview_of_verity_collections.htm" />
+<topic name="Populate a Verity collection" url="popvercllx.htm" />
+<topic name="Types of probes" url="probe_types.htm" />
+<topic name="Release Notes" url="release_notes.htm" />
+<topic name="Request statistics" url="request_statistics.htm" />
+<topic name="Deploy an archive" url="restoring_an_archive.htm" />
+<topic name="Configure debugging IP addresses" url="rstrdebug.htm" />
+<topic name="Configure ColdFusion MX security" url="sandbox_sec.htm" />
+<topic name="Scheduled Tasks" url="schedtask.htm" />
+<topic name="Scheduled tasks overview" url="schedule_task_overview.htm" />
+<topic name="Scheduled Tasks tab" url="scheduled_tasks_tab.htm" />
+<topic name="Server Monitor" url="server_monitor.htm" />
+<topic name="Server Monitor Alerts and Snapshots Section" url="server_monitor_alerts_and_snapshots_section.htm" />
+<topic name="Server Monitor Database" url="server_monitor_database.htm" />
+<topic name="Server Monitor Errors Section" url="server_monitor_errors_section.htm" />
+<topic name="Server Monitor Settings Section" url="server_monitor_settings_section.htm" />
+<topic name="Server Monitor Summary" url="server_monitor_summary.htm" />
+<topic name="Set Line Debugger Settings" url="set_line_debugger_settings.htm" />
+<topic name="Set request tuning" url="set_request_tuning.htm" />
+<topic name="Set caching preferences" url="setcacpref.htm" />
+<topic name="Set ColdFusion MX Administrator password" url="setcfpsswrd.htm" />
+<topic name="Set RDS password" url="setcfstdpass.htm" />
+<topic name="Settings Summary" url="setsummary.htm" />
+<topic name="Setting per application settings" url="setting_per_application_settings.htm" />
+<topic name="Server Settings tab" url="settings_tab.htm" />
+<topic name="Connect to Microsoft SQL Server" url="sqlsvr_connect_to.htm" />
+<topic name="Start and stop ColdFusion MX" url="start_and_stop_coldfusion.htm" />
+<topic name="Suspend probe operation" url="suspending_probe_operation.htm" />
+<topic name="Connect to Sybase" url="sybase_connect_to.htm" />
+<topic name="TechNotes" url="technotes.htm" />
+<topic name="Tips for printing" url="tips_for_printing.htm" />
+<topic name="Uninstall ColdFusion MX" url="uninstall_coldfusion_mx.htm" />
+<topic name="User Manager" url="user_manager.htm" />
+<topic name="Using the Server Monitor to improve server performance" url="using_the_server_monitor_to_improve_server_performance.htm" />
+<topic name="Verify that ColdFusion MX is running" url="vercfserv.htm" />
+<topic name="Verify a data source" url="verify_coldfusion_data_sources.htm" />
+<topic name="Verity Collections tab" url="verity_collections_tab.htm" />
+<topic name="Verity supported file types" url="verity_supported_file_types.htm" />
+<topic name="Use Verity K2 Server" url="verk2.htm" />
+<topic name="Verify that the web server is running" url="verwebserv.htm" />
+<topic name="About web services" url="webservices.htm" />
+<topic name="Welcome to ColdFusion MX Administrator" url="welcome.htm" />
+<topic name="What's new in this release" url="what_s_new_in_this_release.htm" />
+<topic name="What you can do in ColdFusion MX Administrator" url="what_you_can_do_in_coldfusion_administrator.htm" />
+<topic name="Why security is important" url="why_security_is_important.htm" />
+
+</ftstdata>  

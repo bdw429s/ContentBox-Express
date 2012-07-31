@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 27, 2001 8:44:39 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Manage memory variables</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nManage memory variables");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Manage memory variables<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h5 style="font-weight: normal;" align="right"><a href="overview_of_server_settings.htm" style="font-weight: normal;" title="overview_of_server_settings.htm">Server 
+ Settings</a></h5>
+<hr size="1" width="100.145%" align="left" />
+<h1>Manage memory variables</h1>
+<h5>Server Settings &gt; Memory Variables</h5>
+<p>&#160;</p>
+<p>Application and session (<a href="overview_of_server_settings.htm#Memoryvar" title="overview_of_server_settings.htm#Memoryvar">memory</a>) 
+ variables are enabled at installation. If you disable these variables 
+ using the Memory Variables page, they cannot be used in any ColdFusion 
+ application.</p>
+<p>&#160;</p>
+<p>You can use this page to specify maximum and default time-out values 
+ for session and application variables.</p>
+<p>&#160;</p>
+<p>Application variables time out at the expiration of one of the following:</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>The smaller of either 
+	 the Application Variables Maximum Timeout value or the value of the 
+	 <span style="font-family: 'Courier New', monospace;">applicationTimeout</span> 
+	 attribute of the <span style="font-family: 'Courier New', monospace;">cfapplication</span> 
+	 tag, if specified.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>If no <span style="font-family: 'Courier New', monospace;">applicationTimeout</span> 
+	 attribute is set, the default time-out value of the Application Variable.</p></li>
+</ul>
+<h3 class="Procedure">Set timeout values</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">Enable or disable memory variables. 
+	 Optionally enter a number in each text box to specify days, hours, 
+	 minutes, and seconds allowed for maximum and default time-out periods.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24px;">&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 20.928%;" />
+	<col style="width: 45.739%;" />
+	<col style="width: 33.333%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 45.739%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Use J2EE session variables</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 45.739%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 whether to use ColdFusion session variables or J2EE session variables. 
+		 When you enable J2EE session variables, ColdFusion creates an 
+		 identifier for each session and does not use the CFToken or CFID 
+		 cookie value. For more information, see <span style="font-style: italic;"><i>ColdFusion 
+		 Developer's Guide</i></span>.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Application Variables &#160;&#160;&#160;&#160;</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 45.739%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 whether to enable application variables.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Session Variables</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 45.739%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 whether to enable session variables.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum Timeout</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 45.739%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the maximum time-out period that you can use in a <span style="font-family: 'Courier New', monospace;">cfapplication</span> 
+		 tag for application and session variables.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Application 
+		 variables: 2 days</p>
+		<p>Session variables: 2 days</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 20.928%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Default Timeout</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 45.739%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the time-out period that ColdFusion uses for application and session 
+		 variables if you do not specify an application-specific value 
+		 in a <span style="font-family: 'Courier New', monospace;">cfapplication</span> 
+		 tag</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Application 
+		 variables: 2 days</p>
+		<p>Session variables: 20 minutes</p>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<p class="NumList" style="margin-left: 24px;">&#160;</p>
+<p class="NumList" style="margin-left: 24px;">&#160;</p>
+<ol start="2" type="1">
+	<li class="p-NumList"><p class="NumList">Click Submit Changes to save 
+	 your settings.</p></li>
+</ol>
+<p class="RelatedTopics">Related topic</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server 
+	 settings overview</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

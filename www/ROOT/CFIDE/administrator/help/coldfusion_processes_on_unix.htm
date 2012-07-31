@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ColdFusion MX processes on UNIX</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addButton("show",BTN_TEXT,"Show TOC","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide TOC","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("what_s_new_in_this_release.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h5 style="font-weight: normal;" align="right"><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Overview</a></h5>
+<hr align="left" width="100.145%" size="1" />
+<h2>ColdFusion processes on UNIX</h2>
+<p><span style="font-weight: bold;"><b>Note:</b></span> The coldfusion process discussion does not apply when deploying ColdFusion on a J2EE server.</p>
+<p>&#160;</p>
+<p>The ColdFusion installation creates a single process in UNIX called <span style="font-family: 'Courier New', monospace;">cfusion</span>. To check whether it is running, use the following command:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">ps -
+eaf | 
+grep coldfusion</p>
+<p>If it is running, your computer returns a line like the following:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">nobody 4528 1 10 12:44 
+pts/0 00:00:07 /opt/coldfusion/bin/coldfusion -start</p>
+<p>&#160;</p>
+<p>ColdFusion also creates a process named k2admin for Verity search, which spawns two additional processes, k2server and k2index.</p>
+<h3 class="Procedure">Manage the ColdFusion process in UNIX</h3>
+<ol>
+<li class="kadov-p">Log in as root.</li>
+<li class="kadov-p">Enter the following command:
+<p class="NormalIndented" style="font-family: 'Courier New', monospace;">cd <span style="font-style: italic;"><i>cf_root</i></span>/bin</p>
+</li>
+<li class="kadov-p">Enter the appropriate command, as the following table describes:</li>
+</ol>
+<p>&#160;</p>
+<table style="margin-left: 24px;" cellspacing="0" width="80%">
+<col style="width: 29.074%;" />
+<col style="width: 70.926%;" />
+<tr valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 29.074%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Task</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 70.926%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Command</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 29.074%; padding-right: 10px; padding-left: 10px;">
+<p>Start ColdFusion</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 70.926%; padding-right: 10px; padding-left: 10px;">
+<p style="font-family: 'Courier New', monospace;">
+coldfusion start</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 29.074%; padding-right: 10px; padding-left: 10px;">
+<p>Stop ColdFusion</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 70.926%; padding-right: 10px; padding-left: 10px;">
+<p style="font-family: 'Courier New', monospace;">
+coldfusion stop</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 29.074%; padding-right: 10px; padding-left: 10px;">
+<p>Restart ColdFusion</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 70.926%; padding-right: 10px; padding-left: 10px;">
+<p style="font-family: 'Courier New', monospace;">
+coldfusion restart</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 29.074%; padding-right: 10px; padding-left: 10px;">
+<p>View performance information for ColdFusion</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 70.926%; padding-right: 10px; padding-left: 10px;">
+<p style="font-family: 'Courier New', monospace;">
+coldfusion status</p>
+</td>
+</tr>
+</table>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Services and processes overview</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="coldfusion_mx_services_in_windows.htm" title="coldfusion_mx_services_in_windows.htm">ColdFusion services in Windows</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="start_and_stop_coldfusion.htm" title="start_and_stop_coldfusion.htm">Start and stop ColdFusion</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

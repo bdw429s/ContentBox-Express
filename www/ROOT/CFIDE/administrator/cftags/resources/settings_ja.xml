@@ -1,0 +1,570 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Settings
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="caching_clear_cache_submit">テンプレートキャッシュがクリアされました。</cfcase>
+<cfcase value="caching_pagename">キャッシュ機能</cfcase>
+<cfcase value="pageHeader_caching">
+サーバーの設定 &gt; キャッシュ機能</cfcase>
+<cfcase value="template_cache_size">キャッシュされるテンプレートの最大数</cfcase>
+<cfcase value="caching_template_cacheSize_desc">
+テンプレートキャッシングを使用して、キャッシュされるテンプレートの数を制限します。キャッシュが小さい値に設定されていると、テンプレートが再処理される場合があります。サーバーに十分なメモリ容量がある場合は、この値を ColdFusion のすべてのテンプレートの合計数に設定することによって、最適なパフォーマンスを得ることができます。キャッシュを大きい値に設定しても、利用可能なメモリが自動的に減少するわけではありません。これは ColdFusion がテンプレートを増分的にキャッシュするためです。
+</cfcase>
+<cfcase value="caching_trusted_cache">信頼できるキャッシュ</cfcase>
+<cfcase value="caching_trusted_cache_desc">
+これをオンにすると、テンプレートキャッシュに現在常駐させるために検出されたリクエストファイルは、潜在的な更新に対して検査されません。サーバーの有効期間中にテンプレートが更新されないサイトに対しては、これによってファイルシステムのオーバーヘッドを最小限に抑えることができます。この設定では、サーバーを再起動する必要はありません。
+</cfcase>
+<cfcase value="in_request_template_cache">要求にテンプレートをキャッシュ</cfcase>
+<cfcase value="in_request_template_cache_text">
+   オンにすると、要求されたファイルが更新されていないかどうかが 1 回の要求の間に一度だけ確認されます。オフにすると、
+   同じ要求の中でアクセスされるたびに、要求されたファイルが変更されていないかどうかが確認されます。1 回の要求の間に
+   テンプレートやコンポーネントに更新が反映される可能性がないアプリケーションの場合は、こうすることによりファイルシステムのオーバーヘッドを最小限に抑えることができます。この設定を変更する場合、サーバーの再起動は不要です。
+</cfcase>
+<cfcase value="caching_component_cache">コンポーネントキャッシュ</cfcase>
+<cfcase value="caching_component_cache_desc">
+このチェックボックスをオンにすると、解決済みのコンポーネントパスがキャッシュされ、再解決が行われなくなります。この設定を変更する場合、サーバーの再起動は不要です。
+</cfcase>
+<cfcase value="save_class_files">クラスファイルの保存</cfcase>
+<cfcase value="save_class_files_desc">
+このオプションを選択すると、ColdFusion により生成されるクラスファイルはディスクに保存され、サーバーの再起動後に再使用されます。このオプションは本番システムに適しています。開発中は、このオプションを選択しないようにしてください。</cfcase>
+<cfcase value="cacheRealPath">Web サーバーパスのキャッシュ</cfcase>
+<cfcase value="cacheRealPath_desc">
+単一サイトの Web サーバーインストール上で、ページパスをキャッシュします。パフォーマンスが向上します。この変更を有効にするために、サーバーを再起動する必要があります。
+<br /><br />
+メモ : 複数の Web サイトシステムを持つ ColdFusion を使用する場合は、このオプションを選択しないでください。
+</cfcase>
+<cfcase value="caching_Max_cachedQueries">キャッシュされるクエリーの最大数</cfcase>
+<cfcase value="caching_Max_cachedQueries_desc">
+サーバーで維持するキャッシュクエリーの最大数を制限します。キャッシュクエリーでは、データベーストランザクションからではなくメモリから結果セットを取り出すことができます。クエリーはメモリ内に常駐しており、クエリー結果セットのサイズは異なるため、キャッシュされるクエリーの数に対してユーザーが指定した制限が必要となります。この値を超えると、最も古いクエリーがキャッシュから削除され、指定されたクエリーと置き換えられます。
+</cfcase>
+<cfcase value="caching_clear_cache_button">テンプレートキャッシュを直ちにクリア</cfcase>
+<cfcase value="caching_clear_cache_desc">下のボタンをクリックすると、テンプレートキャッシュがクリアされます。次回リクエストされたときにテンプレートはメモリ内にリロードされ、修正されていた場合は再コンパイルされます。</cfcase>
+<cfcase value="component_caching_clear_cache_button">コンポーネントキャッシュを直ちにクリア</cfcase>
+<cfcase value="component_caching_clear_cache_desc">下のボタンをクリックすると、コンポーネントキャッシュがクリアされます。解決済みのコンポーネントパスは無視され、再度解決が試みられます。</cfcase>
+<cfcase value="provide_cache_path">キャッシュパスを指定する必要があります。</cfcase>
+<cfcase value="maxEngineRange">チャートするスレッド数として、1 ～ 5 の整数を入力してください。</cfcase>
+<cfcase value="max_cache_size">キャッシュ内のイメージ数として、1 ～ 1500 の整数を入力してください。</cfcase>
+<cfcase value="charting_pagename">チャートの設定</cfcase>
+<cfcase value="pageHeader_charting">
+サーバーの設定 &gt; チャート</cfcase>
+<cfcase value="l10n_graphmem">メモリキャッシュ</cfcase>
+<cfcase value="l10n_graphdisk">ディスクキャッシュ</cfcase>
+<cfcase value="l10n_graphct">キャッシュタイプ</cfcase>
+<cfcase value="l10n_graphcache">チャートをメモリまたはディスクにキャッシュできます。メモリ内では、キャッシュ機能は迅速ですが、メモリを大量に使用します。</cfcase>
+<cfcase value="l10n_graphmax">キャッシュされるイメージの最大数</cfcase>
+<cfcase value="l10n_graphmaxtext">
+キャッシュに保管するチャートの最大数を指定します。キャッシュがいっぱいになると、新規のチャートが生成されるたびに、最も古いチャートがキャッシュから削除されます。チャートのキャッシュ機能により、同じグラフの生成が一度ですむため、そのチャートへの複数のリクエストがより迅速になります。
+</cfcase>
+<cfcase value="l10n_graphthread">チャートを処理するスレッドの最大数</cfcase>
+<cfcase value="l10n_graphthreadtext">同時に処理できるチャートリクエストの最大数を指定します。最小数は 1 で、最大数は 5 です。数が大きいほどメモリを必要とします。</cfcase>
+<cfcase value="l10n_cachelocation">ディスクキャッシュの位置</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="l10n_cachelocationtext">ディスクへキャッシュする場合は、生成されたチャートを保存するディレクトリを指定します。</cfcase>
+<cfcase value="registry_label">レジストリ</cfcase>
+<cfcase value="registry_desc">システムレジストリ</cfcase>
+<cfcase value="cookie_label">Cookie</cfcase>
+<cfcase value="cookie_desc">クライアントベースのテキストファイル。</cfcase>
+<cfcase value="x_badpdata">
+破棄間隔はゼロ以上の数値である必要があります。
+</cfcase>
+<cfcase value="client_tooquick">
+破棄間隔は 30 分未満にしないでください。
+</cfcase>
+<cfcase value="cv_edit_pagename"><cfoutput>クライアントストアの追加 / 編集 :#CALLER.thisStore#</cfoutput></cfcase>
+<cfcase value="cv_pagename">クライアント変数</cfcase>
+<cfcase value="cv_desc">説明</cfcase>
+<cfcase value="cv_create_tables_manual_instructions.">
+データソースでは、クライアント変数をストアするために必要なデータベーステーブルを手動で作成する必要があります。詳細については、オンラインヘルプを参照してください。
+</cfcase>
+<cfcase value="cv_create_tables">クライアントデータベーステーブルの作成</cfcase>
+<cfcase value="cv_create_tables_tip">
+クライアント変数ストレージに対して現在のデータソースを初めて設定する場合にのみ、このオプションを有効にします。クライアント変数ストレージに対して現在のデータソースが既に設定されている場合は、このオプションを有効にしてはいけません。
+</cfcase>
+<cfcase value="cv_purge">アクセスされなかったクライアントのデータを破棄</cfcase>
+<cfcase value="days">日</cfcase>
+<cfcase value="cv_purge_tip">
+指定日数の間アクセスされなかったクライアントのデータを ColdFusion で定期的に破棄する場合は、このオプションを有効にします。 
+</cfcase>
+<cfcase value="cv_edit_cluster_warn">
+クラスタ化されたサーバーのように、このデータソースが複数の ColdFusion サーバーによって使用されている場合は、クラスタ内の 1 つのサーバーだけがクライアントデータを破棄するよう設定されていることを確認してください。
+</cfcase>
+<cfcase value="cv_disable_globals">グローバルクライアント変数更新の無効化</cfcase>
+<cfcase value="cf_updates_globals_tip">
+このオプションによって、HITCOUNT や LASTVISIT などのグローバルクライアント変数を ColdFusion で更新する方法を制御します。更新を無効にすると、変数は、設定または修正された場合にのみ更新されます。更新を有効にすると、各ページのリクエストに対してグローバルクライアント変数が更新されます。
+</cfcase>
+<cfcase value="pageHeader_clientvars">
+サーバーの設定 &gt; クライアント変数</cfcase>
+<cfcase value="configure_datasources">
+クライアント変数を使用して、セッション間のユーザー情報と基本設定をストアできます。この Administrator 設定は、ClientStorage 属性が cfapplication タグで指定されていない場合にのみ使用されます。使用可能なクライアントストレージメカニズムのリストに ColdFusion データソースを追加する場合は、ドロップダウンリストからデータソースを選択し、[追加] ボタンをクリックします。データソースをデフォルトのストレージメカニズムとして設定する場合は、ラジオボタンを選択し、[適用] をクリックします。
+</cfcase>
+<cfcase value="selectDS">クライアントストアとして追加するためのデータソースの選択</cfcase>
+<cfcase value="button_add">追加</cfcase>
+<cfcase value="activateCS">クライアントセッション用のデフォルトのストレージメカニズムを選択</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="storage_name">ストレージ名</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="delete_client_confirmation">このクライアント変数ストアを削除してもよろしいですか。</cfcase>
+<cfcase value="edit">編集</cfcase>
+<cfcase value="delete">削除</cfcase>
+<cfcase value="none">なし</cfcase>
+<cfcase value="button_apply">適用</cfcase>
+<cfcase value="cv_purgeinterval">破棄の間隔</cfcase>
+<cfcase value="cf_purge_globals_tip">
+このオプションは、ColdFusion がクライアントストアで破棄オペレーションを実行する頻度を制御します。クライアントストアを破棄するように設定してある場合は、これはオペレーションが実行されるレートです。デフォルトでは 1 時間 7 分になります。30 分未満にはしないでください。
+</cfcase>
+<cfcase value="hours">時間</cfcase>
+<cfcase value="minutes">分</cfcase>
+<cfcase value="no_stores">クライアントストアが定義されていません。</cfcase>
+<cfcase value="font_pagename">フォント管理</cfcase>
+<cfcase value="pageHeader_fontmanagement">
+サーバー設定 &gt; フォント管理</cfcase>
+<cfcase value="font_register">新規フォントを ColdFusion で登録</cfcase>
+<cfcase value="font_newpath">新規フォント / フォントディレクトリ</cfcase>
+<cfcase value="delete_font_confirmation">
+このフォントを削除してもよろしいですか。
+</cfcase>
+<cfcase value="button_add_font">追加</cfcase>
+<cfcase value="font_registerUserDefined">ユーザー定義のフォント</cfcase>
+<cfcase value="user_actions">アクション</cfcase>
+<cfcase value="user_fontfamily">フォントファミリー</cfcase>
+<cfcase value="user_fontface">フォントスタイル</cfcase>
+<cfcase value="user_fontpsname">ポストスクリプト名</cfcase>
+<cfcase value="user_fonttype">フォントタイプ</cfcase>
+<cfcase value="user_fontuseablein">使用先</cfcase>
+<cfcase value="user_path">パス</cfcase>
+<cfcase value="fontpaths">現在のシステムフォント</cfcase>
+<cfcase value="system_fontfamily">フォントファミリー</cfcase>
+<cfcase value="system_fontface">フォントスタイル</cfcase>
+<cfcase value="system_fontpsname">ポストスクリプト名</cfcase>
+<cfcase value="system_fonttype">フォントタイプ</cfcase>
+<cfcase value="system_fontpath">パス</cfcase>
+<cfcase value="font_nopathsfound">フォントが見つかりません。</cfcase>
+<cfcase value="vm_pagename">Java と JVM の設定</cfcase>
+<cfcase value="java_jvm_pageHeader">
+サーバー設定 &gt; Java と JVM</cfcase>
+<cfcase value="jvm_header">
+Java 設定と JVM 設定により、ColdFusion が Java 仮想マシンを起動する方法を制御できます。この設定で、使用するクラスパスや割り当てるメモリサイズを制御し、また、任意の JVM 引数を設定できます。この設定を変更した場合は、ColdFusion を再起動する必要があります。不適切な設定を行うと、ColdFusion が正しく起動しなくなる場合があります。
+</cfcase>
+<cfcase value="jvm_backups">
+[送信] ボタンを押すと、jvm.config ファイルのバックアップが作成されます。このバックアップを使用して、重大な変更から復元できます。
+</cfcase>
+<cfcase value="jvm_virtual_path">Java 仮想マシンのパス</cfcase>
+<cfcase value="specify_location_jvm">Java 仮想マシン (JVM) の位置を指定します。</cfcase>
+<cfcase value="megabyte">MB</cfcase>
+<cfcase value="initial_memory_size">最小 JVM ヒープサイズ</cfcase>
+<cfcase value="max_memory_size">最大 JVM ヒープサイズ</cfcase>
+<cfcase value="max_min_mem_desc">
+メモリサイズ設定により、JVM がプログラムとデータに使用するメモリ量が決まります。
+</cfcase>
+<cfcase value="cf_class_path">ColdFusion クラスパス</cfcase>
+<cfcase value="specify_class_paths_jvm">JVM 用の追加クラスパスを指定します。複数のディレクトリを指定する場合はカンマで区切ります。</cfcase>
+<cfcase value="jvm_args">JVM 引数</cfcase>
+<cfcase value="jvm_args_desc">特定の JVM 初期化オプションを、スペースで区切って指定します。</cfcase>
+<cfcase value="hf_apply">これらの変更を有効にするために、ColdFusion サービスを再起動する必要があります。</cfcase>
+<cfcase value="not_valid_license">入力されたライセンスは有効ではありません。</cfcase>
+<cfcase value="license_pagename">ライセンス設定</cfcase>
+<cfcase value="enter_license">ライセンス番号の入力</cfcase>
+<cfcase value="license_intro">
+下のフォームを使用して、新規のシリアル番号を追加してください。入力するシリアル番号によって、さまざまな機能がオンにもオフになります。現在のエディション :
+</cfcase>
+<cfcase value="new_license">新規のライセンス</cfcase>
+<cfcase value="err_queue_timeout">キューのタイムアウトには正の数値を指定する必要があります</cfcase>
+<cfcase value="msg_simul_req">同時リクエスト</cfcase>
+<cfcase value="rl_pagename">リクエストの調整</cfcase>
+<cfcase value="pageHeader_requesttuning">
+サーバーの設定 &gt; リクエストの調整</cfcase>
+<cfcase value="request_limit">リクエストの制限</cfcase>
+<cfcase value="rl_max_req">同時テンプレートリクエストの最大数</cfcase>
+<cfcase value="ss_max_req_tip">
+同時に処理されるリクエストの数を制限します。この設定を使用して、負荷の大きいアプリケーションのシステムパフォーマンスを全体的に向上させてください。指定の制限数を超えるリクエストはキューに入れられます。スタンダード版では、この設定を有効にするために、ColdFusion を再起動する必要があります。
+</cfcase>
+<cfcase value="rl_max_req_tip">
+同時に処理できる CFML ページリクエスト数。この設定を使用して、負荷の大きいアプリケーションのシステムパフォーマンスを全体的に向上させてください。指定の制限数を超えるリクエストはキューに入れられます。
+</cfcase>
+<cfcase value="rl_max_flash">同時 Flash Remoting リクエストの最大数</cfcase>
+<cfcase value="rl_max_flash_tip">
+同時に処理できる Flash Remoting リクエストの数。
+</cfcase>
+<cfcase value="rl_max_webservice">同時 Web サービスリクエストの最大数</cfcase>
+<cfcase value="rl_max_webservice_tip">
+同時に処理できる Web サービスリクエスト数。
+</cfcase>
+<cfcase value="rl_max_cfc">同時 CFC 関数リクエストの最大数</cfcase>
+<cfcase value="rl_max_cfc_tip">
+HTTP 経由で同時に処理できる ColdFusion コンポーネントのメソッド数。この設定は、CFML 内からの CFC メソッドの呼び出しには影響せず、HTTP 経由でリクエストされたメソッドにのみ影響します。
+</cfcase>
+<cfcase value="jrun_limit">JRun マスターリクエスト制限 (再起動が必要)</cfcase>
+<cfcase value="maxJrunThread">実行中の JRun スレッドの最大数</cfcase>
+<cfcase value="maxActiveJRun_tip"><cfoutput>
+同時に実行される JRun ハンドラスレッドの最大数。これは、基盤となる JRun J2EE アプリケーションサーバーが同時に実行するリクエストスレッドの数です。この数には、JSP ページなどの ColdFusion 以外のリクエストも含まれています。一般にこの値は、前述のリクエスト制限の合計 (現在は #CALLER.limitsum#) よりも大きくなります。
+</cfoutput></cfcase>
+<cfcase value="maxQueuedJRun">実行待ちの JRun スレッドの最大数</cfcase>
+<cfcase value="maxQueuedJRun_tip">
+JRun が 1 回に受け入れることができるリクエストの最大数です。これは、基盤となる JRun J2EE アプリケーションサーバーが同時に受け入れるリクエストの数です。
+</cfcase>
+<cfcase value="tag_limit">タグ制限の設定</cfcase>
+<cfcase value="maxReports">同時レポートスレッドの最大数</cfcase>
+<cfcase value="reportThread_tip">
+同時に処理できる ColdFusion レポートの最大数。
+</cfcase>
+<cfcase value="maxCFThread">CFTHREAD に使用できるスレッドの最大数</cfcase>
+<cfcase value="maxCFThread_tip">
+同時に実行される CFTHREAD によって作成されるスレッドの最大数。CFTHREAD によって作成されるスレッドがこの設定を超える場合は実行待ちになります。
+</cfcase>
+<cfcase value="maxCFThread_tip_standard">
+スタンダード版では、最大数の制限は 10 です。
+</cfcase>
+<cfcase value="queue_limit">キューのタイムアウト設定</cfcase>
+<cfcase value="queueTimeout">キューで実行待ちのリクエストのタイムアウト</cfcase>
+<cfcase value="seconds">秒</cfcase>
+<cfcase value="queueTimeout_tip"><cfoutput>
+キューにあるリクエストがこの時間を過ぎて実行待ちである場合、リクエストをタイムアウトします。この値は、[リクエストのタイムアウト] の設定 (現在は #REQUEST.runtime.requestSettings.timeoutRequestTimeLimit# 秒) 以上に設定してください。
+</cfoutput></cfcase>
+<cfcase value="queue_timeout_page">リクエストキューのタイムアウトページ</cfcase>
+<cfcase value="queuetimeout_tip_1">
+テンプレートリクエストが実行されずにタイムアウトした場合にクライアントに送信する HTML ページの、Web ルートからの相対パスを指定します (例 : /CFIDE/timeout.html)。CFML を含むページは指定できません。このページを指定しない場合、リクエストが実行されなかったときには 500 Request Timeout エラーがクライアントに返されます。
+</cfcase>
+<cfcase value="map_no_name">マッピング用の有効な名前を入力してください。</cfcase>
+<cfcase value="map_invalid_path">マッピング用の有効なパスを入力してください。</cfcase>
+<cfcase value="map_duplicate_logical_path">入力した論理パスは既に存在します</cfcase>
+<cfcase value="map_pagename">ColdFusion マッピング</cfcase>
+<cfcase value="pageHeader_mappings">
+サーバーの設定 &gt; マッピング</cfcase>
+<cfcase value="map_welcome">
+ColdFusion マッピングにより、cfinclude タグと cfmodule タグは Web ルートの外にあるページにアクセスできます。これらのタグのマッピングの論理パスで開始するパスを指定すると、ColdFusion はマッピングのディレクトリパスを使用してページを探します。 <br/><br/>
+
+また、ColdFusion はマッピングを使用して ColdFusion コンポーネント (CFC) も探します。cfinvoke タグと cfobject タグおよび CreateObject 関数は、マップされたディレクトリ内で CFC を探します。 <br/><br/>
+
+<b>メモ :</b>このマッピングは、Web サーバー仮想ディレクトリとは無関係です。仮想ディレクトリを作成して、URL を介して該当するディレクトリにアクセスする場合は、Web サーバーのマニュアルを参照してください。 
+</cfcase>
+<cfcase value="add_edit_mapping">ColdFusion マッピングの追加 / 編集</cfcase>
+<cfcase value="map_logical_path">論理パス</cfcase>
+<cfcase value="map_dir_path">ディレクトリパス</cfcase>
+<cfcase value="button_map_update">マッピングの更新</cfcase>
+<cfcase value="button_map_delete">マッピングの削除</cfcase>
+<cfcase value="button_map_reset">リセット</cfcase>
+<cfcase value="button_add_map">マッピングの追加</cfcase>
+<cfcase value="map_active">アクティブな ColdFusion マッピング</cfcase>
+<cfcase value="sort_lpath">ロジカルパスによる並び替え</cfcase>
+<cfcase value="sort_dpath">ドライブパスによる並び替え</cfcase>
+<cfcase value="delete_mapping_confirmation">この ColdFusion マッピングを削除してもよろしいですか。</cfcase>
+<cfcase value="map_nomappings">マッピングはアクティブではありません。</cfcase>
+<cfcase value="numeric_value">タイムアウト値は、0 以上の数値である必要があります。</cfcase>
+<cfcase value="mem_pagename">メモリ変数</cfcase>
+<cfcase value="pageHeader_memoryvars">
+サーバーの設定 &gt; メモリ変数</cfcase>
+<cfcase value="mem_welcome">
+ColdFusion サーバーを再起動すると、アプリケーション変数が期限切れになります。セッション変数はユーザーのセッションが終了するとタイムアウトとなります。このページまたは cfapplication タグで指定するタイムアウトの期限後は、両方のタイプの変数も期限切れになります。 
+</cfcase>
+<cfcase value="mem_useJ2eeSession">J2EE セッション変数の使用</cfcase>
+<cfcase value="mem_appenable">アプリケーション変数の有効化</cfcase>
+<cfcase value="mem_sessenable">セッション変数の有効化</cfcase>
+<cfcase value="maxtime">最大タイムアウト</cfcase>
+<cfcase value="maxTimeoutDescription">
+これらの変数は、cfapplication タグで使用できるタイムアウトの最大期限を指定します。
+</cfcase>
+<cfcase value="mem_appvars">アプリケーション変数</cfcase>
+<cfcase value="mem_days">日</cfcase>
+<cfcase value="mem_hours">時間</cfcase>
+<cfcase value="mem_mins">分</cfcase>
+<cfcase value="mem_secs">秒</cfcase>
+<cfcase value="mem_sessvars">セッション変数</cfcase>
+<cfcase value="defaultime">デフォルトのタイムアウト</cfcase>
+<cfcase value="defaultTimeoutDescription">
+アプリケーション特有の値が cfapplication タグ内で指定されていない場合は、これらの値は、ColdFusion が使用するタイムアウト期間を指定します。
+</cfcase>
+<cfcase value="localofficeupdated">
+ローカル OpenOffice の設定が更新されました。
+</cfcase>
+<cfcase value="remotesofficeupdated">
+リモート OpenOffice の設定が更新されました。
+</cfcase>
+<cfcase value="remotesofficedelete">
+リモート OpenOffice の設定が削除されました。
+</cfcase>
+<cfcase value="document_pagename">OpenOffice の設定</cfcase>
+<cfcase value="pageHeader_documentmanagement">
+サーバーの設定 &gt; ドキュメント</cfcase>
+<cfcase value="openoffice_register_local">ColdFusion でのローカル OpenOffice の設定</cfcase>
+<cfcase value="officePath">OpenOffice ディレクトリ</cfcase>
+<cfcase value="browser_server">サーバーのブラウズ</cfcase>
+<cfcase value="button_add_office">追加</cfcase>
+<cfcase value="openoffice_register_remote">ColdFusion でのリモート OpenOffice の設定</cfcase>
+<cfcase value="remoteHost">リモートホスト</cfcase>
+<cfcase value="remotePort">リモートポート</cfcase>
+<cfcase value="button_delete_office">削除</cfcase>
+<cfcase value="cant_find_template_handler">
+サイト全体のエラーハンドラとして指定されているファイルは存在しません。欠けているテンプレートハンドラの代わりが作成されるまで、デフォルトのものが使用されます。
+</cfcase>
+<cfcase value="empty_securejsonprefix">
+JSON 接頭辞を空の文字列にすることはできません。
+</cfcase>
+<cfcase value="ss_pagename">サーバーの設定</cfcase>
+<cfcase value="pageHeader_serversettings">
+サーバーの設定 &gt; 設定</cfcase>
+<cfcase value="ss_timeout">リクエストタイムアウト</cfcase>
+<cfcase value="ss_timeout_tip">
+チェックボックスをオンにすると、指定の時間を超えたリクエストは終了されます。これにより、非常に長いリクエストがサーバーリソースを占有したり、他のリクエストのパフォーマンスに悪影響を与えないようにすることができます。
+</cfcase>
+<cfcase value="perapp_enable_per_app_settings">アプリケーションごとの設定の有効化</cfcase>
+<cfcase value="perapp_enable_per_app_settings_desc">
+オンにすると、アプリケーションごとの設定がサーバー全体で有効になります。オフにすると、アプリケーションごとの設定がサーバー全体で無効になります。
+</cfcase>
+<cfcase value="ws_enable">cftoken 用の UUID の使用</cfcase>
+<cfcase value="ws_welcome">
+クライアントとセッション変数 cftoken の値用に、乱数ではなく UUID を使用するように設定します。UUID では、トークン用に固有の識別子が生成されます。
+</cfcase>
+<cfcase value="enablehttpst">HTTP ステータスコードの有効化</cfcase>
+<cfcase value="enablehttpsttext">
+ColdFusion エラーがブラウザに返された場合に、ColdFusion は HTTP エラーステータスコードを設定します。テンプレートが見つからない場合はエラーステータスコード 404 が設定され、サーバーエラーの場合はエラーステータスコード 500 が設定されます。
+</cfcase>
+<cfcase value="enablewhite">空白抑制の有効化</cfcase>
+<cfcase value="enablewhitetext">
+ColdFusion が CFML ソースファイルによって出力するかもしれない多くの余分な空白、タブ、改行を取り除き、ColdFusion からブラウザに返されるページのサイズを縮小します。
+</cfcase>
+<cfcase value="disable_CFCTypeCheck_settings">CFC 型チェックの無効化</cfcase>
+<cfcase value="disableCFCTypeCheck_settings_desc">
+オンにすると、CFC 型の UDF 引数が検証されません。引数は "ANY" という型として処理されます。この設定は本番環境でのみ使用します。
+</cfcase>
+<cfcase value="disableServiceFactory">ColdFusion Java 内部コンポーネントへのアクセスの無効化</cfcase>
+<cfcase value="disableServiceFactoryttext">
+ColdFusion の内部実装の一部である Java オブジェクトに対するアクセスと作成を CFML コードが行えないようにします。この設定により、認証されていない CFML テンプレートでは、このサーバーの管理情報や設定情報の読み込みや修正ができなくなります。
+</cfcase>
+<cfcase value="secureJSON">シリアル化 JSON への接頭辞付加</cfcase>
+<cfcase value="secureJSONtext">
+カスタム接頭辞を使用してシリアル化 JSON 文字列に接頭辞を付加することで、JSON データを返す Web サービスをクロスサイトスクリプティング攻撃から保護します。
+</cfcase>
+<cfcase value="enableInMemoryFileSystem">メモリ内ファイルシステムの有効化</cfcase>
+<cfcase value="enableInMemoryFileSystemText">
+メモリ内ファイルシステムのサポートを有効化します
+</cfcase>
+<cfcase value="inMemoryFileSystemLimit">メモリ内仮想ファイルシステムのメモリ制限</cfcase>
+<cfcase value="inMemoryFileSystemLimit_text">
+メモリ内仮想ファイルシステムのメモリ制限を MB 単位で指定します。
+</cfcase>
+<cfcase value="enableWatcher">設定ファイルの変更の監視 (確認間隔 : </cfcase>
+<cfcase value="enableWacherText">
+設定ファイルを監視し、変更された場合は自動的にリロードします。Websphere ND 垂直クラスタに ColdFusion をデプロイする場合には、複数のインスタンスの ColdFusion が同じ設定ファイルを共有するので、この設定が必要になります。ほとんどのインストールでは、この機能を有効にしないでください。
+</cfcase>
+<cfcase value="visableMeasuresLabel">Visible Measures Tracking の有効化</cfcase>
+<cfcase value="visableMeasuresDesc">
+(Beta のみ) 選択されたセクションの ColdFusion のコードに対して、パフォーマンスおよび使用回数に関する情報収集を有効にします。この情報は Adobe Web サイトへ自動的かつ定期的にアップロードされます。このような自動アップロードが許可されないサイトでは、チェックボックスをオフにしてください。
+</cfcase>
+<cfcase value="enableGlobalScriptProtect">グローバルなスクリプト保護</cfcase>
+<cfcase value="globalScriptProtectDesc">
+Form、URL、CGI、Cookie などのスコープ変数をクロスサイトスクリプティング攻撃から保護するかどうかを指定してください。
+</cfcase>
+<cfcase value="allowExtraAttributesInAttrColl">AttributeCollection での追加属性の許可</cfcase>
+<cfcase value="allowExtraAttributesInAttrCollDesc">
+ColdFusion タグで attributecollection 構造体に非標準の属性を渡せるかどうかを指定してください。
+</cfcase>
+<cfcase value="cFaaSGeneratedFilesExpiryTime">CFaaS の間に作成された一時ファイルをクリアする期間 :</cfcase>
+<cfcase value="cFaaSGeneratedFilesExpiryTime_tip">
+CF as a Service (CFaaS) 操作の間に作成された一時ファイルを、作成から一定期間が経過した後に削除します。
+</cfcase>
+<cfcase value="CFFORMScriptSrc">デフォルト ScriptSrc ディレクトリ </cfcase>
+<cfcase value="cfformscriptsrc_text">
+cfform.js ファイルが含まれているディレクトリへのデフォルトのパス (Web ルートからのパス) を指定してください。<br/>
+</cfcase>
+<cfcase value="GoogleMapKey">Google Map API キー</cfcase>
+<cfcase value="googlemapkey_text">
+Google Map API のライセンスキーを指定します。<br />
+</cfcase>
+<cfcase value="enableServerCFC">onServerStart( ) メソッドを含むコンポーネント</cfcase>
+<cfcase value="enableServerCFC_text">
+onServerStart() メソッドを含む CFC の絶対パス (例 : "c:\server.cfc") を指定します。または、Web ルートから下の CFC パスをドット区切りで指定します (例 : "a.b.server")。デフォルトでは、ColdFusion は Web ルートから下で server.cfc を検索します。<br />
+</cfcase>
+<cfcase value="applicationCFCLookup">Application.cfc および Application.cfm の検索順序</cfcase>
+<cfcase value="defaultApplicationCFCLookup">デフォルトの順序</cfcase>
+<cfcase value="tillwebRootApplicationCFCLookup">Web ルートまで</cfcase>
+<cfcase value="inWebRootApplicationCFCLookup">Web ルート内</cfcase>
+<cfcase value="applicationCFCLookup_text">
+Application.cfc および Application.cfm が現在のフォルダで見つからない場合に ColdFusion で使用する検索オプションを指定します。
+デフォルトでは、ColdFusion はシステムルートまで検索します。
+</cfcase>
+<cfcase value="ss_missing_template">見つからないテンプレートハンドラ</cfcase>
+<cfcase value="ss_missing_template_tip">
+リクエストされたテンプレートが見つからない場合に実行するテンプレートへの相対パスを指定してください。<br/>
+</cfcase>
+<cfcase value="ss_err_handler">サイト全体のエラーハンドラ</cfcase>
+<cfcase value="ss_err_handler_tip">
+リクエストの処理中にエラーが発生した場合に実行するテンプレートへの相対パスを指定してください。
+</cfcase>
+<cfcase value="limitheader">リクエストサイズの制限</cfcase>
+<cfcase value="postSizeLimit">送信データの最大サイズ</cfcase>
+<cfcase value="postSizeLimit_tip">
+単一のリクエストでサーバーに送信できるデータ量を制限します。指定された制限よりも大きいリクエストは ColdFusion によって拒否されます。
+</cfcase>
+<cfcase value="throttleThreshold">リクエストのスロットルしきい値</cfcase>
+<cfcase value="throttleThreshold_tip">
+指定された制限よりも小さいリクエストはスロットルによって処理されません。
+</cfcase>
+<cfcase value="throttleMemory">リクエストのスロットルメモリ</cfcase>
+<cfcase value="throttleMemory_tip">
+スロットルの合計メモリサイズを制限します。使用可能な合計メモリが十分でない場合、リクエストはキューに入れられます。この制限よりも大きなリクエストは処理されません。
+</cfcase>
+<cfcase value="filenotfound"><cfoutput>ファイルが見つかりません :#FORM.UpdateFilePath#</cfoutput></cfcase>
+<cfcase value="l10n_version">システム情報</cfcase>
+<cfcase value="version_pageHeader">
+システム情報</cfcase>
+<cfcase value="need_upgrade"><cfoutput>アップグレードライセンスキー <b>(#FORM.new_license#)</b> が入力されました。これは、以前のバージョンの ColdFusion のライセンスキーを入力する際に必要です。</cfoutput></cfcase>
+<cfcase value="cancel_upg">アップグレードのキャンセル</cfcase>
+<cfcase value="old_license">元のライセンスキー</cfcase>
+<cfcase value="ReportPack">Report Pack ライセンス</cfcase>
+<cfcase value="update_file">更新ファイル</cfcase>
+<cfcase value="updatefilepath_instructions">更新ファイルが含まれているディレクトリを入力してください。ランタイム内の正しい位置へ移動するために、ColdFusion にそのファイルへのアクセス権が必要です。この変更を有効にするために、ColdFusion サービスを再起動する必要があります。
+</cfcase>
+<cfcase value="l10n_versioninformation">システム情報</cfcase>
+<cfcase value="l10n_serverdetails">サーバーの詳細</cfcase>
+<cfcase value="serverprdvrsinf">サーバー製品</cfcase>
+<cfcase value="vrsvrsinf">バージョン</cfcase>
+<cfcase value="editionvrsinf">エディション</cfcase>
+<cfcase value="sernlnumbervrsinf">シリアル番号</cfcase>
+<cfcase value="reportpacksernlnumbervrsinf">Report Pack シリアル番号</cfcase>
+<cfcase value="opsysiam">オペレーティングシステム</cfcase>
+<cfcase value="osversionxyz">OS バージョン</cfcase>
+<cfcase value="updlevel">更新レベル</cfcase>
+<cfcase value="adobedriverversion">Adobe ドライバのバージョン</cfcase>
+<cfcase value="l10n_jvmdetails">JVM 詳細</cfcase>
+<cfcase value="javaversionvrs">Java バージョン</cfcase>
+<cfcase value="jvavendvrsninf">Java ベンダ</cfcase>
+<cfcase value="javavendurl">Java ベンダ URL</cfcase>
+<cfcase value="javahomeverioninfo">Java ホーム</cfcase>
+<cfcase value="javafileencoding">Java ファイルエンコード</cfcase>
+<cfcase value="javalocale">Java デフォルトロケール</cfcase>
+<cfcase value="filesepjava">ファイルセパレータ</cfcase>
+<cfcase value="pathsepjvainfo">パスセパレータ</cfcase>
+<cfcase value="linesepjavainfo">行セパレータ</cfcase>
+<cfcase value="usenamejavainfo">ユーザー名</cfcase>
+<cfcase value="userhomejavainfo">ユーザーホーム</cfcase>
+<cfcase value="userdirjavainfo">ユーザーディレクトリ</cfcase>
+<cfcase value="vmjavaspecversion">Java VM 仕様バージョン</cfcase>
+<cfcase value="sweetmaryjvmvendor">Java VM 仕様ベンダ</cfcase>
+<cfcase value="specvmjavaname">Java VM 仕様名</cfcase>
+<cfcase value="javavmversionyeah">Java VM バージョン</cfcase>
+<cfcase value="jvavend">Java VM ベンダ</cfcase>
+<cfcase value="javavmname">Java VM 名</cfcase>
+<cfcase value="versionjavaspec">Java 仕様バージョン</cfcase>
+<cfcase value="specfvendjaca">Java 仕様ベンダ</cfcase>
+<cfcase value="javaspecnam">Java 仕様名</cfcase>
+<cfcase value="jvaclsssvers">Java クラスバージョン</cfcase>
+<cfcase value="CFServerJavaClassPath">CF サーバー Java クラスパス</cfcase>
+<cfcase value="javaClassPath">Java クラスパス</cfcase>
+<cfcase value="javaextdirs">Java 拡張ディレクトリ</cfcase>
+<cfcase value="l10n_printerdetails">プリンタの詳細</cfcase>
+<cfcase value="defaultprinter">デフォルトプリンタ</cfcase>
+<cfcase value="printers">プリンタ</cfcase>
+<cfcase value="jvm_alert">修正プログラムを適用するために、ColdFusion サービスを再起動する必要があります。</cfcase>
+<cfcase value="template_cache_size_error">テンプレートキャッシュサイズは、0 以上である必要があります。</cfcase>
+<cfcase value="max_cached_queries_error">最大キャッシュクエリー数は、0 以上である必要があります。</cfcase>
+<cfcase value="update_caching_error"><cfoutput>
+キャッシュ設定を更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="cache_too_big_error">キャッシュサイズは、1 ～ 1500 の整数値である必要があります。</cfcase>
+<cfcase value="engines_too_big_error">スレッドの最大数は、1 ～ 5 の整数値である必要があります。</cfcase>
+<cfcase value="cache_path_error">有効なキャッシュパスを指定する必要があります。これは既存のディレクトリである必要があります。</cfcase>
+<cfcase value="cv_error_tables">
+クライアントテーブルを作成できません。<br/>既に存在している場合は、[クライアントテーブルの作成] のチェックボックスをオフにする必要があります。
+</cfcase>
+<cfcase value="cv_error_timeout">
+クライアント変数を破棄するためのタイムアウト間隔は、数値である必要があります。
+</cfcase>
+<cfcase value="font_error_duplicate">
+重複したフォントを追加することはできません。
+</cfcase>
+<cfcase value="font_error_empty_directory"><cfoutput>
+ディレクトリ "#CALLER.fontpath#" に使用可能なフォントファイルが含まれていないか、ディレクトリ内のすべてのフォントファイルが既にサーバーに登録されています。受け入れられるフォントの拡張子 :<br/><br/> TTF (True Type Font)<br/> TTC (True Type Collection)<br/> AFM (Adobe Font Metrics)<br/>
+</cfoutput></cfcase>
+<cfcase value="font_error_add"><cfoutput>
+フォント '#CALLER.fontPath#' を追加できません。パスは、有効な絶対パスである必要があります。受け入れられるパス :<br/><br/>C:\myfonts\ C:\myfonts\tahoma.ttf<br/> C:\myfonts\gulim.ttc<br/> /opt/myfonts/<br/> /opt/myfonts/tahoma.ttf<br/> /opt/myfonts/gulim.ttc<br/><br/> 受け入れられるフォントの拡張子 :<br/><br/> TTF (True Type Font)<br/> TTC (True Type Collection)<br/> AFM (Adobe Font Metrics)<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="font_error_delete"><cfoutput>
+フォントを削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="set_jvm_error_update"><cfoutput>
+JVM 設定を更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="get_jvm_error_update"><cfoutput>
+JVM 設定を取得できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="rl_error_limit"><cfoutput>
+#CALLER.arguments.setting# の制限は、ゼロより大きな数値である必要があります。
+</cfoutput></cfcase>
+<cfcase value="cfide_error_update">
+CFIDE システムマッピングを更新できません。<br/>
+</cfcase>
+<cfcase value="map_error_update"><cfoutput>
+マッピングを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_get"><cfoutput>
+マッピングを取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="hours_error">時間の値は、0 ～ 23 の数字である必要があります。</cfcase>
+<cfcase value="mins_error">分の値は、0 ～ 59 の数字である必要があります。</cfcase>
+<cfcase value="secs_error">秒の値は、0 ～ 59 の数字である必要があります。</cfcase>
+<cfcase value="def_bigger_than_max_error">デフォルト値を最大値より大きくできません。</cfcase>
+<cfcase value="mem_error_update"><cfoutput>
+メモリ変数を更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="mem_error_get"><cfoutput>
+メモリ変数設定を取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="local_config_error_add"><cfoutput>
+ローカル Office を設定できません。
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="invalid_location_error"><cfoutput>
+指定されたディレクトリ #CALLER.dirpath# は、有効な Office インストールディレクトリではありません
+</cfoutput></cfcase>
+<cfcase value="remote_config_error_add"><cfoutput>
+リモート OpenOffice を設定できません。
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ss_error_timeout">
+リクエストタイムアウトの長さは、1 秒より大きな数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_post_size">
+送信サイズはゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_throttle_threshold">
+スロットルしきい値はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_throttle_memory">
+スロットルメモリはゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_inmemoryfilesystemlimit">
+メモリ内ファイルシステムの制限は 1 以上の数値である必要があります。
+</cfcase>
+<cfcase value="cant_find_error_handler">
+サイト全体のエラーハンドラとして指定されているファイルは存在しません。代わりが作成されるまで、デフォルトのエラーハンドラが使用されます。
+</cfcase>
+<cfcase value="ss_error_watch_interval">
+設定監視間隔はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_cFaaSGeneratedFilesExpiryTime">
+CFaaS で作成されたファイルの削除期間はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_tmpupd"><cfoutput>
+テンプレートハンドラ情報を更新できません。#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="errorheader">エラーハンドラ</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

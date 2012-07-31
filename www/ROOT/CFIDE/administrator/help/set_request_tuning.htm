@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Set request tuning</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nSet request tuning");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Set request tuning<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<br />
+
+<hr size="1" width="100.145%" align="left" />
+<h1>Set request tuning</h1>
+<p>Lets you set the number of simultaneous request by request type.</p>
+<p>&#160;</p>
+<p>The following table describes the request handling settings. Click Submit 
+ Changes to save your changes.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<col style="width: 33.333%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Setting</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;"><span style="font-weight: bold;"><b>Default</b></span></p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of simultaneous Template 
+		 requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>To 
+		 increase system performance, enter a number to limit the simultaneous 
+		 requests for ColdFusion. When the server reaches your specified 
+		 limit, requests are queued and handled in the order received.</p>
+		<p>&#160;</p>
+		<p><span style="font-weight: bold;"><b>Note:</b></span> Restart the server 
+		 when you change this setting.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>10</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of simultaneous Flash 
+		 Remoting requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of Flash Remoting requests that can be processed concurrently.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>5</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of simultaneous Web 
+		 Service requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of Web Service requests that can be processes concurrently.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>5</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of simultaneous CFC 
+		 function requests</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of CFC methods that can be processed simultaneously 
+		 via HTTP.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>10</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of simultaneous Report 
+		 threads</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of threads that ColdFusion can use to process report 
+		 requests. Specify a value for this setting if you find that multiple 
+		 simultaneous report submissions affect performance.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>8</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of threads available 
+		 for CFTHREAD</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of threads &#160;that ColdFusion can create with the 
+		 CFTHREAD tag. When the server reaches your specified limit, requests 
+		 are queued and handled in the order received.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>10</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Timeout requests waiting in queue 
+		 after [n] seconds</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the time a request can wait in the queue before it is timed out. 
+		 Set the value to be at least equal to the Request Timeout value.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>60</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Request Queue Timeout Page</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the HTML page to sent to clients when a template request times 
+		 out. The specified HTML page cannot contain any CFML. If no page 
+		 is specified, clients see a 500 Request Timeout error when a request 
+		 times out.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>None</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of running JRun threads</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of JRun handler threads that can run concurrently. 
+		 This is the number of request threads that the underlying JRun 
+		 J2EE application server runs concurrently. This includes non-ColdFusion 
+		 requests, including JSP or HTML pages served by JRun.</p>
+		<p>&#160;</p>
+		<p>This number should be equal to or greater than the sum of the 
+		 maximum number of Template, Flash Remoting, Web Service, and CFC 
+		 function requests.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>50</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 33.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of queued JRun threads</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of requests that JRun accepts at any one time. This 
+		 is the number of requests that the underlying JRun J2EE application 
+		 server accepts at the same time.</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 33.333%; padding-right: 10px; padding-left: 10px;"><p>1000</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Related topic</p>
+<p style="margin-left: 40px;"><a href="about_simultaneous_request_tuning.htm" title="about_simultaneous_request_tuning.htm">Simultaneous 
+ request tuning overview</a></p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

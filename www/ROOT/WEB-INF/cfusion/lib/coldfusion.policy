@@ -1,0 +1,8 @@
+// PERMISSIONS GRANTED TO EVERYONE
+
+grant {
+
+    permission java.security.AllPermission;
+
+};
+

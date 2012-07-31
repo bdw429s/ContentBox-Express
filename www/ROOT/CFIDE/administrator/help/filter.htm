@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 9, 2001 3:12:43 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Log Filter</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Debugging & Logging\nLogging\nFilter log content");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_debugging_settings.htm\">Debugging & Logging<\/a> > <a href=\"logsettings.htm\">Logging<\/a> > Filter log content<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="logsettings.htm" title="logsettings.htm">Overview</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" size="1" width="100.435%" 
+	 align="left" />
+<h1>Filter log content</h1>
+<h5>Debugging &amp; Logging &gt; Log Files &gt; <span style="font-style: italic;"><i>logfilename</i></span> 
+ &gt; Log Viewer &gt; Launch Filter</h5>
+<h3 class="Procedure">Filter the log information</h3>
+<ol type="1">
+	<li class="p-NumList"><p class="NumList">To open the Log Filter, click 
+	 Launch Filter on the Log Viewer page.</p></li>
+	<li class="p-NumList"><p class="NumList">In the Log Filter dialog box, 
+	 specify one or more of the following options:</p></li>
+</ol>
+<br />
+
+<table style="margin-left: 24px;" cellspacing="0" width="82.877%">
+	<col style="width: 24.793%;" />
+	<col style="width: 75.207%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 75.207%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Show 
+		 Severity</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 one or more <a href="logviewer.htm#Severity" title="logviewer.htm#Severity">severity levels</a> 
+		 to filter.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Keywords</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>Enter 
+		 one or more words in the Keywords text box. Click the <span style="font-weight: bold;"><b>Find</b></span> 
+		 drop-down list box, and select one of these options: <span style="font-style: italic;"><i>exact 
+		 phrase</i></span>, <span style="font-style: italic;"><i>any words</i></span>, 
+		 or <span style="font-style: italic;"><i>all words</i></span>.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Applications</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>If 
+		 applicable, enter the application name to filter. If applicable, 
+		 the application name appears as the fifth (entry) column in the 
+		 log file.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Thread 
+		 IDs</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 thread identification numbers are used by Adobe Technical Support 
+		 personnel to track and troubleshoot problems. The thread identification 
+		 string appears as the fourth entry (column) in a log file.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal; color: #000000;">Most 
+		 Recent</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the relative age of included messages.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Date 
+		 Range</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>To 
+		 display the log content for a specific date range, enter the start 
+		 and end dates. Enter the dates in year-month-day format ( YYYY-MM-DD). For example, to specify April 
+		 21, 2002, enter: 2002-04-21.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 24.793%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: normal;">Time 
+		 Span</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 75.207%; padding-right: 10px; padding-left: 10px;"><p>To 
+		 show the log content for a specific time range, enter the start 
+		 and end times. Enter the time span in hour-minute-second format 
+		 ( HH:MM: SS). 
+		 For example, to specify 2:00 P.M., enter 14:00:00.</p></td>
+	</tr>
+</table>
+<p class="NormalIndented">&#160;</p>
+<p class="NumList">&#160;</p>
+<ol start="3" type="disc">
+	<li class="p-NumList"><p class="NumList">To begin the filter process, 
+	 click one of the following options:</p></li>
+</ol>
+<ol start="3" type="1">
+	<li class="p" type="disc"><p><span style="font-weight: bold;"><b>Show 
+	 Matches &#160;</b></span>Displays results that match the filter criteria 
+	 specified on the tab.</p></li>
+	<li class="p" type="disc"><p><span style="font-weight: bold;"><b>Hide 
+	 Matches &#160;</b></span>&#160;&#160;Displays results that exclude any 
+	 information that matches the filter criteria specified on the tab.<br />
+	&#160;</p></li>
+</ol>
+<p style="font-weight: bold; margin-left: 0px;">Tip: <span style="text-indent: 40px; 
+															 font-weight: normal;">To 
+ print</span> <span style="font-weight: normal;">the filter results, use 
+ the <a href="tips_for_printing.htm" style="font-weight: normal;" title="tips_for_printing.htm">print 
+ option</a> in your</span> <span style="text-indent: 40px; font-weight: normal;">w</span><span 
+	 style="text-indent: 40px; font-weight: normal;">eb browser.</span></p>
+<p>&#160;</p>
+<h5><a name="related" id="related" title="related"></a>Related topics</h5>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="logsettings.htm" title="logsettings.htm">Log 
+	 settings</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="logtypes.htm" title="logtypes.htm">Generated 
+	 log files</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="logfiles.htm" title="logfiles.htm">Log 
+	 Files page</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

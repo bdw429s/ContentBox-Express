@@ -1,0 +1,147 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+
+<cfsilent>
+
+<!--
+
+L10N Resource File
+
+Section: Monitoring
+
+Locale: English (en)
+
+Find the requested resource by id
+
+-->
+
+</cfsilent>
+
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="ms_pagename">監視の設定</cfcase>
+
+<cfcase value="monitoringsettings_header">サーバーの監視 &gt; 設定</cfcase>
+
+<cfcase value="ms_monitor_enable">監視の有効化</cfcase>
+
+<cfcase value="ms_monitor_enable_tip">
+このチェックボックスをオンにすると、監視が有効になります。
+オフにすると、監視が無効になります。
+</cfcase>
+
+<cfcase value="ms_profiling_enable">プロファイリングの有効化</cfcase>
+
+<cfcase value="ms_profiling_enable_tip">
+このチェックボックスをオンにすると、プロファイリングが有効になります。
+オフにすると、プロファイリングが無効になります。
+</cfcase>
+
+<cfcase value="memorytracking_enable">メモリトラッキングの有効化</cfcase>
+
+<cfcase value="memorytracking_enable_tip">
+このチェックボックスをオンにすると、メモリトラッキングが有効になります。
+オフにすると、メモリトラッキングが無効になります。
+</cfcase>
+
+<cfcase value="monitoringserversettings_header">監視サーバーの設定</cfcase>
+
+<cfcase value="ms_monitoringserver_enable">監視サーバーの有効化</cfcase>
+
+<cfcase value="ms_monitoringserver_enable_tip">
+このチェックボックスをオンにすると、別の監視サーバーが有効になります。
+オフにすると、別の監視サーバーが無効になります。
+</cfcase>
+
+<cfcase value="monitoringServerPort">監視サーバーのポート</cfcase>
+
+<cfcase value="error_portinuse">ポートは既に使用中です。別のポートを指定してください。</cfcase>
+
+<cfcase value="error_settings">サーバーをセットアップする際に、エラーが発生しました。詳細については、ログを調べてください。</cfcase>
+
+<cfcase value="monitoringserverPort_tip">
+監視サーバーを起動するポートを指定します。このサーバーが、監視リクエストを処理します。
+監視サーバーが有効でポートがブロックされていないことを確認してください。
+</cfcase>
+
+<cfcase value="ms_error_portvalidation">
+ポートの値は、0 より大きな数値である必要があります。
+</cfcase>
+
+<cfcase value="ms_error_tmpupd"><cfoutput>
+テンプレートハンドラ情報を更新できません。
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfcase value="invalidSnapshotFile">スナップショットファイルが無効であるか、スナップショットファイルが存在しません :</cfcase>
+
+<cfcase value="flash_remoting_disabled">
+サーバーモニタかマルチサーバーモニタのいずれかを実行するには、Flash Remoting を有効にしてください。
+</cfcase>
+
+<cfcase value="pageHeader_clientvars1">ColdFusion サーバーの監視 &gt; サーバーモニタ</cfcase>
+
+<cfcase value="servermonitor">
+サーバーモニタは、ColdFusion サーバーのオペレーションに関する情報を提供する Adobe Flash アプリケーションです。サーバーモニタを使用するには、Adobe Flash Player 9 をインストールしておく必要があります。<br>
+<br>
+サーバーモニタの上部のボタンを使用して、次の操作を行えます。
+&nbsp;&nbsp;&nbsp;&nbsp;<table cellpadding="0" cellspacing="0">
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;監視を開始 - すべての監視をオンにします。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;プロファイリングを開始 - すべてのタグ、関数、およびクエリー実行時間の監視をオンにします。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;メモリトラッキングを開始 - さまざまなスコープでのメモリトラッキングをオンにします。プロファイリングもオンの場合は、個々のタグ、関数およびクエリーで使用されるメモリがトラッキングされます。</td></tr>
+</table>
+<br>
+サーバーモニタに表示されるメモリ使用量の情報は予測値なので、実際のメモリ使用量とは異なる場合があります。この情報は、絶対的な測定値としてではなく指標として使用してください。<br>
+</cfcase>
+
+<cfcase value="launch_sm">
+サーバーモニタを起動するには、右側のボタンをクリックします...
+  </cfcase>
+
+<cfcase value="launch_server_monitor">サーバーモニタの起動</cfcase>
+
+<cfcase value="pageHeader_clientvars2">ColdFusion サーバーの監視 &gt; マルチサーバーモニタ</cfcase>
+
+<cfcase value="remotemonitor">
+マルチサーバーモニタは、ColdFusion の複数のインスタンスをリモートで監視するために使用できる Adobe Flash アプリケーションです。マルチサーバーモニタを使用するには、Adobe Flash Player 9 をインストールしておく必要があります。<br>
+<br>
+マルチサーバーモニタの上部のタブを使用して、次の操作を行えます。
+&nbsp;&nbsp;&nbsp;&nbsp;<table cellpadding="0" cellspacing="0">
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;クイックビュー - 登録されているすべてのサーバーのステータスがアイコン表示の形式で表示されます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;詳細ビュー - 登録されているすべてのサーバーのステータスが表形式で表示されます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;サーバーの追加 - 新規サーバーを追加するための登録パネルが表示されます。</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;エラー - 登録されたサーバーごとに最後の接続エラーが表示されます。</td></tr>
+</table>
+</cfcase>
+
+<cfcase value="launch_msm">
+マルチサーバーモニタを起動するには、右側のボタンをクリックします...
+</cfcase>
+
+<cfcase value="launch_multiserver_monitor">マルチサーバーモニタの起動</cfcase>
+
+<cfcase value="pageHeader_clientvars3">Server Manager</cfcase>
+
+<cfcase value="servermanager">
+Server Manager は複数のサーバーを管理できる AIR アプリケーションです
+<br>
+</cfcase>
+
+<cfcase value="launch_smanager">
+ColdFusion Server Manager を起動するには、右側のボタンをクリックします...
+</cfcase>
+
+<cfcase value="launch_server_manager">Server Manager の起動</cfcase>
+
+<cfcase value="alternatecontent_cf">
+                  このコンテンツを表示するには、Adobe Flash Player が必要です。<a href=http://www.adobe.com/go/getflash_jp/>Flash を入手
+                </cfcase>
+
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+
+</cfswitch>
+
+</cfprocessingdirective>
+
+

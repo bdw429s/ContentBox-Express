@@ -1,0 +1,112 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: J2EE
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="available_data_sources">使用可能なデータソース</cfcase>
+<cfcase value="archive_data_sources">アーカイブデータソース</cfcase>
+<cfcase value="delbadchar"><cfoutput>
+アーカイブ名の <i>#CALLER.HTMLEditFormat(url.name)#</i> には使用できない文字が含まれています。アーカイブ名には文字と数字のみを使用できます。句読点、英数字以外の文字、空の名前なども使用できません。
+</cfoutput></cfcase>
+<cfcase value="message">
+アーカイブ設定データが見つかりません。再作成してください (config.xml を削除しましたか)。
+</cfcase>
+<cfcase value="dupedetail"><cfoutput>#FORM.name# は既に存在します。他の名前を選択してください。</cfoutput></cfcase>
+<cfcase value="badchar"><cfoutput>
+アーカイブ名の <i>#FORM.archivename#</i> には使用できない文字が含まれています。アーカイブ名には文字と数字のみを使用できます。句読点、英数字以外の文字、空の名前なども使用できません。
+</cfoutput></cfcase>
+<cfcase value="addEdit_j2ee_archives">J2EE アーカイブの追加 / 編集</cfcase>
+<cfcase value="addeditj2eearchive">
+J2EE アーカイブの追加 / 編集
+</cfcase>
+<cfcase value="req">
+* の付いたフィールドは必須です
+</cfcase>
+<cfcase value="addnewarch">新規アーカイブの追加</cfcase>
+<cfcase value="archname">アーカイブ名</cfcase>
+<cfcase value="appdir">アプリケーションディレクトリ</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="distdir">デプロイディレクトリ</cfcase>
+<cfcase value="archtype">アーカイブタイプ</cfcase>
+<cfcase value="ctxroot">コンテキストルート (EAR に有効)</cfcase>
+<cfcase value="serialnum">シリアル番号</cfcase>
+<cfcase value="oldserialnum">以前のシリアル番号 (アップグレードの場合)</cfcase>
+<cfcase value="comsupport">COM サポートを含める</cfcase>
+<cfcase value="disdebug">デバッグの無効化</cfcase>
+<cfcase value="cfmlsrc">CFML ソースを含める</cfcase>
+<cfcase value="inludeadmin">CF Administrator を含める</cfcase>
+<cfcase value="configdsn">アーカイブに含めるデータソースの設定</cfcase>
+<cfcase value="button_create">送信</cfcase>
+<cfcase value="button_cancel">キャンセル</cfcase>
+<cfcase value="button_working">実行中...</cfcase>
+<cfcase value="j2ee_archives_no_odbc">メモ :ODBC データソースを J2EE アーカイブに含めることはできません。それらはこのページには表示されません。</cfcase>
+<cfcase value="j2ee_archives">J2EE アーカイブ</cfcase>
+<cfcase value="pageHeader_j2eearchives">パッケージとデプロイ &gt; J2EE アーカイブ</cfcase>
+<cfcase value="createnewarear">
+J2EE アーカイブ (EAR または WAR) ファイルを作成します。
+</cfcase>
+<cfcase value="archivenamerequired">
+アーカイブ名が必要です
+</cfcase>
+<cfcase value="button_add"> 追加 </cfcase>
+<cfcase value="configdarch">設定済みアーカイブ</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="lastbuilt">最終ビルト</cfcase>
+<cfcase value="arch_noarch">アーカイブは定義されていません</cfcase>
+<cfcase value="button_edit">編集</cfcase>
+<cfcase value="button_delete">削除</cfcase>
+<cfcase value="delete_arch_confirmation">このアーカイブを削除してもよろしいですか。</cfcase>
+<cfcase value="oldlicense_empty">
+これはアップグレード用のシリアル番号です。古いシリアル番号も指定する必要があります。
+</cfcase>
+<cfcase value="oldlicense"><cfoutput>
+<i>#FORM.oldserial#</i> は #CALLER.cfversion# へアップグレードするための有効なシリアル番号ではありません。
+</cfoutput></cfcase>
+<cfcase value="not_upgradelicense"><cfoutput>
+このシリアル番号は、#CALLER.cfversion# へアップグレードするためのものではありません。古いシリアル番号は不要です。
+</cfoutput></cfcase>
+<cfcase value="invalidlicense"><cfoutput>
+<i>#FORM.serial#</i> は #CALLER.cfversion# エンタープライズ版の有効なシリアル番号ではありません。
+</cfoutput></cfcase>
+<cfcase value="invalidlicensedetail">ライセンスが無効です</cfcase>
+<cfcase value="oldlicense_not_required">
+古いシリアル番号は不要です。
+</cfcase>
+<cfcase value="badchar1"><cfoutput>
+アーカイブ名の <i>#FORM.archive#</i> には使用できない文字が含まれています。アーカイブ名には文字と数字のみを使用できます。句読点、英数字以外の文字、空の名前なども使用できません。
+</cfoutput></cfcase>
+<cfcase value="nodistdir">アーカイブ用に指定されたターゲットディレクトリは存在しません</cfcase>
+<cfcase value="noappdir">アーカイブ用に指定されたターゲットアプリケーションディレクトリは存在しません</cfcase>
+<cfcase value="pagenamemsg_buildingpackage">パッケージの構築</cfcase>
+<cfcase value="headlinePleasewait">作業中です。しばらくお待ちください。</cfcase>
+<cfcase value="dir_error">
+有効なアプリケーションディレクトリを入力してください。
+</cfcase>
+<cfcase value="distdir_error">
+有効な配布ディレクトリを入力してください。
+</cfcase>
+<cfcase value="sn_error">
+有効なシリアル番号を入力してください。
+</cfcase>
+<cfcase value="oldsn_error">
+以前のシリアル番号を入力してください。
+</cfcase>
+<cfcase value="archive_error"><cfoutput>
+問題が発生しました<br/>
+<cfoutput>
+<b>メッセージ</b> :#CALLER.exceptions.message#<br/> <b>詳細</b> : #CALLER.exceptions.detail#
+</cfoutput>
+</cfoutput></cfcase>
+<cfcase value="configerror">タイプを取得する際のエラーです。設定を使用できません。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

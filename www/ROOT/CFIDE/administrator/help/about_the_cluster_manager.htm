@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>About the Cluster Manager page</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Enterprise Manager\nCluster Manager page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"about_the_server_manager_page.htm\">Enterprise Manager<\/a> > Cluster Manager page<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="about_the_cluster_manager.htm" title="about_the_cluster_manager.htm">Overview</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" width="100.435%" size="1" align="left" />
+<h1>Cluster Manager page</h1>
+<h5>Enterprise Manager &gt; Cluster Manager</h5>
+<p>&#160;</p>
+<p>The Cluster Manager page in ColdFusion Administrator lets you create and manage clusters of JRun servers, each containing the same ColdFusion applications.</p>
+<p>&#160;</p>
+<ol type="1">
+<li style="margin-left: -20px;" class="p">
+<p>Add a cluster by typing a name in the Cluster Name box, and clicking Add.<br />
+This creates a cluster and adds it to the Configured Clusters table.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Add servers to the cluster by clicking the Edit icon next to the cluster name in the Configured Clusters table. This displays the <a href="edit_cluster_page.htm" title="edit_cluster_page.htm">Edit Cluster</a> page.</p>
+</li>
+</ol>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> The Cluster Manager page appears only if you install the multiserver configuration. It does not display in the server configuration. Nor does it display when running in a J2EE configuration (other than that deployed in the cfusion server of the multiserver configuration).</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Add New Cluster</p>
+<p>&#160;</p>
+<div align="left" >
+<table style="left: 128px; top: 222px;" cellspacing="0" width="82.161%">
+<col width="144" />
+<col width="288" />
+<tr style="height: 20px;" valign="top">
+<td style="border: Solid 1px #c0c0c0;padding-right: 10px; padding-left: 10px; margin-left: 0px;" width="144">
+<p style="font-weight: bold;">Area</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px;" width="288">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; margin-left: 0px;" width="144">
+<p>Cluster Name</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px;" width="288">
+<p>Specifies the name of the cluster.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Configured Clusters</p>
+<p>&#160;</p>
+<div align="left" >
+<table style="left: 128px; top: 222px;" cellspacing="0" width="509">
+<col style="width: 32.765%;" />
+<col style="width: 67.234%;" />
+<tr style="height: 25px;" valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 32.765%; padding-right: 10px; padding-left: 10px; margin-left: 0px;">
+<p style="font-weight: bold;">Area</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 67.234%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr style="height: 26px;" valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 32.765%; padding-right: 10px; padding-left: 10px; margin-left: 0px;">
+<p>Actions</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 67.234%; padding-right: 10px; padding-left: 10px;">
+<p>Displays the <a href="edit_cluster_page.htm" title="edit_cluster_page.htm">Edit Cluster</a> page or deletes the cluster.</p>
+</td>
+</tr>
+<tr style="height: 25px;" valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 32.765%; padding-right: 10px; padding-left: 10px; margin-left: 0px;">
+<p>Cluster Name</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 67.234%; padding-right: 10px; padding-left: 10px;">
+<p>Specifies the cluster name.</p>
+</td>
+</tr>
+<tr style="height: 23px;" valign="top">
+<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 32.765%; padding-right: 10px; padding-left: 10px; margin-left: 0px;">
+<p>Servers in Cluster</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 67.234%; padding-right: 10px; padding-left: 10px;">
+<p>Indicates the number of servers in a cluster.</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&#160;</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">About the Instance Manager page</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="add_coldfusion_instance.htm" title="add_coldfusion_instance.htm">Add Local or Remote ColdFusion Instances</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="edit_cluster_page.htm" title="edit_cluster_page.htm">About the Edit Cluster page</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

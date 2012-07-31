@@ -1,0 +1,176 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Scheduler
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="yes">Yes</cfcase>
+<cfcase value="cancel">Cancel</cfcase>
+<cfcase value="are_you_sure_delete_scheduledTask"><cfoutput>Are you sure you want to delete the scheduled task "#CALLER.task#"?</cfoutput></cfcase>
+<cfcase value="pagename_runprobe">Run System Probe</cfcase>
+<cfcase value="proberun_ok">This probe succeeded.</cfcase>
+<cfcase value="proberun_fail">The probe failed.</cfcase>
+<cfcase value="proberun_disabled">The probe is disabled and cannot be run.</cfcase>
+<cfcase value="proberun_unknown">The probe status is unknown.</cfcase>
+<cfcase value="proberun_bad">There was a problem running the probe.</cfcase>
+<cfcase value="pagename_probes">System Probes</cfcase>
+<cfcase value="define_new_probe">Define New Probe</cfcase>
+<cfcase value="pageHeader_systemprobes">Debugging &amp; Logging &gt; System Probes</cfcase>
+<cfcase value="probes_blurb">System probes can monitor the health of a web application by checking the contents of a URL at a regular interval. If the contents are not what is expected, probes can send a failure notification email or execute a script.</cfcase>
+<cfcase value="system_probes">System Probes</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="probe_name">Probe Name</cfcase>
+<cfcase value="status">Status</cfcase>
+<cfcase value="interval">Interval</cfcase>
+<cfcase value="URL">URL</cfcase>
+<cfcase value="l10n_noprobes">No probes are defined.</cfcase>
+<cfcase value="delete_probe_confirmation">Are you sure you want to delete this system probe?</cfcase>
+<cfcase value="run_probe">Run Probe</cfcase>
+<cfcase value="edit_probe">Edit Probe</cfcase>
+<cfcase value="delete_probe">Delete Probe</cfcase>
+<cfcase value="disable_probe">Disable Probe</cfcase>
+<cfcase value="enable_probe">Enable Probe</cfcase>
+<cfcase value="status_ok">OK</cfcase>
+<cfcase value="status_failed">Failed</cfcase>
+<cfcase value="status_disabled">Disabled</cfcase>
+<cfcase value="status_unknown">Unknown</cfcase>
+<cfcase value="every">Every</cfcase>
+<cfcase value="hours">hours</cfcase>
+<cfcase value="mins">min(s)</cfcase>
+<cfcase value="secs">second(s)</cfcase>
+<cfcase value="from">from</cfcase>
+<cfcase value="to">to</cfcase>
+<cfcase value="probe_email_recip">Notification email Recipients</cfcase>
+<cfcase value="probe_email_from">E-mail</cfcase>
+<cfcase value="probecfm_url">Probe.cfm URL</cfcase>
+<cfcase value="probe_username">Probe.cfm User name</cfcase>
+<cfcase value="probe_password">Probe.cfm Password</cfcase>
+<cfcase value="pagename_addeditprobe">Add/Edit System Probe</cfcase>
+<cfcase value="pagename_addedit">Add/Edit Scheduled Task</cfcase>
+<cfcase value="need_valid_task_name">You need to enter a valid Task Name in order to proceed.</cfcase>
+<cfcase value="need_valid_start_date">You need to enter a valid Start Date in order to proceed.</cfcase>
+<cfcase value="need_valid_start_time">You need to enter a valid Start Time in order to proceed. Valid times should either be in 24 hour format or include AM/PM.</cfcase>
+<cfcase value="need_numeric_interval">You need to enter a numeric time interval, greater than 0, in order to proceed.</cfcase>
+<cfcase value="interval_60second_minimum">The task interval must be greater than 60 seconds.</cfcase>
+<cfcase value="need_valid_end_date">You need to enter a valid End Date.</cfcase>
+<cfcase value="need_valid_end_time">You need to enter a valid End Time in order to proceed. Valid times should either be in 24 hour format or include AM/PM.</cfcase>
+<cfcase value="need_valid_request_timeout">The value specified for Request Timeout must be greater than 0.</cfcase>
+<cfcase value="need_file_path">You need to specify a valid file path if you want to publish the results of this task.</cfcase>
+<cfcase value="need_valid_file_path">If you want to publish the result of this task, you must use an existing, valid directory name.</cfcase>
+<cfcase value="need_valid_proxy_port">The value specified for Proxy Port must be between 1 and 65535.</cfcase>
+<cfcase value="need_scheduled_url">You must specify a URL to hit.</cfcase>
+<cfcase value="end_date_after_start">The end date must be after the start date.</cfcase>
+<cfcase value="end_time_after_start">The end time must be after the start time.</cfcase>
+<cfcase value="interval_one_day">The interval must be less than one day.</cfcase>
+<cfcase value="proxy_server_name">Proxy server names can only contain letters, numbers and periods.</cfcase>
+<cfcase value="proxy_port_and_server">If a proxy port is specified, a proxy server must be defined.</cfcase>
+<cfcase value="strt_time">Start Time</cfcase>
+<cfcase value="task_name">Task Name</cfcase>
+<cfcase value="scheduleedit_pageHeader"><cfoutput>Debugging &amp; Logging &gt; #CALLER.pagename#</cfoutput></cfcase>
+<cfcase value="duration">Duration</cfcase>
+<cfcase value="start_date">Start Date</cfcase>
+<cfcase value="end_date">End Date</cfcase>
+<cfcase value="optional">(optional)</cfcase>
+<cfcase value="l10n_frequency">Frequency</cfcase>
+<cfcase value="one_time">One-Time</cfcase>
+<cfcase value="at">at</cfcase>
+<cfcase value="recurring">Recurring</cfcase>
+<cfcase value="daily">Daily</cfcase>
+<cfcase value="weekly">Weekly</cfcase>
+<cfcase value="monthly">Monthly</cfcase>
+<cfcase value="daily_every">Daily every</cfcase>
+<cfcase value="minutes">Minutes</cfcase>
+<cfcase value="seconds">Seconds</cfcase>
+<cfcase value="l10n_dailystart">Start Time</cfcase>
+<cfcase value="l10n_dailystop">End Time</cfcase>
+<cfcase value="l10n_ipschedule">URL</cfcase>
+<cfcase value="username">User Name</cfcase>
+<cfcase value="password">Password</cfcase>
+<cfcase value="timeout_sec">Timeout (sec)</cfcase>
+<cfcase value="proxy_sever">Proxy Server</cfcase>
+<cfcase value="http_proxy_port">: Port</cfcase>
+<cfcase value="pfailure">Probe Failure</cfcase>
+<cfcase value="failIfTheResponse">Fail if the response</cfcase>
+<cfcase value="contains">contains</cfcase>
+<cfcase value="does_not_contain">does not contain</cfcase>
+<cfcase value="the">the</cfcase>
+<cfcase value="string">string</cfcase>
+<cfcase value="regex">regular expression</cfcase>
+<cfcase value="faction">Failure Actions</cfcase>
+<cfcase value="sned_an_email_notification">Send an e-mail notification</cfcase>
+<cfcase value="execute_the_program">Execute the program</cfcase>
+<cfcase value="publish">Publish</cfcase>
+<cfcase value="save_output">Save output to a file</cfcase>
+<cfcase value="file">File</cfcase>
+<cfcase value="resolve_url">Resolve URL</cfcase>
+<cfcase value="resolve_url_ins">Resolve internal URLs so that links remain intact</cfcase>
+<cfcase value="l10n_cancel">Cancel</cfcase>
+<cfcase value="l10n_submit">Submit</cfcase>
+<cfcase value="taskrun_ok">This scheduled task was completed successfully.</cfcase>
+<cfcase value="taskrun_bad">
+There was an error running your scheduled task. Reasons for which scheduled tasks might fail include:<br />
+<ul>
+<li>The scheduled task is paused</li>
+<li>The URL is a redirection URL.</li>
+<li>The URL is protected by IIS NT Challenge/Response or Apache .htaccess password.  The Username and Password text fields for editing a scheduled task are intended to support Basic Authentication only.</li>
+<li>The Domain Name lookup failed.  Try using the IP address of the domain whenever possible.</li>
+<li>The URL is an SSL site, but the SSL port was specified incorrectly.</li>
+<li>The Web site is not responding.</li>
+<li>The directory specified for published results does not exist.</li>
+</ul>
+</cfcase>
+<cfcase value="taskpause_ok">This scheduled task was paused successfully.</cfcase>
+<cfcase value="taskresume_ok">This scheduled task was resumed successfully.</cfcase>
+<cfcase value="pagename_tasks">Scheduled Tasks</cfcase>
+<cfcase value="schedule_new_task">Schedule New Task</cfcase>
+<cfcase value="pageHeader_scheduledTasks">Debugging &amp; Logging &gt; Scheduled Tasks</cfcase>
+<cfcase value="tasks_blurb">Scheduled tasks can create static web pages from dynamic data sources. You can also schedule tasks to update Verity searches and to create reports.</cfcase>
+<cfcase value="scheduled_tasks">Scheduled Tasks</cfcase>
+<cfcase value="l10n_notasks">No tasks have been scheduled.</cfcase>
+<cfcase value="intervalDaily">Daily</cfcase>
+<cfcase value="delete_task_confirmation">Are you sure you want to delete this ColdFusion server task?</cfcase>
+<cfcase value="run_scheduled_task">Run Scheduled Task</cfcase>
+<cfcase value="edit_scheduled_task">Edit Scheduled Task</cfcase>
+<cfcase value="delete_scheduled_task">Delete Scheduled Task</cfcase>
+<cfcase value="pause_scheduled_task">Pause Scheduled Task</cfcase>
+<cfcase value="resume_scheduled_task">Resume Scheduled Task</cfcase>
+<cfcase value="indefinitely">INDEFINITELY</cfcase>
+<cfcase value="daily_at"><cfoutput>Daily at #CALLER.taskTime_l10n#.</cfoutput></cfcase>
+<cfcase value="intervalWeekly">Weekly</cfcase>
+<cfcase value="weekly_at"><cfoutput>Weekly at #CALLER.taskTime_l10n#.</cfoutput></cfcase>
+<cfcase value="intervalMonthly">Monthly</cfcase>
+<cfcase value="monthly_at"><cfoutput>Monthly at #CALLER.taskTime_l10n#.</cfoutput></cfcase>
+<cfcase value="intervalDailyEvery">DailyEvery</cfcase>
+<cfcase value="intervalOnce">Once</cfcase>
+<cfcase value="one_time_timestamp"><cfoutput>One-time at #CALLER.taskTime_l10n#. </cfoutput></cfcase>
+<cfcase value="probeSettings">Probe Settings</cfcase>
+<cfcase value="pub_path">Publish file path</cfcase>
+<cfcase value="pub_filename">Publish file name</cfcase>
+<cfcase value="proxy_port">Proxy port</cfcase>
+<cfcase value="probes">Probes</cfcase>
+<cfcase value="enabled">Enabled</cfcase>
+<cfcase value="probe_email_from1">Notification Sent From</cfcase>
+<cfcase value="probe_username1">Probe.cfm Username</cfcase>
+<cfcase value="username1">Username</cfcase>
+<cfcase value="request_timeout">Request timeout</cfcase>
+<cfcase value="no">No</cfcase>
+<cfcase value="scheduling_error"><cfoutput>
+An error occured scheduling the task.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>

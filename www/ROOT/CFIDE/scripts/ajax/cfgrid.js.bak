@@ -1,0 +1,894 @@
+// © 2006 Adobe Macromedia Software LLC. All rights reserved.
+
+cfinitgrid = function () { // Wrap in a function so the var scoped variables stay local
+if (!ColdFusion.Grid) ColdFusion.Grid = {}; var $G = ColdFusion.Grid; 
+
+var $L = ColdFusion.Log;
+
+$G.init = function(id, name, formId, dynamic, edit, bindOnLoad, autoSizeColumns, 
+								colModelData, dataModel, autoWidth, autoHeight, stripeRows, styles,
+								pageSize, selectOnLoad, preservePageOnSort, insertButtonLabel, deleteButtonLabel,
+								cellClickInfo, onChangeFunction, onErrorFunction, bindElements, height, width)
+{
+	var grid;
+	
+	var colModel = new Ext.grid.ColumnModel(colModelData);
+	
+	var config = {ds:dataModel, cm:colModel, 
+					height:height, width=width, autoSizeColumns:autoSizeColumns, autoSizeHeaders:autoSizeColumns, 
+					autoHeight:autoHeight, autoWidth:autoWidth, stripeRows:stripeRows};
+
+	var actions = ColdFusion.objectCache[id];
+	actions.bindOnLoad = bindOnLoad;
+	actions.dynamic = dynamic;
+	actions.styles = styles;
+
+	config.selModel = new Ext.grid.RowSelectionModel({singleSelect:true});
+	 config.renderTo = actions.gridId;
+	
+	if(dynamic)
+	{
+	    config.bbar = new Ext.PagingToolbar({
+            pageSize: pageSize,
+            store: dataModel,
+            displayInfo: true,
+            displayMsg: 'Displaying topics {0} of {1}',
+            emptyMsg: "No topics to display",
+        });	
+	}
+	
+	if (!dynamic)
+	{
+		dataModel.load();
+	}
+	
+	if (edit)
+	{
+		grid = new Ext.grid.EditorGridPanel(config);
+	}
+	else
+	{
+		grid = new Ext.grid.GridPanel(config);
+	}
+	
+	actions.grid = grid;
+	grid.render();
+	
+	if (edit && !dynamic && (insertButtonLabel || deleteButtonLabel))
+	{
+		var footerPanel = grid.getView().getFooterPanel(true);
+		//var toolbar = new Ext.Toolbar(footerPanel);
+		if (insertButtonLabel) toolbar.addButton({text:insertButtonLabel, handler:$G.insertRow, scope:actions});
+		if (deleteButtonLabel) toolbar.addButton({text:deleteButtonLabel, handler:$G.deleteRow, scope:actions});
+		grid.autoSize();
+	}
+	
+	if (dynamic)
+	{
+		// Register the load listener for the data model so
+		// that the selected row variable can be reset
+		dataModel.addListener("load", $G.Actions.onLoad, actions, true);
+		dataModel._cf_errorHandler = onErrorFunction;
+		dataModel.proxy._cf_actions = actions;
+		/*
+		var footerPanel = grid.getView().getFooterPanel(true);
+		var toolbar = new Ext.PagingToolbar(footerPanel, dataModel, 
+											{pageSize:pageSize, 
+											beforePageText:CFMessage['grid.init.toolbar.page'] || 'Page',
+											afterPageText:CFMessage['grid.init.toolbar.of'] || 'of {0}'});
+		
+		*/
+		if (onChangeFunction && deleteButtonLabel)
+		{
+			// Add the delete button to EditableGridView toolbar
+			// Insert is not supported, since there's no way of knowing
+			// when the row is sufficiently complete to call the back
+			// end to do the insert. This could be done later by providing
+			// a required flag on CFGRIDCOLUMN.
+			toolbar.addSeparator();
+			var deleteButton = new Ext.ToolbarButton({text:deleteButtonLabel});
+			deleteButton.setHandler($G.deleteRow, actions);
+			toolbar.addButton(deleteButton);
+		}
+		
+		dataModel.load({params:{start:0,limit:pageSize}});
+	}
+	else
+	{
+		// Apply styles right away for static grids
+		$G.applyStyles(actions)
+	}
+	
+	if (bindElements)
+	{
+		ColdFusion.Bind.register(bindElements, {actions:actions}, $G.bindHandler, false);
+	}
+	
+	$L.info("grid.init.created", "widget", [id]);
+	
+	actions.init(id, name, formId, cellClickInfo, dynamic, edit, onChangeFunction, onErrorFunction,
+				preservePageOnSort, pageSize, selectOnLoad);
+};
+
+$G.applyStyles = function(actions)
+{
+	// If styles have been applied already, short circuit here
+	if (actions.stylesApplied) return;
+	
+	Ext.util.CSS.createStyleSheet(actions.styles);
+	
+	actions.stylesApplied = true;
+};
+
+// Specialized bind handler for grid. Whenever the grid bind has to be
+// evaluated, simply reset the data model state by going back to page 1
+$G.bindHandler = function(e, params)
+{
+	$G.refresh(params.actions.id);
+}
+$G.bindHandler._cf_bindhandler = true; // marker for custom event propagation
+
+//A function that refreshes the content of the grid for the gridId passed to
+//the function 
+$G.refresh = function(gridId, preservePage)
+{
+	var actions = ColdFusion.objectCache[gridId];
+	if(actions && $G.Actions.prototype.isPrototypeOf(actions) == true)
+	{
+		var dataSource = actions.grid.getDataSource();
+
+		if(actions.dynamic)
+		{
+			// Reset internal state			
+			actions.editOldValue = null;
+			actions.selectedRow = -1;
+			
+			if (preservePage)
+			{
+				dataSource.reload();
+			}
+			else
+			{
+				dataSource.reload({params:{start:0,limit:actions.pageSize}});
+			}
+		}
+	}
+	else
+	{
+		ColdFusion.handleError(null, "grid.refresh.notfound", "widget", [gridId], null, null, true);
+		return;
+	}
+
+	$L.info("grid.refresh.success", "widget", [gridId]);
+};
+
+// Sorts a grid on the specified column name, in the specified direction
+$G.sort = function(gridId, colName, sortDir)
+{
+	var actions = ColdFusion.objectCache[gridId];
+	if(!actions)
+	{
+		ColdFusion.handleError(null, "grid.sort.notfound", "widget", [gridId], null, null, true);
+		return;
+	}
+	
+	colName = colName.toUpperCase();
+	
+	// validate the column name
+	var colIdx = -1;
+	var colConfig = actions.grid.getColumnModel().config;
+	for (var i=0; i<colConfig.length-1; i++)
+	{
+		if (colName == colConfig[i].colName)
+		{
+			colIdx = i;
+			break;
+		}
+	}
+	
+	if (colIdx == -1)
+	{
+		ColdFusion.handleError(null, "grid.sort.colnotfound", "widget", [colName, gridId], null, null, true);
+		return;
+	}
+	
+	if (!sortDir) sortDir = "ASC";
+	sortDir = sortDir.toUpperCase();
+	if (sortDir != "ASC" && sortDir != "DESC")
+	{
+		ColdFusion.handleError(null, "grid.sort.invalidsortdir", "widget", [sortDir, gridId], null, null, true);
+		return;
+	}
+	
+	var dataSource = actions.grid.getDataSource();
+	dataSource.sort(colName, sortDir);
+};
+
+//A function that returns the underlying grid object from the UI framework given
+//the name of the grid
+$G.getGridObject = function(gridname)
+{
+	if(!gridname)
+	{
+		ColdFusion.handleError(null, "grid.getgridobject.missinggridname", "widget", null, null, null, true);
+		return;
+	}
+	
+	var actions = ColdFusion.objectCache[gridname];
+	
+	if(actions == null || $G.Actions.prototype.isPrototypeOf(actions) == false)
+	{
+		ColdFusion.handleError(null, "grid.getgridobject.notfound", "widget", [gridname], null, null, true);
+		return;
+	}
+	
+	return actions.grid;	
+};
+
+// Models all actions and event handlers for a grid
+// grid - the grid to which this object is being attached
+// cellClickInfo - data for the cell click handler, to append
+//                 URL information on cell click
+$G.Actions = function(gridId) 
+{
+	this.gridId = gridId;
+	this.init = $G.Actions.init;
+	this.onChangeHandler = $G.Actions.onChangeHandler;
+	this.selectionChangeEvent = new ColdFusion.Event.CustomEvent("cfGridSelectionChange", gridId);
+	this.fireSelectionChangeEvent = $G.fireSelectionChangeEvent;
+	this._cf_getAttribute = $G.Actions._cf_getAttribute;
+	this._cf_register = $G.Actions._cf_register;
+};
+
+// Initializes the actions object
+$G.Actions.init = function(id, gridName, formId, cellClickInfo, dynamic, edit,
+										onChangeFunction, onErrorFunction, preservePageOnSort, 
+										pageSize, selectOnLoad)
+{
+	this.id = id;
+	this.gridName = gridName;
+	this.formId = formId;
+	this.form = document.getElementById(formId);
+	this.cellClickInfo = cellClickInfo;
+	this.edit = edit;
+	this.onChangeFunction = onChangeFunction;
+	this.onErrorFunction = onErrorFunction;
+	this.preservePageOnSort = preservePageOnSort;
+	this.pageSize = pageSize;
+	this.selectedRow = -1;
+	this.selectOnLoad = selectOnLoad;
+	
+	this.grid.addListener('cellclick', $G.cellClick, this, true);
+
+	// Add in the hidden field to maintain edit and selection state
+	this.editField = document.createElement('input');
+	this.editField.setAttribute('name', gridName);
+	this.editField.setAttribute('type', 'hidden');
+	this.form.appendChild(this.editField);
+	
+	if (edit)
+	{
+		if (!dynamic)
+		{
+			var colConfig = this.grid.getColumnModel().config;
+			this.editFieldPrefix = '__CFGRID__EDIT__=';
+			this.editFieldPrefix += colConfig.length-1 + $G.Actions.fieldSep;
+			
+			// Now add the columns in
+			for (var i=0; i<colConfig.length-1; i++)
+			{
+				if (i > 0) this.editFieldPrefix += $G.Actions.fieldSep;
+				this.editFieldPrefix += colConfig[i].colName;
+				this.editFieldPrefix += $G.Actions.valueSep;
+				if (colConfig[i].editor)
+				{
+					this.editFieldPrefix += 'Y';
+				}
+				else
+				{
+					this.editFieldPrefix += 'N';
+				}
+			}
+			
+			// Add a trailing field separator
+			this.editFieldPrefix += $G.Actions.fieldSep;
+			
+			// Initialize edit field state
+			// This maintains an array of actions performed on each row in the grid.
+			// The format follows that which needs to be sent to the editField:
+			// It contains an Object with two keys: action and values. Action is a 
+			// single character: 'I' (insert), 'U' (update) or 'D' (delete).
+			// values is an array with length of the column count. Every element
+			// has 2 values - the original value of the column and the new value. 
+			this.editFieldState = [];
+			this.editFieldState.length = this.grid.getDataSource().getTotalCount();
+			
+			// Initial value
+			$G.Actions.computeEditField(this);
+		}
+		
+		// Register the edit listeners
+		this.grid.addListener('beforeedit', $G.Actions.beforeEdit, this, true);
+		this.grid.addListener('afteredit', $G.Actions.afterEdit, this, true);
+	}
+	
+	if (dynamic)
+	{
+		this.grid.getDataSource().addListener('beforeload', $G.Actions.beforeLoad, this, true);
+	}
+	
+	this.grid.getSelectionModel().addListener('rowselect', $G.rowSelect, this, true);
+	this.grid.getSelectionModel().addListener('beforerowselect', $G.beforeRowSelect, this, true);
+
+	if (selectOnLoad) this.grid.getSelectionModel().selectFirstRow();
+};
+
+$G.Actions.beforeLoad = function(store, options)
+{
+	var sortState = store.getSortState();
+	var sortChanged = (sortState.field != this.sortCol
+						|| sortState.direction != this.sortDir);
+
+	if (sortChanged && !this.preservePageOnSort) options.params.start = 0;
+	
+	this.sortCol = sortState.field;
+	this.sortDir = sortState.direction;
+};
+
+// onLoad listener, to reset row selections and fire
+// the selection change event when paging through a grid
+$G.Actions.onLoad = function()
+{
+	this.editOldValue = null;
+	this.selectedRow = -1;
+	var selectRow = this.dynamic ? 0 : 1;
+	
+	// Make the selection only if it's a static grid, or
+	// if it is a dynamic grid with bindOnLoad=true
+	if ((this.bindOnLoad || !this.dynamic) && this.selectOnLoad)
+		this.grid.getSelectionModel().selectRow(selectRow, false);
+};
+
+// Provides a mechanism to get the value of the named column (attribute)
+// for the currently selected row.
+$G.Actions._cf_getAttribute = function(attribute)
+{
+	attribute = attribute.toUpperCase();
+	
+	var rowIndex = this.selectedRow; // No multiple select
+	
+	var attrValue = null;
+
+	if (rowIndex != 0 && (!rowIndex || rowIndex == -1))
+	{
+		return attrValue;
+	}
+	
+	var ds = this.grid.getDataSource();
+	var selRecord = (this.dynamic) ? ds.getAt(rowIndex) : ds.getById(rowIndex);
+	attrValue = selRecord.get(attribute);
+	
+	return attrValue;
+}
+
+$G.Actions._cf_register = function(event, bindHandler, bindParams)
+{
+	this.selectionChangeEvent.subscribe(bindHandler, bindParams);
+}
+
+// Row select listener, populates hidden field to maintain row selection
+// state on form submission
+$G.rowSelect = function(selectionModel, row)
+{
+	var editFieldValue = '';
+
+	var selRecord = selectionModel.getSelected();
+	var selRowId = selRecord.get('CFGRIDROWINDEX') || row;
+
+	// Only single selection model, so assume a single row
+	if (this.selectedRow != selRowId)
+	{
+		this.selectedRow = selRowId;
+		var first = true;
+		for (col in selRecord.data)
+		{
+			if (col == 'CFGRIDROWINDEX') continue;
+			
+			// Don't append a trailing ';' for the last field
+			if (!first) editFieldValue += '; ';
+			
+			editFieldValue += '__CFGRID__COLUMN__=' + col + '; ';
+			editFieldValue += '__CFGRID__DATA__=' + selRecord.data[col];
+			
+			first = false;
+		}
+		
+		// Now fire the change event out to all listener
+		this.fireSelectionChangeEvent();
+	}
+
+	this.editField.setAttribute('value',editFieldValue);
+};
+
+$G.beforeRowSelect = function(selectionModel, row)
+{
+	var ds = this.grid.getDataSource();
+	var selRecord = ds.getAt(row);
+	return !$G.isNullRow(selRecord.data);
+};
+
+$G.isNullRow = function(data)
+{
+	var nullRow = true;
+	for (col in data)
+	{
+		if (data[col] != null)
+		{ 
+			nullRow = false;
+			break;
+		}
+	}
+	return nullRow;
+};
+
+// Fires the selection change event to all listeners
+// on the grid HTML element's change event
+$G.fireSelectionChangeEvent = function()
+{
+	$L.info("grid.fireselectionchangeevent.fire", "widget", [this.id]);
+	this.selectionChangeEvent.fire();
+}
+
+// Cell click listener, used for managing HREFs from columns
+$G.cellClick = function(grid, rowIndex, columnIndex)
+{
+	var colInfo = this.cellClickInfo.colInfo[columnIndex];
+	if (colInfo) // colInfo must be null for editable cells
+	{
+		var currentRow = grid.getSelectionModel().getSelected();
+		
+		// Check if url is actually pointing to a grid column
+		// If it is, get the URL from the column
+		var url = currentRow.get(colInfo.href.toUpperCase());
+		if (!url) url = colInfo.href;
+		
+		var hrefKey = colInfo.hrefKey; // Pointer to column index, not name
+		var target = colInfo.target;
+		var appendKey = this.appendKey; // Need this, if hrefKey is not present, append all
+			
+		if (this.cellClickInfo.appendKey)
+		{
+			var hrefKeyValue;
+			if (hrefKey || hrefKey == 0) // just testing for hrefKey will return false for 0 values
+			{
+				var clickedRecord = grid.getDataSource().getAt(rowIndex);
+				
+				var clickedColName = grid.getColumnModel().config[hrefKey].dataIndex;
+				
+				hrefKeyValue = clickedRecord.get(clickedColName);
+			}
+			else
+			{
+				var colConfig = this.grid.getColumnModel().config;
+				hrefKeyValue = currentRow.get(colConfig[0].dataIndex);
+				for (var i=1; i<colConfig.length-1; i++)
+				{
+					hrefKeyValue += ',' + currentRow.get(colConfig[i].dataIndex);
+				}
+			}
+				
+			if (url.indexOf('?') != -1)
+			{
+				url += '&CFGRIDKEY=' + hrefKeyValue;
+			}
+			else
+			{
+				url += '?CFGRIDKEY=' + hrefKeyValue;
+			}
+		}
+			
+		if (target)
+		{
+			target = target.toLowerCase();
+			if (target == "_top")
+			{
+				target = "top";
+			}
+			else if (target == "_parent")
+			{
+				target = "parent";
+			}
+			else if (target == "_self")
+			{
+				target = window.name;
+			}
+			else if (target == "_blank")
+			{
+				// Special handling for _blank
+				window.open(encodeURI(url));
+				return;
+			}
+			
+			if (!parent[target])
+			{
+				ColdFusion.handleError(null, "grid.cellclick.targetnotfound", "widget", [target]);
+				return;
+			}
+			parent[target].location = encodeURI(url);
+		}
+		else
+		{
+			window.location = encodeURI(url);
+		}
+	}
+};
+
+// Inserts a row into the dataset and updates the hidden
+// field maintaining edit state
+$G.insertRow = function()
+{
+	var rowEditState = {action:'I', values:[]};
+	var colModel = this.grid.getColumnModel();
+	var dataSource = this.grid.getDataSource();
+	var insertData = {};
+	
+	for (var i=0; i<colModel.getColumnCount()-1; i++)
+	{
+		var initialValue = '';
+		var editor = colModel.getCellEditor(i, 0); 
+		if (editor && Ext.form.Checkbox.prototype.isPrototypeOf(editor.field))
+		{
+			initialValue = false;
+		}
+		rowEditState.values[i] = [initialValue,initialValue];
+		insertData[colModel.getDataIndex(i)] = initialValue;
+	}
+
+	insertData['CFGRIDROWINDEX'] = dataSource.getCount()+1;
+	
+	dataSource.add(new Ext.data.Record(insertData));
+
+	this.editFieldState.push(rowEditState);
+	
+	$G.Actions.computeEditField(this);
+};
+
+// Deletes a row from the dataset and updates the hidden
+// field maintaining edit state
+$G.deleteRow = function()
+{
+	var rowIndex = this.selectedRow;
+	if (rowIndex == -1) return;
+
+	if (this.onChangeFunction)
+	{
+		this.onChangeHandler('D', rowIndex, null, $G.deleteRowCallback);
+	}
+	else if (!this.dynamic)
+	{
+		var rowEditState = this.editFieldState[rowIndex-1];
+		if (rowEditState)
+		{
+			rowEditState.action = 'D';
+		}
+		else
+		{
+			rowEditState = $G.Actions.initEditState(this, 'D', rowIndex);
+		}
+		
+		$G.Actions.computeEditField(this);
+		
+		this.grid.stopEditing();
+		//deselect the row on stop editing
+		this.selectedRow = -1;
+	
+		// Remove the row from the data model
+		var dataSource = this.grid.getDataSource();
+		dataSource.remove(this.grid.getSelectionModel().getSelected());
+	}
+};
+
+// Called when a live delete of a row completes
+$G.deleteRowCallback = function(event, params)
+{
+	var dataSource = params._cf_grid.getDataSource();
+	var actions = params._cf_grid.actions;
+	
+	// Reload the current page of data TODO!!!!
+	dataSource.reload();
+};
+
+// beforeEdit event listener, sets up state for afterEdit to process
+$G.Actions.beforeEdit = function(event)
+{
+	if ($G.isNullRow(event.record.data))
+	{
+		// Short circuit for null rows
+		return false;
+	}
+	this.editColumn = event.column;
+	this.editOldValue = event.value;
+};
+
+// afterEdit event listener, maintains the edit state objects and the edit
+// state hidden field
+$G.Actions.afterEdit = function(event)
+{
+	var editNewValue = event.value;
+	if (this.onChangeFunction)
+	{
+		this.onChangeHandler('U', this.selectedRow, event);
+	}
+	else if (!this.dynamic)
+	{
+		var rowEditState = this.editFieldState[this.selectedRow-1];
+		if (rowEditState)
+		{
+			rowEditState.values[event.column][1] = editNewValue;
+		}
+		else
+		{
+			rowEditState = $G.Actions.initEditState(this, 'U', this.selectedRow);
+			
+			// While this may look weird, it needs doing - ensures that
+			// editOldValue gets a copy, rather than a reference, of this.editOldValue
+			var editOldValue = this.editOldValue + '';
+			
+			rowEditState.values[event.column][0] = editOldValue;
+			rowEditState.values[event.column][1] = editNewValue;
+		}
+		
+		$G.Actions.computeEditField(this);
+	}
+	
+	this.editOldValue = null;
+	
+	// Fire a selection change, so bound controls can pick
+	// up the edit changes
+	this.fireSelectionChangeEvent();
+};
+
+// Support for live editing of a grid, only update and delete for now
+$G.Actions.onChangeHandler = function(action, rowIndex, event, callback)
+{
+	var rowData = {};
+	var changed = {};
+	
+	var data = event ? event.record.data : this.grid.getDataSource().getAt(rowIndex).data;
+
+	for (col in data) rowData[col] = data[col];
+	
+	if (action == 'U')
+	{
+		rowData[event.field] = event.originalValue; // reset column to old value
+		changed[event.field] = event.value; // Set up the changed column
+	}
+	
+	this.onChangeFunction(action, rowData, changed, callback, this.grid, this.onErrorFunction);
+}
+
+// Utility function to initialize edit state
+$G.Actions.initEditState = function(actions, action, rowIndex)
+{
+	var rowEditState = {action:action, values:[]};
+	var colModel = actions.grid.getColumnModel();
+	var colCount = colModel.getColumnCount()-1;
+	var record = actions.grid.getDataSource().getById(rowIndex);
+	
+	rowEditState.values.length = colCount;
+	
+	for (var i=0; i<colCount; i++)
+	{
+		var value = record.get(colModel.getDataIndex(i));
+		rowEditState.values[i] = [value,value];
+	}
+	
+	actions.editFieldState[rowIndex-1] = rowEditState;
+	
+	return rowEditState;
+};
+
+// Constants for the grid edit field state
+$G.Actions.fieldSep = eval("'\\u0001'");
+$G.Actions.valueSep = eval("'\\u0002'");
+$G.Actions.nullValue = eval("'\\u0003'");
+
+// Computes and assigns a value to the edit field based on the
+// edit state in the actions object.
+$G.Actions.computeEditField = function(actions)
+{
+	var editFieldValue = actions.editFieldPrefix;
+	var editFieldState = actions.editFieldState;
+	
+	var modifiedRowCount = 0;
+	var rowState = '';
+	
+	// Now add in all the row state
+	for (var i=0; i<editFieldState.length; i++)
+	{
+		var rowEditState = editFieldState[i];
+		if (rowEditState)
+		{
+			modifiedRowCount++;
+			rowState += $G.Actions.fieldSep;
+			rowState += rowEditState.action + $G.Actions.valueSep;
+			
+			var values = rowEditState.values;
+			for (var j=0; j<values.length; j++)
+			{
+				if (j > 0)
+				{
+					rowState += $G.Actions.valueSep;
+				}
+				
+				var oldValue = ($G.Actions.isNull(values[j][0])) ? $G.Actions.nullValue : values[j][0];
+				var newValue = ($G.Actions.isNull(values[j][1])) ? $G.Actions.nullValue : values[j][1];
+				
+				rowState += newValue;
+				if (rowEditState.action == 'U')
+				{
+					rowState += $G.Actions.valueSep + oldValue;
+				}
+			}
+		}
+	}
+	
+	editFieldValue += modifiedRowCount + rowState;
+	
+	actions.editField.setAttribute('value',editFieldValue);
+};
+
+$G.Actions.isNull = function(val)
+{
+	var ret = (val == null || typeof(val) == 'undefined' || val.length == 0);
+	return ret;
+};
+
+$G.loadData = function(data, params)
+{
+	params._cf_gridDataProxy.loadResponse(data, params);
+	var actions = ColdFusion.objectCache[params._cf_gridname];
+	$G.applyStyles(actions);
+	$L.info("grid.loaddata.loaded", "widget", [params._cf_gridname]);
+	//Bug 70285: If totalrowcount is defined, check to see if its zero. If zero then 
+	//fire the selectionchangeevent to make sure that empty load also qualifies
+	//as a valid change to the grid and not just selection of a row.
+	if($G.Actions.isNull(data.TOTALROWCOUNT) == false && data.TOTALROWCOUNT == 0)
+	{
+		actions.fireSelectionChangeEvent();
+	}
+};
+
+// CF implementation of the Ext DataProxy, for dynamic grids
+$G.ExtProxy = function(bindHandler, errorHandler)
+{
+	$G.ExtProxy.superclass.constructor.call(this);
+	this.bindHandler = bindHandler;
+	this.errorHandler = errorHandler;
+};
+
+Ext.extend($G.ExtProxy, Ext.data.DataProxy,
+{
+	// We need this to maintain state for cases where bindOnLoad=false
+	_cf_firstLoad : true,
+	
+	load : function(params, reader, callback, scope, arg)
+	{
+		if (!this._cf_actions.bindOnLoad)
+		{
+			// If bindOnLoad is set to false, then the grid needs to be
+			// loaded up with dummy rows initially
+			var lrParams = {'_cf_reader':reader, 
+							'_cf_grid_errorhandler':this.errorHandler, 
+							'_cf_scope':scope, 
+							'_cf_gridDataProxy':this, 
+							'_cf_gridname':this._cf_gridName, 
+							'_cf_arg':arg, 
+							'_cf_callback':callback,
+							'ignoreData':true};
+			
+			var data = [];
+			for (i=0; i<params.limit; i++) data.push(new Ext.data.Record({}));
+			
+			this.loadResponse(data, lrParams);
+			this._cf_actions.bindOnLoad = true;
+		}
+		else
+		{
+			var pageNo = (params.start/params.limit)+1;
+			
+			// Set sort and dir to '' if not specified
+			// These should always be passed through
+			if (!params.sort) params.sort= '';
+			if (!params.dir) params.dir = '';
+			
+			this.bindHandler(this, pageNo, params.limit, params.sort, params.dir, this.errorHandler, callback, scope, arg, reader);
+		}
+	},
+	
+	loadResponse : function(data, params)
+	{
+		var result = null;
+		if (params.ignoreData)
+		{
+			result = {success:true, records:data, totalRecords:data.length}
+		}
+		else
+		{
+			var errorCode;
+			if (!data)
+			{
+				errorCode = "grid.extproxy.loadresponse.emptyresponse";
+			}
+			else if (!data.TOTALROWCOUNT && data.TOTALROWCOUNT != 0)
+			{
+				errorCode = "grid.extproxy.loadresponse.totalrowcountmissing";
+			}
+			else if (!ColdFusion.Util.isInteger(data.TOTALROWCOUNT))
+			{
+				errorCode = "grid.extproxy.loadresponse.totalrowcountinvalid";
+			}
+			else if (!data.QUERY)
+			{
+				errorCode = "grid.extproxy.loadresponse.querymissing";
+			}
+			else if (!data.QUERY.COLUMNS || !ColdFusion.Util.isArray(data.QUERY.COLUMNS)
+				|| !data.QUERY.DATA || !ColdFusion.Util.isArray(data.QUERY.DATA)
+				|| (data.QUERY.DATA.length > 0 && !ColdFusion.Util.isArray(data.QUERY.DATA[0])))
+			{
+				errorCode = "grid.extproxy.loadresponse.queryinvalid";
+			}
+				
+			if (errorCode)
+			{
+				ColdFusion.handleError(params._cf_grid_errorHandler, errorCode, "widget");
+	
+				this.fireEvent("loadexception", this, params, data, e);
+				return;
+			}
+			
+			result = params._cf_reader.readRecords(data);
+		}
+
+        this.fireEvent("load", this, params, params._cf_arg);
+        params._cf_callback.call(params._cf_scope, result, params._cf_arg, true);
+    },
+    
+    update : function(dataSet)
+	{
+    },
+    
+    updateResponse : function(dataSet)
+	{
+    }
+});
+
+// CF implementation of the Ext Reader, for dynamic grids
+$G.ExtReader = function(colModel)
+{
+	this.recordType = Ext.data.Record.create(colModel);
+};
+
+Ext.extend($G.ExtReader, Ext.data.DataReader,
+{
+	readRecords : function(response)
+	{
+		var records = [];
+		var cols = response.QUERY.COLUMNS;
+		var data = response.QUERY.DATA;
+		
+		for (var i=0; i<data.length; i++)
+		{
+			var recordObj = {};
+			for (var j=0; j<cols.length; j++)
+			{
+				recordObj[cols[j]] = data[i][j];
+			}
+			records.push(new Ext.data.Record(recordObj));
+		}
+		
+		return {success:true, records:records, totalRecords:response.TOTALROWCOUNT};
+	}
+});
+} // Close cfinitgrid function
+cfinitgrid(); // Call function to set everything up

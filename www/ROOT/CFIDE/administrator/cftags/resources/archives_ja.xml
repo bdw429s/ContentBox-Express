@@ -1,0 +1,218 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Archives
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="archive_wizard">アーカイブウィザード</cfcase>
+<cfcase value="buildarchive">CAR ファイルアーカイブの構築</cfcase>
+<cfcase value="deploy_wizard">デプロイウィザード</cfcase>
+<cfcase value="archive_and_deploy">アーカイブとデプロイ</cfcase>
+<cfcase value="must_have_session_vars">申し訳ありませんが、このアプリケーションを使用するために、セッション変数を有効にする必要があります。「メモリ変数」ページでセッション変数を有効にして、これを行うことができます。</cfcase>
+<cfcase value="archives_pageHeader">パッケージとデプロイ &gt; ColdFusion アーカイブ</cfcase>
+<cfcase value="previous_cf_archive_files">
+ColdFusion アーカイブ (CAR) ファイルをこのサーバーにリデプロイします。適切な CAR ファイルへのパスを入力するかブラウズして、ファイルをこのサーバーへデプロイし、関連のあるサーバー設定を更新してください。
+</cfcase>
+<cfcase value="l10n_deployarchive">既存のアーカイブのデプロイ</cfcase>
+<cfcase value="browswServer">サーバーのブラウズ</cfcase>
+<cfcase value="browswServerTip">サーバーディレクトリのブラウズ</cfcase>
+<cfcase value="deployeArchive">デプロイ </cfcase>
+<cfcase value="deployeArchiveTip">アーカイブのデプロイ</cfcase>
+<cfcase value="archive_header">
+ColdFusion では、作業の整理、ファイルのアーカイブ、サイトの移行とデプロイなどを行うためのアプリケーションを定義できます。ColdFusion アーカイブ定義を作成してストアし、後日、アプリケーションのアーカイブ、移行、リデプロイなどを行うことができます。
+</cfcase>
+<cfcase value="l10n_createarchive">アーカイブの作成</cfcase>
+<cfcase value="archiveNameRequired">有効なアーカイブ名が必要です</cfcase>
+<cfcase value="CreateArchive">作成</cfcase>
+<cfcase value="CreateArchiveTip">アーカイブの作成</cfcase>
+<cfcase value="l10n_archivename">アーカイブ名</cfcase>
+<cfcase value="l10n_crntarchives">現在のアーカイブ定義リスト</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="archivename">アーカイブ名</cfcase>
+<cfcase value="edit_archive_def">アーカイブ定義の編集</cfcase>
+<cfcase value="build_archive">アーカイブの構築</cfcase>
+<cfcase value="delete_archive">アーカイブの削除</cfcase>
+<cfcase value="Edit_archive_tip">アーカイブ情報の編集</cfcase>
+<cfcase value="Build_archive_tip">アーカイブの構築</cfcase>
+<cfcase value="Delete_archive_tip">アーカイブの削除</cfcase>
+<cfcase value="delete_archive_confirmation">このアーカイブを削除してもよろしいですか。</cfcase>
+<cfcase value="arch_noarch">アーカイブは定義されていません</cfcase>
+<cfcase value="archive_info">アーカイブ情報</cfcase>
+<cfcase value="application_name">アーカイブ名</cfcase>
+<cfcase value="files_and_directories">ファイルとディレクトリ</cfcase>
+<cfcase value="dirfiles_to_include">含めるディレクトリ / ファイル</cfcase>
+<cfcase value="dirfiles_to_exclude">除外するディレクトリ / ファイル</cfcase>
+<cfcase value="cfx_tags">CFX タグ</cfcase>
+<cfcase value="directory_mappings">ディレクトリマッピング</cfcase>
+<cfcase value="data_sources">データソース</cfcase>
+<cfcase value="collections">コレクション</cfcase>
+<cfcase value="EventGateways">イベントゲートウェイ</cfcase>
+<cfcase value="EventGatewayTypes">イベントゲートウェイタイプ</cfcase>
+<cfcase value="EventGatewaySettings">イベントゲートウェイの設定</cfcase>
+<cfcase value="applets">アプレット</cfcase>
+<cfcase value="scheduled_tasks">スケジュールされたタスク</cfcase>
+<cfcase value="settings">設定</cfcase>
+<cfcase value="webservices">Web サービス</cfcase>
+<cfcase value="pre_restore_to_do_list">復元前の作業メモ</cfcase>
+<cfcase value="post_restore_to_do_list">復元後の作業メモ</cfcase>
+<cfcase value="close_window">ウィンドウを閉じる</cfcase>
+<cfcase value="archive_information">アーカイブ情報</cfcase>
+<cfcase value="name_and_file_location">関連ファイル / ディレクトリ</cfcase>
+<cfcase value="server_settings">サーバーの設定</cfcase>
+<cfcase value="cf_mappings">CF マッピング</cfcase>
+<cfcase value="verity_collections">CF コレクション</cfcase>
+<cfcase value="java_applets">Java アプレット</cfcase>
+<cfcase value="archive_to_do_list">アーカイブの作業メモ</cfcase>
+<cfcase value="archive_summary">アーカイブの要約</cfcase>
+<cfcase value="archive_app">アーカイブアプレット</cfcase>
+<cfcase value="select_all">すべてを選択</cfcase>
+<cfcase value="deselect_all">すべてを選択解除</cfcase>
+<cfcase value="l10n_archjavaapp">登録された Java アプレット</cfcase>
+<cfcase value="name">名前</cfcase>
+<cfcase value="code">コード</cfcase>
+<cfcase value="path">パス</cfcase>
+<cfcase value="l10n_archsum">アーカイブの要約</cfcase>
+<cfcase value="category">カテゴリ</cfcase>
+<cfcase value="details">詳細</cfcase>
+<cfcase value="archive_dirmap">アーカイブ ColdFusion ディレクトリマッピング</cfcase>
+<cfcase value="l10n_archinclude">アーカイブに含まれるファイルとディレクトリ</cfcase>
+<cfcase value="logical_path">論理パス</cfcase>
+<cfcase value="directory_path">ディレクトリパス</cfcase>
+<cfcase value="archive_cfx">アーカイブ CFX</cfcase>
+<cfcase value="registeredCFX">登録された CFX タグ</cfcase>
+<cfcase value="class_path_or_library_path">クラスパスまたはライブラリパス</cfcase>
+<cfcase value="archive_ds">アーカイブデータソース</cfcase>
+<cfcase value="l10n_archdata1z1">DSN とデータソースの設定</cfcase>
+<cfcase value="driver">ドライバ</cfcase>
+<cfcase value="archive_eventgateways">イベントゲートウェイ</cfcase>
+<cfcase value="registeredEventGateways">登録済みゲートウェイインスタンス</cfcase>
+<cfcase value="registeredEventGatewaysTypes">登録済みゲートウェイタイプ</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="gatewaySettings">ゲートウェイの設定</cfcase>
+<cfcase value="button_cancel">キャンセル</cfcase>
+<cfcase value="button_apply">適用</cfcase>
+<cfcase value="Archive_File_Browser_pagename">アーカイブファイルブラウザ</cfcase>
+<cfcase value="include_exclude_assoc_files_folders">関連ファイルとディレクトリの包含 / 除外</cfcase>
+<cfcase value="add_path">パスの追加</cfcase>
+<cfcase value="browse">ブラウズ</cfcase>
+<cfcase value="included_paths">含まれるパス</cfcase>
+<cfcase value="remove_path_from_archive">アーカイブからのパスの削除</cfcase>
+<cfcase value="no_files_have_beed_added_to_this_archive">このアーカイブに追加されたファイルはありません</cfcase>
+<cfcase value="l10n_archexclude">アーカイブから除外されるファイルとディレクトリ</cfcase>
+<cfcase value="excluded_paths">除外されるパス</cfcase>
+<cfcase value="remove_path_from_archive_seclusion_list">アーカイブ隔離リストからのパスの削除</cfcase>
+<cfcase value="no_files_have_been_excluded_from_this_archive">このアーカイブから除外されたファイルはありません</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="description_page_information">
+ColdFusion サーバー上のすべてのオブジェクトをバックアップするアーカイブ定義を作成する場合は、[すべてを選択] をクリックします。オブジェクトを何もバックアップしないアーカイブ定義を作成する場合は、[すべてを選択解除] をクリックします。
+</cfcase>
+<cfcase value="archive_set">アーカイブ設定</cfcase>
+<cfcase value="ychbsaarch">変更はアーカイブとして保存されました。</cfcase>
+<cfcase value="archive_asb">スケジュールビルドのアーカイブ</cfcase>
+<cfcase value="browse_server">サーバーのブラウズ</cfcase>
+<cfcase value="archive_ast">スケジュールされたタスクのアーカイブ</cfcase>
+<cfcase value="l10n_archssched">登録されているスケジュールされたタスク</cfcase>
+<cfcase value="date">日付</cfcase>
+<cfcase value="url">URL</cfcase>
+<cfcase value="archive_arset">アーカイブ設定</cfcase>
+<cfcase value="l10n_archset">一般サーバー設定</cfcase>
+<cfcase value="server_settings_examples">例 : 同時に処置されるリクエストの数の制限、X 秒後にリクエストを
+タイムアウト。詳細については ColdFusion Administrator の「設定」
+セクションを参照。</cfcase>
+<cfcase value="caching">キャッシュ機能</cfcase>
+<cfcase value="caching_examples">例 : テンプレートキャッシュサイズの設定、キャッシュされるクエリーの最大数の制限。詳細については
+「キャッシュ機能」セクションを参照。</cfcase>
+<cfcase value="basic_security">基本的セキュリティ</cfcase>
+<cfcase value="basic_security_examples">例 : ColdFusion Administrator/Studio パスワードの有効化と指定、特定のタグの使用制限。詳細については
+「基本的セキュリティ」セクションを参照。</cfcase>
+<cfcase value="variables">変数</cfcase>
+<cfcase value="variables_examples">例 : クライアントとメモリ変数の有効化。詳細については「変数」セクションを参照。</cfcase>
+<cfcase value="java_jvm">Java と JVM</cfcase>
+<cfcase value="java_examples">例 : JVM の位置の指定。JVM 引数の指定。詳細については、「Java と JVM」ページのオンラインヘルプを参照。</cfcase>
+<cfcase value="java_warning"><b>警告 :</b> Java 設定には、ColdFusion を開始するために使用されるシステム特有のパスがあります。これらの設定を他のマシンにデプロイし、パスが無効である場合は、ColdFusion を開始できません。</cfcase>
+<cfcase value="locking">ロック</cfcase>
+<cfcase value="locking_examples">例 : 変数への同時アクセスを許可するかどうかの指定、変数スコープロックの設定。
+詳細については「ロック」セクションを参照。</cfcase>
+<cfcase value="logging">ロギング</cfcase>
+<cfcase value="logging_examples">例 : サーバー管理者電子メールアドレスの設定、指定の長さの返し時間を引き継ぐページの名前のログ。
+詳細については「ロギング」セクションを参照。</cfcase>
+<cfcase value="mail">メール</cfcase>
+<cfcase value="mail_examples">例 : メールサーバーの指定、ColdFusion の送信するすべての電子メールメッセージのログ。詳細については「メール」セクションを参照。</cfcase>
+<cfcase value="debugging1">デバッグ</cfcase>
+<cfcase value="debugging_examples">例 : すべての CGI、URL、フォーム、および Cookie 変数の名前と値の表示、詳細な処理時間の表示。詳細については「デバッグ」セクションを参照。</cfcase>
+<cfcase value="debugging">チャート</cfcase>
+<cfcase value="charting_examples">例 : キャッシュするチャート数、チャートを処理するスレッドの最大数、キャッシュ位置、キャッシュのタイプ</cfcase>
+<cfcase value="customtagpaths">カスタムタグのパス</cfcase>
+<cfcase value="customtagpaths_examples">例 : カスタムタグのパス設定</cfcase>
+<cfcase value="watcher">Watcher の設定</cfcase>
+<cfcase value="watcher_examples">例 : 設定ファイルを監視し、変更された場合は自動的にリロードします。</cfcase>
+<cfcase value="monitoring">サーバーモニタの設定</cfcase>
+<cfcase value="monitoring_examples">例 : サーバーモニタの設定</cfcase>
+<cfcase value="probe">システムプローブ</cfcase>
+<cfcase value="probe_examples">例 : システムプローブは、規則的な間隔で URL のコンテンツを調べることにより、Web アプリケーションの状態を監視できます</cfcase>
+<cfcase value="archive_tdlist">アーカイブの作業メモ</cfcase>
+<cfcase value="l10n_archpre">復元前の作業メモ</cfcase>
+<cfcase value="l10n_archpost">復元後の作業メモ</cfcase>
+<cfcase value="archive_avc">アーカイブ Verity コレクション</cfcase>
+<cfcase value="l10n_archdata">登録された Verity コレクション</cfcase>
+<cfcase value="collection_directory">コレクションディレクトリ</cfcase>
+<cfcase value="l10n_solrarchdata">登録済み Solr コレクション</cfcase>
+<cfcase value="archive_webservices">アーカイブ Web サービス</cfcase>
+<cfcase value="registeredweb">登録された Web サービス</cfcase>
+<cfcase value="webservicename">Web サービス名</cfcase>
+<cfcase value="wsdlurl">WSDL URL</cfcase>
+<cfcase value="back">戻る</cfcase>
+<cfcase value="next">次へ</cfcase>
+<cfcase value="close">閉じる</cfcase>
+<cfcase value="pick_archive_file">アーカイブの位置</cfcase>
+<cfcase value="build_status">ビルドステータス</cfcase>
+<cfcase value="buildWizard_status_pagetitle">ビルドステータスログ</cfcase>
+<cfcase value="buildSuccessful">ビルドに成功しました</cfcase>
+<cfcase value="buildReadLogTimeout">ログの読み込みがタイムアウトしました。\nこれはエラーが発生したという意味ではありません。\nアーカイブログファイルを調べ、ビルド処理が終了したことを確認してください。</cfcase>
+<cfcase value="buildWizard_pickfile_pagetitle">アーカイブファイルの位置</cfcase>
+<cfcase value="pickcarLocation">アーカイブファイルの位置の選択</cfcase>
+<cfcase value="buildarchive_pickfile_description">
+このアーカイブを使用する場合は、パスとファイル名 (.car 拡張子付き) を選択するか入力してください。<br/>メモ :このファイルが既に存在する場合は、上書きされます。
+</cfcase>
+<cfcase value="buildWizard_summary_pagetitle">アーカイブの要約</cfcase>
+<cfcase value="bkbtndw">戻る</cfcase>
+<cfcase value="nxbtndw">次へ</cfcase>
+<cfcase value="clsbtndw">閉じる</cfcase>
+<cfcase value="l10n_deploysum">アーカイブの要約</cfcase>
+<cfcase value="l10n_deployloc">デプロイの位置</cfcase>
+<cfcase value="l10n_deploystat">デプロイのステータス</cfcase>
+<cfcase value="deployWizard_status_pagetitle">デプロイステータスログ</cfcase>
+<cfcase value="DeploySuccessful">デプロイに成功しました</cfcase>
+<cfcase value="Deploy_Archive">アーカイブのデプロイ</cfcase>
+<cfcase value="l10n_deplfiletitle">このサーバー上でデプロイするアーカイブの選択</cfcase>
+<cfcase value="l10n_deplfile">
+アーカイブを復元する場合は、取り出すメソッド (Local、HTTP、または FTP)、現在のアーカイブ (.car) ファイルの位置、.car ファイルのデスティネーションを指定してください。 </cfcase>
+<cfcase value="pageName">デプロイの位置</cfcase>
+<cfcase value="pickLocationInstructions">デプロイの位置 (複数)</cfcase>
+<cfcase value="l10n_depldirpath">ディレクトリパス変換</cfcase>
+<cfcase value="deploy">デプロイ</cfcase>
+<cfcase value="ar_sev">厳格度</cfcase>
+<cfcase value="ar_dat">日付</cfcase>
+<cfcase value="ar_tim">時間</cfcase>
+<cfcase value="ar_mes">メッセージ</cfcase>
+<cfcase value="archive_error_deploy">
+アーカイブファイルは有効なアーカイブ (.car 拡張子) である必要があります<br/>
+</cfcase>
+<cfcase value="archive_error_create">
+無効なアーカイブ名です。アーカイブ名には、文字、数字、ピリオド、アンダースコア、ダッシュのみを使用できます。
+</cfcase>
+<cfcase value="buildWithErrors">ビルドは完了しましたが、エラーがあります。\n詳細については、ログを調べてください。 </cfcase>
+<cfcase value="carFileName_error">
+無効なアーカイブ名です。.car 拡張子を持つファイルが定義されていることを確認してください。<br/>
+</cfcase>
+<cfcase value="DeployWithErrors">デプロイは完了しましたが、エラーがあります。\n詳細については、ログを調べてください。 </cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

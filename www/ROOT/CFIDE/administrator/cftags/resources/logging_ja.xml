@@ -1,0 +1,92 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Logging
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="delete">削除</cfcase>
+<cfcase value="cancel">キャンセル</cfcase>
+<cfcase value="are_you_sure_delete">削除してよろしいですか。</cfcase>
+<cfcase value="invalidLogFile">ログファイルが無効であるか、ログファイルが存在しません :</cfcase>
+<cfcase value="log_bad_filename">
+無効なログファイルが指定されています。
+</cfcase>
+<cfcase value="log_not_deleted"><cfoutput>
+ログファイルを削除できません。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="pagenameq2">ログファイル</cfcase>
+<cfcase value="pageHeader_logfiles">
+デバッグとロギング &gt; ログファイル</cfcase>
+<cfcase value="logblurb">
+ColdFusion により、アプリケーションのトラブルシューティングやイベントの追跡に役立つログファイルがいくつか作成されます。このページを使用して、ログファイルの検索、表示、ダウンロード、アーカイブ、削除ができます。
+</cfcase>
+<cfcase value="needappvars">
+ログビューアが機能するためには、有効にされたアプリケーション変数が必要です。アプリケーション変数が無効にされているため、ログビューアを使用して、ログファイルを表示し、検索することができません。
+</cfcase>
+<cfcase value="available_log_files">使用可能なログファイル</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="filename">ファイル名</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="size">サイズ</cfcase>
+<cfcase value="lastmodified">最終更新日</cfcase>
+<cfcase value="search_view_log_file">ログファイルの検索 / 表示</cfcase>
+<cfcase value="download_log_file">ログファイルのダウンロード</cfcase>
+<cfcase value="store_log_file">ログファイルのアーカイブ</cfcase>
+
+<cfcase value="Enable_logging">ロギングの有効化</cfcase>
+
+<cfcase value="Disable_logging">ロギングの無効化</cfcase>
+
+<cfcase value="delete_log_file">ログファイルの削除</cfcase>
+<cfcase value="delete_logfile_confirmation">このログファイルを削除してもよろしいですか。</cfcase>
+<cfcase value="view_log_files">ログファイルの表示</cfcase>
+<cfcase value="nologsfound">ログファイルが見つかりません。</cfcase>
+<cfcase value="baddir">不適切なディレクトリ名が入力されました。</cfcase>
+<cfcase value="pagename_loggingsettings">ロギングの設定</cfcase>
+<cfcase value="pageHeader_logsettings">
+デバッグとロギング &gt; ロギングの設定</cfcase>
+<cfcase value="log_directory">ログディレクトリ</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="logfilepath_instructions">エラーログファイルが書き込まれるディレクトリを入力するか、[サーバーのブラウズ] をクリックして、ディレクトリツリーから選択してください。指定するドライブには、十分なディスク容量と、ColdFusion システムサービスに対するセキュリティ権限が必要です。この変更を有効にするために、ColdFusion サービスをシャットダウンして再起動する必要があります。</cfcase>
+<cfcase value="max_file_size">最大ファイルサイズ (KB)</cfcase>
+<cfcase value="maxfilesize_instructions">ColdFusion がログファイル用に使用する最大ファイルサイズを入力してください。このサイズに達すると、ファイルは自動的にアーカイブされます。
+</cfcase>
+<cfcase value="max_archives">アーカイブの最大数</cfcase>
+<cfcase value="maxfilebackups_instructions">作成されるログのアーカイブの最大数を設定します。最大数に達すると、ファイルは古い順に削除されます。
+</cfcase>
+<cfcase value="use_os_fac">オペレーティングシステムのロギング機能の使用</cfcase>
+<cfcase value="use_os_fac_instructions">有効化された ColdFusion ログメッセージのいくつかは、オペレーティングシステムのロギング機能を使用して、書き込まれます。この設定に関係なく、すべての ColdFusion ログメッセージも、常に標準の ColdFusion ログファイルに書き込まれます。
+</cfcase>
+<cfcase value="log_slow_pages">処理時間の遅いページのロギング</cfcase>
+<cfcase value="seconds">秒</cfcase>
+<cfcase value="log_slow_pages_instructions">
+サイトにおける潜在的問題やボトルネックを診断するために、ColdFusion では、指定した時間を過ぎて返されるページの名前をロギングできます。これを有効にすると、すべての出力が server.log ファイルに書き込まれます。</cfcase>
+<cfcase value="log_corba">すべての CORBA 呼び出しをロギング</cfcase>
+<cfcase value="log_corba_instructions">
+すべての CORBA 呼び出しがロギングされ、設定の問題の診断に役立ちます。これを有効にすると、すべての出力が server.log ファイルに書き込まれます。
+</cfcase>
+<cfcase value="enable_logging_tasks">スケジュールされたタスクのロギングを有効化</cfcase>
+<cfcase value="log_tasks_instructions">
+ColdFusion Executive タスクのスケジューリングをロギングします。
+</cfcase>
+<cfcase value="error_maxflesizemsg">最大ログファイルサイズは、999999 KB 未満の正数である必要があります。</cfcase>
+<cfcase value="logging_setting_error"><cfoutput>
+変更を保存する際のエラーです。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="logdir_jserror">ログディレクトリを空白にすることはできません。ディレクトリを入力してください。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

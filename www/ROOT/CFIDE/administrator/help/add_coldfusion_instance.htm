@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Add ColdFusion instance</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Enterprise Manager\nAdd Local or Remote ColdFusion instance");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"about_the_server_manager_page.htm\">Enterprise Manager<\/a> > Add Local or Remote ColdFusion instance<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">Overview</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" size="1" width="100.435%" 
+	 align="left" />
+<h1>Add ColdFusion instance</h1>
+<h5>Enterprise Manager &gt; Instance Manager &gt; Add Instance</h5>
+<p style="font-weight: bold;">Enterprise Manager &gt; Instance Manager 
+ &gt; Register Remote Instance</p>
+<p style="font-weight: bold;">Enterprise Manager &gt; Instance Manager 
+ &gt; <span style="font-style: italic;"><i>servername</i></span></p>
+<h1>&#160;</h1>
+<p>This page lets you perform different actions, depending on which button 
+ you clicked on the <a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">Instance 
+ Manager</a>:</p>
+<ul type="disc">
+	<li class="p"><p><span style="font-weight: bold;"><b>Add New Instance:</b></span> 
+	 Create a new JRun server and automatically deploy a copy of the current 
+	 ColdFusion application into that server. Alternatively, you can deploy 
+	 ColdFusion applications packaged by using the <a href="j2ee_archive.htm" title="j2ee_archive.htm">J2EE 
+	 Archives</a> page.</p></li>
+	<li class="p"><p><span style="font-weight: bold;"><b>Register Remote Instance:</b></span> 
+	 Define existing remote JRun servers to the Instance Manager for the 
+	 purpose of adding these servers to a <a href="about_the_cluster_manager.htm" title="about_the_cluster_manager.htm">cluster</a>. 
+	 The remote JRun server instance need not be running when you define 
+	 it to the Instance Manager, however, it must be running before you 
+	 can add it to a cluster.</p></li>
+	<li class="p"><p><span style="font-weight: bold;"><b>Edit ColdFusion Server:</b></span> 
+	 Modify built-in web server settings for a server instance.</p></li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold;">Add New ColdFusion Instance</p>
+<p>&#160;</p>
+<div align="left" >
+<table style="left: 128px; top: 222px; height: 178px;" cellspacing="0" 
+		 width="937">
+	<col style="width: 17.799%;" />
+	<col style="width: 82.201%;" />
+	<tr style="height: 20px;" valign="top">
+		<td style="border: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p style="font-weight: bold;">Area</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Server Name</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Name of the new 
+		 JRun server.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Server Directory</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Location of the 
+		 new JRun server. It's best to accept the default.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Create from EAR/WAR</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>If you created 
+		 an EAR or WAR file through the <a href="j2ee_archive.htm" title="j2ee_archive.htm">J2EE 
+		 Archives page</a>, you can optionally use that archive file as 
+		 the basis for the ColdFusion application that is deployed in the 
+		 new server.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Create Windows Service</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 the Instance Manager creates a windows service for the new JRun 
+		 server.</p></td>
+	</tr>
+	<tr style="height: 20px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Auto Restart Service</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 the Instance Manager defines the Windows service with an auto 
+		 restart recovery option.</p></td>
+	</tr>
+</table>
+</div>
+<p>&#160;</p>
+<p style="font-weight: bold;">Register Remote ColdFusion Instance</p>
+<p>&#160;</p>
+<div align="left" >
+<table style="left: 128px; top: 222px;" cellspacing="0" width="939">
+	<col style="width: 28.517%;" />
+	<col style="width: 71.483%;" />
+	<tr style="height: 28px;" valign="top">
+		<td style="border: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p style="font-weight: bold;">Area</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr style="height: 29px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>ColdFusion Instance Name</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Name of the existing 
+		 remote JRun server instance.</p></td>
+	</tr>
+	<tr style="height: 30px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Remote Host (IP Address or DNS Name)</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>IP address or 
+		 fully qualified DNS name of the computer that contains the remote 
+		 JRun instance.</p></td>
+	</tr>
+	<tr style="height: 45px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Remote Port</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Port number for 
+		 the remote JRun server's JNDI port (also called remote port). 
+		 JRun stores this setting in the SERVER-INF/jndi.properties file.</p></td>
+	</tr>
+</table>
+</div>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Edit <span style="font-style: italic;"><i>servername</i></span></p>
+<p>&#160;</p>
+<div align="left" >
+<table style="left: 128px; top: 222px;" cellspacing="0" width="937">
+	<col style="width: 28.792%;" />
+	<col style="width: 71.208%;" />
+	<tr style="height: 28px;" valign="top">
+		<td style="border: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p style="font-weight: bold;">Area</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr style="height: 28px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Internal Web Server Port</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Port number for 
+		 the built-in web server.</p></td>
+	</tr>
+	<tr style="height: 27px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Enable JWS (Internal Web Server)</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 the server instance enables the built-in web server.</p></td>
+	</tr>
+	<tr style="height: 29px;" valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; padding-right: 10px; padding-left: 10px; 
+			 margin-left: 0px;"><p>Directory Browsing</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 padding-right: 10px; padding-left: 10px;"><p>Specifies whether 
+		 the built-in web server displays directory information in a browser.</p></td>
+	</tr>
+</table>
+</div>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p"><p><a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">Instance 
+	 Manager page</a></p></li>
+	<li class="p"><p><a href="about_the_cluster_manager.htm" title="about_the_cluster_manager.htm">Cluster Manager 
+	 page</a></p></li>
+	<li class="p"><p><a href="edit_cluster_page.htm" title="edit_cluster_page.htm">Edit Cluster page</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

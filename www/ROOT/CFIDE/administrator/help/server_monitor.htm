@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Server Monitor</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nServer Monitor overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Server Monitor overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Setting 
+ Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Server Monitor overview</h1>
+<p>The ColdFusion Server Monitor is an Adobe Flash application that lets 
+ you keep track of activities on a ColdFusion Server. You can identify 
+ information about the server, including requests, queries, memory usage, 
+ and errors. You can start and stop collecting server information and take 
+ snapshots of the server.</p>
+<p>&#160;</p>
+<p>You can start and stop monitoring, profiling, and memory tracking by 
+ clicking the corresponding buttons in the top bar. By default, the ColdFusion 
+ Administrator turns off server monitoring; you must explicitly start Server 
+ Monitoring. The following table indicates what data the Server Monitor 
+ collects when you click the start button:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 25.548%;" />
+	<col style="width: 74.452%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Button</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 74.452%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Action</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Start Monitoring</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 74.452%; padding-right: 10px; padding-left: 10px;"><p>Starts 
+		 gathering information about all requests, including active requests, 
+		 slowest requests, active sessions, cumulative server usage, highest 
+		 hit counts, template cache status, request throttle data, requests 
+		 that timed out, requests with errors, and server alerts. The Server 
+		 Monitor does not gather information for requests that are excluded 
+		 on the Filter Settings page.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Start Profiling</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 74.452%; padding-right: 10px; padding-left: 10px;"><p>Starts 
+		 gathering tag and function timing information for the Slowest 
+		 Requests report; the CFML stack trace for the Active Requests 
+		 report; information about active queries, slowest queries, cached 
+		 queries, and query cache status; database pool status; and the 
+		 most frequently run queries. This lets you find bottlenecks in 
+		 your application. You can view details about each request that 
+		 is slow or consumes a lot of memory. You can determine which tags 
+		 and functions cause the request to run slowly and which variables 
+		 consume the most memory. You can use this information on both 
+		 development and production servers. To gather the profiling information, 
+		 turn on monitoring, profiling, and, if needed, memory tracking.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Start Memory Tracking</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 74.452%; padding-right: 10px; padding-left: 10px;"><p>Starts 
+		 gathering information about memory consumption, including overall 
+		 memory usage, the queries and sessions that have used the most 
+		 memory, and the memory usage of all application and server scopes, 
+		 and profiling information on the largest variables on the Requests 
+		 by Memory Usage report, if profiling is enabled.</p>
+		<p>You must enable profiling to view query-related reports; you 
+		 must enable profiling and memory tracking to view the Queries 
+		 by Memory Usage report.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Reset All Statistics</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 74.452%; padding-right: 10px; padding-left: 10px;"><p>Resets 
+		 all statistics collected on the server.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; width: 25.548%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Refresh</p></td>
+		<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; 
+			 width: 74.452%; padding-right: 10px; padding-left: 10px;"><p>Updates 
+		 the data for all the graphs, reports and message boxes on the 
+		 page.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>When you start the Server Monitor, the Overview page appears. To return 
+ to the Overview page from any other page, click the Overview button in 
+ the top bar. of the Server Monitor.</p>
+<p>&#160;</p>
+<p>By default, the Server Monitor retrieves data for graphs every 5 seconds; 
+ it retrieves data for reports every thirty seconds. All of the graphs 
+ lets you display all the data collected or the data collected for a specified 
+ recent period of time.</p>
+<p>&#160;</p>
+<p>The Server Monitor lets you control the granularity with which you turn 
+ monitoring on and off with the following buttons:</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Start Monitoring</b></span> - Turns on 
+ all monitoring.</p>
+<p><span style="font-weight: bold;"><b>Start Profiling</b></span> - Turns on monitoring 
+ of individual tags, functions, and query execution times.</p>
+<p><span style="font-weight: bold;"><b>Start Memory Tracking</b></span> &#160;- 
+ Turns on tracking of memory used by different scopes. If Profiling is 
+ also on, the Server Monitor tracks the memory used by individual tags, 
+ functions, and queries.</p>
+<p>&#160;</p>
+<p>Turning on or off monitoring, profiling, and memory tracking determines 
+ which data the Server Monitor gathers. For example, all of the query reports 
+ require that you turn on profiling. The performance impact of turning 
+ on monitoring and profiling is minimal; however, the performance impact 
+ of memory tracking can be significant.</p>
+<p>&#160;</p>
+<p>The Server Monitor contains the following sections:</p>
+<p>&#160;</p>
+<ul type="disc">
+	<li class="p"><p><a href="server_monitor_summary.htm" title="server_monitor_summary.htm">Summary</a></p></li>
+	<li class="p"><p>Request Statistics</p></li>
+	<li class="p"><p><a href="memory_usage.htm" title="memory_usage.htm">Memory Usage</a></p></li>
+	<li class="p"><p><a href="server_monitor_database.htm" title="server_monitor_database.htm">Database</a></p></li>
+	<li class="p"><p><a href="server_monitor_errors_section.htm" title="server_monitor_errors_section.htm">Errors</a></p></li>
+	<li class="p"><p><a href="server_monitor_alerts_and_snapshots_section.htm" title="server_monitor_alerts_and_snapshots_section.htm">Alerts 
+	 and Snapshots</a></p></li>
+	<li class="p"><p>Settings</p></li>
+</ul>
+<p style="margin-left: 40px;">&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

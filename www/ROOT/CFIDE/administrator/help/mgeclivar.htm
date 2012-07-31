@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="02 19, 2002 3:39:43 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Manage client variables</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nManage client variables");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Manage client variables<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Manage client variables</h1>
+<h5>Server Settings &gt; Client Variables</h5>
+<p>&#160;</p>
+<p>ColdFusion lets you store <a href="overview_of_server_settings.htm#Clientvar" title="overview_of_server_settings.htm#Clientvar">client 
+ variables</a> in the following ways:</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>In a <a href="#clivar_datasource" title="#clivar_datasource">data 
+	 source</a>.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>As a <a href="#clivar_cookie" title="#clivar_cookie">cookie</a> 
+	 in a web browser.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>In the operating system 
+	 <a href="#clivar_cookie" title="#clivar_cookie">registry</a>. Although this method is the 
+	 default, storing client variables in the registry can critically degrade 
+	 server performance and Adobe does not recommend using it in a production 
+	 environment. If you do use the registry to store client variables, 
+	 you must allocate sufficient memory and disk space.</p></li>
+</ul>
+<h3 class="Procedure"><a name="clivar_datasource" id="clivar_datasource" title="clivar_datasource"></a> 
+ Store client variables in a data source</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">On the Client Variables page, 
+	 in the Select Data Source to Add as Client Store table, select a data 
+	 source from the drop-down list box. For information about creating 
+	 a data source, see <a href="create_a_data_source.htm" title="create_a_data_source.htm">Create a data 
+	 source</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Add. The Add/Edit Client 
+	 Store page for the data source appears.&#160;</p></li>
+	<li class="p-NumList"><p class="NumList">Select options for the data 
+	 source, as described in the following table. (To exit from the page 
+	 without saving changes, click the left-arrow icon.)</p></li>
+</ol>
+<p>&#160;</p>
+<table style="margin-left: 24px;" cellspacing="0" width="100%">
+	<col style="width: 30.068%;" />
+	<col style="width: 52.109%;" />
+	<col style="width: 17.823%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 30.068%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 52.109%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 17.823%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.068%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Description</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 52.109%; padding-right: 10px; padding-left: 10px;"><p>A 
+		 description of the client data store and its settings. Not displayed 
+		 for Registry.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.823%; padding-right: 10px; padding-left: 10px;"><p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.068%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Create Client database tables</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 52.109%; padding-right: 10px; padding-left: 10px;"><!--- <p style="font-weight: bold;">&nbsp;</p> =-->
+			<p>If ColdFusion can determine that the database you use supports 
+		 SQL creation of database tables, this option appears, and you 
+		 do not need to create the client variable tables before they are 
+		 used. In this case, the Create Client Database Tables option appears 
+		 on the Add/Edit Client Store page; if you select this option, 
+		 ColdFusion creates the necessary tables in the database.</p>
+		<!--- <p style="font-weight: bold;">&nbsp;</p> =-->
+			<p>&#160;</p>
+		<p>If the database does not support SQL table creation, if the 
+		 database already has the required tables, or if you are using 
+		 the Registry, this option does not appear.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.823%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.068%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Purge data for clients that remain 
+		 unvisited for [n] days</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 52.109%; padding-right: 10px; padding-left: 10px;"><p>Typically, 
+		 client data is saved for a limited time. To delete (purge) client 
+		 data that has not been accessed in a specified number of days, 
+		 select this option and enter a value for the number of days.</p>
+		<p>&#160;</p>
+		<!--- <p style="font-weight: bold;">&nbsp;</p> =-->
+			<p style="font-weight: bold;">Note: <span style="font-weight: normal;">If 
+		 a cluster of ColdFusion servers uses this data source, ensure 
+		 that only one server is configured to purge client data.</span></p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.823%; padding-right: 10px; padding-left: 10px;"><p>Enabled; 
+		 90</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.068%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Disable global client variable updates</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 52.109%; padding-right: 10px; padding-left: 10px;"><p>By 
+		 default, ColdFusion updates client variables for every page request. 
+		 To prevent ColdFusion from updating variables, select this option.</p>
+		<p>&#160;</p>
+		<p>If updates are disabled, ColdFusion updates global client variables 
+		 only when they are first created and when they are updated. This 
+		 helps improve application performance.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.823%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<ol start="4">
+	<li class="p-NumList"><p class="NumList">Click Submit Changes. The 
+	 Client Variables page appears, with your data source in the list.</p></li>
+	<li class="p-NumList"><p class="NumList">In the Select Default Storage 
+	 Mechanism for Client Sessions table, select the data source.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Apply.</p></li>
+</ol>
+<h3 class="Procedure"><a name="clivar_cookie" id="clivar_cookie" title="clivar_cookie"></a>Store 
+ client variables in a cookie or in the system registry</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">On the Client Variables page, 
+	 select Cookie or Registry.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Apply.</p></li>
+</ol>
+<p>&#160;</p>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p"><p><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server settings 
+	 overview</a></p></li>
+	<li class="p"><p><a href="about_coldfusion_data_sources.htm" title="about_coldfusion_data_sources.htm">ColdFusion 
+	 data sources overview</a></p></li>
+	<li class="p"><p><a href="client_variable_planning.htm" title="client_variable_planning.htm">Client variable 
+	 planning</a></p></li>
+	<li class="p"><p><a href="migclivar.htm" title="migclivar.htm">Migrate client variable data</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

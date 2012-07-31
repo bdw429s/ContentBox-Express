@@ -1,0 +1,203 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: EventGateway
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="status_running">起動中</cfcase>
+<cfcase value="status_stopped">停止済み</cfcase>
+<cfcase value="status_stopping">停止中</cfcase>
+<cfcase value="status_starting">起動中</cfcase>
+<cfcase value="status_failed">失敗</cfcase>
+<cfcase value="gateway_id_required">ゲートウェイインスタンスの名前を入力してください。</cfcase>
+<cfcase value="gateway_cfcpath_required">CFC テンプレートへのフルパスを入力してください。</cfcase>
+<cfcase value="gateway_config_missing">設定ファイルが見つかりません : </cfcase>
+<cfcase value="gw_started"><cfoutput>ゲートウェイの起動中 :'#CALLER.gwid#'  </cfoutput></cfcase>
+<cfcase value="gwservice_off">イベントゲートウェイインスタンスを起動できません。イベントゲートウェイサービスが有効になっていません。 </cfcase>
+<cfcase value="gw_restarted"><cfoutput>ゲートウェイの再起動中 :'#CALLER.gwid#'  </cfoutput></cfcase>
+<cfcase value="gw_stopped"><cfoutput>ゲートウェイの停止中 :'#CALLER.gwid#' </cfoutput></cfcase>
+<cfcase value="eventgatewayinstance">イベントゲートウェイインスタンス</cfcase>
+<cfcase value="pageHeader_gatewayinstances">イベントゲートウェイ &gt; ゲートウェイインスタンス</cfcase>
+<cfcase value="gateways_welcome">
+ColdFusion イベントゲートウェイインスタンスを設定して、さまざまなソースから既に書かれた ColdFusion コンポーネントにイベントを誘導できます。
+</cfcase>
+<cfcase value="l10n_aegateways">ColdFusion ゲートウェイインスタンスの追加 / 編集</cfcase>
+<cfcase value="gateway_id">ゲートウェイ ID</cfcase>
+<cfcase value="gateway_type">ゲートウェイタイプ</cfcase>
+<cfcase value="select_type">タイプを選択してください</cfcase>
+<cfcase value="manage_button_button">タイプの管理</cfcase>
+<cfcase value="gateway_cfcpath">CFC パス</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="config_file">設定ファイル</cfcase>
+<cfcase value="gateway_startmode">スタートアップモード</cfcase>
+<cfcase value="gateway_startauto">自動</cfcase>
+<cfcase value="gateway_startmanual">手動</cfcase>
+<cfcase value="gateway_startdisable">無効</cfcase>
+<cfcase value="button_gateway_update">ゲートウェイインスタンスの更新 </cfcase>
+<cfcase value="button_gateway_delete">ゲートウェイインスタンスの削除</cfcase>
+<cfcase value="button_gateway_add">ゲートウェイインスタンスの追加 </cfcase>
+<cfcase value="gateway_delete_warn"><cfoutput>
+ゲートウェイインスタンスを削除するとやり直しできません。#CALLER.nl#このゲートウェイインスタンスを削除しますか。
+</cfoutput></cfcase>
+<cfcase value="l10n_confgatewayInstances">設定済み ColdFusion イベントゲートウェイインスタンス</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="running">ステータス</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="gateway_startup">スタートアップ</cfcase>
+<cfcase value="gateway_eventsIn">イン</cfcase>
+<cfcase value="gateway_eventsOut">アウト</cfcase>
+<cfcase value="gateway_config">ゲートウェイ設定</cfcase>
+<cfcase value="gateway_edit">編集</cfcase>
+<cfcase value="gateway_start">起動</cfcase>
+<cfcase value="gateway_stop">停止</cfcase>
+<cfcase value="gateway_restart">再起動</cfcase>
+<cfcase value="gateway_delete">削除</cfcase>
+<cfcase value="status_disabled"><em>Disabled</em></cfcase>
+<cfcase value="status_resetEventsIn">イベントのリセット</cfcase>
+<cfcase value="DISABLED">無効</cfcase>
+<cfcase value="AUTO">自動</cfcase>
+<cfcase value="MANUAL">手動</cfcase>
+<cfcase value="no_gatewayinstances">ゲートウェイインスタンスが設定されていません。</cfcase>
+<cfcase value="refresh">更新</cfcase>
+<cfcase value="manage_gateway_button">ゲートウェイタイプの管理</cfcase>
+<cfcase value="button_goto_eventgatewaysettings">イベントゲートウェイの設定</cfcase>
+<cfcase value="ActiveMQ_Desc">Apache ActiveMQ JMS メッセージを処理する</cfcase>
+<cfcase value="CFML_Desc">CFC を使用して非同期イベントを処理する</cfcase>
+<cfcase value="DataManagement_Desc">Data Management Services にデータの変更を通知する</cfcase>
+<cfcase value="DataServicesMessaging_Desc">Data Services Messaging メッセージを処理する</cfcase>
+<cfcase value="DirectoryWatcher_Desc">ディレクトリでのファイルの変更を監視する</cfcase>
+<cfcase value="FMS_Desc">Flash Media Server 共有オブジェクトを処理する</cfcase>
+<cfcase value="JMS_Desc">Java Messaging Service メッセージを処理する</cfcase>
+<cfcase value="SAMETIME_Desc">Lotus SAMETIME インスタントメッセージを処理する</cfcase>
+<cfcase value="SMS_Desc">SMS テキストメッセージングを処理する</cfcase>
+<cfcase value="Socket_Desc">ソケットをリスンする</cfcase>
+<cfcase value="XMPP_Desc">XMPP インスタントメッセージを処理する</cfcase>
+<cfcase value="gatewaytype_addedSuccessfully">
+ゲートウェイタイプの追加に成功しました。
+</cfcase>
+<cfcase value="gatewaytype_updatedSuccessfully">
+ゲートウェイタイプの更新に成功しました。
+</cfcase>
+<cfcase value="gatewaytype_deletedSuccessfully">
+ゲートウェイタイプの削除に成功しました。
+</cfcase>
+<cfcase value="gatewayTypes">ゲートウェイタイプ</cfcase>
+<cfcase value="pageHeader_gatewaytypes">イベントゲートウェイ &gt; ゲートウェイタイプ</cfcase>
+<cfcase value="gatewaytypes_welcome">
+システムで使用できるゲートウェイのタイプを設定します。タイプの設定後、そのタイプのゲートウェイインスタンスを任意の数だけ作成できます。
+</cfcase>
+<cfcase value="l10n_aegatewaytypes">ColdFusion イベントゲートウェイタイプの追加 / 編集</cfcase>
+<cfcase value="gatewaytype_type">タイプ名</cfcase>
+<cfcase value="gatewaytype_name_required">ゲートウェイタイプの名前を入力してください。</cfcase>
+<cfcase value="gatewaytype_desc">説明</cfcase>
+<cfcase value="gatewaytype_desc_required">ゲートウェイタイプの説明を入力してください。</cfcase>
+<cfcase value="gatewaytype_class">Java クラス</cfcase>
+<cfcase value="gatewaytype_class_required">完全に修飾された Java クラス名を入力してください。</cfcase>
+<cfcase value="gatewaytype_startuptimeout">スタートアップタイムアウト</cfcase>
+<cfcase value="gatewaytype_timeout_required">タイムアウト値を秒で入力してください。</cfcase>
+<cfcase value="seconds">秒</cfcase>
+<cfcase value="gatewaytype_config">スタートアップタイムアウト時に停止</cfcase>
+<cfcase value="button_gatewaytype_update">タイプの更新</cfcase>
+<cfcase value="button_gatewaytype_delete">タイプの削除</cfcase>
+<cfcase value="button_gatewaty_add">タイプの追加</cfcase>
+<cfcase value="gwtype_delete_warn"><cfoutput>
+警告 :ゲートウェイタイプを削除すると、このタイプを使用して設定されたゲートウェイインスタンスもすべて削除されます。#CALLER.nl#このゲートウェイタイプを削除しますか。
+</cfoutput></cfcase>
+<cfcase value="l10n_confgatewaytypes">設定済み ColdFusion ゲートウェイタイプ</cfcase>
+<cfcase value="gatewaytype_name">名前</cfcase>
+<cfcase value="gatewaytype_timeout">タイムアウト</cfcase>
+<cfcase value="gatewaytype_kill">タイムアウト時にキル</cfcase>
+<cfcase value="gatewaytype_edit">編集</cfcase>
+<cfcase value="gatewaytype_delete">削除</cfcase>
+<cfcase value="no_gatewaytypes">設定済みゲートウェイタイプはありません。</cfcase>
+<cfcase value="button_goto_gw">ゲートウェイインスタンスの管理</cfcase>
+<cfcase value="button_goto_settings">イベントゲートウェイの設定</cfcase>
+<cfcase value="gwstarted_message">イベントゲートウェイが起動しました。</cfcase>
+<cfcase value="gwstopped_message">イベントゲートウェイが停止しました。</cfcase>
+<cfcase value="threads_negative_err">[イベントゲートウェイ処理スレッド] は 0 またはマイナスにはできません</cfcase>
+<cfcase value="events_negative_err">[キューに入れるイベントの最大数] は 0 またはマイナスにはできません</cfcase>
+<cfcase value="smstest_message_starter">SMS テストサーバーが起動しました。</cfcase>
+<cfcase value="smstest_message_stopped">SMS テストサーバーが停止しました。</cfcase>
+<cfcase value="eventGatewaySettings">イベントゲートウェイの設定</cfcase>
+<cfcase value="pageHeader_eventgatewaysettings">イベントゲートウェイ &gt; 設定</cfcase>
+<cfcase value="gw_enable">ColdFusion イベントゲートウェイサービスの有効化</cfcase>
+<cfcase value="gw_enable_tip">
+ColdFusion イベントゲートウェイサービスを有効にします。このサービスにより、外部
+ソースからのイベントを指定の ColdFusion コンポーネントに渡すことができます。この
+設定を変更すると、サービスが直ちに起動または停止されます。
+</cfcase>
+<cfcase value="gw_poolsize">イベントゲートウェイ処理スレッド</cfcase>
+<cfcase value="gw_pool_tip">
+イベントが到着したときに ColdFusion 関数を実行するために使用されるスレッドの最大数を指定します。
+数値が高いほどより多くのリソースが使用されますが、イベントのスループットが増加します。
+</cfcase>
+<cfcase value="gw_pool_standard">
+スタンダード版では、1 つの処理スレッドに制限されます。
+</cfcase>
+<cfcase value="gw_qsize">キューに入れるイベントの最大数</cfcase>
+<cfcase value="gw_qsize_tip">
+イベントキューで使用できるイベントの最大数を指定します。
+キューの長さがこの値を超えると、ゲートウェイのイベントは処理キューに追加
+されません。これはすべてのイベントゲートウェイ用のグローバルな設定です。
+</cfcase>
+<cfcase value="gw_smstest">SMS テストサーバー</cfcase>
+<cfcase value="gw_smstest_tip">
+SMS ゲートウェイアプリケーションのテストを補助するために、ColdFusion には SMS テストサーバーが内蔵されています。これは、あらかじめ設定済みの SMS テストゲートウェイと共同で機能します。SMS テストサーバーを起動した後、SMS テストゲートウェイを有効にし、SMS テストクライアントを使用して、アプリケーションをテストできます。
+</cfcase>
+<cfcase value="gw_smstest_running">
+テストサーバーは現在起動しています。
+</cfcase>
+<cfcase value="gw_smstest_stopped">
+テストサーバーは現在停止しています。
+</cfcase>
+<cfcase value="button_stopsms">SMS テストサーバーの停止</cfcase>
+<cfcase value="button_startsms">SMS テストサーバーの起動</cfcase>
+<cfcase value="error_selecttype">ゲートウェイインスタンスのタイプを選択してください。</cfcase>
+<cfcase value="gateway_error_update"><cfoutput>
+イベントゲートウェイインスタンスを作成する際のエラー。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_delete"><cfoutput>
+イベントゲートウェイインスタンスを削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_start"><cfoutput>
+イベントゲートウェイを起動できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_restart"><cfoutput>
+イベントゲートウェイインスタンスを再起動できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_stop"><cfoutput>
+イベントゲートウェイインスタンスを停止できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gatewaytype_error_update"><cfoutput>
+ゲートウェイタイプを作成する際のエラー。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gatewaytype_error_delete"><cfoutput>
+ゲートウェイタイプを削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gwerror_update"><cfoutput>
+ゲートウェイ設定を更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="smstest_start_error"><cfoutput>
+SMS テストサーバーを起動できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="smstest_stop_error"><cfoutput>
+SMS テストサーバーを停止できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

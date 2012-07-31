@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="390" height="335" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="#FDFEF6;#FFFFC5;#B699CCFF" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<dialChart dial="Dial240" minorTicksVisible="true" inside="#FFFFC5" hand="#B699CCFF"
+				is3D="true" isTransposed="false" seriesTitle="" font="Arial-11"
+				foreground="black" isMultiline="false">
+				<axis type="Scale" isVisible="true" isAbsolute="true" scaleMin="0"
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</axis>
+				<dataLabels style="Value" placement="Outside" background="#00000000" font="Arial-24"
+					isMultiline="false">
+					<decoration style="None" foreColor="black"/>
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="false" isVisible="true"
+					placement="Top" valign="Middle" halign="Center" background="#00000000"
+					isMultiline="false">
+					<decoration style="Shadow" foreColor="black"/>
+				</legend>
+				<elements place="Clustered" shape="Bar" markerSize="0" shapeSize="80"
+					lineWidth="4" drawOutline="true" drawShadow="true" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25" stageDelay="0" replayDelay="-1"/>
+					<morph morph="Blur" stage="Rows"/>
+					<series index="0" isSecondAxis="false" forceBreak="false">
+						<morph/>
+						<marker type="Rectangle" bitmap="marker.gif"/>
+						<paint color="#CCFF99" image=""/>
+						<dataLabel>
+						</dataLabel>
+					</series>
+					<series index="1" isSecondAxis="false" forceBreak="false">
+						<morph/>
+						<marker type="Rectangle" bitmap="marker.gif"/>
+						<paint color="#FFCC99" image=""/>
+						<dataLabel>
+						</dataLabel>
+					</series>
+					<series index="2" isSecondAxis="false" forceBreak="false">
+						<morph/>
+						<marker type="Rectangle" bitmap="marker.gif"/>
+						<paint color="#FF99CC" image=""/>
+						<dataLabel>
+						</dataLabel>
+					</series>
+				</elements>
+				<table isVisible="false" isTransposed="false" cellSpacing="4" cellPadding="0"
+					border="Outer">
+					<decoration style="RoundShadow" foreColor="black"/>
+					<colLabels hAlign="Center" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</colLabels>
+					<rowLabels hAlign="Left" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</rowLabels>
+					<cells hAlign="Right" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</cells>
+					<format style="Number">
+						<locale/>
+					</format>
+				</table>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					background="#00000000" font="Arial-16-bold" isMultiline="true">
+					<decoration style="Shadow" foreColor="black"/>
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<decoration style="None" foreColor="black"/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Pastel" paint="Shade" isVertical="false" min="18"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</dialChart>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>Low</COL>
+<COL>Average</COL>
+<COL>High</COL>
+<ROW col0="120.0" col1="220.0" col2="0.0">Sample 0:</ROW>
+<ROW col0="150.0" col1="300.0" col2="250.0">Sample 1:</ROW>
+<ROW col0="200.0" col1="400.0" col2="400.0">Sample 2:</ROW>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

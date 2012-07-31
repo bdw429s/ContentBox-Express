@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Create a data source</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nData Sources\nCreate a data source");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"overview_of_coldfusion_data_sources.htm\">Data Sources<\/a> > Create a data source<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Create and edit a data source</h1>
+<h5>Data &amp; Services &gt; Data Sources</h5>
+<p>&#160;</p>
+<p>The ColdFusion Administrator lets you quickly create a data source so 
+ that your ColdFusion applications can interact with various databases.</p>
+<h3 class="Procedure">To create a data source:</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">In the Add New Data Source 
+	 area of the Data Sources page, enter a data source name.</p></li>
+	<li class="p-NumList"><p class="NumList">Select a driver from the drop-down 
+	 list box.</p></li>
+	<li class="p-NumList"><p class="NumList">Click <span style="font-weight: bold;"><b>Add</b></span>. 
+	 A form appears that requests additional information. The available 
+	 fields in this form depend on the driver that you selected. The following 
+	 names are reserved; you cannot use them for data source names:</p>
+	<p class="NumList" style="margin-left: 40px;">service</p>
+	<p class="NumList" style="margin-left: 40px;">jms_provider</p>
+	<p class="NumList" style="margin-left: 40px;">comp</p>
+	<p class="NumList" style="margin-left: 40px;">jms</p></li>
+	<li class="p-NumList"><p class="NumList">In the Database field, enter 
+	 the name of the database.</p></li>
+	<li class="p-NumList"><p class="NumList">In the Server field, enter 
+	 the network name or IP address of the server that hosts the database, 
+	 and enter any required port value. The ColdFusion Administrator suggests 
+	 typical default ports, such as 1433 for SQL Server. For more information, 
+	 see the &quot;Connect to...&quot; topic for your database in the <a href="#Related" title="#Related">Related topics</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">If your database requires 
+	 login information, enter your user name and password.</p></li>
+</ol>
+<p class="NormalIndented"><span style="font-weight: bold;"><b>Tip:</b></span> 
+ The omission of required user name and password information is a common 
+ reason why a data source fails to verify.</p>
+<ol start="7" type="1">
+	<li class="p-NumList"><p class="NumList">(Optional) Enter a description.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) Click <span style="font-weight: bold;"><b>Show 
+	 Advanced Settings</b></span> to specify any additional settings; for example, 
+	 to configure which SQL commands will interact with this data source. 
+	 For more information, see the &quot;Connect to...&quot; topic for 
+	 your database in the <a href="#Related" title="#Related">Related topics</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">If you do not want to autogenerate 
+	 the keys for data sources, select the <span style="font-weight: bold;"><b>Disable 
+	 autogenerated keys</b></span> check box. By default, this check box is 
+	 not selected. If you select it, the autogenerated keys are not retrieved 
+	 when you run INSERT queries. When transaction volumes are very high, 
+	 Oracle data sources throw the exception &quot;Auto-generated keys 
+	 were not requested&quot;, or &quot;the SQL was not a simple INSERT 
+	 statement&quot;. This happens because the autogenerated keys are retrieved 
+	 with the transactions. The Disable autogenerated keys setting disables 
+	 the retrieval of auto generated keys to resolve this issue. </p></li>
+	<li class="p-NumList"><p class="NumList">Click <span style="font-weight: bold;"><b>Submit</b></span> 
+	 to create the data source. ColdFusion automatically verifies that 
+	 it can connect to the data source.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) To verify this 
+	 data source later, click the <span style="font-weight: bold;"><b>Verify 
+	 All Connections</b></span> icon.</p></li>
+</ol>
+<p>&#160;</p>
+<h5>To edit a data source:</h5>
+<p>1.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>From the Connected 
+ Data Sources list, click the first icon under Actions, which is the edit 
+ icon. You can also edit the data source by clicking the data source name.</p>
+<p>2.<span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Modify the settings 
+ for the datasource and click Submit to update the configuration.</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_coldfusion_data_sources.htm" title="overview_of_coldfusion_data_sources.htm">Data 
+	 sources overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="about_the_data_sources_page.htm" title="about_the_data_sources_page.htm">Data 
+	 Sources page overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verify_coldfusion_data_sources.htm" title="verify_coldfusion_data_sources.htm">Verify 
+	 a data source</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="about_database_drivers.htm" title="about_database_drivers.htm">Database 
+	 drivers overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Verity 
+	 collections overview</a></p></li>
+	<li class="kadov-p" style="margin-left: -20px;"><p><a href="db2_universal_db_connect_to.htm" title="db2_universal_db_connect_to.htm">Connect 
+	 to DB2 Universal database</a></p></li>
+	<li class="kadov-p" style="margin-left: -20px;"><p><a href="informix_connect_to.htm" title="informix_connect_to.htm">Connect 
+	 to Informix</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="access_connect_to.htm" title="access_connect_to.htm">Connect 
+	 to Microsoft Access database</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="access_unicode_connect_to.htm" title="access_unicode_connect_to.htm">Connect 
+	 to Microsoft Access with Unicode</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="sqlsvr_connect_to.htm" title="sqlsvr_connect_to.htm">Connect 
+	 to Microsoft SQL Server database</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="mysql_connect_to.htm" title="mysql_connect_to.htm">Connect 
+	 to MySQL database</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="odbc_socket_connect_to.htm" title="odbc_socket_connect_to.htm">Connect 
+	 to ODBC socket</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="oracle_connect_to.htm" title="oracle_connect_to.htm">Connect 
+	 to Oracle</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="other_connect_to.htm" title="other_connect_to.htm">Connect 
+	 to other data sources</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="sybase_connect_to.htm" title="sybase_connect_to.htm">Connect 
+	 to Sybase</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="connect_through_jndi.htm" title="connect_through_jndi.htm">Connect 
+	 through JNDI</a></p></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="NumList">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

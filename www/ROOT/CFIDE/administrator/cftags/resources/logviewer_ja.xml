@@ -1,0 +1,78 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: logviewer
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="coldfusion_log_viewer">ColdFusion ログビューア</cfcase>
+<cfcase value="copyright">Copyright (c) 1995-2010 Adobe Systems, Inc. All rights reserved. </cfcase>
+<cfcase value="pagename_logviewer">ログビューア</cfcase>
+<cfcase value="dont_commit">変更を加えずに、前のページへ戻ってください。</cfcase>
+<cfcase value="click_array_to_return">左の矢印をクリックすると、ログファイルのリストへ戻ります。</cfcase>
+<cfcase value="Launch Filter">フィルタの開始</cfcase>
+<cfcase value="search_limit">制限内の検索に達しました。</cfcase>
+<cfcase value="show_severity">厳格度の表示</cfcase>
+<cfcase value="fatlgvw">重大</cfcase>
+<cfcase value="erlgvw">エラー</cfcase>
+<cfcase value="wrlgvw">警告</cfcase>
+<cfcase value="inflgvw">情報</cfcase>
+<cfcase value="help">ヘルプ</cfcase>
+<cfcase value="keywords">キーワード</cfcase>
+<cfcase value="find">検索</cfcase>
+<cfcase value="exact_phrase">語句に完全に一致</cfcase>
+<cfcase value="any_word">いずれかの語句に一致</cfcase>
+<cfcase value="all_words">すべての語句に一致</cfcase>
+<cfcase value="applications">アプリケーション</cfcase>
+<cfcase value="threadids">スレッド ID</cfcase>
+<cfcase value="most_recent">最近のログ</cfcase>
+<cfcase value="anytime">すべて</cfcase>
+<cfcase value="last_6_hours">6 時間以内</cfcase>
+<cfcase value="last_12_hours">12 時間以内</cfcase>
+<cfcase value="last_24_hours">24 時間以内</cfcase>
+<cfcase value="last_2_days">2 日間以内</cfcase>
+<cfcase value="last_3_days">3 日間以内</cfcase>
+<cfcase value="last_1_week">1 週間以内</cfcase>
+<cfcase value="last_2_weeks">2 週間以内</cfcase>
+<cfcase value="last_1_month">1 か月以内</cfcase>
+<cfcase value="last_3_months">3 か月以内</cfcase>
+<cfcase value="specify_date_range">(または、以下に指定の時刻 / 日付の範囲)</cfcase>
+<cfcase value="date_range">日にちの範囲</cfcase>
+<cfcase value="to">終了</cfcase>
+<cfcase value="time_span">時間の範囲</cfcase>
+<cfcase value="search_within">絞り込み :</cfcase>
+<cfcase value="yes">はい</cfcase>
+<cfcase value="no">いいえ</cfcase>
+<cfcase value="show_matches">一致を表示</cfcase>
+<cfcase value="hide_matches">一致を隠す</cfcase>
+<cfcase value="select_no_more">一連の 3 つ以内のログファイルを選択してください。</cfcase>
+<cfcase value="bad_log_file_name">ログファイルの名前に、スペースなどの不正な文字が含まれています。</cfcase>
+<cfcase value="could_not_combine">なんらかの原因で、これらのログファイルを結合できませんでした。それぞれを個別に検索してください。</cfcase>
+<cfcase value="searching_files">ファイルの検索中</cfcase>
+<cfcase value="searching_file">ファイルの検索中</cfcase>
+<cfcase value="view_raw_data">生データの表示</cfcase>
+<cfcase value="compact_view">コンパクト表示</cfcase>
+<cfcase value="Previous">前</cfcase>
+<cfcase value="of">:</cfcase>
+<cfcase value="Next">次へ</cfcase>
+<cfcase value="Date">日付</cfcase>
+<cfcase value="Time">時間</cfcase>
+<cfcase value="Severity">厳格度</cfcase>
+<cfcase value="ThreadID">スレッド ID</cfcase>
+<cfcase value="Application_Name">アプリケーション名</cfcase>
+<cfcase value="l10n_znext">次へ</cfcase>
+<cfcase value="l10n_zprevious">前</cfcase>
+<cfcase value="logvw_searchfiles">ファイルの検索中</cfcase>
+<cfcase value="file_exceeded_error">このファイルはログビューアの制限を超えました。</cfcase>
+<cfcase value="error_accessing">ログファイルへアクセスする際に、エラーがありました。これはおそらく、ログファイル名が不正であるか、既にログファイルが存在しないためです。また、ODBC ログファイルドライバ設定に問題がある可能性もあります。</cfcase>
+<cfcase value="error_displaying">選択したログファイルを表示する際に、エラーがありました。これはおそらく、異なるタイプのログファイルを選択して、ColdFusion ログと ColdFusion ではないログを混合したためです。複数のログファイルを表示する場合は、前へ<a href="javascript:history.back()">戻り</a>、同じタイプのログファイルを選択してください。</cfcase>
+<cfcase value="error_reading_log_file">このログファイルをアクセスする際に、エラーがありました。このファイルがまだ存在し、他のアプリケーションによりロックされていないことを確認してください。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

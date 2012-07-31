@@ -1,0 +1,307 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Extensions
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="applets_edit_pagename">登録された Java アプレットの追加 / 編集</cfcase>
+<cfcase value="applets_pageHeader"><h2 class="pageHeader">拡張機能 &gt; Java アプレット &gt; アプレットの追加 / 編集</h2></cfcase>
+<cfcase value="LEFT">LEFT</cfcase>
+<cfcase value="RIGHT">RIGHT</cfcase>
+<cfcase value="BOTTOM">BOTTOM</cfcase>
+<cfcase value="TOP">TOP</cfcase>
+<cfcase value="TEXTTOP">TEXTTOP</cfcase>
+<cfcase value="MIDDLE">MIDDLE</cfcase>
+<cfcase value="ABSMIDDLE">ABSMIDDLE</cfcase>
+<cfcase value="BASELINE">BASELINE</cfcase>
+<cfcase value="ABSBOTTOM">ABSBOTTOM</cfcase>
+<cfcase value="l10n_editjavaapplet">登録された Java アプレットの追加 / 編集</cfcase>
+<cfcase value="applets_name">アプレット名</cfcase>
+<cfcase value="applet_name_Required">アプレット名が必要です</cfcase>
+<cfcase value="applets_code">コード</cfcase>
+<cfcase value="applet_code_Required">アプレットコードが必要です</cfcase>
+<cfcase value="applets_codebase">コードベース</cfcase>
+<cfcase value="applet_codebase_Required">アプレットコードベースが必要です</cfcase>
+<cfcase value="applets_archive">アーカイブ</cfcase>
+<cfcase value="applets_method">メソッド</cfcase>
+<cfcase value="applets_height">高さ</cfcase>
+<cfcase value="applets_width">幅</cfcase>
+<cfcase value="applets_vspace">垂直方向の余白</cfcase>
+<cfcase value="applets_hspace">水平方向の余白</cfcase>
+<cfcase value="applets_align">行揃え</cfcase>
+<cfcase value="applets_nsmessage">サポートされないときのメッセージ</cfcase>
+<cfcase value="applets_parameters">アプレットパラメータ</cfcase>
+<cfcase value="applets_parameter_name">パラメータ名</cfcase>
+<cfcase value="applets_value">値</cfcase>
+<cfcase value="delete_param">パラメータの削除</cfcase>
+<cfcase value="add">追加</cfcase>
+<cfcase value="cancel">キャンセル</cfcase>
+<cfcase value="submit">送信</cfcase>
+<cfcase value="applets_pagename">Java アプレット</cfcase>
+<cfcase value="pageHeader_javaapplets">拡張機能 &gt; Java アプレット</cfcase>
+<cfcase value="applets_welcome">
+ColdFusion には、cfform タグを使用してアクセスする Java アプレットがいくつかあります。独自のアプレットを登録し、cfapplet タグを使用してそのアプレットを cfform フォームに追加できます。cfapplet タグを使用して cfform に Java アプレットを配置する前に、ColdFusion Administrator にそのアプレットを登録する必要があります。 
+</cfcase>
+<cfcase value="delete_applet_confirmation">このアプレットを削除してもよろしいですか。</cfcase>
+<cfcase value="applet_register_button">新規アプレットの登録</cfcase>
+<cfcase value="applet_registered">登録された Java アプレット</cfcase>
+<cfcase value="applet_actions">アクション</cfcase>
+<cfcase value="applet_applet">アプレット</cfcase>
+<cfcase value="applet_code">コード</cfcase>
+<cfcase value="applet_method">メソッド</cfcase>
+<cfcase value="applet_codebase">コードベース</cfcase>
+<cfcase value="edit_applet">アプレットの編集</cfcase>
+<cfcase value="delete_applet">アプレットの削除</cfcase>
+<cfcase value="noappletsfound">アプレットが見つかりません。</cfcase>
+<cfcase value="pagenameq1">CFX タグ</cfcase>
+<cfcase value="pageHeader_cfxtags">拡張機能 &gt; CFX タグ</cfcase>
+<cfcase value="cfx_welcome">
+CFX タグは、CFML を拡張して強化するために ColdFusion アプリケーションプログラミングインターフェイス (API) に対して書かれたカスタムタグです。Windows プラットフォーム上では DLL として、UNIX プラットフォーム上では共有オブジェクト (.so/sl) として C++ を使用して、CFX タグを構築します。cfx.jar ファイル内で定義されている Java インターフェイスを拡張することにより、Java CFX は構築されます。
+</cfcase>
+<cfcase value="javacfx_register_button">Java CFX の登録</cfcase>
+<cfcase value="cppcfx_register_button">C++ CFX の登録</cfcase>
+<cfcase value="delete_cfx_confirmation">この CFX タグを削除してもよろしいですか。</cfcase>
+<cfcase value="cfx_registered_tags">登録された CFX タグ</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="tag_name">タグ名</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="edit_cfx">CFX の編集</cfcase>
+<cfcase value="delete_cfx">CFX の削除</cfcase>
+<cfcase value="nocfxsfound">CFX タグが見つかりません。</cfcase>
+<cfcase value="pagename_cpptag">C++ CFX タグの追加 / 編集</cfcase>
+<cfcase value="cfxcpp_pageHeader">拡張機能 &gt; CFX タグ &gt; C++ CFX の管理</cfcase>
+<cfcase value="l10n_blurb_cpp">タグ名 (cfx_ 接頭辞の後) と、.dll、.so、または .sl サーバーライブラリへのパスを入力してください。<br/>詳細についてはオンラインヘルプを参照してください。</cfcase>
+<cfcase value="l10n_editjavacfx">C++ CFX タグの追加 / 編集</cfcase>
+<cfcase value="server_library">サーバーライブラリ</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="procedure">操作</cfcase>
+<cfcase value="keep_library_loaded">ロードしたライブラリの維持</cfcase>
+<cfcase value="check_box_library_ram">ライブラリを RAM で維持する場合は、このボックスをオンにします。</cfcase>
+<cfcase value="javapagetitle">Java CFX タグの追加 / 編集</cfcase>
+<cfcase value="cfxjava_pageHeader">拡張機能 &gt; CFX タグ &gt; Java CFX の管理</cfcase>
+<cfcase value="l10n_blurb_java">
+cfx_ 接頭辞の後にタグ名と、インターフェイスを実装するクラス名を .class 拡張子なしで入力してください。クラスファイルは、サーバークラスパスからアクセス可能である必要があります。
+</cfcase>
+<cfcase value="l10n_editjava_cfx">Java CFX タグの追加 / 編集</cfcase>
+<cfcase value="class_name">クラス名</cfcase>
+<cfcase value="corba_pagename">CORBA コネクタ</cfcase>
+<cfcase value="pageHeader_corbaconnectors">拡張機能 > CORBA コネクタ</cfcase>
+<cfcase value="corba_welcome">
+ColdFusion では、コネクタを使用して、ORB Java ライブラリが動的にロードされます。コネクタを追加し、ライブラリの位置を指定することができます。各コネクタは、ベンダのランタイムライブラリに依存します。また、プロパティファイルを介して、ORB 初期化オプションを指定することもできます。
+</cfcase>
+<cfcase value="corba_changes_tip">
+<b>メモ :</b> コネクタの設定に加えられた変更は、サーバーを再起動した後に有効になります。
+</cfcase>
+<cfcase value="corba_buttons_register">
+CORBA コネクタの登録
+</cfcase>
+<cfcase value="delete_corba_confirmation">
+この CORBA オブジェクトを削除してもよろしいですか。
+</cfcase>
+<cfcase value="corba_registered">登録された CORBA コネクタ</cfcase>
+<cfcase value="l0n_actions">アクション</cfcase>
+<cfcase value="corba_name">名前</cfcase>
+<cfcase value="l10n_dllpath">クラスパス</cfcase>
+<cfcase value="edit">編集</cfcase>
+<cfcase value="delete">削除</cfcase>
+<cfcase value="corba_buttons_submit">ORB コネクタの選択</cfcase>
+<cfcase value="noorbsregistered">ORB は登録されていません。</cfcase>
+<cfcase value="corba_no_name">
+ORB 名を入力してください。
+</cfcase>
+<cfcase value="corba_invalid_name">
+ORB 名は英数文字に制限されます。
+</cfcase>
+<cfcase value="corba_edit_pagename">CORBA コネクタ</cfcase>
+<cfcase value="editcorba_pageHeader">拡張機能 &gt; CFX タグ &gt; Corba の管理</cfcase>
+<cfcase value="corba_edit">CORBA コネクタの編集 :</cfcase>
+<cfcase value="corba_new">新規 CORBA コネクタ</cfcase>
+<cfcase value="l10n_corbaconnector">CORBA コネクタ</cfcase>
+<cfcase value="corba_orb_name">ORB 名</cfcase>
+<cfcase value="corba_class_name">ORB クラス名</cfcase>
+<cfcase value="corba_class_path">クラスパス</cfcase>
+<cfcase value="corba_button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="corba_ptoperty_file">ORB プロパティファイル</cfcase>
+<cfcase value="sbzmet">送信</cfcase>
+<cfcase value="cazlbtn">キャンセル</cfcase>
+<cfcase value="ct_pagename">カスタムタグのパス</cfcase>
+<cfcase value="pageHeader_customtagpaths">拡張機能 > カスタムタグのパス</cfcase>
+<cfcase value="ct_path">
+カスタムタグによって、ColdFusion Markup Language (CFML) の機能が拡張されます。デフォルトのカスタムタグのパスは、インストールディレクトリ内にあります。ここでカスタムタグに他のパスを指定することもできます。</cfcase>
+<cfcase value="ct_register">新規カスタムタグのパスの登録</cfcase>
+<cfcase value="ct_newpath">新規パス</cfcase>
+<cfcase value="button_add_path">パスの追加</cfcase>
+<cfcase value="button_edit_path">パスの編集</cfcase>
+<cfcase value="delete_customtagpath_confirmation">
+このカスタムタグのパスを削除してもよろしいですか。
+</cfcase>
+<cfcase value="tagpaths">現在のカスタムタグのパス</cfcase>
+<cfcase value="cf_path">パス</cfcase>
+<cfcase value="ct_nopathsfound">カスタムタグのパスが見つかりません。</cfcase>
+<cfcase value="flex_pagename">Flex 統合</cfcase>
+<cfcase value="pageHeader_flexintegration">データとサービス &gt; Flex 統合</cfcase>
+<cfcase value="enableFlashRem">Flash Remoting サポートの有効化</cfcase>
+<cfcase value="enableFlashRem_desc">
+Flash クライアントが、この ColdFusion サーバーに接続して ColdFusion コンポーネント (CFC) を呼び出せるようになります。メモ :この機能を無効にすると、ColdFusion サーバーの監視とマルチサーバーの監視も無効になります。
+</cfcase>
+<cfcase value="enableFlexDS">リモート Adobe LiveCycle Data Management アクセスの有効化</cfcase>
+<cfcase value="enableFlexDS_desc">
+LiveCycle Data Services ES が、この ColdFusion サーバーに RMI 経由で接続し、Flex アプリケーションをサポートするデータを CFC を使用して読み込んで更新できるようにします。この機能を使用していない場合は、無効にしてください。この設定は、ColdFusion のインストールに統合されている LiveCycle Data Services ES には影響しません。
+</cfcase>
+<cfcase value="serverIdentity">サーバー ID</cfcase>
+<cfcase value="serverIdentity_info">
+このマシン上で ColdFusion の複数のインスタンスを実行する場合は、各インスタンスに固有の ID を設定する必要があります。 
+</cfcase>
+<cfcase value="enablermissl">SSL による RMI を Data Management 用に有効化</cfcase>
+<cfcase value="enablermissl_desc">
+Flex と ColdFusion の間の RMI 通信用に SSL (Secure Socket Layer) の暗号化を使用できるようにします。
+Flex と ColdFusion の間で認証情報や機密情報をセキュリティ保護されていないネットワークを使用してデータ転送
+している場合を除き、この設定は必要ではありません。キーストアファイルとキーストアパスワードが必要です。
+キーストアファイルの作成方法については、オンラインヘルプを参照してください。
+</cfcase>
+<cfcase value="keystorePath">キーストアの絶対パス</cfcase>
+<cfcase value="keystorePwd">キーストアパスワード</cfcase>
+<cfcase value="selectIP">LiveCycle Data Service が動作している IP アドレスの選択</cfcase>
+<cfcase value="fdsip_welcometext">
+LiveCycle Data Services ES の統合ポイントをセキュリティ保護するために、Data Management の操作を許可されているホストが制限されています。LiveCycle Data Services ES を別のコンピュータで実行している場合は、その IP アドレスをここに指定します。デフォルトでは、ColdFusion で Data Management の操作を実行できるのはローカルコンピュータのみです。
+</cfcase>
+<cfcase value="ip_address">IP アドレス</cfcase>
+<cfcase value="add_button">追加</cfcase>
+<cfcase value="fdsviewdeleteIP">LiveCycle Data Services ES が動作している選択済み IP アドレスの表示または削除</cfcase>
+<cfcase value="remove_button">選択の削除</cfcase>
+<cfcase value="webservice_pagename">Web サービス</cfcase>
+<cfcase value="webservices_pageheader">データとサービス &gt; Web サービス</cfcase>
+<cfcase value="webservice_welcome">
+ColdFusion を使用して Web サービスを登録できます。そのため、Web サービスを呼び出す際に、Web Services Description Language (WSDL) URL 全体を指定する必要はありません。WSDL URL は、初めて参照されるときに自動的に登録されます。
+</cfcase>
+<cfcase value="l10n_aewebservices">ColdFusion Web サービスの追加 / 編集</cfcase>
+<cfcase value="webservice_logical_path">Web サービス名</cfcase>
+<cfcase value="webservice_name_required">Web サービスの名前を入力してください。</cfcase>
+<cfcase value="webservice_dir_path">WSDL URL</cfcase>
+<cfcase value="webservice_dir_path_required">wsdl ファイルへの有効な URL を入力してください。</cfcase>
+<cfcase value="webservice_username">ユーザー名</cfcase>
+<cfcase value="webservice_username_optional">ユーザー名を入力してください [オプション]</cfcase>
+<cfcase value="webservice_password">パスワード</cfcase>
+<cfcase value="webservice_password_optional">パスワードを入力してください [オプション]</cfcase>
+<cfcase value="button_webservice_update">Web サービスの更新</cfcase>
+<cfcase value="button_webservice_delete">Web サービスの削除</cfcase>
+<cfcase value="button_webservice_add">Web サービスの追加</cfcase>
+<cfcase value="l10n_awservices">アクティブな ColdFusion Web サービス</cfcase>
+<cfcase value="webservice_path">Web サービス名</cfcase>
+<cfcase value="webservice_wsdl_url">WSDL URL</cfcase>
+<cfcase value="webservice_edit">編集</cfcase>
+<cfcase value="webservice_refresh">更新</cfcase>
+<cfcase value="webservice_delete">削除</cfcase>
+<cfcase value="no_webservice">Web サービスを使用できません。</cfcase>
+<cfcase value="applets_error_noname">
+アプレットに名前を付ける必要があります。
+</cfcase>
+<cfcase value="applets_error_nocodebase">
+続行するためには、有効なコードベースを指定する必要があります。
+</cfcase>
+<cfcase value="applets_error_nocode_or_archive">
+続行するには、有効なコード属性またはアーカイブ属性を指定する必要があります。
+</cfcase>
+<cfcase value="applet_error_delete_old"><cfoutput>
+古いエントリを削除できないため、リクエストされたアプレットを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="applet_error_edit"><cfoutput>
+リクエストされたアプレットを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="applet_error_delete"><cfoutput>
+アプレット '#CALLER.applet#' を削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="applet_error_get"><cfoutput>
+登録されたアプレットのリストを取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="cfx_error_get"><cfoutput>
+CFX タグのリストを取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="nativecfxiniterror">
+ネイティブ CFX サポートを有効にするために、ご使用のアプリケーションサーバーを設定する必要があります。設定手順については、アプリケーションサーバー用のマニュアル『ColdFusion の設定と管理』の「ColdFusion の設定」を参照してください。
+</cfcase>
+<cfcase value="cfx_invalid_tagname_error">
+CFX 名は無効です。<br/>
+</cfcase>
+<cfcase value="cfx_error_update"><cfoutput>
+cfx を更新または作成する際にエラーが発生しました。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="corba_error_delete"><cfoutput>
+リクエストされた ORB #URL.orb# を削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="corba_error_apply"><cfoutput>
+デフォルトの ORB 設定を適用できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="corba_error_get"><cfoutput>
+登録された ORB コネクタのリストを取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="corba_error_edit"><cfoutput>
+リクエストされた ORB #FORM.name# を更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="corba_error_orbget"><cfoutput>
+リクエストされた ORB #CALLER.name# を取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="ct_error_add"><cfoutput>
+カスタムタグのパス #CALLER.newPath# を追加できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ct_error_add1"><cfoutput>
+カスタムタグのパスを追加できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_req_keystore_pass">
+キーストアファイルとパスワードが必要です。
+    </cfcase>
+<cfcase value="error_flexassembler"><cfoutput>
+設定を更新しようとする際のエラーです。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="fdsip_error_remove"><cfoutput>
+リクエストされた IP を Flex Data Management の設定から削除する際に、エラーが発生しました。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="fdsip_error_get"><cfoutput>
+制限された IP アドレスのリストを Flex Data Management の設定から取り出す際に、エラーが発生しました。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_create">
+Web サービスを作成する際のエラーです。正しい Web サービス名または URL を入力したことを確認してください。
+</cfcase>
+<cfcase value="map_error_delete"><cfoutput>
+Web サービスを削除できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_refresh"><cfoutput>
+Web サービスを更新できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

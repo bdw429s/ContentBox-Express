@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1.0">
+	<properties>
+	</properties>
+	<item name="MySQL database">
+		<section name="Connect to MySQL database" link="mysql_connect_to.htm">
+		</section>
+	</item>
+	<item name="User account">
+		<section name="Change ColdFusion user account" link="Change_ColdFusion_user_account.htm">
+		</section>
+	</item>
+	<item name="CORBA Connector">
+		<section name="Corba Extension" link="corbaext.htm">
+		</section>
+	</item>
+	<item name="Verity">
+		<section name="Verity supported file types" link="Verity_Supported_File_Types.htm">
+		</section>
+	</item>
+	<item name="E-mail">
+		<section name="Configure administrator mail" link="conadmail.htm">
+		</section>
+	</item>
+	<item name="Mail">
+		<section name="Configure administrator mail" link="conadmail.htm">
+		</section>
+	</item>
+	<item name="ColdFusion Administrator">
+		<item name="Secure">
+			<section name="Change Administrator password" link="chgadpwrd.htm">
+			</section>
+		</item>
+		<item name="Configure password">
+			<section name="Change Administrator password" link="chgadpwrd.htm">
+			</section>
+		</item>
+		<item name="Key Features">
+		</item>
+		<item name="Possible Tasks">
+			<section name="What you can do in ColdFusion Administrator" link="What_you_can_do_in_ColdFusion_Administrator.htm">
+			</section>
+		</item>
+		<item name="Anatomy">
+			<section name="Anatomy of the ColdFusion Administrator" link="Layout_of_the_ColdFusion_Administrator.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Dreamweaver password">
+		<section name="Set ColdFusion Studio password" link="setcfstdpass.htm">
+		</section>
+	</item>
+	<item name="RDS password" seealso="ColdFusion Studio password">
+	</item>
+	<item name="ColdFusion Studio password">
+		<section name="Set ColdFusion Studio password" link="setcfstdpass.htm">
+		</section>
+	</item>
+	<item name="Microsoft Access">
+		<section name="Connect to Microsoft Access" link="access_connect_to.htm">
+		</section>
+	</item>
+	<item name="Sybase">
+		<section name="Connect to Sybase" link="sybase_connect_to.htm">
+		</section>
+		<item name="Connect">
+			<section name="Connect to Sybase" link="sybase_connect_to.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Informix">
+		<section name="Connect to Informix" link="informix_connect_to.htm">
+		</section>
+	</item>
+	<item name="Log Viewer">
+		<section name="Log Viewer" link="logviewer.htm">
+		</section>
+	</item>
+	<item name="Debugging Settings">
+		<item name="Overview">
+			<section name="Overview of Debugging Settings" link="Overview_of_Debugging_Settings.htm">
+			</section>
+		</item>
+		<item name="Configure">
+			<section name="Configure Debugging Settings" link="debgopt.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Code Compatibility Analyzer">
+		<item name="Using">
+			<section name="Using the Code Compatibility Analyzer" link="code_anal.htm">
+			</section>
+		</item>
+		<item name="Results">
+		</item>
+	</item>
+	<item name="Example Applications">
+	</item>
+	<item name="Java Applets">
+		<section name="Add or Register Applet" link="addeditjavaapplet.htm">
+		</section>
+		<item name="Register an Applet">
+			<section name="Add or Register Applet" link="addeditjavaapplet.htm">
+			</section>
+		</item>
+		<item name="About the Java Applet Page">
+			<section name="Java Applets" link="javaapplet.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Connection String">
+		<section name="Use connection string options" link="conxstringopt.htm">
+		</section>
+	</item>
+	<item name="Java and JVM Settings">
+		<section name="JVM and Java Settings" link="jvmandjava.htm">
+		</section>
+	</item>
+	<item name="Migrate client variable data">
+		<section name="Migrate client variable data" link="migclivar.htm">
+		</section>
+	</item>
+	<item name="Basic configuration">
+		<section name="Overview of basic configuration" link="Overview_of_Basic_Configuration.htm">
+		</section>
+	</item>
+	<item name="Server settings">
+		<item name="Overview">
+			<section name="Overview of server settings" link="Overview_of_Server_Settings.htm">
+			</section>
+		</item>
+		<item name="Configure">
+			<section name="Apply server settings" link="appserset.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Verity Collections Tab">
+		<section name="Verity Collections Tab" link="Verity_Collections_Tab.htm">
+		</section>
+	</item>
+	<item name="Oracle">
+		<section name="Connect to Oracle" link="oracle_connect_to.htm">
+		</section>
+	</item>
+	<item name="Client variables">
+		<item name="Migrate">
+			<section name="Migrate client variable data" link="migclivar.htm">
+			</section>
+		</item>
+		<item name="Manage">
+			<section name="Manage client variables" link="mgeclivar.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Data sources">
+		<section name="Connect through JNDI" link="connect_through_jndi.htm">
+		</section>
+		<section name="Connect to DB2 Universal Database" link="db2_universal_db_connect_to.htm">
+		</section>
+		<section name="Connect to Informix" link="informix_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft Access" link="access_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft Access with Unicode" link="access_unicode_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft SQL Server" link="sqlsvr_connect_to.htm">
+		</section>
+		<section name="Connect to MySQL" link="mysql_connect_to.htm">
+		</section>
+		<section name="Connect to ODBC Socket" link="odbc_socket_connect_to.htm">
+		</section>
+		<section name="Connect to Oracle" link="oracle_connect_to.htm">
+		</section>
+		<section name="Connect to other data sources" link="other_connect_to.htm">
+		</section>
+		<section name="Connect to Sybase" link="sybase_connect_to.htm">
+		</section>
+		<section name="Use connection string options" link="conxstringopt.htm">
+		</section>
+		<item name="About">
+			<section name="About the data sources page" link="About_the_data_sources_page.htm">
+			</section>
+		</item>
+		<item name="Create">
+			<section name="Create a data source" link="create_a_data_source.htm">
+			</section>
+		</item>
+		<item name="Verify">
+			<section name="Verify ColdFusion data sources" link="Verify_ColdFusion_data_sources.htm">
+			</section>
+		</item>
+		<item name="Overview">
+			<section name="Overview of ColdFusion data sources" link="Overview_of_ColdFusion_data_sources.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Aliases, logical">
+		<item name="Create">
+			<section name="Create logical mappings" link="crelogmap.htm">
+			</section>
+		</item>
+		<item name="About">
+			<section name="About logical aliases for physical directories" link="About_logical_aliases_for_physical_directories.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Log Files">
+		<item name="Columns, raw format">
+			<section name="Log File columns" link="Log_File_columns.htm">
+			</section>
+		</item>
+		<item name="About">
+			<section name="Log Files" link="logfiles.htm">
+			</section>
+		</item>
+		<item name="Types">
+			<section name="Types of Logs" link="logtypes.htm">
+			</section>
+		</item>
+		<item name="Analyze server activity with">
+			<section name="Analyze server activity in log files" link="Analyze_server_activity_in_log_files.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Security">
+		<item name="Importance">
+			<section name="Why security is important" link="Why_security_is_important.htm">
+			</section>
+		</item>
+		<item name="Configure">
+			<section name="Configure ColdFusion Security" link="sandbox_sec.htm">
+			</section>
+		</item>
+		<item name="Set Administrator Password" framename="_blank">
+			<section name="Set ColdFusion Administrator password" link="setcfpsswrd.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Logical aliases">
+		<section name="About logical aliases for physical directories" link="About_logical_aliases_for_physical_directories.htm">
+		</section>
+	</item>
+	<item name="CFX Tags Tab">
+	</item>
+	<item name="Other helpful resources">
+		<section name="Other helpful resources" link="Other_helpful_resources.htm">
+		</section>
+	</item>
+	<item name="Archive Summary Tab">
+		<section name="Archive Summary Tab" link="Archive_Summary_Tab.htm">
+		</section>
+	</item>
+	<item name="Documentation">
+		<section name="Documentation" link="Documentation.htm">
+		</section>
+	</item>
+	<item name="Version information">
+		<section name="Version information" link="idCFinf.htm">
+		</section>
+	</item>
+	<item name="Memory variables">
+		<section name="Manage memory variables" link="mngmemvar.htm">
+		</section>
+	</item>
+	<item name="Java Applets Tab">
+	</item>
+	<item name="Archive To Do List Tab">
+	</item>
+	<item name="Verity K2 Server">
+		<section name="Use Verity Server" link="verK2.htm">
+		</section>
+	</item>
+	<item name="Custom Tag Paths">
+		<section name="Custom Tag Paths" link="customtag.htm">
+		</section>
+	</item>
+	<item name="Optional configuration">
+		<section name="Overview of optional configuration" link="Overview_of_Optional_Configuration.htm">
+		</section>
+	</item>
+	<item name="Debugging IP Addresses">
+		<section name="Restrict debugging output" link="rstrdebug.htm">
+		</section>
+	</item>
+	<item name="CFX Tags">
+		<item name="About">
+			<section name="CF Tags" link="cftags.htm">
+			</section>
+		</item>
+		<item name="Register">
+			<section name="Add or Edit CF Tag" link="addeditcftag.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Verity collections">
+		<item name="Index">
+			<section name="Populate a Verity collection" link="popvercllx.htm">
+			</section>
+		</item>
+		<item name="Create">
+			<section name="Create a Verity collection" link="crevercllx.htm">
+			</section>
+		</item>
+		<item name="Populate">
+			<section name="Populate a Verity collection" link="popvercllx.htm">
+			</section>
+		</item>
+		<item name="Overview">
+			<section name="Overview of Verity collections" link="Overview_of_Verity_Collections.htm">
+			</section>
+		</item>
+		<item name="Manage">
+			<section name="Manage Verity collections" link="Manage_Verity_collections.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Scheduled Tasks Tab">
+	</item>
+	<item name="CF Mappings Tab">
+	</item>
+	<item name="Web Services">
+		<section name="Web Services" link="webservices.htm">
+		</section>
+	</item>
+	<item name="What's new in this release">
+		<section name="What's new in this release" link="What's_new_in_this_release.htm">
+		</section>
+	</item>
+	<item name="Using left-hand tabs">
+		<section name="Using left-hand tabs" link="Using_the_tabs.htm">
+		</section>
+	</item>
+	<item name="Associated Files and Directories Tab">
+	</item>
+	<item name="Files and Directories Tab">
+	</item>
+	<item name="Logging Settings">
+		<section name="Logging Settings" link="logsettings.htm">
+		</section>
+	</item>
+	<item name="Printing Tips">
+		<section name="Tips for printing" link="Tips_for_printing.htm">
+		</section>
+	</item>
+	<item name="Online Help">
+		<section name="Online Help" link="Online_Help.htm">
+		</section>
+	</item>
+	<item name="DB2 Universal Database">
+		<section name="Connect to DB2 Universal Database" link="db2_universal_db_connect_to.htm">
+		</section>
+	</item>
+	<item name="ODBC Socket">
+		<section name="Connect to ODBC Socket" link="odbc_socket_connect_to.htm">
+		</section>
+	</item>
+	<item name="Knowledge Base">
+	</item>
+	<item name="Site Archive" seealso="Archive">
+	</item>
+	<item name="UNIX processes, ColdFusion">
+	</item>
+	<item name="Basic troubleshooting">
+		<section name="Overview of basic troubleshooting" link="Overview_of_Basic_Troubleshooting.htm">
+		</section>
+	</item>
+	<item name="Archive">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+		<item name="Build">
+			<section name="Generating an Archive" link="Generating_Archive.htm">
+			</section>
+		</item>
+		<item name="Deploy">
+			<section name="Restoring an Archive" link="Restoring_an_Archive.htm">
+			</section>
+		</item>
+		<item name="Modify">
+			<section name="Modifying an Archive Definition" link="modifying_a_site_archive.htm">
+			</section>
+		</item>
+		<item name="Delete">
+			<section name="Delete Archive Definition" link="Delete_Archive_Definition.htm">
+			</section>
+		</item>
+		<item name="Overview">
+			<section name="Overview of Site Archiving" link="Overview_of_Site_Archiving.htm">
+			</section>
+		</item>
+		<item name="Create">
+			<section name="Creating a Site Archive" link="creating_site_archive.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Data Sources Page">
+		<section name="About the data sources page" link="About_the_data_sources_page.htm">
+		</section>
+	</item>
+	<item name="Data Sources Tab">
+	</item>
+	<item name="Database drivers">
+		<section name="About database drivers" link="About_database_drivers.htm">
+		</section>
+		<section name="Connect to DB2 Universal Database" link="db2_universal_db_connect_to.htm">
+		</section>
+		<section name="Connect to Informix" link="informix_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft Access" link="access_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft Access with Unicode" link="access_unicode_connect_to.htm">
+		</section>
+		<section name="Connect to Microsoft SQL Server" link="sqlsvr_connect_to.htm">
+		</section>
+		<section name="Connect to MySQL" link="mysql_connect_to.htm">
+		</section>
+		<section name="Connect to ODBC Socket" link="odbc_socket_connect_to.htm">
+		</section>
+		<section name="Connect to Oracle" link="oracle_connect_to.htm">
+		</section>
+		<section name="Connect to other data sources" link="other_connect_to.htm">
+		</section>
+		<section name="Connect to Sybase" link="sybase_connect_to.htm">
+		</section>
+		<section name="Connect through JNDI" link="connect_through_jndi.htm">
+		</section>
+		<section name="Data sources overview" link="Overview_of_ColdFusion_data_sources.htm">
+		</section>
+		<section name="Use connection string options" link="conxstringopt.htm">
+		</section>
+	</item>
+	<item name="Log Filter">
+		<section name="Log Filter" link="filter.htm">
+		</section>
+	</item>
+	<item name="Microsoft SQL Server">
+		<section name="Connect to Microsoft SQL Server" link="sqlsvr_connect_to.htm">
+		</section>
+	</item>
+	<item name="Release Notes">
+	</item>
+	<item name="Caching Preferences">
+		<section name="Set caching preferences" link="setcacpref.htm">
+		</section>
+	</item>
+	<item name="Mappings" seealso="Aliases, logical">
+	</item>
+	<item name="ColdFusion Server">
+		<item name="Verify run status">
+			<section name="Verify that the ColdFusion Server is running" link="verCFserv.htm">
+			</section>
+		</item>
+		<item name="ColdFusion processes on UNIX">
+		</item>
+		<item name="ColdFusion services on Windows">
+			<section name="ColdFusion services on Windows" link="ColdFusion_services_in_Windows.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Start and Stop ColdFusion">
+	</item>
+	<item name="Other data sources">
+		<section name="Connect to other data sources" link="other_connect_to.htm">
+		</section>
+	</item>
+	<item name="Archive Information Tab">
+	</item>
+	<item name="Uninstall">
+	</item>
+	<item name="Performance Monitor">
+		<item name="Configure">
+			<section name="Configure the Performance Monitor" link="Configure_the_Performance_Monitor.htm">
+			</section>
+		</item>
+		<item name="Enable">
+			<section name="Enable performance monitoring" link="Enable_performance_monitoring.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Windows services">
+		<section name="ColdFusion services on Windows" link="ColdFusion_services_in_Windows.htm">
+		</section>
+		<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+		</section>
+	</item>
+	<item name="Scheduled Tasks">
+		<item name="Configure">
+			<section name="Add or Edit Task" link="addedittask.htm">
+			</section>
+		</item>
+		<item name="Overview">
+			<section name="Schedule Task Overview" link="Schedule_Task_Overview.htm">
+			</section>
+		</item>
+		<item name="About the Scheduled Tasks page">
+			<section name="Schedule Task" link="schedtask.htm">
+			</section>
+		</item>
+	</item>
+	<item name="Settings Summary">
+		<section name="Settings Summary" link="setsummary.htm">
+		</section>
+	</item>
+	<item name="TechNotes" seealso="Knowledge Base">
+	</item>
+	<item name="ColdFusion archive">
+		<section name="Restoring an Archive" link="Restoring_an_Archive.htm">
+		</section>
+		<section name="Overview of Site Archiving" link="Overview_of_Site_Archiving.htm">
+		</section>
+	</item>
+	<item name="CAR files">
+		<section name="Overview of Site Archiving" link="Overview_of_Site_Archiving.htm">
+		</section>
+		<section name="Restoring an Archive" link="Restoring_an_Archive.htm">
+		</section>
+	</item>
+	<item name="applets">
+		<section name="Add or Register Applet" link="addeditjavaapplet.htm">
+		</section>
+	</item>
+	<item name="cfapplet">
+		<section name="Add or Register Applet" link="addeditjavaapplet.htm">
+		</section>
+	</item>
+	<item name="services, Windows">
+		<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+		</section>
+	</item>
+	<item name="Windows service names">
+	</item>
+	<item name="ODBC Agent">
+	</item>
+	<item name="ODBC Server">
+	</item>
+	<item name="Search Server">
+	</item>
+	<item name="fonts">
+	</item>
+	<item name="user-defined fonts">
+	</item>
+	<item name="system fonts">
+	</item>
+	<item name="PDF">
+	</item>
+	<item name="FlashPaper">
+	</item>
+	<item name="SWF">
+	</item>
+	<item name="TrueType">
+	</item>
+	<item name="Acrobat">
+	</item>
+	<item name="cfreport">
+	</item>
+	<item name="cfdocument">
+	</item>
+	<item name="embedded fonts">
+	</item>
+	<item name="port">
+		<item name="Verity K2 Server">
+			<section name="Use Verity K2 Server" link="verK2.htm">
+			</section>
+		</item>
+		<item name="JRun HTTP">
+			<section name="About the Instance Manager" link="About_the_Server_Manager_Page.htm">
+			</section>
+			<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+			</section>
+		</item>
+		<item name="Remote (JNDI)">
+			<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+			</section>
+		</item>
+	</item>
+	<item name="JRun">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+		<section name="About the Instance Manager" link="About_the_Server_Manager_Page.htm">
+		</section>
+		<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+		</section>
+	</item>
+	<item name="server instance">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+		<section name="About the Instance Manager" link="About_the_Server_Manager_Page.htm">
+		</section>
+		<section name="About the Cluster Manager page" link="About_the_Cluster_Manager.htm">
+		</section>
+	</item>
+	<item name="clustering">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+		<section name="About the Instance Manager" link="About_the_Server_Manager_Page.htm">
+		</section>
+		<section name="About the Cluster Manager page" link="About_the_Cluster_Manager.htm">
+		</section>
+	</item>
+	<item name="sticky sessions">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="algorithm, cluster">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="cluster algorithm">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="round robin">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="weighted round robin">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="random weighted">
+		<section name="Edit Cluster" link="edit_cluster_page.htm">
+		</section>
+	</item>
+	<item name="SMS gateway">
+		<section name="Event Gateway Overview" link="event_gateway_overview.htm">
+		</section>
+	</item>
+	<item name="XMPP gateway">
+		<section name="Event Gateway Overview" link="event_gateway_overview.htm">
+		</section>
+	</item>
+	<item name="IM gateway">
+		<section name="Event Gateway Overview" link="event_gateway_overview.htm">
+		</section>
+	</item>
+	<item name="event gateways">
+		<section name="Event Gateway Overview" link="event_gateway_overview.htm">
+		</section>
+		<section name="Event Gateway Settings" link="event_gateway_settings.htm">
+		</section>
+		<section name="Gateway Instances" link="event_gateways.htm">
+		</section>
+		<section name="Gateway Types" link="event_gateway_types.htm">
+		</section>
+	</item>
+	<item name="gateways">
+		<section name="Event Gateway Overview" link="event_gateway_overview.htm">
+		</section>
+		<section name="Event Gateway Settings" link="event_gateway_settings.htm">
+		</section>
+		<section name="Gateway Instances" link="event_gateways.htm">
+		</section>
+		<section name="Gateway Types" link="event_gateway_types.htm">
+		</section>
+	</item>
+	<item name="security.properties file">
+		<section name="About the Instance Manager page" link="About_the_Server_Manager_Page.htm">
+		</section>
+	</item>
+	<item name="multiple instances">
+		<section name="About the Instance Manager page" link="About_the_Server_Manager_Page.htm">
+		</section>
+		<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+		</section>
+		<section name="About the Cluster Manager page" link="About_the_Cluster_Manager.htm">
+		</section>
+	</item>
+	<item name="instance creation">
+		<section name="About the Instance Manager page" link="About_the_Server_Manager_Page.htm">
+		</section>
+		<section name="Add ColdFusion instance" link="add_coldfusion_instance.htm">
+		</section>
+	</item>
+	<item name="J2EE archive">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="EAR file">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="WAR file">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="Web Application Archive (WAR)">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="Enterprise Application Archive (EAR)">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="deployment, J2EE">
+		<section name="J2EE archive" link="j2ee_archive.htm">
+		</section>
+		<section name="J2EE Packaging overview" link="j2ee_packaging_overview.htm">
+		</section>
+	</item>
+	<item name="license scanner">
+		<section name="License Scanner" link="license_scanner.htm">
+		</section>
+	</item>
+	<item name="scanner, license">
+		<section name="License Scanner" link="license_scanner.htm">
+		</section>
+	</item>
+	<item name="subnet">
+		<section name="License Scanner" link="license_scanner.htm">
+		</section>
+	</item>
+	<item name="JNDI data source">
+		<section name="Connect through JNDI" link="connect_through_jndi.htm">
+		</section>
+	</item>
+	<item name="Microsoft Access with Unicode">
+		<section name="Connect to Microsoft Access with Unicode" link="access_unicode_connect_to.htm">
+		</section>
+	</item>
+	<item name="JDBC">
+		<section name="Data sources overview" link="Overview_of_ColdFusion_data_sources.htm">
+		</section>
+	</item>
+</index>

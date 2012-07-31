@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>About the Edit Cluster page</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Enterprise Manager\nEdit Cluster page");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"about_the_server_manager_page.htm\">Enterprise Manager<\/a> > Edit Cluster page<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="About_the_Instance_Manager_Page.htm" title="About_the_Instance_Manager_Page.htm">Overview</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" size="1" width="100.435%" 
+	 align="left" />
+<h1>Edit Cluster page</h1>
+<h5>Enterprise Manager &gt; Cluster Manager &gt; Edit Cluster</h5>
+<p>&#160;</p>
+<p>The Edit Cluster page in ColdFusion Administrator lets you define the 
+ server instances for a cluster and to customize cluster settings. For 
+ more information on sticky sessions and clustering algorithm, see the 
+ <a href="http://www.adobe.com/go/cf9_sysreqs" title="http://www.adobe.com/go/cf9_sysreqs">JRun 4 documentation</a>.</p>
+<p>&#160;</p>
+<ol type="1">
+	<li class="p"><p>Add and remove JRun server instances by clicking the 
+	 server name and the Left or Right Arrow button in the Modify Servers 
+	 in Cluster area. To add or remove all JRun server instances, use the 
+	 Double Arrow buttons.</p></li>
+	<li class="p"><p>When you finish configuring the servers in the cluster, 
+	 click Submit.</p></li>
+	<li class="p"><p>(Optional) Specify a cluster algorithm.</p>
+	<ul>
+		<li class="p"><p><span style="font-weight: bold;"><b>Round robin</b></span> 
+		 (default)<span style="font-weight: bold;"><b>:</b></span> The web server 
+		 connector sends each request to the next JRun server in the list. 
+		 &#160;</p></li>
+		<li class="p"><p><span style="font-weight: bold;"><b>Weighted round 
+		 robin:</b></span> The web server connector sends relatively more requests 
+		 (one after the other) to certain JRun servers, as specified in 
+		 the <span style="font-family: 'Courier New', monospace;">serverweight</span> 
+		 attribute. &#160;</p></li>
+		<li class="p"><p><span style="font-weight: bold;"><b>Random weighted:</b></span> 
+		 The web server connector sends relatively more requests (in a 
+		 random order) to JRun servers, as specified in the <span style="font-family: 'Courier New', monospace;">serverweight</span> 
+		 attribute. &#160;&#160;</p></li>
+	</ul></li>
+	<li class="p"><p>Enable or disable sticky sessions, as follows:</p>
+	<ul type="disc">
+		<li class="p"><p><span style="font-weight: bold;"><b>Yes:</b></span> The 
+		 web server connector detects whether a request has an existing 
+		 session and automatically routes that request to the original 
+		 JRun server instance. If your ColdFusion application uses session 
+		 management but does not use session replication, you must enable 
+		 sticky sessions.</p></li>
+		<li class="p"><p><span style="font-weight: bold;"><b>No:</b></span> The 
+		 web server connector routes incoming request to the next JRun 
+		 server instance, as determined by the cluster algorithm.</p></li>
+	</ul></li>
+	<li class="p"><p>Enable or disable session replication, as follows:</p>
+	<ul type="disc">
+		<li class="p"><p><span style="font-weight: bold;"><b>Yes:</b></span> JRun 
+		 automatically replicates session in-memory to other servers in 
+		 the cluster.</p></li>
+		<li class="p"><p><span style="font-weight: bold;"><b>No:</b></span> Session 
+		 replication is disabled. If your ColdFusion application uses session 
+		 replication, sticky sessions are not typically required.</p></li>
+	</ul>
+	<p><span style="font-weight: bold;"><b>Note:</b></span> When session replication 
+	 is enabled, JRun propagates session-variable information to all servers 
+	 in the cluster every time a session variable changes. Consider whether 
+	 the application's business requirements require session replication 
+	 and whether your network incur the increased traffic before enabling 
+	 session replication. You might consider using client variables instead 
+	 of session variables.</p></li>
+	<li class="p"><p>Click <span style="font-weight: bold;"><b>Submit</b></span>.</p></li>
+	<li class="p"><p>Restart the server instances.</p></li>
+</ol>
+<p>&#160;</p>
+<p>The sticky sessions and session replication options require the use 
+ of J2EE Sessions by all instances participating in the cluster. To enable 
+ J2EE sessions, go to the <a href="mngmemvar.htm" title="mngmemvar.htm">Memory Variables page</a> 
+ and enable the Use J2EE session variables option. You must do this for 
+ each server in the cluster.<br />
+&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> Do not add the JRun admin 
+ server to a cluster. Additionally, the multiserver configuration prevents 
+ you from adding the localhost cfusion server to a cluster. (Although you 
+ can add a remote cfusion server to a cluster, this is not recommended.)</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">About 
+	 the Instance Manager page</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="add_coldfusion_instance.htm" title="add_coldfusion_instance.htm">Add 
+	 Local or Remote ColdFusion Instances</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="about_the_cluster_manager.htm" title="about_the_cluster_manager.htm">About 
+	 the Cluster Manager page</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

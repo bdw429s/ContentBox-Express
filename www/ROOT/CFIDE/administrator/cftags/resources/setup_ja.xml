@@ -1,0 +1,71 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Extensions
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="doc_title">サンプルアプリケーション</cfcase>
+<cfcase value="back">戻る</cfcase>
+<cfcase value="next">次へ</cfcase>
+<cfcase value="language_select">ColdFusion Administrator のオンラインヘルプ用とサンプルアプリケーション用 (必要な場合) の言語を選択してください。</cfcase>
+<cfcase value="language">言語</cfcase>
+<cfcase value="install_examples">サンプルアプリケーションをインストールしますか。セキュリティの理由で、サンプルアプリケーションの本番サーバー上へのインストールは避けてください。</cfcase>
+<cfcase value="examples_yes"><b>はい</b>、サンプルアプリケーションをインストールします。</cfcase>
+<cfcase value="examples_no"><b>いいえ</b>、サンプルアプリケーションをインストールしません。</cfcase>
+<cfcase value="cant_install_examples">サンプルアプリケーションを ODBC サポートのない Windows 上にインストールすることはできません。</cfcase>
+<cfcase value="finish_title">最終設定</cfcase>
+<cfcase value="ok">OK</cfcase>
+<cfcase value="finish_desc">設定の終了中 :</cfcase>
+<cfcase value="install_odbc">ODBC データソースサポートのインストール中...</cfcase>
+<cfcase value="install_help">Administrator ヘルプのインストール中...</cfcase>
+<cfcase value="installing_examples">サンプルアプリケーションのインストール中...</cfcase>
+<cfcase value="register_dll">Windows ライブラリのインストール中...</cfcase>
+<cfcase value="finish_setup">セットアップウィザードの終了中...</cfcase>
+<cfcase value="setup_complete">セットアップが完了しました。</cfcase>
+<cfcase value="odbc_title">ODBC</cfcase>
+<cfcase value="odbc_desc">Microsoft Access のような ODBC データソースのサポートをインストールしますか。[はい] を選択すると、追加ドライバと ODBC に接続するためのサービスのセットがインストールされます。</cfcase>
+<cfcase value="odbc_yes"><b>はい</b>、ODBC サービスをインストールします。</cfcase>
+<cfcase value="odbc_no"><b>いいえ</b>、ODBC サービスをインストールしません。</cfcase>
+<cfcase value="admin_pw_required">管理者パスワードを入力する必要があります。</cfcase>
+<cfcase value="admin_pw_mismatch">管理者パスワードとその確認が一致する必要があります。</cfcase>
+<cfcase value="rds_pw_required">RDS を有効にする場合は、パスワードを入力する必要があります。</cfcase>
+<cfcase value="rds_pw_mismatch">RDS パスワードとその確認が一致する必要があります。</cfcase>
+<cfcase value="security_title">セキュリティ設定</cfcase>
+<cfcase value="admin_pw_label">ColdFusion MX 管理者パスワード</cfcase>
+<cfcase value="password">パスワード</cfcase>
+<cfcase value="confirm">確認</cfcase>
+<cfcase value="security_nords">Remote Development Services (RDS) がインストールされていません。[次へ] をクリックして続行してください。</cfcase>
+<cfcase value="security_desc">Remote Development Services (RDS) 用のパスワードを入力してください。RDS を無効にする場合は、インストールガイドを参照してください。</cfcase>
+<cfcase value="enableRDS">RDS の有効化</cfcase>
+<cfcase value="serial_invalid">無効なシリアル番号が入力されました。</cfcase>
+<cfcase value="serial_title">シリアル番号</cfcase>
+<cfcase value="submit">送信</cfcase>
+<cfcase value="trial">トライアルモードで継続</cfcase>
+<cfcase value="serial_desc">ColdFusion MX へようこそ。このウィザードは、インストールを完了するために必要な手順をガイドします。</cfcase>
+<cfcase value="serial_enter">ColdFusion MX のライセンスを購入された場合は、そのシリアル番号を入力してください。</cfcase>
+<cfcase value="serial_number">シリアル番号</cfcase>
+<cfcase value="trial_desc">ライセンスを購入していない場合は、トライアル版を 30 日間使用できます。</cfcase>
+<cfcase value="error_label">エラー</cfcase>
+<cfcase value="setup_errors">ファイルのインストール中に、エラーが発生しました。</cfcase>
+<cfcase value="admin_pw_error"><cfoutput>
+admin パスワードを設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="rds_pw_error"><cfoutput>
+RDS パスワードを設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="rds_config_error"><cfoutput>
+RDS サービスを設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="license_error"><cfoutput>
+シリアル番号を設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

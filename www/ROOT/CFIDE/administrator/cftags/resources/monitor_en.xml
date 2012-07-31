@@ -1,0 +1,147 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+
+<cfsilent>
+
+<!--
+
+L10N Resource File
+
+Section: Monitoring
+
+Locale: English (en)
+
+Find the requested resource by id
+
+-->
+
+</cfsilent>
+
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="ms_pagename">Monitoring Settings</cfcase>
+
+<cfcase value="monitoringsettings_header">Server Monitoring &gt; Settings</cfcase>
+
+<cfcase value="ms_monitor_enable">Enable Monitoring</cfcase>
+
+<cfcase value="ms_monitor_enable_tip">
+When checked, indicates that monitoring is enabled. 
+If unchecked, it will disable monitoring.
+</cfcase>
+
+<cfcase value="ms_profiling_enable">Enable Profiling</cfcase>
+
+<cfcase value="ms_profiling_enable_tip">
+When checked, indicates that profiling is enabled. 
+If unchecked, it will disable profiling.
+</cfcase>
+
+<cfcase value="memorytracking_enable">Enable Memory Tracking</cfcase>
+
+<cfcase value="memorytracking_enable_tip">
+When checked, indicates that memory tracking is enabled. 
+If unchecked, it will disable memory tracking.
+</cfcase>
+
+<cfcase value="monitoringserversettings_header">Monitoring Server Settings</cfcase>
+
+<cfcase value="ms_monitoringserver_enable">Enable Monitoring Server</cfcase>
+
+<cfcase value="ms_monitoringserver_enable_tip">
+When checked, indicates that separate monitoring server is enabled. 
+If unchecked, it will disable separate monitoring server.
+</cfcase>
+
+<cfcase value="monitoringServerPort">Monitoring Server Port</cfcase>
+
+<cfcase value="error_portinuse">Port already in use. Please provide a different port.</cfcase>
+
+<cfcase value="error_settings">There was an error while settings up server. Please check logs for more details.</cfcase>
+
+<cfcase value="monitoringserverPort_tip">
+Specify the port on which monitoring server should start. This server will handle monitoring requests. 
+Make sure that Monitoring Server is enabled and the port is not blocked.
+</cfcase>
+
+<cfcase value="ms_error_portvalidation">
+Port Value must be numeric and greater than 0.
+</cfcase>
+
+<cfcase value="ms_error_tmpupd"><cfoutput>
+Unable to update template handler information.
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfcase value="invalidSnapshotFile">Invalid snapshot file or snapshot file does not exist :</cfcase>
+
+<cfcase value="flash_remoting_disabled">
+Flash remoting should be enabled to run either of Server Monitor or Multiserver Monitor.
+</cfcase>
+
+<cfcase value="pageHeader_clientvars1">Server Monitoring &gt; Server Monitor</cfcase>
+
+<cfcase value="servermonitor">
+The Server Monitor is an Adobe Flash application that provides information about ColdFusion server operation. To use the Server Monitor, you must have Adobe Flash Player 9 installed.<br>
+<br>
+Use the buttons at the top of the Server Monitor to do the following:
+&nbsp;&nbsp;&nbsp;&nbsp;<table cellpadding="0" cellspacing="0">
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Start Monitoring - Turns on all monitoring.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Start Profiling - Turns on monitoring of all tags, functions, and query execution times.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Start Memory Tracking - Turns on tracking of memory by different scopes. If Profiling is also on, tracks memory used by individual tags, functions, and queries.</td></tr>
+</table>
+<br>
+Memory usage information displayed in the Server Monitor is estimated and may vary from actual memory usage. Use the information as an indicator rather than an absolute measure.<br>
+</cfcase>
+
+<cfcase value="launch_sm">
+Click the button on the right to launch the Server Monitor ...
+  </cfcase>
+
+<cfcase value="launch_server_monitor">Launch Server Monitor</cfcase>
+
+<cfcase value="pageHeader_clientvars2">Server Monitoring &gt; Multiserver Monitor</cfcase>
+
+<cfcase value="remotemonitor">
+The Multiserver Monitor is an Adobe Flash application that you can use to remotely monitor multiple ColdFusion instances. To use the Multiserver Monitor, you must have Adobe Flash Player 9 installed.<br>
+<br>
+Use the tabs at the top of the Multiserver Monitor to do the following:
+&nbsp;&nbsp;&nbsp;&nbsp;<table cellpadding="0" cellspacing="0">
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Quick View - Displays the status of all registered servers in a icon view format.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Detailed View - Displays the status of all registered servers in a tabular format.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Add Server - Displays the registration panel for adding new servers.</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Errors - Displays the last connection error for each registered server.</td></tr>
+</table>
+</cfcase>
+
+<cfcase value="launch_msm">
+Click the button on the right to launch the Multiserver Monitor ...
+</cfcase>
+
+<cfcase value="launch_multiserver_monitor">Launch Multiserver Monitor</cfcase>
+
+<cfcase value="pageHeader_clientvars3">Server Manager</cfcase>
+
+<cfcase value="servermanager">
+The Server Manager is an AIR application which allows management of multiple servers
+<br>
+</cfcase>
+
+<cfcase value="launch_smanager">
+Click the button on the right to launch the ColdFusion Server Manager ...
+</cfcase>
+
+<cfcase value="launch_server_manager">Launch Server Manager</cfcase>
+
+<cfcase value="alternatecontent_cf">
+                  This content requires the Adobe Flash Player. <a href=http://www.adobe.com/go/getflash/>Get Flash
+                </cfcase>
+
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+
+</cfswitch>
+
+</cfprocessingdirective>
+
+

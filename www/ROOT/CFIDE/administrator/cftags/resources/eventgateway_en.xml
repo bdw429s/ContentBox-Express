@@ -1,0 +1,225 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: EventGateway
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="status_running">Running</cfcase>
+<cfcase value="status_stopped">Stopped</cfcase>
+<cfcase value="status_stopping">Stopping</cfcase>
+<cfcase value="status_starting">Starting</cfcase>
+<cfcase value="status_failed">Failed</cfcase>
+<cfcase value="gateway_id_required">Please enter a name for the gateway instance.</cfcase>
+<cfcase value="gateway_cfcpath_required">Please enter a full path to a CFC template.</cfcase>
+<cfcase value="gateway_config_missing">Unable to find configuration file: </cfcase>
+<cfcase value="gw_started"><cfoutput>Starting gateway: '#CALLER.gwid#' </cfoutput></cfcase>
+<cfcase value="gwservice_off">Unable to start event gateway instance: Event Gateway Service is not enabled. </cfcase>
+<cfcase value="gw_restarted"><cfoutput>Restarting gateway: '#CALLER.gwid#' </cfoutput></cfcase>
+<cfcase value="gw_stopped"><cfoutput>Stopping gateway: '#CALLER.gwid#'</cfoutput></cfcase>
+<cfcase value="eventgatewayinstance">Event Gateway instances</cfcase>
+<cfcase value="pageHeader_gatewayinstances">Event Gateways &gt; Gateway Instances</cfcase>
+<cfcase value="gateways_welcome">
+You can configure ColdFusion event gateway instances to direct events from various
+sources to ColdFusion components that you have written.
+</cfcase>
+<cfcase value="l10n_aegateways">Add / Edit ColdFusion Event Gateway Instances</cfcase>
+<cfcase value="gateway_id">Gateway ID</cfcase>
+<cfcase value="gateway_type">Gateway Type</cfcase>
+<cfcase value="select_type">Please select a type</cfcase>
+<cfcase value="manage_button_button">Manage Types</cfcase>
+<cfcase value="gateway_cfcpath">CFC Path</cfcase>
+<cfcase value="button_browse">Browse Server</cfcase>
+<cfcase value="config_file">Configuration File</cfcase>
+<cfcase value="gateway_startmode">Startup Mode</cfcase>
+<cfcase value="gateway_startauto">Automatic</cfcase>
+<cfcase value="gateway_startmanual">Manual</cfcase>
+<cfcase value="gateway_startdisable">Disabled</cfcase>
+<cfcase value="button_gateway_update">Update Gateway Instance </cfcase>
+<cfcase value="button_gateway_delete">Delete GatewayInstance</cfcase>
+<cfcase value="button_gateway_add">Add Gateway Instance </cfcase>
+<cfcase value="gateway_delete_warn"><cfoutput>
+Deleting a gateway instance can not be undone.#CALLER.nl#Delete this gateway instance?
+</cfoutput></cfcase>
+<cfcase value="l10n_confgatewayInstances">Configured ColdFusion Event Gateway Instances</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="running">Status</cfcase>
+<cfcase value="type">Type</cfcase>
+<cfcase value="gateway_startup">Startup</cfcase>
+<cfcase value="gateway_eventsIn">In</cfcase>
+<cfcase value="gateway_eventsOut">Out</cfcase>
+<cfcase value="gateway_config">Gateway Config</cfcase>
+<cfcase value="gateway_edit">Edit</cfcase>
+<cfcase value="gateway_start">Start</cfcase>
+<cfcase value="gateway_stop">Stop</cfcase>
+<cfcase value="gateway_restart">Restart</cfcase>
+<cfcase value="gateway_delete">Delete</cfcase>
+<cfcase value="status_disabled"><em>Disabled</em></cfcase>
+<cfcase value="status_resetEventsIn">Reset Events</cfcase>
+<cfcase value="DISABLED">disabled</cfcase>
+<cfcase value="AUTO">auto</cfcase>
+<cfcase value="MANUAL">manual</cfcase>
+<cfcase value="no_gatewayinstances">No gateway instances are configured.</cfcase>
+<cfcase value="refresh">Refresh</cfcase>
+<cfcase value="manage_gateway_button">Manage Gateway Types</cfcase>
+<cfcase value="button_goto_eventgatewaysettings">Event Gateway Settings</cfcase>
+<cfcase value="ActiveMQ_Desc">Handles Apache ActiveMQ JMS messages</cfcase>
+<cfcase value="CFML_Desc">Handles asynchronous events through CFCs</cfcase>
+<cfcase value="DataManagement_Desc">Notifies Data Management Services of data changes</cfcase>
+<cfcase value="DataServicesMessaging_Desc">Handles Data Services Messaging messages</cfcase>
+<cfcase value="DirectoryWatcher_Desc">Watches a directory for file changes</cfcase>
+<cfcase value="FMS_Desc">Handles Flash Media Server shared objects</cfcase>
+<cfcase value="JMS_Desc">Handles Java Messaging Service messages</cfcase>
+<cfcase value="SAMETIME_Desc">Handles Lotus SAMETIME instant messaging</cfcase>
+<cfcase value="SMS_Desc">Handles SMS text messaging</cfcase>
+<cfcase value="Socket_Desc">Listens on a socket</cfcase>
+<cfcase value="XMPP_Desc">Handles XMPP instant messaging</cfcase>
+<cfcase value="gatewaytype_addedSuccessfully">
+Gateway type added successfully.
+</cfcase>
+<cfcase value="gatewaytype_updatedSuccessfully">
+Gateway type updated successfully.
+</cfcase>
+<cfcase value="gatewaytype_deletedSuccessfully">
+Gateway type deleted successfully.
+</cfcase>
+<cfcase value="gatewayTypes">Gateway Types</cfcase>
+<cfcase value="pageHeader_gatewaytypes">Event Gateways &gt; Gateway Types</cfcase>
+<cfcase value="gatewaytypes_welcome">
+Configure the types of gateways available on your system.  After you configure a type, you can create any number of gateway instances of that type.
+</cfcase>
+<cfcase value="l10n_aegatewaytypes">Add / Edit ColdFusion Event Gateway Types</cfcase>
+<cfcase value="gatewaytype_type">Type Name</cfcase>
+<cfcase value="gatewaytype_name_required">Please enter in a name for the gateway type.</cfcase>
+<cfcase value="gatewaytype_desc">Description</cfcase>
+<cfcase value="gatewaytype_desc_required">Please enter a description for the gateway type.</cfcase>
+<cfcase value="gatewaytype_class">Java Class</cfcase>
+<cfcase value="gatewaytype_class_required">Please enter a fully qualified Java class name.</cfcase>
+<cfcase value="gatewaytype_startuptimeout">Startup Timeout</cfcase>
+<cfcase value="gatewaytype_timeout_required">Please enter a timeout value in seconds.</cfcase>
+<cfcase value="seconds">seconds</cfcase>
+<cfcase value="gatewaytype_config">Stop on Startup Timeout</cfcase>
+<cfcase value="button_gatewaytype_update">Update Type</cfcase>
+<cfcase value="button_gatewaytype_delete">Delete Type</cfcase>
+<cfcase value="button_gatewaty_add">Add Type</cfcase>
+<cfcase value="gwtype_delete_warn"><cfoutput>
+WARNING: Deleting a gateway type will also delete any gateway instances configured using this type.#CALLER.nl#Delete this Gateway Type?
+</cfoutput></cfcase>
+<cfcase value="l10n_confgatewaytypes">Configured ColdFusion Gateway Types</cfcase>
+<cfcase value="gatewaytype_name">Name</cfcase>
+<cfcase value="gatewaytype_timeout">Timeout</cfcase>
+<cfcase value="gatewaytype_kill">Kill on Timeout?</cfcase>
+<cfcase value="gatewaytype_edit">Edit</cfcase>
+<cfcase value="gatewaytype_delete">Delete</cfcase>
+<cfcase value="no_gatewaytypes">No Gateway Types are configured.</cfcase>
+<cfcase value="button_goto_gw">Manage Gateway Instances</cfcase>
+<cfcase value="button_goto_settings">Event Gateway Settings</cfcase>
+<cfcase value="gwstarted_message">Event Gateway Started.</cfcase>
+<cfcase value="gwstopped_message">Event Gateway Stopped.</cfcase>
+<cfcase value="threads_negative_err">Event Gateway Processing Threads cannot be 0 or negative</cfcase>
+<cfcase value="events_negative_err">Maximum number of events to queue cannot be 0 or negative</cfcase>
+<cfcase value="smstest_message_starter">SMS Test Server started.</cfcase>
+<cfcase value="smstest_message_stopped">SMS Test Server stopped.</cfcase>
+<cfcase value="eventGatewaySettings">Event Gateway Settings</cfcase>
+<cfcase value="pageHeader_eventgatewaysettings">Event Gateways &gt; Settings</cfcase>
+<cfcase value="gw_enable">Enable ColdFusion Event Gateway Services</cfcase>
+<cfcase value="gw_enable_tip">
+Enables the ColdFusion event gateway services. These services can pass events
+from external sources to ColdFusion components that you specify. Changing this
+setting starts or stops the services immediately.
+</cfcase>
+<cfcase value="gw_poolsize">Event Gateway Processing Threads</cfcase>
+<cfcase value="gw_pool_tip">
+Specifies the maximum number of threads used to execute ColdFusion functions
+when an event arrives. A higher number uses more resources, but increases event throughput.
+</cfcase>
+<cfcase value="gw_pool_standard">
+Standard Edition is restricted to a single processing thread.
+</cfcase>
+<cfcase value="gw_qsize">Maximum number of events to queue</cfcase>
+<cfcase value="gw_qsize_tip">
+Specifies the maximum number of events that are allowed in the event queue.
+If the queue length exceeds this value, gateway events are not added to the
+processing queue. This is a global setting for all event gateways.
+</cfcase>
+<cfcase value="gw_smstest">SMS Test Server</cfcase>
+<cfcase value="gw_smstest_tip">
+To assist with the testing of SMS gateway applications, ColdFusion has a built-in SMS test server
+that works in conjunction with the preconfigured SMS test gateway.  After you  start the
+SMS test server, you can enable the SMS test gateway and use the SMS test client to test your
+applications.
+</cfcase>
+<cfcase value="gw_smstest_running">
+The test server is currently running.
+</cfcase>
+<cfcase value="gw_smstest_stopped">
+The test server is currently stopped.
+</cfcase>
+<cfcase value="button_stopsms">Stop SMS Test Server</cfcase>
+<cfcase value="button_startsms">Start SMS Test Server</cfcase>
+<cfcase value="error_selecttype">Please select a type for the gatewayinstance .</cfcase>
+<cfcase value="gateway_error_update"><cfoutput>
+Error creating event gateway instance.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_delete"><cfoutput>
+Unable to delete event gateway instance.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_start"><cfoutput>
+Unable to start event gateway.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_restart"><cfoutput>
+Unable to restart event gateway instance.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gateway_error_stop"><cfoutput>
+Unable to stop event gateway instance.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gatewaytype_error_update"><cfoutput>
+Error creating gateway type.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gatewaytype_error_delete"><cfoutput>
+Unable to delete gateway type.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="gwerror_update"><cfoutput>
+Unable to update gateway settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="smstest_start_error"><cfoutput>
+Unable to start SMS Test server.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="smstest_stop_error"><cfoutput>
+Unable to stop SMS Test server.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

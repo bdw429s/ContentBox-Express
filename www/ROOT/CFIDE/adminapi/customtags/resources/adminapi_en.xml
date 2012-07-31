@@ -1,0 +1,197 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+
+<cfsilent>
+
+<!--
+
+L10N Resource File
+
+Section: adminapi
+
+Locale: English (en)
+
+Find the requested resource by id
+
+-->
+
+</cfsilent>
+
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="error_migrate">Unable to migrate verity collection</cfcase>
+
+<cfcase value="error_solr_down">Unable to reach Solr Server.</cfcase>
+
+<cfcase value="col_migrated"> collection migrated to</cfcase>
+
+<cfcase value="no_verity_server">Unable to retrieve collections from the ColdFusion Search Service.<br />Please verify that the ColdFusion Search Server is installed and running.</cfcase>
+			
+<cfcase value="no_verity_collections">There are no Verity collections to migrate.</cfcase>
+
+<cfcase value="invalidUser">The current user is not authorized to invoke this method.</cfcase>
+
+<cfcase value="lic_dev">Developer</cfcase>
+
+<cfcase value="lic_eva">Evaluation</cfcase>
+
+<cfcase value="lic_pro">Professional</cfcase>
+
+<cfcase value="lic_standard">Standard</cfcase>
+
+<cfcase value="lic_ent">Enterprise</cfcase>
+
+<cfcase value="invalidService">Error Invoking service.</cfcase>
+
+<cfcase value="invalidComponentAccess">Only ADMINAPI componenets may be invoked through RDS.</cfcase>
+
+<cfcase value="baddir">You have entered an invalid directory name.</cfcase>
+
+<cfcase value="invalidip">Invalid IP Address:</cfcase>
+
+<cfcase value="gwservice_off">Unable to start event gateway: Event Gateway Service is not enabled. </cfcase>
+
+<cfcase value="gateways_not_found">Gateway not found.</cfcase>
+
+<cfcase value="invalid_gateway_name">Invalid gateway name.</cfcase>
+
+<cfcase value="applet_codebase_required">Applet Codebase Is Required</cfcase>
+
+<cfcase value="applet_wrong_align_value">Invalid Align argument valid values are: Left, Right, Bottom, Top, TextTop, Middle, ABSMiddle, Baseline, ABSBottom</cfcase>
+
+<cfcase value="invalid_corba_name">Invalid Name for Corba Connector.</cfcase>
+
+<cfcase value="customTagDirDoesntExist">Custom tag directory doesn't exist.</cfcase>
+
+<cfcase value="map_no_name">Please enter a valid name for the mapping</cfcase>
+
+<cfcase value="map_invalid_path">Please enter a valid path for the mapping</cfcase>
+
+<cfcase value="invalid_format_Timeout">Invalid timeout value, timeout needs to be a list in the following format "days,hours,mins,sec" for example: "0,3,0,0" (3 hours).</cfcase>
+
+<cfcase value="Numeric_Value_Required">Numeric value required for this setting.</cfcase>
+
+<cfcase value="invalidCacheType">Valid values are "memory" or "disk".</cfcase>
+
+<cfcase value="numeric_value">All timeout values must be numeric and greater than or equal to 0.</cfcase>
+
+<cfcase value="AppCFCLookup_order_out_of_range">AppCFCLookupOrder must be a valid number greater than 0 and less than or equal to 3 where:<br /> </br>
+Value of 1 implies "Default Order" </br>
+Value of 2 implies "Until webroot" </br>
+Value of 3 implies "In webroot" </br>
+</cfcase>
+
+<cfcase value="cant_update_settings">The settings updates cannot be saved.  This is often a result of a permissions issue with the jvm.config file or a result of the jvm.config file being marked read only.</cfcase>
+
+<cfcase value="invalid_jvm_path">The JVM path you entered is not a valid JVM path.  The JVM path must have a bin directory with a JVM executable located in it.</cfcase>
+
+<cfcase value="not_valid_pair">This combination of license keys does not constitute a valid upgrade.</cfcase>
+
+<cfcase value="not_valid_license">The Serial Number entered is not valid.</cfcase>
+
+<cfcase value="bad_upgradeSerialNumberPairFormat">When you use an upgrade serial number we need both the upgrade serial number and the old serial number separated by a comma.</cfcase>
+
+<cfcase value="invalid_trialext">Trial extension serial numbers can be applied only on top of trial licenses. </cfcase>
+
+<cfcase value="not_valid_report_pack_license">The Report Pack Serial Number entered is not valid.</cfcase>
+
+<cfcase value="font_not_found">Unknown font family.</cfcase>
+
+<cfcase value="sandbox_not_found">sandbox not found.</cfcase>
+
+<cfcase value="sandbox_already_exists">sandbox already exists.</cfcase>
+
+<cfcase value="cannot_delete_system_sandboxes">Not authorized to delete system sandboxes.</cfcase>
+
+<cfcase value="wrong_port_type">wrong port type, valid options are: single, higher, lower, range.</cfcase>
+
+<cfcase value="security_invalidfunction">This function can not be added to the restricted function list.</cfcase>
+
+<cfcase value="security_invalidTag">This tag can not be added to the restricted tag list.</cfcase>
+
+<cfcase value="db_not_found">Database not found.</cfcase>
+
+<cfcase value="badIP">Invalid IP address.</cfcase>
+
+<cfcase value="badiman">Instance Management not availabe in this edition of ColdFusion</cfcase>
+
+<cfcase value="invalidSettingKey">Invalid setting key:</cfcase>
+
+<cfcase value="invalidSettingPrefix">The setting</cfcase>
+
+<cfcase value="invalidSettingNumeric">must be 0 or a positive integer.</cfcase>
+
+<cfcase value="invalidSettingBoolean">must be a boolean value.</cfcase>
+
+<cfcase value="invalidSettingList">must be a list.</cfcase>
+
+<cfcase value="emptySettingString">Cannot be an empty string key:</cfcase>
+
+<cfcase value="sameAliasNameString">This alias setting already exists. Please specify different template path or alias name</cfcase>
+
+<cfcase value="extraSettingMsg">Has more than the required keys/settings</cfcase>
+
+<cfcase value="invalidAlertType">is not a not a valid Alert Type. The valid types are:</cfcase>
+
+<cfcase value="emptyArraySetting">Array passed as arguement cannot be empty</cfcase>
+
+<cfcase value="error_invalidseverity">invalid severity type. The valid types are 'warning,error,information,debug'</cfcase>
+
+<cfcase value="SystemMappingError">Unable to modify system mappings.</cfcase>
+
+<cfcase value="cfx_invalid_tagname_error">
+The cfx name is invalid.
+</cfcase>
+
+<cfcase value="local_config_error_add">Unable to configure local OpenOffice.</cfcase>
+
+<cfcase value="remote_config_error_add">Unable to configure remote OpenOffice.</cfcase>
+
+<cfcase value="invalid_location_error">Specified directory is not a valid Office installation.</cfcase>
+
+<cfcase value="def_bigger_than_max_error">Default values cannot be larger than maximum values.</cfcase>
+
+<cfcase value="cache_too_big_error">Cache size must be an integer value greater than 0 and less than or equal to 250.</cfcase>
+
+<cfcase value="engines_too_big_error">The maximum number of threads must be an integer value greater than 0 and less than or equal to 5.</cfcase>
+
+<cfcase value="cache_path_error">You must specify a valid cache path. This must be an existing directory.</cfcase>
+
+<cfcase value="hours_error">Hours values must be numeric and between 0 and 23.</cfcase>
+
+<cfcase value="mins_error">Minutes values must be numeric and between 0 and 59.</cfcase>
+
+<cfcase value="secs_error">Seconds values must be numeric and between 0 and 59.</cfcase>
+
+<cfcase value="max_memory_size_error"><cfoutput>Maximum Memory Size must be a valid number (in megabytes) greater than or equal to <cfoutput>#CALLER.MIN_MAX_SIZE#</cfoutput>.</cfoutput></cfcase>
+
+<cfcase value="min_memory_size_error">Minimum Memory Size must be a valid number (in megabytes).</cfcase>
+
+<cfcase value="min_max_size_error">Initial Memory Size must be less than or equal to the Maximum Memory Size.</cfcase>
+
+<cfcase value="invalid_classpath_error">The classpath that you provided is not a valid class path.</cfcase>
+
+<cfcase value="font_error_add">
+Unable to add font. Your path must be a valid absolute path. Acceptable paths are:<br /><br />
+    C:\myfonts\
+    C:\myfonts\tahoma.ttf<br />
+    C:\myfonts\gulim.ttc<br />
+    /opt/myfonts/<br />
+    /opt/myfonts/tahoma.ttf<br />
+    /opt/myfonts/gulim.ttc<br /><br />
+Acceptable font extensions are: <br /><br />
+TTF (True Type Font)<br />
+TTC (True Type Collection)<br />
+OTF (Open Type Font)<br />
+AFM (Adobe Font Metrics)<br />
+</cfcase>
+
+<cfcase value="error_invalidDirectory">Invalid Directory, please check your directory and try again.</cfcase>
+
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+
+</cfswitch>
+
+</cfprocessingdirective>
+
+

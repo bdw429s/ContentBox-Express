@@ -1,0 +1,33 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: scanner
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="scan_pagename">デバッグとロギング &gt; ライセンススキャナー</cfcase>
+<cfcase value="pageHeader_licensescanner">
+デバッグとロギング &gt; ライセンススキャナー</cfcase>
+<cfcase value="scan_found_word">見つかりました</cfcase>
+<cfcase value="scan_machines_using">同一のシリアル番号を使用するコンピュータは、ライセンスに適合しません</cfcase>
+<cfcase value="no_machines">このサブネット上には ColdFusion ライセンスを使用するマシンはありません</cfcase>
+<cfcase value="scan_machines_using_volume">コンピュータはボリュームライセンスを使用しています</cfcase>
+<cfcase value="scan_machine_label">マシン</cfcase>
+<cfcase value="scan_ip_label">IP アドレス</cfcase>
+<cfcase value="scan_edition_label">エディション</cfcase>
+<cfcase value="scan_build_label">ビルド</cfcase>
+<cfcase value="inCompliance_header">以下のコンピュータがライセンスに適合しています</cfcase>
+<cfcase value="scan_run_scan_now">スキャナーを直ちに実行</cfcase>
+<cfcase value="scan_click">ライセンススキャナーはローカルのサブネットを検索して、実行中の ColdFusion の他のインスタンスを探します。</cfcase>
+<cfcase value="launch_scanner">
+ColdFusion スキャナーを実行するには、右側のボタンをクリックします
+  </cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

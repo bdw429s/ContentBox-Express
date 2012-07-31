@@ -1,0 +1,98 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Code
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="detail_report_by_feature">Detail Report -- By Feature</cfcase>
+<cfcase value="session_expired">
+<p class="sentance">
+Your analysis information has expired. Please close this window and rerun
+your report.
+</p>
+</cfcase>
+<cfcase value="feat_sv_er">Error</cfcase>
+<cfcase value="feat_sv_inf">Info</cfcase>
+<cfcase value="how_to_fix">How to Fix</cfcase>
+<cfcase value="line">Line</cfcase>
+<cfcase value="mainwindowfr">main content</cfcase>
+<cfcase value="topwindowfr">controls</cfcase>
+<cfcase value="compat_report_listed_by_features">Compatibility Report: Listed by features</cfcase>
+<cfcase value="return_to_feature">Return to Feature:</cfcase>
+<cfcase value="print_report">Print Report</cfcase>
+<cfcase value="close_window">Close Window</cfcase>
+<cfcase value="detail_report_by_file">Detail Report -- By File</cfcase>
+<cfcase value="feat_sv_er_f">Error</cfcase>
+<cfcase value="feat_sv_inf_f">Info</cfcase>
+<cfcase value="code_except">Code Excerpt</cfcase>
+<cfcase value="compat_report_listed_by_files">Compatibility Report: Listed by files</cfcase>
+<cfcase value="return_to_file">Return to File:</cfcase>
+<cfcase value="code_analyzer">CFML Code Analyzer</cfcase>
+<cfcase value="must_have_app_vars">
+To use this application, you must enable session variables on the
+Memory Variables page.
+</cfcase>
+<cfcase value="pageHeader_codeanalyzer">Debugging &amp; Logging &gt; Code Analyzer</cfcase>
+<cfcase value="anal_slct">Please select at least one feature to analyze!</cfcase>
+<cfcase value="welcone_code_analyzer">
+The Code Compatibility Analyzer helps migrate your applications to ColdFusion from earlier versions of ColdFusion.
+</cfcase>
+<cfcase value="code_analyzer_review">
+The Code Compatibility Analyzer reviews the CFML pages that you specify and informs you of any potential compatibility issues. It detects unsupported and deprecated CFML features, and outlines the required implementation changes that ensure a smooth migration.
+</cfcase>
+<cfcase value="codver7">CF7</cfcase>
+<cfcase value="codver8">CF8</cfcase>
+<cfcase value="allfilter">CFM, CFC</cfcase>
+<cfcase value="cfmfilter">CFM</cfcase>
+<cfcase value="cfcfilter">CFC</cfcase>
+<cfcase value="l10n_codecomp">Code Compatibility Analyzer</cfcase>
+<cfcase value="directory_to_analyze">Directory to Analyze</cfcase>
+<cfcase value="browse_server">Browse Server</cfcase>
+<cfcase value="subdir">Analyze subdirectories</cfcase>
+<cfcase value="fitype">Analyze file types</cfcase>
+<cfcase value="valcfm">Validate CFML</cfcase>
+<cfcase value="codver">Code Version</cfcase>
+<cfcase value="slctall">All</cfcase>
+<cfcase value="slcterr">Error</cfcase>
+<cfcase value="slctinf">Info</cfcase>
+<cfcase value="l10n_advSettings">Advanced Settings</cfcase>
+<cfcase value="flsev">Filter by severity</cfcase>
+<cfcase value="fitfet">Filter by product feature</cfcase>
+<cfcase value="selct">Select All</cfcase>
+<cfcase value="clear">Clear All</cfcase>
+<cfcase value="runan">Run Analyzer</cfcase>
+<cfcase value="basicop">Basic View</cfcase>
+<cfcase value="tag">Tags</cfcase>
+<cfcase value="func">Function</cfcase>
+<cfcase value="other">Operators,
+Variables, and Other Constructs</cfcase>
+<cfcase value="run_analyzer">Run Analyzer</cfcase>
+<cfcase value="advanced_options">Advanced Options</cfcase>
+<cfcase value="basic_options">Basic Options</cfcase>
+<cfcase value="jsplzspctmp">Please specify your template directory!</cfcase>
+<cfcase value="coult_not_find_dir">Compatibility Code Analyzer could not find directory or file:</cfcase>
+<cfcase value="codecapantitle">ColdFusion Code Compatibility Report</cfcase>
+<cfcase value="reanlyzethis">Re-analyze CFML code for ColdFusion compatibility</cfcase>
+<cfcase value="codeanalyzerresults_pageHeader">Debugging &amp; Logging &gt; Code Analyzer &gt; Results</cfcase>
+<cfcase value="err">Error</cfcase>
+<cfcase value="inf">Info</cfcase>
+<cfcase value="ttl">Total</cfcase>
+<cfcase value="total">Total</cfcase>
+<cfcase value="resultssummaryblurb">Results Summary</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="fet">Feature</cfcase>
+<cfcase value="sev">Severity</cfcase>
+<cfcase value="doc">Document</cfcase>
+<cfcase value="featdetail">Details by feature</cfcase>
+<cfcase value="pagedeatil">Details by file</cfcase>
+<cfcase value="file_filter_error">File filters must start with "*.", followed by valid file extention and seperated by semi-colon.</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

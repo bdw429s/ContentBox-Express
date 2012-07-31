@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 27, 2001 8:43:53 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Set caching preferences</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nSet caching preferences");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Set caching preferences<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h5 style="font-weight: normal;" align="right"><a href="overview_of_server_settings.htm" style="font-weight: normal;" title="overview_of_server_settings.htm">Server 
+ Settings</a></h5>
+<hr size="1" width="100.145%" align="left" />
+<h1>Set caching preferences</h1>
+<h5>Server Settings &gt; Caching</h5>
+<p>&#160;</p>
+<p>The following table describes the caching settings. Click Submit Changes 
+ to save your changes.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 29.456%;" />
+	<col style="width: 53.333%;" />
+	<col style="width: 17.211%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Option</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 53.333%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 17.211%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of cached templates</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 the number of templates cached. If your server has sufficient 
+		 memory, you can achieve optimum performance by setting this value 
+		 to the total number of ColdFusion templates in your application. 
+		 ColdFusion caches templates incrementally, so specifying a high 
+		 value does not automatically reduce available memory.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>1024</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Trusted cache</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option so ColdFusion uses cached application pages (templates) 
+		 without first checking to see if they changed. For sites where 
+		 templates are not updated during the life of the server, using 
+		 this option minimizes file system overhead.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Cache Template in Request</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Inspect 
+		 requested files for potential updates in the current request.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Component Cache</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this check box to allow ColdFusion to cache the component path 
+		 resolution and not resolve it again. This setting does not require 
+		 restarting the server. </p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Save class files</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to save to disk the class files generated by the ColdFusion 
+		 bytecode compiler. Adobe recommends selecting this option for 
+		 production systems; during the development phase, it is typically 
+		 faster to disable this option.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Cache web server paths<br />
+		(Not enabled in the J2EE configuration)</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to cache ColdFusion page paths for a single server. 
+		 Deselect this option if ColdFusion connects to a web server with 
+		 multiple websites or multiple virtual websites.</p>
+		<p>&#160;</p>
+		<p>To configure this setting when using the J2EE configuration 
+		 on JRun, set the <span style="font-family: 'Courier New', monospace;">cacheRealPath</span> 
+		 attribute to false for the ProxyService in the jrun.xml file.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum number of cached queries</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option by entering a value to limit the maximum number of 
+		 cached queries that the server &#160;maintains. Cached queries 
+		 allow for retrieval of result sets from memory rather than through 
+		 a database transaction. Because queries reside in memory, and 
+		 query result set sizes differ, you must provide some user-imposed 
+		 limit for the number of cached queries.</p>
+		<p>&#160;</p>
+		<p>When the maximum number of cached queries is reached, the oldest 
+		 query is dropped from the cache and replaced with the specified 
+		 query. If you set the maximum number of cached queries to 0, query 
+		 caching is unlimited.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>100</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Clear Template Cache Now</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Empties 
+		 the template cache. ColdFusion reloads templates into memory the 
+		 next time they are requested and recompiles them if they have 
+		 been modified.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>&#160;</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 29.456%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Clear Component Cache Now</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 53.333%; padding-right: 10px; padding-left: 10px;"><p>Clears 
+		 the component cache. After the cache is cleared, ColdFusion ignores 
+		 the resolved path for the components and tries resolving it again.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 17.211%; padding-right: 10px; padding-left: 10px;"><p>&#160;</p></td>
+	</tr>
+</table>
+<p class="RelatedTopics">Related topic</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server 
+	 Settings overview</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

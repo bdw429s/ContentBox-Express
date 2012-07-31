@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Font management</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nSet font management preferences");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Set font management preferences<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right">Server Settings</p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" size="1" width="100.435%" 
+	 align="left" />
+<h1>Set font management preferences</h1>
+<h5>Server Settings &gt; Font Management</h5>
+<p>&#160;</p>
+<p>Use this page to review and define fonts for use with ColdFusion FlashPaper 
+ and PDF output formats. ColdFusion generates FlashPaper and PDF outputs 
+ through the <span style="font-family: 'Courier New', monospace;">cfdocument</span> 
+ tag, through the <span style="font-family: 'Courier New', monospace;">cfreport</span> 
+ tag, or when directly invoking a Report Builder CFR file.</p>
+<p>&#160;</p>
+<p>ColdFusion automatically registers Acrobat built-in fonts and fonts 
+ located in typical font locations (such as the Windows\fonts directory). 
+ However, if your server has additional fonts installed in nonstandard 
+ locations, you must register them with the ColdFusion Administrator so 
+ that ColdFusion can locate and render reports in PDF and FlashPaper output 
+ formats.</p>
+<p>&#160;</p>
+<p>This page contains the following sections:</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>Register 
+	 New Font with ColdFusion:</b></span> Browse to a directory that contains 
+	 fonts or select a specific font, and then click New Font.</p></li>
+	<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>User 
+	 Defined Fonts:</b></span> Displays the fonts that you registered explicitly.</p></li>
+	<li class="p" style="margin-left: -20px;"><p><span style="font-weight: bold;"><b>Current 
+	 System Fonts:</b></span> Displays fonts stored in platform-specific system 
+	 font directories. For a list of these directories, see Font 
+	 Management overview.</p></li>
+</ul>
+<p>&#160;</p>
+<p>The following table describes the fields on the Font Management page:</p>
+<p>&#160;</p>
+<table cellspacing="0">
+	<col style="width: 23.118%;" />
+	<col style="width: 76.882%;" />
+	<tr valign="top">
+		<td style="border-top: Solid 1px #c0c0c0; border-left: Solid 1px #c0c0c0; 
+			 width: 23.118%; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Area</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 width: 76.882%; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Description</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>New Font/Font Directory</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Specifies a fully qualified path to 
+		 a directory that contains font files or to a specific font file. 
+		 The ColdFusion Administrator lets you register the following types 
+		 of font formats:</p>
+		<ul type="disc">
+			<li class="p"><p><span style="font-weight: bold;"><b>TTF</b></span>: 
+			 TrueType font.</p></li>
+			<li class="p"><p><span style="font-weight: bold;"><b>TTC:</b></span> 
+			 Collection of TrueType or OpenType fonts.</p></li>
+			<li class="p"><p><span style="font-weight: bold;"><b>OTF:</b></span> 
+			 OpenType font.</p></li>
+			<li class="p"><p><span style="font-weight: bold;"><b>PFB:</b></span> 
+			 (Adobe printer fonts).</p></li>
+			<li class="p"><p><span style="font-weight: bold;"><b>AFM:</b></span> 
+			 Adobe Font Metrics.</p></li>
+		</ul></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Font Family</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>High-level font name (for example, 
+		 Arial or Times New Roman).</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Font Face</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>A specific font face (for example, 
+		 Arial Italic or Times New Roman Bold).</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>PostScript Name</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Specifies the PostScript name of the 
+		 font.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Font Type</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Specifies the font type (for example, 
+		 TrueType or Adobe Built-In).</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; width: 23.118%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Usable In</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; width: 76.882%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Specifies whether the font is usable 
+		 in PDF, FlashPaper, or both formats.</p>
+		<p>&#160;</p>
+		<p><span style="font-weight: bold;"><b>Note:</b></span> Adobe built-in 
+		 fonts are not usable in FlashPaper output format.</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 23.118%; padding-right: 10px; padding-left: 10px;"><p>Path</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 76.882%; padding-right: 10px; padding-left: 10px;"><p>Fully 
+		 qualified path to the font file.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

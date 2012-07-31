@@ -1,0 +1,252 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Datasources
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="db2">DB2 Universal Database</cfcase>
+<cfcase value="db2_pageHeader">データとサービス &gt; データソース &gt; DB2 Universal Database</cfcase>
+<cfcase value="datasourcename">CF データソース名</cfcase>
+<cfcase value="datasourcename_title">ColdFusion データソース名</cfcase>
+<cfcase value="database">データベース</cfcase>
+<cfcase value="database_title">データソースに対応するデータベース名を入力してください。</cfcase>
+<cfcase value="server">サーバー</cfcase>
+<cfcase value="server_title">データベースが置かれているサーバーの IP アドレスまたはホスト名を入力してください。</cfcase>
+<cfcase value="port">ポート</cfcase>
+<cfcase value="port_title">データベースサーバーにアクセスするために使用されるポートを入力してください。</cfcase>
+<cfcase value="username">ユーザー名</cfcase>
+<cfcase value="username_title">データベースが認証を必要とする場合は、ユーザー名を入力してください。</cfcase>
+<cfcase value="password">パスワード</cfcase>
+<cfcase value="password_title">データベースが認証を必要とする場合は、ユーザー名に対応するパスワードを入力してください。</cfcase>
+<cfcase value="passwordCharLimit">(16 文字まで)</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="hideAdvancedSettings">詳細設定を閉じる</cfcase>
+<cfcase value="showAdvancedSettings">詳細設定の表示</cfcase>
+<cfcase value="submit">送信</cfcase>
+<cfcase value="Cancel">キャンセル</cfcase>
+<cfcase value="ConnectionString">接続文字列</cfcase>
+<cfcase value="ConnectionString_title">ベンダ特有の接続文字列引数用の名前 / 値ペアを入力してください。形式は一般的に name=value です。</cfcase>
+<cfcase value="maxConnections_limit">接続数の制限</cfcase>
+<cfcase value="enablemaxconnections_title">最大接続数の制限を有効化する場合は、チェックボックスをオンにしてください。</cfcase>
+<cfcase value="maxConnections_enable">制限数</cfcase>
+<cfcase value="maintainConnections">接続の維持</cfcase>
+<cfcase value="maintainConnections_title">データソース用のサーバー接続プーリングを有効にする場合は、チェックボックスをオンにしてください。有効にすると、パフォーマンスが向上します。</cfcase>
+<cfcase value="maintainConnectionsAcrossRequests">クライアントのリクエスト全体にわたり、接続を維持します。</cfcase>
+<cfcase value="sendStringParametersAsUnicodelabel">文字列形式</cfcase>
+<cfcase value="sendStringParametersAsUnicode_title">デフォルトで、ColdFusion は ASCII を使用して文字列を形式化します。そのため、ラテン語ベースのアルファベットを使用する言語で、最良のパフォーマンスが引き出されます。</cfcase>
+<cfcase value="sendStringParametersAsUnicode">非 Latin 文字用に設定されたデータソース用に Unicode を有効化してください</cfcase>
+<cfcase value="MaxPooledStatements">プールされるステートメントの最大数</cfcase>
+<cfcase value="timeout">タイムアウト (分)</cfcase>
+<cfcase value="timeout_title">サーバーが接続を閉じるまで、データソース接続がアクティブではない状態で待つ時間を、分単位で入力してください。</cfcase>
+<cfcase value="Interval">間隔 (分)</cfcase>
+<cfcase value="interval_title">サーバーが期限切れのデータソース接続を閉じるまで待つ時間を、分単位で入力してください。</cfcase>
+<cfcase value="QueryTimeout">クエリータイムアウト (秒)</cfcase>
+<cfcase value="useSpyLoglabel">動作のロギング</cfcase>
+<cfcase value="useSpyLog_title">データベース関連のメソッド呼び出しを指定されたログファイルにロギングします。</cfcase>
+<cfcase value="useSpyLog">データベース呼び出しのロギング先 :</cfcase>
+<cfcase value="BrowseServer">サーバーのブラウズ</cfcase>
+<cfcase value="defaultdriver">デフォルトのドライバ</cfcase>
+<cfcase value="other_pageHeader">データとサービス &gt; データソース &gt; その他</cfcase>
+<cfcase value="JDBCURL">JDBC URL</cfcase>
+<cfcase value="jdbcurl_title">このデータソース用の JDBC 接続 URL を入力してください。</cfcase>
+<cfcase value="DriverClass">ドライバクラス</cfcase>
+<cfcase value="class_title">JDBC クラスを入力してください。</cfcase>
+<cfcase value="Driver Name">ドライバ名</cfcase>
+<cfcase value="driver_title">JDBC ドライバを入力してください。</cfcase>
+<cfcase value="derbyClientDriver">Apache Derby クライアント</cfcase>
+<cfcase value="derbyClient_pageHeader">データとサービス &gt; データソース &gt; Apache Derby クライアント</cfcase>
+<cfcase value="derbydatasourcename_title">ColdFusion データソース名</cfcase>
+<cfcase value="derbyEmbeddeddriver">Apache Derby Embedded</cfcase>
+<cfcase value="derbyEmbedded_pageHeader">データとサービス &gt; データソース &gt; Apache Derby Embedded</cfcase>
+<cfcase value="derbyembdatasourcename_title">CF データソース名</cfcase>
+<cfcase value="DatabaseFolder">データベースフォルダ</cfcase>
+<cfcase value="CreateDatabase">データベースの作成</cfcase>
+<cfcase value="createdatabase_title">データベースを作成する必要がある場合は、チェックボックスをオンにしてください。</cfcase>
+<cfcase value="cfusername">ColdFusion ユーザー名</cfcase>
+<cfcase value="cfpassword">ColdFusion パスワード</cfcase>
+<cfcase value="othermeomy">その他</cfcase>
+<cfcase value="datasource_updatedSuccessfully">
+データソースの更新に成功しました。
+</cfcase>
+<cfcase value="pagename_datasources">データソース</cfcase>
+<cfcase value="pageHeader_datasources">データとサービス &gt; データソース</cfcase>
+<cfcase value="welcome">
+データソース接続とデータソース名 (DSN) を追加して、管理してください。<br/>DSN を使用して、ColdFusion をさまざまなデータソースに接続します。
+</cfcase>
+<cfcase value="add_new_dsn">新規のデータソースの追加</cfcase>
+<cfcase value="dsn">データソース名</cfcase>
+<cfcase value="driver">ドライバ</cfcase>
+<cfcase value="button_add"> 追加 </cfcase>
+<cfcase value="connected">接続済みデータソース</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="sort_dsn">データソース名で並べ替え</cfcase>
+<cfcase value="sort_driver">ドライバで並べ替え</cfcase>
+<cfcase value="status">ステータス</cfcase>
+<cfcase value="ds_stat_ok">OK</cfcase>
+<cfcase value="button_edit">編集</cfcase>
+<cfcase value="button_verify">確認</cfcase>
+<cfcase value="button_delete">削除</cfcase>
+<cfcase value="delete_datasource_confirmation">このデータソースを削除してもよろしいですか。</cfcase>
+<cfcase value="defaultClientStore_cantdelete">このデータソースは現在デフォルトのクライアント変数データベースです。\nこのデータソースを削除する前に、新規のデフォルトクライアントストアを選択する必要があります。</cfcase>
+<cfcase value="button_verifyall">すべての接続の確認</cfcase>
+<cfcase value="informixdriver">Informix</cfcase>
+<cfcase value="informix_pageHeader">データとサービス &gt; データソース &gt; Informix</cfcase>
+<cfcase value="informixServer">Informix サーバー</cfcase>
+<cfcase value="informixServer_title">データソースに対応する Informix サーバー名を入力してください。</cfcase>
+<cfcase value="errMSG">JNDI 環境変数の形式が正しくありません</cfcase>
+<cfcase value="errDTL">形式 :name=value (後にカンマが付く)</cfcase>
+<cfcase value="JNDINAME">JNDI 名</cfcase>
+<cfcase value="jndiname_title">このデータソースの JNDI 名を入力してください。</cfcase>
+<cfcase value="jndiEnviroSettings">JNDI 環境設定</cfcase>
+<cfcase value="jndiEnviroSettings_title">JNDI 環境変数の名前 / 値のペアを入力してください。形式は一般的に name=value にカンマを加えます。</cfcase>
+<cfcase value="bridge">JDBC to ODBC Bridge</cfcase>
+<cfcase value="odbc_dsn">ODBC DSN</cfcase>
+<cfcase value="odbc_dsn_tip">
+ブリッジが接続する ODBC データソース名を入力してください。
+</cfcase>
+<cfcase value="msaccessdrvr">Microsoft Access</cfcase>
+<cfcase value="sequelLinkDisabled">
+ColdFusion ODBC サーバーサービスが起動していないか、インストールされていません。
+Microsoft Access with Unicode ドライバを使用して、Microsoft Access データソースに接続することもできます。
+</cfcase>
+<cfcase value="msaccess_pageHeader">データとサービス &gt; データソース &gt; Microsoft Access</cfcase>
+<cfcase value="DatabaseFile">データベースファイル</cfcase>
+<cfcase value="SystemDatabaseFile">システムデータベースファイル</cfcase>
+<cfcase value="UseDefaultUsername">デフォルトのユーザー名を使用</cfcase>
+<cfcase value="UseTrustedConnection_title"></cfcase>
+<cfcase value="PageTimeout">ページタイムアウト</cfcase>
+<cfcase value="MaxBufferSize">最大バッファーサイズ</cfcase>
+<cfcase value="DefaultUsername">デフォルトのユーザー名</cfcase>
+<cfcase value="defaultusername_title">データベースが認証を必要とする場合は、デフォルトのユーザー名を入力してください。</cfcase>
+<cfcase value="DefaultPassword">デフォルトのパスワード</cfcase>
+<cfcase value="DefaultPassword_title">デフォルトのユーザー名に対応するデフォルトのパスワードを入力してください。</cfcase>
+<cfcase value="returnTimeStamp">TimeStamp を String に返す</cfcase>
+<cfcase value="returnTimeStamp_title">最大接続数の制限を有効化する場合は、チェックボックスをオンにしてください。</cfcase>
+<cfcase value="msaccessjet_pageHeader">データとサービス &gt; データソース &gt; Microsoft Access with Unicode</cfcase>
+<cfcase value="mysqldriver">MySQL (4/5)</cfcase>
+<cfcase value="mysql_pageHeader">データとサービス &gt; データソース &gt; MySQL (4/5)</cfcase>
+<cfcase value="mysqlusername">ユーザー名</cfcase>
+<cfcase value="mysqlpassword_title">データベースが認証を必要とする場合は、ユーザー名に対応するパスワードを入力してください。</cfcase>
+<cfcase value="mysqlDDdriver">MySQL_DD</cfcase>
+<cfcase value="mysqldDD_pageHeader">データとサービス &gt; データソース &gt; MySQL_DD</cfcase>
+<cfcase value="mysqldd_datasourcename_title">ColdFusion データソース名</cfcase>
+<cfcase value="socketdrvr">ODBC Socket</cfcase>
+<cfcase value="sequelLinkDisabledODBC">
+ColdFusion ODBC サーバーサービスが起動していないか、インストールされていません。
+</cfcase>
+<cfcase value="odbcsocket_pageHeader">データとサービス &gt; データソース &gt; ODBC Socket</cfcase>
+<cfcase value="UseTrustedConnection">信頼できる接続</cfcase>
+<cfcase value="oracledrvr">Oracle</cfcase>
+<cfcase value="oracle_pageHeader">データとサービス &gt; データソース &gt; Oracle</cfcase>
+<cfcase value="SID">SID 名</cfcase>
+<cfcase value="sid_title">データソースに対応するシステム識別子を入力してください。</cfcase>
+<cfcase value="supportLinkslabel">Oracle リンクサーバー</cfcase>
+<cfcase value="supportLinks_title">Oracle リンクサーバーを有効にする場合は、このチェックボックスをオンにします。この設定を推奨します。</cfcase>
+<cfcase value="supportLinks">Oracle リンクサーバーのサポートを有効にします。</cfcase>
+<cfcase value="postgresqldriver">PostgreSQL</cfcase>
+<cfcase value="postgresql_pageHeader">データとサービス &gt; データソース &gt; PostgreSQL</cfcase>
+<cfcase value="sqlserverdrvr">Microsoft SQL Server</cfcase>
+<cfcase value="mssql_pageHeader">データとサービス &gt; データソース &gt; Microsoft SQL Server</cfcase>
+<cfcase value="selectmethod">メソッドの選択</cfcase>
+<cfcase value="sendStringParametersAsUnicode1">非 Latin 文字用に設定されたデータソースに対して High ASCII 文字と Unicode を有効にします</cfcase>
+<cfcase value="sybasedrvr">Sybase</cfcase>
+<cfcase value="sybase_pageHeader">データとサービス &gt; データソース &gt; Sybase</cfcase>
+<cfcase value="disableConnections">接続の無効化</cfcase>
+<cfcase value="disableConnections_title">データソースへの接続を無効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="suspendAllConnections">すべてのクライアント接続を一時停止</cfcase>
+<cfcase value="LoginTimeout">ログインタイムアウト (秒)</cfcase>
+<cfcase value="longTextRetrieval_clob">CLOB</cfcase>
+<cfcase value="longTextRetrieval_clob_title">長いテキストの取り出しを有効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="enableLongTextRetrieval_clob">長いテキストの取り出し (CLOB) を有効にします。</cfcase>
+<cfcase value="largeObjectRetrieval_blob">BLOB</cfcase>
+<cfcase value="largeObjectRetrieval_blob_title">バイナリの大きなオブジェクトの取り出しを有効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="enbaleLargeObjectRetrieval_blob">バイナリの大きなオブジェクトの取り出し (BLOB) を有効にします。</cfcase>
+<cfcase value="LongTextBuffer">長いテキストのバッファー (chr)</cfcase>
+<cfcase value="blobBuffer">Blob バッファー (バイト)</cfcase>
+<cfcase value="disableAutogenKeys">自動生成キーの無効化</cfcase>
+<cfcase value="disableAutogenKeys_title">自動生成キーの取得を無効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="disableAutogenKeysSupport">自動生成キーの取得を無効化</cfcase>
+<cfcase value="AllowedSQL">使用可能な SQL</cfcase>
+<cfcase value="select">SELECT</cfcase>
+<cfcase value="Create">CREATE</cfcase>
+<cfcase value="GRANT">GRANT</cfcase>
+<cfcase value="INSERT">INSERT</cfcase>
+<cfcase value="DROP">DROP</cfcase>
+<cfcase value="REVOKE">REVOKE</cfcase>
+<cfcase value="UPDATE">UPDATE</cfcase>
+<cfcase value="ALTER">ALTER</cfcase>
+<cfcase value="StoredProcedures">STORED PROCEDURES</cfcase>
+<cfcase value="DELETE">DELETE</cfcase>
+<cfcase value="validationQueryLabel">検証クエリー</cfcase>
+<cfcase value="edit_error"><cfoutput>
+この DSN (#CALLER.dsn#) を編集 / 作成する際のエラー。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="uniqueName_error">
+既存のデータソースと同じ名前のデータソースを作成しようとしています。<br/>固有のデータソース名を入力するか、既存のデータソースを編集してください。
+</cfcase>
+<cfcase value="invalidName_error">
+無効な名前を持つデータソースを作成しようとしています。データソース名は、ColdFusion 変数の命名規則に従う必要があります
+</cfcase>
+<cfcase value="driverType_error">
+有効なドライバタイプを選択してください。
+</cfcase>
+<cfcase value="dsn_error">
+有効な DSN 名を入力してください。
+</cfcase>
+<cfcase value="driver_error">
+有効なドライバタイプを選択してください。
+</cfcase>
+<cfcase value="error_driver_not_specified">指定されていません</cfcase>
+<cfcase value="ds_stat_error">エラー</cfcase>
+<cfcase value="no_dsn_selected_error">
+ODBC データソース名が必要です。<br/>
+</cfcase>
+<cfcase value="pageTimeout_error">
+ページのタイムアウト値は 0 より大きい必要があります。<br/>
+</cfcase>
+<cfcase value="msaccessedit_error"><cfoutput>
+この DSN (#CALLER.dsn#) を編集 / 作成する際のエラー。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="access_registry_error"><cfoutput>
+NT レジストリを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="access_sqlexecutive_updateerror"><cfoutput>
+ColdFusion ODBC サーバーを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="access_sqlexecutive_error"><cfoutput>
+ColdFusion ODBC サーバーを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="msaccessjetedit_error"><cfoutput>
+この DSN (#CALLER.dsn#) を編集 / 作成する際のエラー。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="odbc_no_dsn_selected_error">
+変更を送信する前に、ODBC データソースを選択する必要があります。<br />
+</cfcase>
+<cfcase value="odbc_access_sqlexecutive_error"><cfoutput>
+ColdFusion ODBC サーバーを更新できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="odbcedit_error"><cfoutput>
+この DSN (#CALLER.dsn#) を編集 / 作成する際のエラー。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="errorAccessingODBCDatasource"><cfoutput>
+使用可能な ODBC データソースにアクセスする際のエラー。- #CALLER.cfcatch.message#<br/>
+</cfoutput></cfcase>
+<cfcase value="sqlserveredit_error"><cfoutput>
+この DSN (#CALLER.dsn#) を編集 / 作成する際のエラー。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+#CALLER.CFCATCH.stacktrace#<br />
+</cfoutput></cfcase>
+<cfcase value="error_verify"><cfoutput>
+データソース用の接続確認に失敗しました :#CALLER.dsn#<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

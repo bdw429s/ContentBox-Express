@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="400" height="300" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<slide is3D="true" isTransposed="false" seriesTitle="" decoration="None"
+				font="Arial-11" foreground="black" isMultiline="false">
+				<dataLabels style="None" placement="Outside" decoration="None" background="#00000000"
+					font="Arial-12" isMultiline="false">
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="true" isVisible="true"
+					placement="Top" valign="Bottom" halign="Left" decoration="Shadow"
+					background="#00000000" font="Dialog-12" isMultiline="true"
+				/>
+				<elements place="Clustered" shape="Bar" markerSize="0" shapeSize="80"
+					lineWidth="4" drawOutline="false" drawShadow="true" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25" stageDelay="0" replayDelay="250"/>
+					<morph morph="Both" stage="Rows"/>
+				</elements>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					decoration="Shadow" background="#00000000" font="Arial-16-bold" isMultiline="true">
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Pastel" paint="Plain" isVertical="false" min="0"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</slide>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>Embed real-time interactive charts into your web pages and stand-alone applications.</COL>
+<COL>Employ any JSP compliant server to deliver charts as applets or interactive server-generated images in PNG,JPEG, SWF, SVG, PDF, TIFF and other formats.</COL>
+<COL>Use XML to describe charts properties and contents or link charts directly to datasources.</COL>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

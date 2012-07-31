@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Font management overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addButton("show",BTN_TEXT,"Show TOC","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide TOC","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("what_s_new_in_this_release.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<ul type="disc">
+<li class="p">
+<p align="right"><a href="#Related" title="#Related">Related Topics</a></p>
+</li>
+</ul>
+<hr style="margin-top: 0px; margin-bottom: 0px;" width="100.435%" size="1" align="left" />
+<h1>Font management overview</h1>
+<p>ColdFusion can create documents and reports in both PDF and FlashPaper format. Both of these formats require that the server computer have access to the fonts used in the HTML styles (<span style="font-family: 'Courier New', monospace;">cfdocument</span> tag) or the report definition (ColdFusion Report Builder). ColdFusion requires access to these fonts to properly render text in PDF and FlashPaper documents and, when specified, to embed fonts into a PDF file.</p>
+<h3>Types of fonts and font extensions</h3>
+<p>The ColdFusion Administrator lets you register the following types of fonts:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+<col style="width: 18.322%;" />
+<col style="width: 22.013%;" />
+<col style="width: 41.167%;" />
+<col style="width: 18.498%;" />
+<tr valign="top">
+<td style="border: Solid 1px #000000;width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Type</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">File extension</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Usable in</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p>TrueType</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p>TTF</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p>Scaleable font format developed by Apple Computer and supported in all Macintosh and Windows operating systems.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p>PDF and FlashPaper</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p>TrueType Collection</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p>TTC</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p>A file that contains multiple TrueType or OpenType fonts</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p>PDF and FlashPaper</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p>OpenType</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p>OTF</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p>An extension of the TrueType font format.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p>PDF and FlashPaper</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p>Adobe printer font</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p>PFB</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p>Adobe printer font</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p>PDF only</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: Solid 1px #000000; border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.322%; padding-right: 10px; padding-left: 10px;">
+<p>Adobe Font Metrics</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 22.013%; padding-right: 10px; padding-left: 10px;">
+<p>AFM</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 41.167%; padding-right: 10px; padding-left: 10px;">
+<p>A font format that contains general font information and font metrics information. Typically used on Unix only.</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 18.498%; padding-right: 10px; padding-left: 10px;">
+<p>PDF only</p>
+</td>
+</tr>
+</table>
+<p>&#160;</p>
+<p>The Font Management page also displays the built-in Acrobat fonts, which are available for PDF only.</p>
+<p>&#160;</p>
+<p>ColdFusion MX does not use PFM or FFT fonts.</p>
+<h3>Font locations</h3>
+<p>The ColdFusion Administrator automatically displays the fonts discovered in platform-specific default locations, as follows:</p>
+<ul type="disc">
+<li class="p">
+<p><span style="font-weight: bold;"><b>Windows</b></span> - The Windows/Fonts directory (for example, WINDOWS/Fonts or WINNT/Fonts)</p>
+</li>
+<li class="p">
+<p><span style="font-weight: bold;"><b>Unix</b></span> - The following directories:</p>
+</li>
+<li style="list-style: none; display: inline">
+<ul type="disc">
+<li class="p">
+<p>/usr/X/lib/X11/fonts/TrueType</p>
+</li>
+<li class="p">
+<p>/usr/openwin/lib/X11/fonts/TrueType</p>
+</li>
+<li class="p">
+<p>/usr/share/fonts/default/TrueType</p>
+</li>
+<li class="p">
+<p>/usr/X11R6/lib/X11/fonts/ttf</p>
+</li>
+<li class="p">
+<p>/usr/X11R6/lib/X11/fonts/truetype</p>
+</li>
+<li class="p">
+<p>/usr/X11R6/lib/X11/fonts/TTF</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>&#160;</p>
+<p>Additionally, you can define fonts stored in other locations on the server. These are called <span style="font-weight: bold;"><b>user-defined fonts</b></span>. For example, you may want to register the Lucida family of TrueType fonts, which the Sun JDK ships in the <span style="font-style: italic;"><i>jdk_root</i></span>/jre/lib/fonts directory.</p>
+<h3>Embedding fonts in PDF output</h3>
+<p>Report developers can optionally specify that ColdFusion embed fonts in the PDF file (FlashPaper always embeds fonts). When using the <span style="font-family: 'Courier New', monospace;">cfdocument</span> tag, fonts are embedded if fontEmbed is set to yes or selective. When using reports defined in the Report Builder, fonts are embedded if specified in the report definition file.</p>
+<p>&#160;</p>
+<p>Embedding fonts increases file size, but ensures that reports display appropriately regardless of whether or not client computers have the fonts installed.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note</b></span>: Some font licenses prohibit embedding. ColdFusion does not embed fonts marked as not-for-embedding.</p>
+<h3>Client requirements</h3>
+<p>If fonts are not embedded in the PDF file, fonts must be installed on the client computer to ensure that reports display appropriately.</p>
+<p>&#160;</p>
+<p>Most Windows computers ship with Internet Explorer, which includes the Microsoft Core Fonts, a set of TrueType fonts</p>
+<h3>UNIX considerations</h3>
+<p>If you install ColdFusion on a UNIX computer you must ensure that the appropriate fonts are installed, even if the computer provides console access only.</p>
+<p>&#160;</p>
+<p>For more information on TrueType fonts for UNIX, see <a title="core fonts from corefonts.sourceforge.net" href="http://corefonts.sourceforge.net/" target="_blank">http://corefonts.sourceforge.net/</a>.</p>
+<h3>ColdFusion Report Builder considerations</h3>
+<p>The ColdFusion Report Builder has no automatic knowledge of fonts available on the server so the developer building the report definition must consult the ColdFusion MX Administrator to determine which fonts are available on the server and, if necessary, register fonts in the Administrator or install &#160;fonts on the computer that runs Report Builder.</p>
+<p>&#160;</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="font_management.htm" title="font_management.htm">Font management</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

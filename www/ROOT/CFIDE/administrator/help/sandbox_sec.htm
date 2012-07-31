@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Configure ColdFusion security</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Security \nConfigure ColdFusion security");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"why_security_is_important.htm\">Security <\/a> > Configure ColdFusion security<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p style="margin-left: 0px;" align="right"><a href="why_security_is_important.htm" title="why_security_is_important.htm">Why 
+ Security is Important</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Configure ColdFusion security</h1>
+<h5>Security &gt; Sandbox Security (in ColdFusion Server Enterprise Edition)</h5>
+<h5>Security &gt; Resource Security (in ColdFusion Server Standard Edition)</h5>
+<h3 class="Procedure">Enable ColdFusion security</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList" style="margin-left: 0px;">Select 
+	 the Enable ColdFusion Security option.</p></li>
+	<li class="p-NumList"><p class="NumList" style="margin-left: 0px;">Click 
+	 Submit Changes.</p></li>
+	<li class="p-NumList"><p class="NumList" style="margin-left: 0px;">Restart 
+	 your ColdFusion server.</p></li>
+</ol>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> To use sandbox security 
+ in the multiserver and J2EE configurations, the application server must 
+ be running a security manager (java.lang.SecurityManager) and you must 
+ define the following JVM arguments (for Macromedia JRun, this is the java.args 
+ line in the jrun_root/jvm.config file):</p>
+<p>-Djava.security.manager</p>
+<p>-Djava.security.policy=&quot;cf_root/WEB-INF/cfusion/lib/coldfusion.policy&quot;</p>
+<p>-Djava.security.auth.policy=&quot;cf_root/WEB-INF/cfusion/lib/neo_jaas.policy&quot;</p>
+<p>&#160;</p>
+<p>You can do the following actions:</p>
+<ul type="disc">
+	<li class="p"><p><a href="#add_sandbox" title="#add_sandbox">Add a sandbox</a> (Enterprise 
+	 Edition only)</p></li>
+	<li class="p"><p><a href="#dsns_tags_fxns" title="#dsns_tags_fxns">Edit security permissions 
+	 for data sources, tags, and functions</a>, as follows:</p></li>
+	<li class="p-NormalIndented" type="circle"><p class="NormalIndented"><span 
+	 style="font-weight: bold;"><b>Data sources:</b></span> Restrict usage of 
+	 data sources (data sources connect ColdFusion applications to databases.</p></li>
+	<li class="p-NormalIndented" type="circle"><p class="NormalIndented"><span 
+	 style="font-weight: bold;"><b>Tags:</b></span> Restrict use of the ColdFusion 
+	 tags that manipulate resources on the server (or on an external server), 
+	 such as files, the registry, LDAP, mail, and the log.</p></li>
+	<li class="p-NormalIndented" type="circle"><p class="NormalIndented"><span 
+	 style="font-weight: bold;"><b>Functions:</b></span> Restrict usage of the 
+	 ColdFusion functions that access the file system.</p></li>
+	<li class="p"><p><a href="#files_dirs" title="#files_dirs">Edit security permissions for 
+	 files and directories</a> &#160;Enable tags and functions within the 
+	 sandbox to access files and directories outside of the sandbox.</p></li>
+	<li class="p"><p><a href="#servers_ports" title="#servers_ports">Edit security permissions 
+	 for servers and ports</a> &#160;&#160;Specify the IP addresses, ports, 
+	 and port ranges that the ColdFusion tags can use to call third-party 
+	 resources.</p></li>
+</ul>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> You can click Finish after 
+ you make all your changes. You don't have to click Finish after configuring 
+ each tab.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Security in ColdFusion Enterprise Edition:</b></span> 
+ In ColdFusion Enterprise Edition, you can configure multiple security 
+ areas on a per-directory basis. These security areas are called sandboxes. 
+ A <span style="font-style: italic;"><i>sandbox</i></span> is a designated directory 
+ of your site to which you apply security restrictions. Thus, sandbox security 
+ lets you specify which tags, functions, and resources (for example, files, 
+ directories, and data sources) can be used by ColdFusion pages located 
+ in and beneath the designated directory.</p>
+<p>&#160;</p>
+<p>When you enable ColdFusion security, ColdFusion creates the following 
+ internal system-level sandboxes, which you can edit, but not delete:</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>(ColdFusion CFIDE system 
+	 directory)</p></li>
+	<li class="p" style="margin-left: -20px;"><p>(ColdFusion WEB-INF system 
+	 directory)</p></li>
+</ul>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> If you enable sandbox 
+ security and want to use the Administrator API, you must enable access 
+ to the CFIDE/adminapi directory.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Security in ColdFusion Standard Edition:</b></span> 
+ In ColdFusion Standard Edition, Sandbox Security is named Resource Security. 
+ You can configure security at the server level and settings apply to all 
+ directories beneath the web root.</p>
+<h3 class="Procedure"><a name="add_sandbox" id="add_sandbox" title="add_sandbox"></a>Add a 
+ sandbox (Enterprise Edition only)</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">In the Add Security Sandbox 
+	 field on the Sandbox Security page, enter the name of the new sandbox. 
+	 This name must be a fully qualified directory path or a ColdFusion 
+	 mapping.</p></li>
+</ol>
+<p style="margin-left: 24px;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ The directory or ColdFusion mapping must exist.</p>
+<ol start="2">
+	<li class="p-NumList"><p class="NumList">To create a sandbox based 
+	 on the default sandbox, select New Sandbox from the drop-down list 
+	 box. Alternatively, select an existing sandbox to copy its settings 
+	 to your new sandbox.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Add. The sandbox appears 
+	 in the list of Defined Directory Permissions.</p></li>
+</ol>
+<h3 class="Procedure"><a name="dsns_tags_fxns" id="dsns_tags_fxns" title="dsns_tags_fxns"></a>Edit 
+ security permissions for data sources, tags, and functions</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">In the list of Defined Directory 
+	 Permissions on the Sandbox Security page, click the name or the <span 
+	 style="font-weight: bold;"><b>Edit</b></span> button for the directory that 
+	 you want to edit.</p></li>
+	<li class="p-NumList"><p class="NumList">To disable a data source, 
+	 in the left column of the Data Sources tab, highlight the data source, 
+	 and click the right arrow. By default, ColdFusion pages in this sandbox 
+	 can access all data sources.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24px;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ The All Datatsources option includes 
+ future data sources and those not specified as enabled or disabled.</p>
+<ol start="3">
+	<li class="p-NumList"><p class="NumList">Click the CF Tags tab. To 
+	 disable tags, highlight the tags in the left column, and click the 
+	 right arrow. By default, ColdFusion pages in this sandbox can access 
+	 all listed tags.</p></li>
+	<li class="p-NumList"><p class="NumList">Click the CF Functions tab. 
+	 To disable functions, highlight the functions in the left column, 
+	 and click the right arrow. By default, ColdFusion pages in this sandbox 
+	 can access all listed functions.</p></li>
+</ol>
+<h3 class="Procedure"><a name="files_dirs" id="files_dirs" title="files_dirs"></a>Edit security 
+ permissions for files and directories</h3>
+<ol start="1">
+	<li class="p-NumList"><p class="NumList">Click the Files/Dirs tab. 
+	 The Secured Files and Directories list displays the files and directories 
+	 outside of the sandbox that pages within the sandbox can access. This 
+	 behavior differs from the CF Tags and CF Functions tabs, where you 
+	 select items to disable.</p></li>
+	<li class="p-NumList"><p class="NumList">To edit an existing file or 
+	 directory specification, click the <span style="font-weight: bold;"><b>Edit</b></span> 
+	 icon or filepath in the Secured Files and Directories list.</p></li>
+	<li class="p-NumList"><p class="NumList">To enable access to files 
+	 or directories, use the File Path entry field to enter or browse to 
+	 the files or directories to enable; for example, C:\pix. A filepath 
+	 consisting of the special token &lt;&lt;ALL FILES&gt;&gt; matches 
+	 any file. Optionally, append a wildcard to customize access to child 
+	 directories and files:</p></li>
+</ol>
+<ul>
+	<li class="p" type="disc"><p>A backslash followed by a dash (\-) lets 
+	 tags and functions access all files in the specified directory and 
+	 recursively allows access to all files in child directories contained 
+	 in that directory; for example, C:\pix\-.</p></li>
+	<li class="p" type="disc"><p>A backslash followed by an asterisk (\*) 
+	 lets tags and functions access all files in the present directory 
+	 and a list of child directories, but denies access to files in any 
+	 child directories; for example, C:\pix\* .</p></li>
+</ul>
+<ol start="4">
+	<li class="p-NumList"><p class="NumList">Select the permissions. For 
+	 example, select the Read option for ColdFusion pages within my_sandbox to read files in the C:\pix directory.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Add Files/Paths. The 
+	 filepath and its permissions appear in the Secured Files and Directories 
+	 list.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24px;">&#160;</p>
+<p class="NumList" style="margin-left: 24px;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ When running ColdFusion in the J2EE configuration on IBM WebSphere, file 
+ or directory security is not enabled.</p>
+<h3 class="Procedure"><a name="servers_ports" id="servers_ports" title="servers_ports"></a>Edit 
+ security permissions for servers and ports</h3>
+<ol start="1">
+	<li class="p-NumList"><p class="NumList">Click the Server/Ports tab.</p></li>
+</ol>
+<p class="NumList" style="font-weight: bold; margin-left: 24px;">Note: 
+ <span style="font-weight: normal;">By default, all IPs and ports are available 
+ to the protocol tags.</span></p>
+<ol start="2">
+	<li class="p-NumList"><p class="NumList">To turn off default behavior 
+	 (global access to all IP addresses and ports), enter the IP addresses 
+	 and port numbers that pages in this sandbox will be allowed to connect 
+	 to using tags that access external resources (for example, <span style="font-family: 'Courier New', monospace;">cfmail</span>, 
+	 <span style="font-family: 'Courier New', monospace;">cfpop</span>, 
+	 <span style="font-family: 'Courier New', monospace;">cfldap</span>, 
+	 <span style="font-family: 'Courier New', monospace;">cfhttp</span>, 
+	 and so on). You can specify an IP address, a server name (such as 
+	 www.someservername.com), 
+	 or a domain name (such as someservername.com). 
+	 Specifying a port restriction is optional. After you enter server 
+	 and, optionally, port information, protocol tags cannot access any 
+	 other server/port, unless you explicitly add it.</p>
+	<p class="NumList">For example, to let this sandbox access 207.88.220.3 
+	 on ports 80 and lower, perform the following steps:</p>
+	<ol>
+		<li class="p-NumList2"><p class="NumList2" style="margin-left: -35px;">In 
+		 the IP Address field, enter 207.88.220.3.</p></li>
+		<li class="p-NumList2"><p class="NumList2" style="margin-left: -35px;">In 
+		 the Port field, enter 80, and click This Port and Lower.</p></li>
+	</ol></li>
+	<li class="p-NumList"><p class="NumList">Click Add IP Address. The 
+	 entry appears in the Enabled IP/Ports list.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24px;">&#160;</p>
+<p class="NumList" style="margin-left: 24px;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ When running ColdFusion in the J2EE configuration on IBM WebSphere, IP/port 
+ security is not enabled.</p>
+<h3 class="Procedure"><a name="servers_ports1" id="a1" title="servers_ports1"></a>Edit runtime 
+ permissions for ColdFusion pages</h3>
+<p>&#160;</p>
+<ol start="1">
+	<li class="p-NumList"><p class="NumList">Click the Others tab. By default, 
+	 all runtime permissions are enabled.</p></li>
+	<li class="p-NumList"><p class="NumList">If you want to disable any 
+	 runtime permissions for a ColdFusion page in the specified directory, 
+	 then select the runtime permission from the Enabled Runtime Permissions 
+	 box and click the &gt;&gt; button. To select more than one runtime 
+	 permissions, press the CTRL key and select the runtime permissions.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Finish.</p></li>
+</ol>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="setcfpsswrd.htm" title="setcfpsswrd.htm">Set 
+	 ColdFusion Administrator password</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="setcfstdpass.htm" title="setcfstdpass.htm">Set 
+	 RDS password</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

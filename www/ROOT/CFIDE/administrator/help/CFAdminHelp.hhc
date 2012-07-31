@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toc version="1.0">
+	<properties imagewidth="16" windowstyles="8388610" exwindowstyles="256">
+	</properties>
+	<item name="What's new in this release" link="Whats_new_in_this_release.htm.htm">
+	</item>
+	<item name="Introduction">
+		<item name="What you can do in the ColdFusion Administrator" link="What_you_can_do_in_ColdFusion_Administrator.htm">
+		</item>
+		<item name="Working Environment">
+			<item name="Layout of the ColdFusion Administrator" link="Layout_of_the_ColdFusion_Administrator.htm">
+			</item>
+			<item name="Verify that the web server is running" link="verwebserv.htm">
+			</item>
+			<item name="System information" link="idCFinf.htm">
+			</item>
+		</item>
+		<item name="Getting Help">
+			<item name="Online Help" link="Online_Help.htm">
+			</item>
+			<item name="Tips for printing" link="Tips_for_printing.htm">
+			</item>
+		</item>
+		<item name="Getting Started ">
+			<item name="Basic Configuration">
+				<item name="Basic configuration overview" link="Overview_of_Basic_Configuration.htm">
+				</item>
+				<item name="Change Administrator password" link="chgadpwrd.htm">
+				</item>
+				<item name="About ColdFusion data sources" link="About_ColdFusion_data_sources.htm">
+				</item>
+				<item name="Java settings for ColdFusion overview" link="About_Java_settings_for_ColdFusion_MX.htm">
+				</item>
+				<item name="Performance Monitor">
+					<item name="Overview of ColdFusion performance monitoring" link="Overview_of_ColdFusion_performance_monitoring.htm">
+					</item>
+					<item name="Enable performance monitoring" link="Enable_performance_monitoring.htm">
+					</item>
+					<item name="Configure the Performance Monitor" link="Configure_the_Performance_Monitor.htm">
+					</item>
+				</item>
+			</item>
+			<item name="Optional Configuration">
+				<item name="Optional configuration overview" link="Overview_of_Optional_Configuration.htm">
+				</item>
+				<item name="Client variable planning" link="Client_Variable_Planning.htm">
+				</item>
+				<item name="Logical aliases for physical directories overview" link="About_logical_aliases_for_physical_directories.htm">
+				</item>
+			</item>
+			<item name="Basic Troubleshooting">
+				<item name="Basic troubleshooting overview" link="Overview_of_Basic_Troubleshooting.htm">
+				</item>
+				<item name="Verify that the web server is running" link="verwebserv.htm">
+				</item>
+				<item name="Verify that ColdFusion is running" link="verCFserv.htm">
+				</item>
+				<item name="Change ColdFusion user account" link="Change_ColdFusion_user_account.htm">
+				</item>
+				<item name="Analyze server activity in log files" link="Analyze_server_activity_in_log_files.htm">
+				</item>
+			</item>
+		</item>
+	</item>
+	<item name="Server Settings">
+		<item name="Server settings overview" link="Overview_of_Server_Settings.htm">
+		</item>
+		<item name="Apply server settings" link="appserset.htm">
+		</item>
+		<item name="Set per application settings" link="Setting_per_application_settings.htm">
+		</item>
+		<item name="Set request tuning" link="Set_request_tuning.htm">
+		</item>
+		<item name="Simultaneous request tuning overview" link="About_simultaneous_request_tuning.htm">
+		</item>
+		<item name="Set caching preferences" link="setcacpref.htm">
+		</item>
+		<item name="Manage client variables" link="mgeclivar.htm">
+		</item>
+		<item name="Migrate client variable data" link="migclivar.htm">
+		</item>
+		<item name="Manage memory variables" link="mngmemvar.htm">
+		</item>
+		<item name="Mappings page" link="crelogmap.htm">
+		</item>
+		<item name="Mail page" link="conadmail.htm">
+		</item>
+		<item name="Manage Undelivered Mails" link="Manage_Undelivered_Mails.htm">
+		</item>
+		<item name="Set charting preferences" link="charting.htm">
+		</item>
+		<item name="Set font management preferences" link="font_management.htm">
+		</item>
+		<item name="Configure OpenOffice" link="Document_page.htm">
+		</item>
+		<item name="Set Java and JVM preferences" link="jvmandjava.htm">
+		</item>
+		<item name="Settings summary" link="setsummary.htm">
+		</item>
+	</item>
+	<item name="Data &amp; Services">
+		<item name="Data Sources">
+			<item name="Data sources in ColdFusion overview" link="Overview_of_ColdFusion_data_sources.htm">
+			</item>
+			<item name="Data Sources page" link="About_the_data_sources_page.htm">
+			</item>
+			<item name="Create a data source" link="create_a_data_source.htm">
+			</item>
+			<item name="Verify a data source" link="Verify_ColdFusion_data_sources.htm">
+			</item>
+			<item name="Database drivers overview" link="About_database_drivers.htm">
+			</item>
+			<item name="Use the connection string" link="conxstringopt.htm">
+			</item>
+			<item name="Connect to Apache Derby Client" link="Connect_to_Apache_Derby_Client.htm">
+			</item>
+			<item name="Connect to Apache Derby Embedded" link="Connect_to_Apache_Derby_Embedded.htm">
+			</item>
+			<item name="Connect to DB2 Universal Database" link="db2_universal_db_connect_to.htm">
+			</item>
+			<item name="Connect to Informix" link="informix_connect_to.htm">
+			</item>
+			<item name="Connect to Microsoft Access" link="access_connect_to.htm">
+			</item>
+			<item name="Connect to Microsoft Access Unicode" link="access_unicode_connect_to.htm">
+			</item>
+			<item name="Connect to Microsoft SQL Server" link="sqlsvr_connect_to.htm">
+			</item>
+			<item name="Connect to MySQL" link="mysql_connect_to.htm">
+			</item>
+			<item name="Connect to ODBC Socket" link="odbc_socket_connect_to.htm">
+			</item>
+			<item name="Connect to Oracle" link="oracle_connect_to.htm">
+			</item>
+			<item name="Connect to other data sources" link="other_connect_to.htm">
+			</item>
+			<item name="Connect to PostgreSQL" link="Connect_to_PostgreSQL.htm">
+			</item>
+			<item name="Connect to Sybase" link="sybase_connect_to.htm">
+			</item>
+			<item name="Connect through JNDI" link="connect_through_jndi.htm">
+			</item>
+		</item>
+		<item name="ColdFusion Collections">
+			<item name="Create a ColdFusion collection" link="crevercllx.htm">
+			</item>
+			<item name="Verity Collections">
+				<item name="Verity collections overview" link="Overview_of_Verity_Collections.htm">
+				</item>
+				<item name="Populate a Verity collection" link="popvercllx.htm">
+				</item>
+				<item name="Verity supported file types" link="Verity_Supported_File_Types.htm">
+				</item>
+				<item name="Manage Verity collections" link="Manage_Verity_collections.htm">
+				</item>
+				<item name="Migrate Verity collections" link="Migrate_verity_collections.htm">
+				</item>
+			</item>
+			<item name="Solr Collections">
+				<item name="Solr Server Overview" link="Solr_Collections.htm">
+				</item>
+				<item name="Populate a Solr Collection" link="Populate_a_Solr_Collection.htm">
+				</item>
+				<item name="Manage Solr collections" link="Manage_Solr_collections.htm">
+				</item>
+			</item>
+		</item>
+		<item name="Use Verity K2 server" link="verK2.htm">
+		</item>
+		<item name="Web Services overview" link="webservices.htm">
+		</item>
+		<item name="Flex Integration" link="flex_data_service.htm">
+		</item>
+	</item>
+	<item name="Debugging &amp; Logging">
+		<item name="Debugging">
+			<item name="Debugging settings overview" link="Overview_of_Debugging_Settings.htm">
+			</item>
+			<item name="Debug output settings page" link="debgopt.htm">
+			</item>
+			<item name="Debugging IP addresses page" link="rstrdebug.htm">
+			</item>
+			<item name="Set Debugger Settings" link="Set_Line_Debugger_Settings.htm">
+			</item>
+		</item>
+		<item name="Logging">
+			<item name="Logging Settings page" link="logsettings.htm">
+			</item>
+			<item name="Log Files page" link="logfiles.htm">
+			</item>
+			<item name="View and search log content" link="logviewer.htm">
+			</item>
+			<item name="Filter log content" link="filter.htm">
+			</item>
+			<item name="Log files generated by ColdFusion" link="logtypes.htm">
+			</item>
+			<item name="Log file columns" link="Log_File_columns.htm">
+			</item>
+		</item>
+		<item name="Scheduled Tasks">
+			<item name="Scheduled tasks overview" link="Schedule_Task_Overview.htm">
+			</item>
+			<item name="About the Schedule Tasks page" link="schedtask.htm">
+			</item>
+			<item name="Add or edit scheduled tasks" link="addedittask.htm">
+			</item>
+		</item>
+		<item name="System Probes">
+			<item name="System Probes overview" link="probe_types.htm">
+			</item>
+			<item name="About the System Probes page" link="About_the_ColdFusion_Probe_Page.htm">
+			</item>
+			<item name="Add or edit system probes" link="Adding_Probes.htm">
+			</item>
+			<item name="Suspend probe operation" link="Suspending_Probe_Operation.htm">
+			</item>
+		</item>
+		<item name="Code Analyzer" link="code_anal.htm">
+		</item>
+		<item name="License Scanner" link="license_scanner.htm">
+		</item>
+	</item>
+	<item name="Server Monitoring">
+		<item name="Server Monitor overview" link="Server_Monitor.htm">
+		</item>
+		<item name="Server Monitor Summary" link="Server_Monitor_Summary.htm">
+		</item>
+		<item name="Server Monitor Request statistics" link="Server_Monitor_Request_statistics.htm">
+		</item>
+		<item name="Server Monitor Memory Usage" link="Memory_Usage.htm">
+		</item>
+		<item name="Server Monitor Database" link="Server_Monitor_Database.htm">
+		</item>
+		<item name="Server Monitor Errors" link="Server_Monitor_Errors_Section.htm">
+		</item>
+		<item name="ColdFusion Monitor Alerts and Snapshots" link="Server_Monitor_Alerts_and_Snapshots_Section.htm">
+		</item>
+		<item name="Multiserver monitor" link="Multi_Server_monitor.htm">
+		</item>
+		<item name="Server Manager client" link="Server_Manager_client.htm">
+		</item>
+	</item>
+	<item name="Extensions">
+		<item name="Java Applets page" link="javaapplet.htm">
+		</item>
+		<item name="Register or modify Java applets" link="addeditjavaapplet.htm">
+		</item>
+		<item name="About the CFX Tags page" link="cftags.htm">
+		</item>
+		<item name="Register CFX tags" link="addeditcftag.htm">
+		</item>
+		<item name="Custom Tag Paths page" link="customtag.htm">
+		</item>
+		<item name="CORBA Connectors page" link="corbaext.htm">
+		</item>
+	</item>
+	<item name="Event Gateways">
+		<item name="Event gateways overview" link="event_gateway_overview.htm">
+		</item>
+		<item name="Event gateway settings" link="event_gateway_settings.htm">
+		</item>
+		<item name="Event gateway types" link="event_gateway_types.htm">
+		</item>
+		<item name="Event Gateways" link="event_gateways.htm">
+		</item>
+	</item>
+	<item name="Security ">
+		<item name="Why security is important" link="Why_security_is_important.htm">
+		</item>
+		<item name="Set ColdFusion Administrator password" link="setcfpsswrd.htm">
+		</item>
+		<item name="Change password" link="Change_password.htm">
+		</item>
+		<item name="Set RDS password" link="setcfstdpass.htm">
+		</item>
+		<item name="Configure ColdFusion security" link="sandbox_sec.htm">
+		</item>
+		<item name="User Manager">
+			<item name="Add User" link="User_Manager.htm">
+			</item>
+			<item name="Edit User Configuration" link="Edit_User_Configuration.htm">
+			</item>
+		</item>
+		<item name="Allowed IP Addresses" link="Allowed_IP_Addresses.htm">
+		</item>
+	</item>
+	<item name="Packaging and Deployment">
+		<item name="ColdFusion Archives">
+			<item name="ColdFusion Archives overview" link="Overview_of_Site_Archiving.htm">
+			</item>
+			<item name="Create an archive definition" link="creating_site_archive.htm">
+			</item>
+			<item name="Archive Information tab" link="Archive_Information_tab.htm">
+			</item>
+			<item name="Archive Summary tab" link="Archive_Summary_Tab.htm">
+			</item>
+			<item name="Archive To Do List tab" link="Archive_To_Do_List_Tab.htm">
+			</item>
+			<item name="Delete an archive definition" link="Delete_Archive_Definition.htm">
+			</item>
+			<item name="Modify an archive definition" link="modifying_a_site_archive.htm">
+			</item>
+			<item name="Build an archive" link="Generating_Archive.htm">
+			</item>
+			<item name="Deploy an archive" link="Restoring_an_Archive.htm">
+			</item>
+		</item>
+		<item name="J2EE Archives">
+			<item name="J2EE archives overview" link="j2ee_packaging_overview.htm">
+			</item>
+			<item name="J2EE Archives page overview" link="j2ee_archive.htm">
+			</item>
+			<item name="J2EE archives" link="adding_and_editing_j2ee_archives.htm">
+			</item>
+		</item>
+	</item>
+	<item name="Enterprise Manager">
+		<item name="About the Instance Manager page" link="About_the_Server_Manager_Page.htm">
+		</item>
+		<item name="Add Local or Remote ColdFusion instance" link="add_coldfusion_instance.htm">
+		</item>
+		<item name="Cluster Manager page" link="About_the_Cluster_Manager.htm">
+		</item>
+		<item name="Edit Cluster page" link="edit_cluster_page.htm">
+		</item>
+	</item>
+</toc>

@@ -1,0 +1,272 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Datasources
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="db2">DB2 Universal Database</cfcase>
+<cfcase value="db2_pageHeader">Data &amp; Services &gt; Datasources &gt; DB2 Universal Database</cfcase>
+<cfcase value="datasourcename">CF Data Source Name</cfcase>
+<cfcase value="datasourcename_title">ColdFusion datasouce name</cfcase>
+<cfcase value="database">Database</cfcase>
+<cfcase value="database_title">Enter the database name that corresponds to the data source.</cfcase>
+<cfcase value="server">Server</cfcase>
+<cfcase value="server_title">Enter the IP address or host name of the server on which the database resides.</cfcase>
+<cfcase value="port">Port</cfcase>
+<cfcase value="port_title">Enter the port that is used to access the database server.</cfcase>
+<cfcase value="username">User name</cfcase>
+<cfcase value="username_title">Enter the user name if the database requires authentication.</cfcase>
+<cfcase value="password">Password</cfcase>
+<cfcase value="password_title">Enter the password corresponding to the User name if the database requires authentication.</cfcase>
+<cfcase value="passwordCharLimit">(16-character limit)</cfcase>
+<cfcase value="description">Description</cfcase>
+<cfcase value="hideAdvancedSettings">Hide Advanced Settings</cfcase>
+<cfcase value="showAdvancedSettings">Show Advanced Settings</cfcase>
+<cfcase value="submit">Submit</cfcase>
+<cfcase value="Cancel">Cancel</cfcase>
+<cfcase value="ConnectionString">Connection String</cfcase>
+<cfcase value="ConnectionString_title">Enter name/value pairs for vendor-specific connection string arguments. The format is typically name=value.</cfcase>
+<cfcase value="maxConnections_limit">Limit Connections</cfcase>
+<cfcase value="enablemaxconnections_title">Select the checkbox to enable the max connection limit.</cfcase>
+<cfcase value="maxConnections_enable">Restrict connections to</cfcase>
+<cfcase value="maintainConnections">Maintain Connections</cfcase>
+<cfcase value="maintainConnections_title">Select the checkbox to enable server connection pooling for your data source. This is highly recommended to increase performance.</cfcase>
+<cfcase value="maintainConnectionsAcrossRequests">Maintain connections across client requests.</cfcase>
+<cfcase value="sendStringParametersAsUnicodelabel">String Format</cfcase>
+<cfcase value="sendStringParametersAsUnicode_title">By default, ColdFusion uses ASCII to format string characters. This optimizes performance for languages with Latin based alphabets.</cfcase>
+<cfcase value="sendStringParametersAsUnicode">Enable Unicode for data sources configured for non-Latin characters</cfcase>
+<cfcase value="MaxPooledStatements">Max Pooled Statements</cfcase>
+<cfcase value="timeout">Timeout (min)</cfcase>
+<cfcase value="timeout_title">Enter a time, in minutes, that the server allows a data source connection to remain inactive before closing that connection.</cfcase>
+<cfcase value="Interval">Interval (min)</cfcase>
+<cfcase value="interval_title">Enter a time, in minutes, that the server waits before closing an expired data source connection.</cfcase>
+<cfcase value="QueryTimeout">Query Timeout (seconds)</cfcase>
+<cfcase value="useSpyLoglabel">Log Activity</cfcase>
+<cfcase value="useSpyLog_title">Log database-related method calls to the specified log file.</cfcase>
+<cfcase value="useSpyLog">Log database calls to</cfcase>
+<cfcase value="BrowseServer">Browse Server</cfcase>
+<cfcase value="defaultdriver">Default Driver</cfcase>
+<cfcase value="other_pageHeader">Data &amp; Services &gt; Datasources &gt; Other</cfcase>
+<cfcase value="JDBCURL">JDBC URL</cfcase>
+<cfcase value="jdbcurl_title">Enter the JDBC Connection URL for this datasource.</cfcase>
+<cfcase value="DriverClass">Driver Class</cfcase>
+<cfcase value="class_title">Enter the JDBC Class.</cfcase>
+<cfcase value="Driver Name">Driver Name</cfcase>
+<cfcase value="driver_title">Enter the JDBC Driver.</cfcase>
+<cfcase value="derbyClientDriver">Apache Derby Client</cfcase>
+<cfcase value="derbyClient_pageHeader">Data &amp; Services &gt; Datasources &gt; Apache Derby Client</cfcase>
+<cfcase value="derbydatasourcename_title">ColdFusion datasouce name</cfcase>
+<cfcase value="derbyEmbeddeddriver">Apache Derby Embedded</cfcase>
+<cfcase value="derbyEmbedded_pageHeader">Data &amp; Services &gt; Datasources &gt; Apache Derby Embedded</cfcase>
+<cfcase value="derbyembdatasourcename_title">CF datasource name</cfcase>
+<cfcase value="DatabaseFolder">Database Folder</cfcase>
+<cfcase value="CreateDatabase">Create Database</cfcase>
+<cfcase value="createdatabase_title">Select the checkbox if the database has to be created</cfcase>
+<cfcase value="cfusername">ColdFusion User name</cfcase>
+<cfcase value="cfpassword">ColdFusion Password</cfcase>
+<cfcase value="othermeomy">other</cfcase>
+<cfcase value="datasource_updatedSuccessfully">
+data source updated successfully.
+</cfcase>
+<cfcase value="pagename_datasources">Data Sources</cfcase>
+<cfcase value="pageHeader_datasources">Data &amp; Services &gt; Data Sources</cfcase>
+<cfcase value="welcome">
+Add and manage your data source connections and Data Source Names (DSNs).<br />
+You use a DSN to connect ColdFusion to a variety of data sources.
+</cfcase>
+<cfcase value="add_new_dsn">Add New Data Source</cfcase>
+<cfcase value="dsn">Data Source Name</cfcase>
+<cfcase value="driver">Driver</cfcase>
+<cfcase value="button_add"> Add </cfcase>
+<cfcase value="connected">Connected Data Sources</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="sort_dsn">Sort by data source name</cfcase>
+<cfcase value="sort_driver">Sort by driver</cfcase>
+<cfcase value="status">Status</cfcase>
+<cfcase value="ds_stat_ok">OK</cfcase>
+<cfcase value="button_edit">Edit</cfcase>
+<cfcase value="button_verify">Verify</cfcase>
+<cfcase value="button_delete">Delete</cfcase>
+<cfcase value="delete_datasource_confirmation">Are you sure you want to delete this data source?</cfcase>
+<cfcase value="defaultClientStore_cantdelete">This data source is currently the default client variable database. \n You must select a new default client store before deleting this data source.</cfcase>
+<cfcase value="button_verifyall">Verify All Connections</cfcase>
+<cfcase value="informixdriver">Informix</cfcase>
+<cfcase value="informix_pageHeader">Data &amp; Services &gt; Datasources &gt; Informix</cfcase>
+<cfcase value="informixServer">Informix Server</cfcase>
+<cfcase value="informixServer_title">Enter the Informix server name that corresponds to the data source.</cfcase>
+<cfcase value="errMSG">JNDI environment variables not in correct format</cfcase>
+<cfcase value="errDTL">format: name=value followed by a comma</cfcase>
+<cfcase value="JNDINAME">JNDI Name</cfcase>
+<cfcase value="jndiname_title">Enter the JNDI name for this datasource.</cfcase>
+<cfcase value="jndiEnviroSettings">JNDI Environment Settings</cfcase>
+<cfcase value="jndiEnviroSettings_title">Enter name/value pairs for JNDI environment variables. The format is typically name=value followed by a comma.</cfcase>
+<cfcase value="bridge">JDBC to ODBC Bridge</cfcase>
+<cfcase value="odbc_dsn">ODBC DSN</cfcase>
+<cfcase value="odbc_dsn_tip">
+Enter the ODBC data source name that the bridge will connect to.
+</cfcase>
+<cfcase value="msaccessdrvr">Microsoft Access</cfcase>
+<cfcase value="sequelLinkDisabled">
+The ColdFusion ODBC Server service is not running or has not been installed.
+You may also use the "MS Access with Unicode" driver to connect to MS Access datasources.
+</cfcase>
+<cfcase value="msaccess_pageHeader">Data &amp; Services &gt; Datasources &gt; Microsoft Access</cfcase>
+<cfcase value="DatabaseFile">Database File</cfcase>
+<cfcase value="SystemDatabaseFile">System Database File</cfcase>
+<cfcase value="UseDefaultUsername">Use Default User name</cfcase>
+<cfcase value="UseTrustedConnection_title"></cfcase>
+<cfcase value="PageTimeout">Page Timeout</cfcase>
+<cfcase value="MaxBufferSize">Max Buffer Size</cfcase>
+<cfcase value="DefaultUsername">Default User Name</cfcase>
+<cfcase value="defaultusername_title">Enter the default user name if the database requires authentication.</cfcase>
+<cfcase value="DefaultPassword">Default Password</cfcase>
+<cfcase value="DefaultPassword_title">Enter the default password corresponding to the default username.</cfcase>
+<cfcase value="returnTimeStamp">Return TimeStamp as String</cfcase>
+<cfcase value="returnTimeStamp_title">Select the checkbox to enable the max connection limit.</cfcase>
+<cfcase value="msaccessjet_pageHeader">Data &amp; Services &gt; Datasources &gt; Microsoft Access with Unicode</cfcase>
+<cfcase value="mysqldriver">MySQL (4/5)</cfcase>
+<cfcase value="mysql_pageHeader">Data &amp; Services &gt; Datasources &gt; MySQL (4/5)</cfcase>
+<cfcase value="mysqlusername">Username</cfcase>
+<cfcase value="mysqlpassword_title">Enter the password corresponding to the Username if the database requires authentication.</cfcase>
+<cfcase value="mysqlDDdriver">MySQL_DD</cfcase>
+<cfcase value="mysqldDD_pageHeader">Data &amp; Services &gt; Datasources &gt; MySQL_DD</cfcase>
+<cfcase value="mysqldd_datasourcename_title">ColdFusion datasource name</cfcase>
+<cfcase value="socketdrvr">ODBC Socket</cfcase>
+<cfcase value="sequelLinkDisabledODBC">
+The ColdFusion ODBC Server service is not running or has not been installed.
+</cfcase>
+<cfcase value="odbcsocket_pageHeader">Data &amp; Services &gt; Datasources &gt; ODBC Socket</cfcase>
+<cfcase value="UseTrustedConnection">Trusted Connection</cfcase>
+<cfcase value="oracledrvr">Oracle</cfcase>
+<cfcase value="oracle_pageHeader">Data &amp; Services &gt; Datasources &gt; Oracle</cfcase>
+<cfcase value="SID">SID Name</cfcase>
+<cfcase value="sid_title">Enter the System Identifier that corresponds to the data source.</cfcase>
+<cfcase value="supportLinkslabel">Oracle Linked Servers</cfcase>
+<cfcase value="supportLinks_title">Check this to enable Oracle linked servers. This is the recommended setting.</cfcase>
+<cfcase value="supportLinks">Enable Oracle linked servers support.</cfcase>
+<cfcase value="postgresqldriver">PostgreSQL</cfcase>
+<cfcase value="postgresql_pageHeader">Data &amp; Services &gt; Datasources &gt; PostgreSQL</cfcase>
+<cfcase value="sqlserverdrvr">Microsoft SQL Server</cfcase>
+<cfcase value="mssql_pageHeader">Data &amp; Services &gt; Datasources &gt; Microsoft SQL Server</cfcase>
+<cfcase value="selectmethod">Select Method</cfcase>
+<cfcase value="sendStringParametersAsUnicode1">Enable High ASCII characters and Unicode for data sources configured for non-Latin characters</cfcase>
+<cfcase value="sybasedrvr">Sybase</cfcase>
+<cfcase value="sybase_pageHeader">Data &amp; Services &gt; Datasources &gt; Sybase</cfcase>
+<cfcase value="disableConnections">Disable Connections</cfcase>
+<cfcase value="disableConnections_title">Check this box to disable connections to data sources.</cfcase>
+<cfcase value="suspendAllConnections">Suspend all client connections.</cfcase>
+<cfcase value="LoginTimeout">Login Timeout (sec)</cfcase>
+<cfcase value="longTextRetrieval_clob">CLOB</cfcase>
+<cfcase value="longTextRetrieval_clob_title">Check this box to enable long text retrieval.</cfcase>
+<cfcase value="enableLongTextRetrieval_clob">Enable long text retrieval (CLOB).</cfcase>
+<cfcase value="largeObjectRetrieval_blob">BLOB</cfcase>
+<cfcase value="largeObjectRetrieval_blob_title">Check this box to enable binary large object retrieval.</cfcase>
+<cfcase value="enbaleLargeObjectRetrieval_blob">Enable binary large object retrieval (BLOB).</cfcase>
+<cfcase value="LongTextBuffer">Long Text Buffer (chr)</cfcase>
+<cfcase value="blobBuffer">Blob Buffer(bytes)</cfcase>
+<cfcase value="disableAutogenKeys">Disable Autogenerated Keys</cfcase>
+<cfcase value="disableAutogenKeys_title">Check this box to disable retrieving auto generated keys.</cfcase>
+<cfcase value="disableAutogenKeysSupport">Disable retrieval of autogenerated keys</cfcase>
+<cfcase value="AllowedSQL">Allowed SQL</cfcase>
+<cfcase value="select">SELECT</cfcase>
+<cfcase value="Create">Create</cfcase>
+<cfcase value="GRANT">GRANT</cfcase>
+<cfcase value="INSERT">INSERT</cfcase>
+<cfcase value="DROP">DROP</cfcase>
+<cfcase value="REVOKE">REVOKE</cfcase>
+<cfcase value="UPDATE">UPDATE</cfcase>
+<cfcase value="ALTER">ALTER</cfcase>
+<cfcase value="StoredProcedures">Stored Procedures</cfcase>
+<cfcase value="DELETE">DELETE</cfcase>
+<cfcase value="validationQueryLabel">Validation Query</cfcase>
+<cfcase value="edit_error"><cfoutput>
+Error editing/creating this dsn (#CALLER.dsn#)<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="uniqueName_error">
+Trying to create a data source with a name that is the same as an existing data source.<br />
+Please enter in a unique data source name, or edit the existing data source.
+</cfcase>
+<cfcase value="invalidName_error">
+Trying to create a data source with a name that is invalid. Data source Names must match ColdFusion variable naming conventions
+</cfcase>
+<cfcase value="driverType_error">
+You must select a valid driver type.
+</cfcase>
+<cfcase value="dsn_error">
+Please enter in a valid dsn name.
+</cfcase>
+<cfcase value="driver_error">
+Select a valid driver type:
+</cfcase>
+<cfcase value="error_driver_not_specified">Not Specified</cfcase>
+<cfcase value="ds_stat_error">Error</cfcase>
+<cfcase value="no_dsn_selected_error">
+A ODBC Datasource Name is required.<br />
+</cfcase>
+<cfcase value="pageTimeout_error">
+A page timeout value greater then zero is required.<br />
+</cfcase>
+<cfcase value="msaccessedit_error"><cfoutput>
+Error editing/creating this dsn (#CALLER.dsn#)<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="access_registry_error"><cfoutput>
+Unable to update the NT registry.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="access_sqlexecutive_updateerror"><cfoutput>
+Unable to update the ColdFusion ODBC Server.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="access_sqlexecutive_error"><cfoutput>
+Unable to update the ColdFusion ODBC Server.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="msaccessjetedit_error"><cfoutput>
+Error editing/creating this dsn (#CALLER.dsn#)<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="odbc_no_dsn_selected_error">
+A ODBC Datasource must be selected before submitting changes.<br />
+</cfcase>
+<cfcase value="odbc_access_sqlexecutive_error"><cfoutput>
+Unable to update the ColdFusion ODBC Server.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="odbcedit_error"><cfoutput>
+Error editing/creating this dsn (#CALLER.dsn#)<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="errorAccessingODBCDatasource"><cfoutput>
+Error accessing available odbc datasources. - #CALLER.cfcatch.message#<br />
+</cfoutput></cfcase>
+<cfcase value="sqlserveredit_error"><cfoutput>
+Error editing/creating this dsn (#CALLER.dsn#)<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+#CALLER.CFCATCH.stacktrace#<br />
+</cfoutput></cfcase>
+<cfcase value="error_verify"><cfoutput>
+Connection verification failed for data source: #CALLER.dsn#<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

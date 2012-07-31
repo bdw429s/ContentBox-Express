@@ -1,0 +1,169 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Mail
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="pagename_mailset">メール設定</cfcase>
+<cfcase value="conn_ok">接続の確認に成功しました。</cfcase>
+<cfcase value="conn_fail">接続の確認に失敗しました。</cfcase>
+<cfcase value="pageHeader_mail">サーバーの設定 &gt; メール</cfcase>
+<cfcase value="connection">メールサーバーの設定</cfcase>
+<cfcase value="mailserver">メールサーバー</cfcase>
+<cfcase value="server_tip"> SMTP メールメッセージの送信に使用する
+サーバーを指定します。メールサーバーのインターネットアドレス
+ (mail.company.com など) または IP アドレス (127.0.0.1 など) 
+を指定できます。
+</cfcase>
+<cfcase value="mailserverUsername">ユーザー名</cfcase>
+<cfcase value="mailserverPassword">パスワード</cfcase>
+<cfcase value="username_tip">
+ご使用のメールサーバーで認証が必要な場合は、
+使用するユーザー名とパスワードを指定できます。
+</cfcase>
+<cfcase value="Sign">署名</cfcase>
+<cfcase value="sign_tip">
+メールに ColdFusion の署名を追加する場合は、このチェックボックスを選択します。
+</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="Keystore">キーストア</cfcase>
+<cfcase value="keystore_tip">
+"キーストアの場所" - 秘密キーと証明書を保存するキーストア。サポートされているタイプは JKS (java キーストア) と pkcs12 です。
+    </cfcase>
+<cfcase value="KeystorePassword">キーストアパスワード</cfcase>
+<cfcase value="keystorepassword_tip">
+キーストアのパスワード。
+    </cfcase>
+<cfcase value="KeyAlias">キーエイリアス</cfcase>
+<cfcase value="keyalias_tip">
+     キーストアに証明書と秘密キーを保存するときに使用するキーのエイリアス。これが指定されていない場合は、キーストアの最初のエントリが使用されます。
+    </cfcase>
+<cfcase value="KeyPassword">キーパスワード</cfcase>
+<cfcase value="keypassword_tip">
+秘密キーを保存するときに使用するパスワード。これが指定されていない場合は、キーストアパスワードがキーパスワードの代わりに使用されます。
+    </cfcase>
+<cfcase value="verify">メールサーバーの接続の確認</cfcase>
+<cfcase value="verify_tip"> このフォームを送信するときに、このメールサーバー
+に接続できることを ColdFusion で確認する場合は、
+このチェックボックスを選択してください。 </cfcase>
+<cfcase value="server_port">サーバーポート</cfcase>
+<cfcase value="port_tip"> メールサーバーのデフォルトポート番号です。
+標準の SMTP メールサーバーポートは 25 です。</cfcase>
+<cfcase value="BackupMailServers">バックアップメールサーバー</cfcase>
+<cfcase value="BackupMailServers_tip">
+  <br>SMTP メールメッセージの送信に使用するバックアップサーバーを指定します。複数のサーバー名を指定する場合は
+    カンマで区切ります。デフォルト以外のポート番号を指定するには、
+    コロンを使用します (例 : mail.company.com:123)。メールサーバーで
+    デフォルトサーバー以外からの認証が必要な場合は、<strong>
+            user:password@mail.company.com</strong> の形式でユーザー名とパスワードを指定できます。
+    </cfcase>
+<cfcase value="MaintainConnections">メールサーバーへの接続を維持します</cfcase>
+<cfcase value="MaintainConnections_tip"> メッセージの配達後、
+メールサーバーへの接続を閉じずに再利用する場合は、
+このチェックボックスを選択してください (推奨)。</cfcase>
+<cfcase value="connectiontimeout_sec">接続タイムアウト (秒)</cfcase>
+<cfcase value="timeout_tip"> ColdFusion がメールサーバーからの応答を待つ時間を指定します。</cfcase>
+<cfcase value="enableSSL">メールサーバーへの SSL ソケット接続の有効化</cfcase>
+<cfcase value="enableSSL_tip">メールサーバーへの接続で SSL 暗号化を有効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="enableTLS">メールサーバーへの TLS 接続の有効化</cfcase>
+<cfcase value="enableTLS_tip"> メールサーバーへの接続で TLS (Transport Level Security) を有効にする場合は、このチェックボックスをオンにします。</cfcase>
+<cfcase value="spoolsettings">メールスプールの設定</cfcase>
+<cfcase value="scheduler">スプール間隔 (秒)</cfcase>
+<cfcase value="scheduler_tip">スプールされたメールをメールスプーラが
+処理するために待つ時間を指定します。 </cfcase>
+<cfcase value="MaxDeliveryThreads">メール
+配達スレッド</cfcase>
+<cfcase value="MaxDeliveryThreads_tip">
+スプールされたメールを ColdFusion が配達するために使用する
+同時スレッドの最大数を指定します。数字が大きいほど、
+配達するメールメッセージの量が増加することを意味します。
+</cfcase>
+<cfcase value="SpoolEnable">配達されるメールメッセージ
+をスプールします</cfcase>
+<cfcase value="SpoolToMemory">終了</cfcase>
+<cfcase value="spoolto_disk">ディスク</cfcase>
+<cfcase value="spoolto_memory">メモリ</cfcase>
+<cfcase value="SpoolEnable_tip"> 配達するメッセージを
+メールスプーラにスプールさせる場合は、このチェックボックスを選択します (推奨)。選択しない場合、
+メールスプーラはページの処理中にメッセージを
+配達しようとします。</cfcase>
+<cfcase value="SpoolToMemory_tip"> ディスクへのスプールはより安全です。メッセージがディスクに書き込まれ、
+ColdFusion が再起動されても配達されるからです。
+メモリへのスプールはパフォーマンスを向上させますが、
+より多くのメモリを必要とし、メッセージの保管は安全
+ではありません。 </cfcase>
+<cfcase value="MaxMessagesInMemory">メモリにスプールされる
+メッセージの最大数</cfcase>
+<cfcase value="MaxMessagesInMemory_tip">
+ColdFusion がディスクへのスプールへ切り替える前に、
+メモリ内に保つメッセージの最大数を指定します。 </cfcase>
+<cfcase value="view_undelivered_mail">未配達メールの表示</cfcase>
+<cfcase value="maillogging">メールロギングの設定</cfcase>
+<cfcase value="severity">エラーログの厳格度</cfcase>
+<cfcase value="severity_debug">デバッグ</cfcase>
+<cfcase value="severity_information">情報</cfcase>
+<cfcase value="severity_warning">警告</cfcase>
+<cfcase value="severity_tip">
+ロギングする SMTP 関連のエラーメッセージのタイプを選択してください。
+</cfcase>
+<cfcase value="logsent">ColdFusion から送信される
+メールメッセージをすべてロギング</cfcase>
+<cfcase value="logsent_tip">メッセージの送信者、受信者、
+件名をログファイルに保存する場合は、このチェックボックスを選択してください。 </cfcase>
+<cfcase value="charsetsetting">メール文字セット設定</cfcase>
+<cfcase value="charset"><strong>デフォルト CFMail 文字設定</strong></cfcase>
+<cfcase value="subject">件名</cfcase>
+<cfcase value="sender">送信元</cfcase>
+<cfcase value="to">受信者</cfcase>
+<cfcase value="filesize">ファイルサイズ</cfcase>
+<cfcase value="date">日付</cfcase>
+<cfcase value="delete">削除</cfcase>
+<cfcase value="respool">再スプール</cfcase>
+<cfcase value="message_deleted">メッセージの削除に成功しました</cfcase>
+<cfcase value="message_respooled">メッセージの再スプールに成功しました</cfcase>
+<cfcase value="pageHeader_undeliveredMail">サーバーの設定 > メール > 未配達メール</cfcase>
+<cfcase value="ss_error_mail_smtpport">
+サーバーポートはゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_mail_timeout">
+タイムアウト値はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_mail_schedule">
+スプール間隔はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_mail_maxdeliverythreads">
+同時スレッドの最大数はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="ss_error_mail_maxmessagesinmemory">
+メモリにスプールするメッセージの最大数はゼロより大きい数値である必要があります。
+</cfcase>
+<cfcase value="error_update"><cfoutput>
+メール設定を更新できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="error_notest">
+メールサーバーの接続はテストされませんでした。<br />
+</cfcase>
+<cfcase value="error_get"><cfoutput>
+メール設定を取得できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="severity_error">エラー</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Server Monitor Database</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nServer Monitor Database");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Server Monitor Database<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<hr size="1" width="100.145%" align="left" />
+<h1>Server Monitor Database</h1>
+<p style="font-weight: bold;">Server Monitoring &gt; Server Monitor</p>
+<p style="font-weight: bold;">&#160;</p>
+<p>Wherever possible, it's best to allow database servers to handle data 
+ manipulation. Adding SQL code to handle this work is much more efficient 
+ than doing string manipulations or doing in-memory queries (query of queries). 
+ Additionally, stored procedures generally provide a higher level of performance 
+ than regular SQL queries. Converting queries in cfquery calls to stored 
+ procedures and using the cfstoredproc tag typically improves performance. 
+ View database response time information in the Database section of the 
+ Server Monitor.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Active Queries page</p>
+<p>The Active Queries page lists all currently active queries that take 
+ longer to load than the threshold specified on the Slowest Queries page. 
+ You can view a list or a detailed view.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Slowest Queries page</p>
+<p>The Slowest Queries page provides the Slowest Queries report and the 
+ Slowest Queries by Average report. Both reports let you identify queries 
+ by template name and line number. The Slowest Queries report shows specific 
+ instances of a query that is slow; the detail view includes the SQL. This 
+ information lets you determine why an instance of that query was slow. 
+ The Slowest Queries by Average report indicates queries that are slow 
+ on average. This report does not provide the SQL for the queries because 
+ the SQL may vary from one instance of the query to another. Cached queries 
+ are not included in either report. To improve performance, tune the queries 
+ listed in these reports. If the result of a query is static, you may improve 
+ performance by caching the query using ColdFusion’s query cache.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Cached Queries page</p>
+<p>The Cached Queries page lists the queries that were cached. You can 
+ view a list of cached queries or details about an individual query. If 
+ the execution time of a query is low, determine if you really need to 
+ cache it. If the execution count is high, you should tune the cachedafter 
+ and cachedwithin settings of the query.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Query Cache Status page</p>
+<p>The Query Cache Status page graphs the number of cached queries, the 
+ estimated memory that the query cache consumes, and the query cache hit 
+ ratio. The higher the query cache hit ratio, the better the performance. 
+ If the cache hit ratio is too low, you may want to increase the size of 
+ the query cache. Alternatively, you can analyze how your application uses 
+ the query cache by determining whether you can tune the cachedAfter and 
+ cachedWithin attributes of the cfquery tag. If the query cache is too 
+ large, determine if you can move some queries out of the cache.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Pool Status page</p>
+<p>The Pool Status page lists the data sources, whether an application 
+ on the ColdFusion server is using the data source, and the number of connections. 
+ You can view a list of data sources or details about an individual data 
+ source.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Most Frequently Run Queries page</p>
+<p>The Most Frequently Run Queries page lists the queries that have been 
+ executed the most. Even if individual instances of a query run rapidly, 
+ tuning queries with a high frequency can result in improved performance. 
+ This report does not provide information about cached queries. You can 
+ view a list of queries or details about an individual query.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+﻿/*Created with Adobe RoboHelp 8.*/
+BODY {
+	font-family: Arial;
+	background-color: #ffffff;
+}
+H1 {
+	font-weight: bold;
+	margin-top: 0pt;
+	font-size: 16pt;
+	margin-bottom: 5pt;
+}
+LI.H1 {
+	font-weight: bold;
+	font-size: 16pt;
+}
+H2 {
+	font-weight: bold;
+	font-size: 14pt;
+	margin-bottom: 5pt;
+	margin-top: 5pt;
+}
+LI.H2 {
+	font-weight: bold;
+	font-size: 14pt;
+}
+H3 {
+	font-weight: bold;
+	font-size: 12pt;
+	margin-bottom: 5pt;
+}
+LI.H3 {
+	font-weight: bold;
+	font-size: 12pt;
+}
+H4 {
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+LI.H4 {
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+H5 {
+	font-weight: bold;
+	font-size: 10.0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+LI.H5 {
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+H6 {
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+LI.H6 {
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+P {
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+LI.P {
+	font-size: 10pt;
+}
+A.expandspot {
+	color: #008000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+SPAN.expandtext {
+	font-style: italic;
+	font-weight: normal;
+	color: #ff0000;
+}
+A.dropspot {
+	cursor: hand;
+	color: #008000;
+	font-style: italic;
+	text-decoration: none;
+}
+A.glossterm {
+	color: #800000;
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+}
+SPAN.glosstext {
+	font-style: italic;
+	font-weight: normal;
+	color: #0000ff;
+}
+OL,
+UL {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+H3.Procedure {
+	margin-bottom: 0pt;
+	font-size: 10pt;
+}
+LI.H3-Procedure {
+	font-size: 10pt;
+}
+P.NumList {
+	font-size: 10pt;
+	list-style: decimal;
+	margin-left: -12pt;
+}
+LI.P-NumList {
+	font-size: 10pt;
+	list-style: decimal;
+}
+P.Bullet {
+	list-style: 
+	margin-left: -15pt;
+	font-size: 10pt;
+}
+LI.P-Bullet {
+	list-style: 
+	font-size: 10pt;
+}
+P.RelatedTopics {
+	font-weight: bold;
+	font-style: normal;
+	margin-top: 14pt;
+	margin-bottom: 0pt;
+}
+LI.P-RelatedTopics {
+	font-weight: bold;
+	font-style: normal;
+}
+P.NumList2 {
+	list-style: lower-alpha;
+	text-indent: -;
+	margin-left: -12pt;
+}
+LI.P-NumList2 {
+	list-style: lower-alpha;
+	text-indent: -;
+}
+P.NormalIndented {
+	margin-left: 18pt;
+}
+LI.P-NormalIndented {
+}
+rh-list.NumUpperAlphaNum {
+	x-lvl-1-p-tag: P;
+	x-lvl-2-type: upper-alpha;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: decimal;
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: lower-alpha;
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-type: decimal;
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: upper-alpha;
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-lvl-8-p-tag: P;
+	x-level-count: 9;
+	x-lvl-9-margin: 160px;
+	x-lvl-9-p-tag: P;
+}
+rh-list.multiNumber {
+	x-level-count: 6;
+	x-lvl-1-format: "<x>.";
+	x-lvl-1-margin: 24px;
+	x-lvl-1-text-indent: -24px;
+	x-lvl-2-format: "<1>.<x>.";
+	x-lvl-2-margin: 60px;
+	x-lvl-2-text-indent: -36px;
+	x-lvl-3-format: "<1>.<2>.<3>.";
+	x-lvl-3-margin: 84px;
+	x-lvl-3-text-indent: -48px;
+	x-lvl-4-format: "<x>)";
+	x-lvl-4-margin: 96px;
+	x-lvl-4-text-indent: -36px;
+	x-lvl-5-format: "<x>}";
+	x-lvl-5-margin: 96px;
+	x-lvl-5-text-indent: -20px;
+	x-lvl-6-format: "[<x>]";
+	x-lvl-6-margin: 96px;
+	x-lvl-2-type: decimal;
+	x-lvl-3-type: decimal;
+	x-lvl-1-type: decimal;
+	x-lvl-4-type: upper-alpha;
+	x-lvl-5-type: upper-roman;
+	x-lvl-6-type: lower-alpha;
+}
+rh-list.Bullets {
+	x-lvl-1-type: disc;
+	x-lvl-1-format: "<x>";
+	x-lvl-2-type: square;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-3-type: circle;
+	x-lvl-3-format: "<x>";
+	x-lvl-3-margin: 40px;
+	x-lvl-4-type: diamond;
+	x-lvl-4-format: "<x>";
+	x-lvl-4-margin: 60px;
+	x-lvl-5-type: disc;
+	x-lvl-5-format: "<x>";
+	x-lvl-5-margin: 80px;
+	x-lvl-6-type: square;
+	x-lvl-6-format: "<x>";
+	x-lvl-6-margin: 100px;
+	x-lvl-7-type: circle;
+	x-lvl-7-format: "<x>";
+	x-lvl-7-margin: 120px;
+	x-lvl-8-type: diamond;
+	x-lvl-8-format: "<x>";
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: disc;
+	x-lvl-9-format: "<x>";
+	x-lvl-9-margin: 160px;
+	x-lvl-9-pfx-class: rls-9-Bullets;
+	x-lvl-1-pfx-class: rls-1-Bullets;
+	x-lvl-2-pfx-class: rls-2-Bullets;
+	x-lvl-3-pfx-class: rls-3-Bullets;
+	x-lvl-4-pfx-class: rls-4-Bullets;
+	x-lvl-5-pfx-class: rls-5-Bullets;
+	x-lvl-6-pfx-class: rls-6-Bullets;
+	x-lvl-7-pfx-class: rls-7-Bullets;
+	x-lvl-8-pfx-class: rls-8-Bullets;
+}
+span.rls-9-Bullets {
+	font-size: 8pt;
+}
+span.rls-1-Bullets {
+	font-size: 12pt;
+}
+span.rls-2-Bullets {
+	font-size: 12pt;
+}
+span.rls-3-Bullets {
+	font-size: 12pt;
+}
+span.rls-4-Bullets {
+	font-size: 12pt;
+}
+span.rls-5-Bullets {
+	font-size: 10pt;
+}
+span.rls-6-Bullets {
+	font-size: 10pt;
+}
+span.rls-7-Bullets {
+	font-size: 10pt;
+}
+span.rls-8-Bullets {
+	font-size: 10pt;
+}
+rh-list.BasicNumber {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-1-p-tag: P;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+rh-list.subbullet {
+	x-lvl-1-format: "<x>&c";
+	x-lvl-2-type: lower-alpha;
+	x-lvl-2-format: "<x>&c";
+	x-lvl-1-p-tag: P;
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-3-type: lower-roman;
+	x-lvl-3-format: "<x>&c";
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: decimal;
+	x-lvl-4-format: "&o<x>&c";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-format: "&o<x>&c";
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: lower-roman;
+	x-lvl-6-format: "&o<x>&c";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: lower-alpha;
+	x-lvl-8-margin: 140px;
+	x-level-count: 9;
+	x-lvl-9-type: lower-roman;
+	x-lvl-9-margin: 160px;
+}
+rh-list.NumberBulletAlphaBullet {
+	x-lvl-1-p-tag: P;
+	x-lvl-2-type: bullet;
+	x-lvl-3-margin: 40px;
+	x-lvl-3-p-tag: P;
+	x-lvl-4-type: circle;
+	x-lvl-2-format: "<x>";
+	x-lvl-2-margin: 20px;
+	x-lvl-2-p-tag: P;
+	x-lvl-4-format: "<x>";
+	x-lvl-4-margin: 60px;
+	x-lvl-4-p-tag: P;
+	x-lvl-5-type: decimal;
+	x-lvl-5-margin: 80px;
+	x-lvl-5-p-tag: P;
+	x-lvl-6-type: Degree;
+	x-lvl-6-format: "<x>";
+	x-lvl-6-margin: 100px;
+	x-lvl-6-p-tag: P;
+	x-lvl-7-margin: 120px;
+	x-lvl-7-p-tag: P;
+	x-lvl-8-type: diamond;
+	x-lvl-8-format: "<x>";
+	x-lvl-8-margin: 140px;
+	x-lvl-8-p-tag: P;
+	x-level-count: 9;
+	x-lvl-9-margin: 160px;
+	x-lvl-9-p-tag: P;
+}

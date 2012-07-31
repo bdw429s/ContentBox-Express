@@ -1,0 +1,30 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Archives
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+<cfcase value="fail_12341">失敗</cfcase>
+<cfcase value="0k_64564">OK</cfcase>
+<cfcase value="probe_local">プローブリクエストは、127.0.0.1 から送られる必要があります。</cfcase>
+<cfcase value="probe_enterprise">プローブには、ColdFusion のエンタープライズ版が必要です。</cfcase>
+<cfcase value="probe_non200">HTTP リクエストは非 200 ステータスコードを返しました。</cfcase>
+<cfcase value="probe_stringnotfound">必要な文字列が見つかりません</cfcase>
+<cfcase value="probe_foundstring">文字列が見つかりました</cfcase>
+<cfcase value="probe_regexnotmatched">必要な正規表現が一致しません</cfcase>
+<cfcase value="probe_matchedregex">正規表現が一致しました</cfcase>
+<cfcase value="probe_cfprobefailure">ColdFusion プローブが失敗しました</cfcase>
+<cfcase value="proberun_fail">このプローブは失敗しました。</cfcase>
+<cfcase value="probe_name">プローブ名</cfcase>
+<cfcase value="execution_time">実行時間</cfcase>
+<cfcase value="response_contents">レスポンス内容</cfcase>
+<cfcase value="probe_notfound">プローブが見つかりません</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

@@ -1,0 +1,93 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Code
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="detail_report_by_feature">詳細レポート ― 機能別</cfcase>
+<cfcase value="session_expired">
+<p class="sentance">分析情報の期限が切れました。このウィンドウを閉じ、レポートへ戻ってください。</p>
+</cfcase>
+<cfcase value="feat_sv_er">エラー</cfcase>
+<cfcase value="feat_sv_inf">情報</cfcase>
+<cfcase value="how_to_fix">修復方法</cfcase>
+<cfcase value="line">行</cfcase>
+<cfcase value="mainwindowfr">メインコンテント</cfcase>
+<cfcase value="topwindowfr">コントロール</cfcase>
+<cfcase value="compat_report_listed_by_features">互換性レポート :機能別にリスト</cfcase>
+<cfcase value="return_to_feature">機能へ戻る :</cfcase>
+<cfcase value="print_report">レポートのプリント</cfcase>
+<cfcase value="close_window">ウィンドウを閉じる</cfcase>
+<cfcase value="detail_report_by_file">詳細レポート -- ファイル別</cfcase>
+<cfcase value="feat_sv_er_f">エラー</cfcase>
+<cfcase value="feat_sv_inf_f">情報</cfcase>
+<cfcase value="code_except">コード引用</cfcase>
+<cfcase value="compat_report_listed_by_files">互換性レポート :ファイル別にリスト</cfcase>
+<cfcase value="return_to_file">ファイルへ戻る :</cfcase>
+<cfcase value="code_analyzer">CFML コードアナライザ</cfcase>
+<cfcase value="must_have_app_vars">
+このアプリケーションを使用する場合は、「メモリ変数」ページでセッション変数を有効にする必要があります。
+</cfcase>
+<cfcase value="pageHeader_codeanalyzer">デバッグとロギング &gt; コードアナライザ</cfcase>
+<cfcase value="anal_slct">分析するための機能を、少なくとも 1 つは選択してください。</cfcase>
+<cfcase value="welcone_code_analyzer">
+コード互換性アナライザを利用して、以前のバージョンの ColdFusion からこのバージョンの ColdFusion に移行できます。 
+</cfcase>
+<cfcase value="code_analyzer_review">
+このコード互換性アナライザは、指定された CFML ページを調べ、重大な互換性の問題があれば、それを報告します。サポートされない非推奨の CFML 機能を検出し、スムーズな移行を確実にするために必要な実装の変更を概略します。
+</cfcase>
+<cfcase value="codver7">CF7</cfcase>
+<cfcase value="codver8">CF8</cfcase>
+<cfcase value="allfilter">CFM, CFC</cfcase>
+<cfcase value="cfmfilter">CFM</cfcase>
+<cfcase value="cfcfilter">CFC</cfcase>
+<cfcase value="l10n_codecomp">コード互換性アナライザ</cfcase>
+<cfcase value="directory_to_analyze">分析するディレクトリ</cfcase>
+<cfcase value="browse_server">サーバーのブラウズ</cfcase>
+<cfcase value="subdir">サブディレクトリの分析</cfcase>
+<cfcase value="fitype">ファイルタイプの分析</cfcase>
+<cfcase value="valcfm">CFML の検証</cfcase>
+<cfcase value="codver">Code Version</cfcase>
+<cfcase value="slctall">すべて</cfcase>
+<cfcase value="slcterr">エラー</cfcase>
+<cfcase value="slctinf">情報</cfcase>
+<cfcase value="l10n_advSettings">詳細設定</cfcase>
+<cfcase value="flsev">厳格度によるフィルタ</cfcase>
+<cfcase value="fitfet">製品機能によるフィルタ</cfcase>
+<cfcase value="selct">すべてを選択</cfcase>
+<cfcase value="clear">すべてをクリア</cfcase>
+<cfcase value="runan">アナライザの実行</cfcase>
+<cfcase value="basicop">基本ビュー</cfcase>
+<cfcase value="tag">タグ</cfcase>
+<cfcase value="func">関数</cfcase>
+<cfcase value="other">演算子、変数、その他の連想配列</cfcase>
+<cfcase value="run_analyzer">アナライザの実行</cfcase>
+<cfcase value="advanced_options">拡張オプション</cfcase>
+<cfcase value="basic_options">基本オプション</cfcase>
+<cfcase value="jsplzspctmp">テンプレートディレクトリを指定してください。</cfcase>
+<cfcase value="coult_not_find_dir">コード互換性アナライザは、ディレクトリまたはファイルを見つけることができませんでした :</cfcase>
+<cfcase value="codecapantitle">ColdFusion コード互換性レポート</cfcase>
+<cfcase value="reanlyzethis">ColdFusion 互換性用の CFML コードを再分析</cfcase>
+<cfcase value="codeanalyzerresults_pageHeader">デバッグとロギング &gt; コードアナライザ &gt; 結果</cfcase>
+<cfcase value="err">エラー</cfcase>
+<cfcase value="inf">情報</cfcase>
+<cfcase value="ttl">合計</cfcase>
+<cfcase value="total">合計</cfcase>
+<cfcase value="resultssummaryblurb">結果の要約</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="fet">機能</cfcase>
+<cfcase value="sev">厳格度</cfcase>
+<cfcase value="doc">ドキュメント</cfcase>
+<cfcase value="featdetail">機能別の詳細</cfcase>
+<cfcase value="pagedeatil">ファイル別の詳細</cfcase>
+<cfcase value="file_filter_error">ファイルフィルタは “*.” で開始し、その後にセミコロンで区切られた有効なファイル拡張子が続く必要があります。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>J2EE Packaging overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Packaging and Deployment\nJ2EE Archives\nJ2EE archives overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_site_archiving.htm\">Packaging and Deployment<\/a> > <a href=\"j2ee_packaging_overview.htm\">J2EE Archives<\/a> > J2EE archives overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr style="margin-top: 0px; margin-bottom: 0px;" width="100.435%" size="1" align="left" />
+<h2><a name="J2EEArchivesOverview" id="J2EEArchivesOverview" title="J2EEArchivesOverview"></a>J2EE archives overview</h2>
+<p>ColdFusion lets you create an EAR or WAR file that contains an entire application. This archive file contains the ColdFusion web application, settings for ColdFusion (such as data source definitions), the CFM pages used by your application (text or compiled Java), and optionally, the ColdFusion Administrator.</p>
+<p>&#160;</p>
+<p>This feature lets you quickly create an archive file that a J2EE administrator can use to deploy your ColdFusion application.</p>
+<p>&#160;</p>
+<p>J2EE archives are different from ColdFusion archives (CAR) files. For information on CAR files, see Create and deploy application archives. For details, see <a href="overview_of_site_archiving.htm" title="overview_of_site_archiving.htm">ColdFusion Archive overview</a>.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Context root</p>
+<p>Because the J2EE environment supports multiple, isolated web applications running in a server instance, each J2EE web application running in a server is rooted at a unique base URL, called a context root (or context path). The J2EE application server uses the initial portion of the URL (that is, the portion immediately following http://<span style="font-style: italic;"><i>hostname</i></span>) to determine which web application processes an incoming request.</p>
+<p>&#160;</p>
+<p>For example, if you are running ColdFusion with a context root of cfmx, you display the ColdFusion Administrator using the URL http://<span style="font-style: italic;"><i>hostname</i></span>/cfmx/CFIDE/administrator/index.cfm.</p>
+<p>&#160;</p>
+<p>Most J2EE application servers allow one application in each server instance to use / (forward slash) for the context root. The Remote Development Services (RDS) web application is not required if you use a context root of /.</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="j2ee_archive.htm" title="j2ee_archive.htm">About the J2EE Archives page</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="adding_and_editing_j2ee_archives.htm" title="adding_and_editing_j2ee_archives.htm">Adding and editing J2EE archives</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="overview_of_site_archiving.htm" title="overview_of_site_archiving.htm">ColdFusion Archive (CAR) files</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="about_the_server_manager_page.htm" title="about_the_server_manager_page.htm">About the Instance Manager page</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

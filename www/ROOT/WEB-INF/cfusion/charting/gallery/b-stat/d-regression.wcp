@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="463" height="283" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="#FDFEF6" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<statistical dashSize="4" gridStyle="Stddev" type="Regression" is3D="true"
+				isTransposed="false" seriesTitle="" font="Arial-11" foreground="black"
+				isMultiline="false">
+				<xAxis type="DateTime" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="ShortDate" pattern="M/d/yy">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="ShortDate" pattern="M/d/yy">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Month" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</xAxis>
+				<xAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Choice" pattern="-6#-6σ | -5#-5σ | -4#-4σ | -3#-3σ | -2#-2σ | -1#-1σ | 0#µ | 1#1σ | 2#2σ | 3#3σ | 4#4σ | 5#5σ | 6#6σ">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</xAxis2>
+				<yAxis type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number" pattern="#,##0.###">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None" pattern="#,##0.###">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis>
+				<yAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Choice" pattern="-6#-6σ | -5#-5σ | -4#-4σ | -3#-3σ | -2#-2σ | -1#-1σ | 0#µ | 1#1σ | 2#2σ | 3#3σ | 4#4σ | 5#5σ | 6#6σ">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None" pattern="#,##0.###">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis2>
+				<valueAtRisk type="Fill" level="0.95"/>
+				<dataLabels style="None" placement="Outside" background="#00000000" font="Arial-12"
+					isMultiline="false">
+					<decoration style="None" foreColor="black"/>
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="true" isVisible="false"
+					placement="Top" valign="Middle" halign="Center" background="#00000000"
+					isMultiline="false">
+					<decoration style="Shadow" foreColor="black"/>
+				</legend>
+				<elements place="Clustered" shape="Bar" markerSize="0" shapeSize="80"
+					lineWidth="2" drawOutline="true" drawShadow="true" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25" stageDelay="0" replayDelay="-1"/>
+					<morph morph="Blur" stage="Rows"/>
+				</elements>
+				<table isVisible="false" isTransposed="false" cellSpacing="4" cellPadding="0"
+					border="Outer">
+					<decoration style="RoundShadow" foreColor="black"/>
+					<colLabels hAlign="Center" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</colLabels>
+					<rowLabels hAlign="Left" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</rowLabels>
+					<cells hAlign="Right" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</cells>
+					<format style="Number">
+						<locale/>
+					</format>
+				</table>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					background="#00000000" font="Arial-16-bold" isMultiline="true">
+					<decoration style="Shadow" foreColor="black"/>
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<decoration style="None" foreColor="black"/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Standard" paint="Plain" isVertical="false" min="0"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</statistical>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>a0</COL>
+<COL>a1</COL>
+<COL>a2</COL>
+<COL>a3</COL>
+<COL>a4</COL>
+<COL>a5</COL>
+<COL>a6</COL>
+<COL>a7</COL>
+<COL>a8</COL>
+<COL>a9</COL>
+<COL>a10</COL>
+<COL>a11</COL>
+<COL>a12</COL>
+<COL>a13</COL>
+<COL>a14</COL>
+<COL>a15</COL>
+<COL>a16</COL>
+<COL>a17</COL>
+<COL>a18</COL>
+<COL>a19</COL>
+<COL>a20</COL>
+<COL>a21</COL>
+<COL>a22</COL>
+<COL>a23</COL>
+<COL>a24</COL>
+<COL>a25</COL>
+<COL>a26</COL>
+<COL>a27</COL>
+<COL>a28</COL>
+<COL>a29</COL>
+<COL>a30</COL>
+<COL>a31</COL>
+<COL>a32</COL>
+<COL>a33</COL>
+<COL>a34</COL>
+<COL>a35</COL>
+<COL>a36</COL>
+<COL>a37</COL>
+<COL>a38</COL>
+<COL>a39</COL>
+<COL>a40</COL>
+<COL>a41</COL>
+<COL>a42</COL>
+<COL>a43</COL>
+<COL>a44</COL>
+<COL>a45</COL>
+<COL>a46</COL>
+<COL>a47</COL>
+<COL>a48</COL>
+<COL>a49</COL>
+<COL>a50</COL>
+<COL>a51</COL>
+<COL>a52</COL>
+<COL>a53</COL>
+<COL>a54</COL>
+<COL>a55</COL>
+<COL>a56</COL>
+<COL>a57</COL>
+<COL>a58</COL>
+<COL>a59</COL>
+<COL>a60</COL>
+<COL>a61</COL>
+<COL>a62</COL>
+<COL>a63</COL>
+<COL>a64</COL>
+<COL>a65</COL>
+<COL>a66</COL>
+<COL>a67</COL>
+<COL>a68</COL>
+<COL>a69</COL>
+<COL>a70</COL>
+<COL>a71</COL>
+<COL>a72</COL>
+<COL>a73</COL>
+<COL>a74</COL>
+<COL>a75</COL>
+<COL>a76</COL>
+<COL>a77</COL>
+<COL>a78</COL>
+<COL>a79</COL>
+<COL>a80</COL>
+<COL>a81</COL>
+<COL>a82</COL>
+<COL>a83</COL>
+<COL>a84</COL>
+<COL>a85</COL>
+<COL>a86</COL>
+<COL>a87</COL>
+<COL>a88</COL>
+<COL>a89</COL>
+<COL>a90</COL>
+<COL>a91</COL>
+<COL>a92</COL>
+<COL>a93</COL>
+<COL>a94</COL>
+<COL>a95</COL>
+<COL>a96</COL>
+<COL>a97</COL>
+<COL>a98</COL>
+<COL>a99</COL>
+<ROW col0="47.261303" col1="38.036774" col2="53.661793" col3="96.18071" col4="94.186806" col5="54.65105" col6="63.64672" col7="72.92206" col8="53.63317" col9="23.320633" col10="32.399284" col11="53.077698" col12="58.870846" col13="85.09852" col14="13.263607" col15="61.9106" col16="70.55442" col17="0.8880913" col18="26.01846" col19="84.98467" col20="31.946909" col21="40.22468" col22="47.01001" col23="3.6826491" col24="17.868774" col25="58.335728" col26="89.7842" col27="21.76174" col28="4.6519938" col29="51.49623" col30="79.175156" col31="80.91203" col32="43.38346" col33="32.093983" col34="72.20707" col35="88.98472" col36="2.4113357" col37="72.34868" col38="40.337666" col39="46.20235" col40="66.98405" col41="22.530048" col42="60.0891" col43="94.439" col44="33.653324" col45="3.1548977" col46="76.81455" col47="40.221004" col48="41.08571" col49="67.30185" col50="32.8844" col51="32.36153" col52="47.935802" col53="35.875023" col54="1.1612892" col55="28.72439" col56="10.2060795" col57="50.48998" col58="36.97287" col59="52.0206" col60="52.0485" col61="32.303757" col62="41.817673" col63="50.54049" col64="54.205864" col65="80.103966" col66="88.992935" col67="12.936044" col68="94.40775" col69="28.139656" col70="55.511658" col71="39.827877" col72="68.23359" col73="52.673603" col74="82.09003" col75="4.978156" col76="5.8162985" col77="61.196526" col78="90.21948" col79="59.28619" col80="82.5257" col81="17.638565" col82="49.172455" col83="95.459366" col84="85.03442" col85="71.35185" col86="32.22477" col87="30.380445" col88="64.89266" col89="14.823312" col90="72.031334" col91="41.687057" col92="49.683483" col93="95.710495" col94="39.779125" col95="39.354546" col96="45.00122" col97="67.553185" col98="19.452202" col99="56.90832"/>
+<ROW col0="113.92614314890474" col1="3.3826390467999516" col2="95.6595629520714" col3="76.86759047373636" col4="101.03627687397378" col5="51.29299106185686" col6="70.8492368282414" col7="59.8591370517346" col8="79.08669977174301" col9="22.724055479390444" col10="64.008004721111" col11="45.38945269668306" col12="14.4341562887426" col13="59.59175027424927" col14="-25.673081349419967" col15="84.71837250479577" col16="52.16722950948834" col17="8.36108710801369" col18="32.47952486496024" col19="145.3458196613297" col20="113.40495650103276" col21="23.811477601953083" col22="43.765459978011805" col23="29.216399769498228" col24="13.373433379121536" col25="41.091434154882734" col26="84.35085100495623" col27="23.83415455248377" col28="-30.573428068594858" col29="92.48176131880743" col30="80.27999335131243" col31="49.95490248867524" col32="53.76070962250158" col33="-45.926156432799104" col34="78.73703538390336" col35="81.55100048272493" col36="-10.6497247583737" col37="50.50191551457337" col38="55.73215390423484" col39="59.52936573760482" col40="87.57135106676051" col41="6.290295114570981" col42="6.523237667169937" col43="141.957942907334" col44="34.267291538176806" col45="-12.374952781514377" col46="76.16582068578683" col47="74.86199404530875" col48="38.04827762403066" col49="77.3518638514057" col50="96.90464461350882" col51="80.67009254636963" col52="94.63546332685507" col53="43.42398090175748" col54="-7.696664445839625" col55="9.056775496922441" col56="-1.3310841058146714" col57="9.432512361842932" col58="70.29770833834763" col59="88.82189016341212" col60="9.905677564098795" col61="45.806109440831136" col62="35.625132616268495" col63="97.99525303169116" col64="98.40983853255014" col65="45.628497212639445" col66="70.32728839359932" col67="70.70865800964334" col68="84.83169025327545" col69="-1.0221499480315934" col70="73.25022192533103" col71="32.58920601672685" col72="49.62641048735819" col73="88.67690627044676" col74="32.39700378071899" col75="24.022248894678118" col76="33.24354368998454" col77="16.90474455486752" col78="76.55226344324576" col79="100.44793693110496" col80="58.51290835369798" col81="12.585945235789422" col82="104.89109289043645" col83="76.49058240923637" col84="100.07934752567866" col85="53.98120190140326" col86="16.158969088014143" col87="54.106291871166434" col88="96.87718001560798" col89="-9.516703402312977" col90="94.29935565343797" col91="-6.207891502758599" col92="52.920546500501416" col93="153.49102363903336" col94="12.162744102567043" col95="67.24823332538591" col96="14.7113666967362" col97="85.5451763453491" col98="86.87868556910368" col99="58.11298270290176"/>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

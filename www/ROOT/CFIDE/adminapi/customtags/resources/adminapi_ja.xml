@@ -1,0 +1,186 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+
+<cfsilent>
+
+<!--
+
+L10N Resource File
+
+Section: adminapi
+
+Locale: English (en)
+
+Find the requested resource by id
+
+-->
+
+</cfsilent>
+
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="error_migrate">次の Verity コレクションを移行できません :</cfcase>
+
+<cfcase value="error_solr_down">Solr サーバーに到達できません。</cfcase>
+
+<cfcase value="col_migrated"> コレクションが次に移行されました :</cfcase>
+
+<cfcase value="no_verity_server">ColdFusion 検索サービスからコレクションを取得できません。<br />ColdFusion 検索サービスがインストール済みで実行中であることを確認してください。</cfcase>
+			
+<cfcase value="no_verity_collections">移行する Verity コレクションがありません。</cfcase>
+
+<cfcase value="invalidUser">現在のユーザーには、このメソッドを呼び出す権限がありません。</cfcase>
+
+<cfcase value="lic_dev">デベロッパー</cfcase>
+
+<cfcase value="lic_eva">評価</cfcase>
+
+<cfcase value="lic_pro">プロフェッショナル</cfcase>
+
+<cfcase value="lic_standard">スタンダード</cfcase>
+
+<cfcase value="lic_ent">エンタープライズ</cfcase>
+
+<cfcase value="invalidService">サービスを呼び出す際のエラー。</cfcase>
+
+<cfcase value="invalidComponentAccess">RDS を介して、ADMINAPI コンポーネントのみを呼び出せます。</cfcase>
+
+<cfcase value="baddir">無効なディレクトリ名が入力されました。</cfcase>
+
+<cfcase value="invalidip">無効な IP アドレス :</cfcase>
+
+<cfcase value="gwservice_off">イベントゲートウェイを起動できません。イベントゲートウェイサービスが有効になっていません。 </cfcase>
+
+<cfcase value="gateways_not_found">ゲートウェイが見つかりません。</cfcase>
+
+<cfcase value="invalid_gateway_name">無効なゲートウェイ名です。</cfcase>
+
+<cfcase value="applet_codebase_required">アプレットコードベースが必要です</cfcase>
+
+<cfcase value="applet_wrong_align_value">無効な Align 引数です。有効な値 :Left、Right、Bottom、Top、TextTop、Middle、ABSMiddle、Baseline、ABSBottom</cfcase>
+
+<cfcase value="invalid_corba_name">Corba コネクタ用の無効な名前。</cfcase>
+
+<cfcase value="customTagDirDoesntExist">カスタムタグディレクトリが存在しません。</cfcase>
+
+<cfcase value="map_no_name">マッピング用の有効な名前を入力してください。</cfcase>
+
+<cfcase value="map_invalid_path">マッピング用の有効なパスを入力してください。</cfcase>
+
+<cfcase value="invalid_format_Timeout">無効なタイムアウト値です。タイムアウトは "days,hours,mins,sec" の形式のリストである必要があります。次に例を示します。"0,3,0,0" (3 時間)。</cfcase>
+
+<cfcase value="Numeric_Value_Required">この設定には数値が必要です。</cfcase>
+
+<cfcase value="invalidCacheType">有効な値は "memory" か "disk" です。</cfcase>
+
+<cfcase value="numeric_value">タイムアウト値は、0 以上の数値である必要があります。</cfcase>
+
+<cfcase value="AppCFCLookup_order_out_of_range">AppCFCLookupOrder には、0 より大きくて 3 以下の有効な数値を指定する必要があります。各数値の意味は次のとおりです。<br /> </br>
+値 1 は "デフォルトの順序" を意味します</br>
+値 2 は "Web ルートまで" を意味します</br>
+値 3 は "Web ルート内" を意味します</br>
+</cfcase>
+
+<cfcase value="cant_update_settings">設定更新を保存できません。これは、しばしば jvm.config ファイルのパーミッションや、jvm.config が読み取り専用であることが原因です。</cfcase>
+
+<cfcase value="invalid_jvm_path">入力された JVM パスは有効な JVM パスではありません。JVM パスは、bin ディレクトリがあり、その中に JVM 実行可能ファイルがある必要があります。</cfcase>
+
+<cfcase value="not_valid_pair">このライセンスキーの組み合わせは、アップグレードには有効ではありません。</cfcase>
+
+<cfcase value="not_valid_license">入力されたシリアル番号は有効ではありません。</cfcase>
+
+<cfcase value="bad_upgradeSerialNumberPairFormat">アップグレード用シリアル番号を使用する際に、アップグレード用シリアル番号と古いシリアル番号の両方が必要です (カンマで分けてください)。</cfcase>
+
+<cfcase value="invalid_trialext">トライアル版拡張機能のシリアル番号は、トライアル版ライセンスのみに適用できます。 </cfcase>
+
+<cfcase value="not_valid_report_pack_license">入力された Report Pack シリアル番号は有効ではありません。</cfcase>
+
+<cfcase value="font_not_found">不明のフォントファミリー。</cfcase>
+
+<cfcase value="sandbox_not_found">サンドボックスが見つかりません。</cfcase>
+
+<cfcase value="sandbox_already_exists">サンドボックスは既に存在します。</cfcase>
+
+<cfcase value="cannot_delete_system_sandboxes">システムサンドボックスを削除する権限がありません。</cfcase>
+
+<cfcase value="wrong_port_type">不正なポートタイプです。有効なオプション :single、higher、lower、range。</cfcase>
+
+<cfcase value="security_invalidfunction">制限された関数リストにこの関数を追加できません。</cfcase>
+
+<cfcase value="security_invalidTag">制限されたタグリストにこのタグを追加できません。</cfcase>
+
+<cfcase value="db_not_found">データベースが見つかりません。</cfcase>
+
+<cfcase value="badIP">無効な IP アドレス。</cfcase>
+
+<cfcase value="badiman">このエディションの ColdFusion では、インスタンス管理を使用できません。</cfcase>
+
+<cfcase value="invalidSettingKey">無効な設定キー :</cfcase>
+
+<cfcase value="invalidSettingPrefix">この設定は、</cfcase>
+
+<cfcase value="invalidSettingNumeric">0 または正の整数であることが必要です。</cfcase>
+
+<cfcase value="invalidSettingBoolean">ブール値であることが必要です。</cfcase>
+
+<cfcase value="invalidSettingList">リストであることが必要です。</cfcase>
+
+<cfcase value="emptySettingString">空の文字列キーにはできません :</cfcase>
+
+<cfcase value="sameAliasNameString">このエイリアス設定は既に存在します。別のテンプレートパスまたはエイリアス名を指定してください</cfcase>
+
+<cfcase value="extraSettingMsg">必要とされるよりも多くのキー / 設定があります</cfcase>
+
+<cfcase value="invalidAlertType">有効なアラートタイプではありません。有効なタイプ :</cfcase>
+
+<cfcase value="emptyArraySetting">引数として渡す配列が空であることはできません。</cfcase>
+
+<cfcase value="error_invalidseverity">無効な厳格度タイプです。有効なタイプは 'warning,error,information,debug' です</cfcase>
+
+<cfcase value="SystemMappingError">システムマッピングを修正できません。</cfcase>
+
+<cfcase value="cfx_invalid_tagname_error">
+CFX 名は無効です。
+</cfcase>
+
+<cfcase value="local_config_error_add">ローカル OpenOffice を設定できません。</cfcase>
+
+<cfcase value="remote_config_error_add">リモート OpenOffice を設定できません。</cfcase>
+
+<cfcase value="invalid_location_error">指定されたディレクトリは、有効な Office インストールディレクトリではありません。</cfcase>
+
+<cfcase value="def_bigger_than_max_error">デフォルト値を最大値より大きくできません。</cfcase>
+
+<cfcase value="cache_too_big_error">キャッシュサイズは、1 ～ 250 の整数値である必要があります。</cfcase>
+
+<cfcase value="engines_too_big_error">スレッドの最大数は、1 ～ 5 の整数値である必要があります。</cfcase>
+
+<cfcase value="cache_path_error">有効なキャッシュパスを指定する必要があります。これは既存のディレクトリである必要があります。</cfcase>
+
+<cfcase value="hours_error">時間の値は、0 ～ 23 の数字である必要があります。</cfcase>
+
+<cfcase value="mins_error">分の値は、0 ～ 59 の数字である必要があります。</cfcase>
+
+<cfcase value="secs_error">秒の値は、0 ～ 59 の数字である必要があります。</cfcase>
+
+<cfcase value="max_memory_size_error"><cfoutput>最大メモリサイズは有効な数字 (MB) で、以下と同じかそれよりも大きい必要があります :<cfoutput>#CALLER.MIN_MAX_SIZE#</cfoutput>.</cfoutput></cfcase>
+
+<cfcase value="min_memory_size_error">最小メモリサイズは有効な数字 (MB) である必要があります。</cfcase>
+
+<cfcase value="min_max_size_error">初期メモリサイズは最大メモリサイズ以下である必要があります。</cfcase>
+
+<cfcase value="invalid_classpath_error">入力されたクラスパスは有効なクラスパスではありません。</cfcase>
+
+<cfcase value="font_error_add">
+フォントを追加できません。パスは、有効な絶対パスである必要があります。受け入れられるパス :<br/><br/>C:\myfonts\ C:\myfonts\tahoma.ttf<br/> C:\myfonts\gulim.ttc<br/> /opt/myfonts/<br/> /opt/myfonts/tahoma.ttf<br/> /opt/myfonts/gulim.ttc<br/><br/> 受け入れられるフォントの拡張子 :<br/><br/> TTF (True Type Font)<br/> TTC (True Type Collection)<br/> OTF (Open Type Font)<br/> AFM (Adobe Font Metrics)<br/>
+</cfcase>
+
+<cfcase value="error_invalidDirectory">無効なディレクトリです。ディレクトリを調べて、再試行してください。</cfcase>
+
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+
+</cfswitch>
+
+</cfprocessingdirective>
+
+

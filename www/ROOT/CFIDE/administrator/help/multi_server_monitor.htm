@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Multi Server monitor</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nMultiserver monitor");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Multiserver monitor<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<hr size="1" width="100.145%" align="left" />
+<h1>Multiserver monitor</h1>
+<p style="font-weight: bold;">Server Monitoring &gt; Server Monitor</p>
+<p>&#160;</p>
+<p>The ColdFusion Multiserver Monitor lets you keep track of activities 
+ on multiple ColdFusion servers. You can quickly see the status of several 
+ servers, and view detailed information about each server,</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>A</b></span><span style="font-weight: bold;"><b>dd 
+ a server to those you are monitoring</b></span></p>
+<ol type="1">
+	<li class="p"><p>Click the Launch Multiserver Monitor button.</p></li>
+	<li class="p"><p>Click Add Server.</p></li>
+	<li class="p"><p>Enter the following:</p>
+	<ul>
+		<li class="p" type="disc"><p>The server name or IP address</p></li>
+		<li class="p" type="disc"><p>The port through which you communicate 
+		 with the server</p></li>
+		<li class="p" type="disc"><p>The context root, if any</p></li>
+		<li class="p" type="disc"><p>The user name and password to access 
+		 the server</p></li>
+	</ul></li>
+	<li class="p"><p>Click OK.</p></li>
+</ol>
+<p>&#160;</p>
+<p style="font-weight: bold;">Quickly see the status of all the servers 
+ you are monitoring</p>
+<ul type="disc">
+	<li class="p"><p style="font-weight: normal;">Click Quick View.</p></li>
+</ul>
+<p style="font-weight: normal;">For each server you are monitoring, the 
+ Multiserver Monitor displays the server name, port, how long the server 
+ has been running, and whether there are any alerts.</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: bold;">See a detailed status of all the servers 
+ you are monitoring</p>
+<ul type="disc">
+	<li class="p"><p style="font-weight: normal;">Click Detailed View.</p></li>
+</ul>
+<p style="font-weight: normal;">The detailed view lists each server. To 
+ see details about a server in the list, highlight it. The details appear 
+ at the bottom of the page.</p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;">See information about any server errors</p>
+<ul type="disc">
+	<li class="p"><p style="font-weight: normal;">Click Errors.</p></li>
+</ul>
+<p style="font-weight: normal;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ The errors listed on this page include only server errors. Application 
+ errors appear in the individual Server Monitor on the Summary page. For 
+ more information, see <a href="server_monitor_summary.htm" title="server_monitor_summary.htm">Server Monitor 
+ Summary</a>.</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">If you register some servers in the Multiserver 
+ Monitor served by 127.0.0.1, and then open a Multiserver Monitor served 
+ by localhost, the servers are not considered to be the same servers. This 
+ is because Flash creates different shared objects for these IP addresses. 
+ <span style="font-weight: normal;">The information that is stored in these 
+ shared objects is saved using XOR encryption. The master password for 
+ the Multiserver Monitor is stored using SHA1 encryption.</span></p>
+<p style="font-weight: normal;">&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

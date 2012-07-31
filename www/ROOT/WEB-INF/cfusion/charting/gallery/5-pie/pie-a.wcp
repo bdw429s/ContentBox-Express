@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="406" height="390" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<pieChart depth="Double" style="Default" type="Pie" angle="-20"
+				is3D="true" isTransposed="false" seriesTitle="" decoration="None"
+				font="Arial-11" foreground="black" isMultiline="false">
+				<axis type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</axis>
+				<dataLabels style="None" placement="Outside" decoration="None" background="#00000000"
+					font="Arial-12" isMultiline="false">
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="true" isVisible="true"
+					placement="Top" valign="Middle" halign="Center" decoration="Shadow"
+					background="#00000000" isMultiline="false"
+				/>
+				<elements place="Clustered" shape="Bar" markerSize="0" shapeSize="80"
+					lineWidth="4" drawOutline="true" drawShadow="false" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25"/>
+					<morph morph="Grow" stage="Cols"/>
+				</elements>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					decoration="Shadow" background="#00000000" font="Arial-16-bold" isMultiline="true">
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Standard" paint="Shade" isVertical="false" min="0"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</pieChart>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>2000</COL>
+<COL>2001</COL>
+<COL>2002</COL>
+<COL>2003</COL>
+<COL>2004</COL>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

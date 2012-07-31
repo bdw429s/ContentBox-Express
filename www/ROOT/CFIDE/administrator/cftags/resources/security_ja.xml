@@ -1,0 +1,416 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Security
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+
+<cfcase value="alert">警告 :</cfcase>
+
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="ip_pagename">デバッグする IP アドレス</cfcase>
+<cfcase value="pageHeader_allowipaddress">セキュリティ &gt; 使用できる IP アドレス</cfcase>
+<cfcase value="ip_welcometext">
+公開サービスの呼び出しを許可するクライアント IP アドレスを指定してください。
+個々の IP アドレス、IP アドレスの範囲 (例 : 10-30)、または * ワイルドカードを指定できます。
+IPv4 アドレスと IPv6 アドレスの両方がサポートされます。
+リストに IP アドレスを追加するには、アドレスを入力して [追加] をクリックしてください。
+リストから IP アドレスを削除するには、アドレスを選択して [選択の削除] をクリックしてください。
+ここで IP アドレスが指定されていない場合は、すべてのユーザーが公開サービスを呼び出せなくなります。
+</cfcase>
+<cfcase value="selectIP">公開サービスを使用できる IP アドレスの選択</cfcase>
+<cfcase value="ip_address">IP アドレス</cfcase>
+<cfcase value="add_button">追加</cfcase>
+<cfcase value="viewdeleteIP">公開サービス用に選択した IP アドレスの表示 / 削除</cfcase>
+<cfcase value="remove_button">選択の削除</cfcase>
+<cfcase value="err_seedLength">シードは 8 文字以上である必要があります</cfcase>
+<cfcase value="adminpasswordpagename">ColdFusion Administrator パスワード</cfcase>
+<cfcase value="pageHeader_adminpassword">セキュリティ &gt; Administrator</cfcase>
+<cfcase value="cfadmin_password">ColdFusion Administrator の認証</cfcase>
+<cfcase value="cfadmin_password_explanation">
+ColdFusion Administrator へのアクセスは、信頼できるユーザーに
+限定してください。デフォルトでは、これらのページにアクセスするために
+認証が必要です。ただし、これらのページへのアクセスを制限
+するように Web サーバーを設定する場合は、この認証を無効にして、
+代わりに Web サーバーのセキュリティを利用することもできます。
+(ページのセキュリティ設定の詳細については、Web サーバーのマニュアルを参照。)
+</cfcase>
+<cfcase value="cfadmin_username_explanation">
+Administrator の認証タイプを次の中から選択してください。
+</cfcase>
+<cfcase value="cfadmin_singlepassword">単一のパスワードのみを使用する (デフォルト)</cfcase>
+<cfcase value="cfadmin_usernames">別のユーザー名とパスワードで認証する (複数のユーザーを許可する)</cfcase>
+<cfcase value="cfadmin_securitydisabled">認証を必要としない (推奨しません)</cfcase>
+<cfcase value="cfadmin_changePassword">
+ルート管理ユーザーの ColdFusion Administrator パスワードを変更する場合は、以下に新規のパスワードを入力し、確認してください。
+</cfcase>
+<cfcase value="cfadmin_Newpassword">新規のパスワード</cfcase>
+<cfcase value="cfadmin_NewpasswordConfirm">パスワードの確認</cfcase>
+<cfcase value="cfadmin_passwordlength">(50 文字まで)</cfcase>
+<cfcase value="seedHeader">パスワードシード</cfcase>
+<cfcase value="cfadmin_changeSeed">
+データソースパスワードの暗号化に使用する新しいシード値を指定するには :
+</cfcase>
+<cfcase value="newSeed">新規シード</cfcase>
+<cfcase value="cfadmin_seedlength">(8 ～ 500 文字以内。)</cfcase>
+<cfcase value="RDSpagename">RDS パスワード</cfcase>
+<cfcase value="disableRDSLabel">RDS サービスの有効化</cfcase>
+<cfcase value="enableRDS_desc">
+ColdFusion RDS サービスにより、以下で定義する RDS パスワードを使用してこのサーバーに接続できます。
+これは、開発用のみを意図しています。本番マシンの場合は、RDS を無効にするチェックボックスをオンにしてください。
+</cfcase>
+<cfcase value="pageHeader_rdspassword">セキュリティ &gt; RDS</cfcase>
+<cfcase value="cfrds_password">RDS の認証</cfcase>
+<cfcase value="rds_password_explanation">
+RDS へのアクセスは、信頼できるユーザーに限定してください。
+デフォルトでは、RDS には認証が必要です。ただし、この認証を無効にして、
+Web サーバーのセキュリティを利用することもできます。
+</cfcase>
+<cfcase value="cfrds_username_explanation">
+RDS の認証タイプを次の中から選択してください。
+</cfcase>
+<cfcase value="cfrds_singlepassword">単一のパスワードのみを使用する (デフォルト)</cfcase>
+<cfcase value="cfrds_usernames">別のユーザー名とパスワードで認証する (複数のユーザーを許可する)</cfcase>
+<cfcase value="cfrds_securitydisabled">認証を必要としない (推奨しません)</cfcase>
+<cfcase value="rds_pass">単一の RDS パスワード</cfcase>
+<cfcase value="rds_superpassword_explanation">
+単一の RDS パスワードを変更する場合は、以下で新規のパスワードを入力し、確認してください。
+</cfcase>
+<cfcase value="rdsN_Newpassword">新規のパスワード</cfcase>
+<cfcase value="rdsN_NewpasswordConfirm">パスワードの確認</cfcase>
+<cfcase value="pagename1">サンドボックスセキュリティ権限</cfcase>
+<cfcase value="delete_sandbox_confirmation">
+このセキュリティサンドボックスを削除してもよろしいですか。
+</cfcase>
+<cfcase value="pagename2">セキュリティ設定</cfcase>
+<cfcase value="pageHeader_sandbox">セキュリティ &gt; サンドボックスセキュリティ</cfcase>
+<cfcase value="enable_switch_security">ColdFusion セキュリティの有効化</cfcase>
+<cfcase value="welcome">
+ColdFusion のサンドボックスセキュリティでは、ColdFusion リソースへのアクセスを制御するために、ColdFusion ページの位置が使用されます。サンドボックスは、セキュリティ制限を適用するサイトの指定領域 (ファイルやディレクトリ) です。デフォルトで、サブディレクトリ (または子のディレクトリ) は、1 レベル上のディレクトリ (親ディレクトリ) のサンドボックス設定を継承します。サブディレクトリ用のサンドボックス設定を定義すると、親ディレクトリから継承されたサンドボックス設定は上書きされます。
+<br />
+<br />
+<b>メモ : </b>この設定は、サーバーで有効化する前に行ってください。また、この設定を有効にするために、ColdFusion アプリケーションサーバーを再起動する必要があります。
+</cfcase>
+<cfcase value="j2ee_enableSBS">
+サンドボックスセキュリティをマルチサーバー版および J2EE 版で使用するには、アプリケーションサーバーがセキュリティマネージャ (java.lang.SecurityManager) で実行されている必要があります。また、『ColdFusion 設定と管理』および ColdFusion Administrator オンラインヘルプの説明に従って、JVM 引数を定義する必要があります。
+</cfcase>
+<cfcase value="jrun_turn_off_security">
+サンドボックスセキュリティを無効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の JRun セクションを参照してください。
+</cfcase>
+<cfcase value="jrun_turn_on_security">
+サンドボックスセキュリティを有効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の JRun セクションを参照してください。
+</cfcase>
+<cfcase value="sunone_turn_off_security">
+サンドボックスセキュリティを無効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の Sun ONE セクションを参照してください。
+</cfcase>
+<cfcase value="sunone_turn_on_security">
+サンドボックスセキュリティを有効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の Sun ONE セクションを参照してください。
+</cfcase>
+<cfcase value="oracle_turn_off_security">
+サンドボックスセキュリティを無効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の Oracle セクションを参照してください。
+</cfcase>
+<cfcase value="oracle_turn_on_security">
+サンドボックスセキュリティを有効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の Oracle セクションを参照してください。
+</cfcase>
+<cfcase value="weblogic_turn_off_security">
+サンドボックスセキュリティを無効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の BEA WebLogic セクションを参照してください。
+</cfcase>
+<cfcase value="weblogic_turn_on_security">
+サンドボックスセキュリティを有効化する場合は、『<a href="http://www.adobe.com/go/prod_releasenotes_jp" target="Adobe website">リリースノート</a>』の BEA WebLogic セクションを参照してください。
+</cfcase>
+<cfcase value="l10n_addsandbox">セキュリティサンドボックスの追加</cfcase>
+<cfcase value="browse_button">サーバーのブラウズ</cfcase>
+<cfcase value="new_sandbox">サンドボックスの新規作成、またはコピーするサンドボックスの選択</cfcase>
+<cfcase value="defined_dirs">定義されたディレクトリ権限</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="dirpat">ディレクトリ</cfcase>
+<cfcase value="rootsecuritycntx">ルートセキュリティコンテキスト</cfcase>
+<cfcase value="edit">編集</cfcase>
+<cfcase value="delete">削除</cfcase>
+<cfcase value="cfide_dir">(ColdFusion CFIDE システムディレクトリ)</cfcase>
+<cfcase value="webinf_dir">(ColdFusion WEB-INF システムディレクトリ)</cfcase>
+<cfcase value="no_dir_perm">ディレクトリ権限が存在しません。</cfcase>
+<cfcase value="sandbox_apply">これらの変更を有効にするために、ColdFusion を再起動する必要があります。</cfcase>
+<cfcase value="pagename_resourcesecurity">リソースセキュリティ</cfcase>
+<cfcase value="pagename_securityPermissions">セキュリティ権限</cfcase>
+<cfcase value="enable_switch_sandbox">ColdFusion サンドボックスセキュリティの有効化</cfcase>
+<cfcase value="welcome_1">
+セキュリティ権限を使用して、ユーザーは、ColdFusion のタグ、関数、そしてデータソースのようなエンタープライズリソースへのアクセスを有効にしたり、無効にできます。<br />
+<b>メモ : </b>この設定を有効にするために、ColdFusion を再起動する必要があります。
+</cfcase>
+<cfcase value="directory">ディレクトリ</cfcase>
+<cfcase value="default">デフォルト</cfcase>
+<cfcase value="webapp">Web アプリケーション</cfcase>
+<cfcase value="subtitle1">RDS と Administrator に対するユーザーアクセス</cfcase>
+<cfcase value="subtitle2">ユーザーサンドボックス</cfcase>
+<cfcase value="subtitle3">公開サービス</cfcase>
+<cfcase value="userManagerPagename">ユーザーマネージャ</cfcase>
+<cfcase value="username">ユーザー名 :</cfcase>
+<cfcase value="Password">パスワード :</cfcase>
+<cfcase value="ConfirmPassword">パスワードの確認 :</cfcase>
+<cfcase value="DescriptionLabel">説明 :</cfcase>
+<cfcase value="AllowRDSAccessLabel">RDS アクセスを許可</cfcase>
+<cfcase value="AllowAdminAccessLabel">管理アクセスを許可</cfcase>
+<cfcase value="APIAccessOnlyLabel">API アクセスのみ</cfcase>
+<cfcase value="AdminConsoleAndAPILabel">Administrator コンソールと API アクセス</cfcase>
+<cfcase value="AllowedRolesLabel">許可されているロール :</cfcase>
+<cfcase value="ProhibitedRolesLabel">禁止されているロール :</cfcase>
+<cfcase value="AllowedServicesLabel">許可されているサービス :</cfcase>
+<cfcase value="ProhibitedServicesLabel">禁止されているサービス :</cfcase>
+<cfcase value="AllowedSandboxesLabel">許可されているサンドボックス :</cfcase>
+<cfcase value="ProhibitedSandboxesLabel">禁止されているサンドボックス :</cfcase>
+<cfcase value="addUserBtn">ユーザーの追加</cfcase>
+<cfcase value="editUserBtn">ユーザーの編集</cfcase>
+<cfcase value="cancelEditBtn">編集のキャンセル</cfcase>
+<cfcase value="cancelAdd">キャンセル</cfcase>
+<cfcase value="addUser">ユーザー認証 (追加モード)</cfcase>
+<cfcase value="editUser">ユーザー認証 (編集モード)</cfcase>
+<cfcase value="GridHeaderAction">アクション</cfcase>
+<cfcase value="GridHeaderUser">ユーザー</cfcase>
+<cfcase value="GridHeaderSandBoxes">サンドボックス</cfcase>
+<cfcase value="GridHeaderRoles">ロール</cfcase>
+<cfcase value="GridHeaderAccess">アクセス</cfcase>
+<cfcase value="CFAdminAccessLabel">CF Admin</cfcase>
+<cfcase value="RDSAccessLabel">RDS</cfcase>
+<cfcase value="AdminAPIAccessLabel">Admin API</cfcase>
+<cfcase value="err_usernameAlreadyExists">ユーザーを作成できません。このユーザー名は既に存在します。</cfcase>
+<cfcase value="err_cantcreateroot">ユーザーを作成できません。ルートユーザーと同じ ID でユーザーを作成しようとしています。</cfcase>
+<cfcase value="err_userDoesntExist">選択したユーザーが存在しません。</cfcase>
+<cfcase value="pageHeader_usermanager">セキュリティ &gt; ユーザーマネージャ</cfcase>
+<cfcase value="deleteConfirmation">このユーザーを削除してもよろしいですか。</cfcase>
+<cfcase value="err_passwordlength">パスワードは 5 文字以上にしてください</cfcase>
+<cfcase value="err_usernamelength">ユーザー名は 5 ～ 20 文字にしてください</cfcase>
+<cfcase value="err_usernamenonchars">ユーザー名に使用できるのは英数字のみです</cfcase>
+<cfcase value="err_passwordmismatch">[パスワード] と [パスワードの確認] が一致しません</cfcase>
+<cfcase value="pagedesc">ユーザーを追加および管理します。ロールとサンドボックスへのアクセス権をユーザーに付与できます。</cfcase>
+<cfcase value="charHelpString">(5 文字以上)</cfcase>
+<cfcase value="username_empty">ユーザー名は空にできません</cfcase>
+<cfcase value="password_empty">パスワードは空にできません</cfcase>
+<cfcase value="usermngrpagename1">ユーザーマネージャ</cfcase>
+<cfcase value="GridHeaderDescription">説明</cfcase>
+<cfcase value="AdminAccessLabel">管理アクセス</cfcase>
+<cfcase value="CFAdminAPIAccessLabel">API のみ</cfcase>
+<cfcase value="CFAdminConsoleAPIAccessLabel">Console & API</cfcase>
+<cfcase value="pagedesc1">ユーザーを追加および管理します。ロールとサンドボックスへのアクセス権をユーザーに付与できます。.</cfcase>
+<cfcase value="YesLabel">はい</cfcase>
+<cfcase value="NoLabel">いいえ</cfcase>
+<cfcase value="add_new_user">新規ユーザーの追加</cfcase>
+<cfcase value="button_add"> ユーザーの追加</cfcase>
+<cfcase value="connected">定義済みのユーザー</cfcase>
+<cfcase value="adminuserpasswordpagename">ColdFusion 管理ユーザーパスワード</cfcase>
+<cfcase value="pageHeader_adminuserpassword">
+セキュリティ &gt; パスワードの変更</cfcase>
+<cfcase value="adminuser_password_explanation">
+ColdFusion Administrator のパスワードを変更する場合は、以下に新規のパスワードを入力し、確認してください。
+</cfcase>
+<cfcase value="cfadminuser_newpassword">新規のパスワード</cfcase>
+<cfcase value="cfadminuser_newpasswordConfirm">パスワードの確認</cfcase>
+<cfcase value="l10n_secdsource">データソース</cfcase>
+<cfcase value="l10n_cftags">CF タグ</cfcase>
+<cfcase value="l10n_cffunctions">CF 関数</cfcase>
+<cfcase value="l10n_cfilesdir">ファイル / ディレクトリ</cfcase>
+<cfcase value="ipports">サーバー / ポート</cfcase>
+<cfcase value="Others">その他</cfcase>
+<cfcase value="cffunctionPermissions">CF 関数権限 :</cfcase>
+<cfcase value="l10n_enfunc">有効化された関数</cfcase>
+<cfcase value="l10n_disfunc">無効化された関数</cfcase>
+<cfcase value="finish">終了</cfcase>
+<cfcase value="step_functions">
+無効化する ColdFusion 関数を選択してください。
+このサンドボックス内の ColdFusion ページでは、[無効化された関数] ボックス内にリストされている関数を使用できません。
+</cfcase>
+<cfcase value="cftagpermissions">CF タグ権限 :</cfcase>
+<cfcase value="l10nentags">有効化されたタグ</cfcase>
+<cfcase value="l10n_distags">無効化されたタグ</cfcase>
+<cfcase value="step_tags">
+無効化する ColdFusion タグを選択してください。
+サンドボックス内の ColdFusion ページでは、[無効化されたタグ] ボックス内にリストされているタグを使用できません。
+</cfcase>
+<cfcase value="allDatasources">
+&lt;&lt;すべてのデータソース&gt;&gt;
+</cfcase>
+<cfcase value="datasourcepermissions">データソース権限 :</cfcase>
+<cfcase value="l10n_endata">有効化されたデータソース</cfcase>
+<cfcase value="l10n_disdata">無効化されたデータソース</cfcase>
+<cfcase value="step_ds">
+このディレクトリ内の ColdFusion ページで使用できるデータソースを選択してください。
+複数のデータソースを選択する場合は、Ctrl キーを押しながら、データソースの名前をクリックします。
+ディレクトリ内の ColdFusion ページでは、[無効化されたデータソース] ボックス内にリストされているデータソースを使用できません。<br />
+<br />
+<b>メモ :</b> [すべてのデータソース] オプションには、明示的に有効化または無効化するように指定されたデータソースだけではなく、
+ColdFusion Administrator の「データソース」セクションで将来作成されるすべてのデータソースも含まれます。</cfcase>
+<cfcase value="addEditSecuredFileDir">保護されたファイルとディレクトリの追加 / 編集 :</cfcase>
+<cfcase value="logical_filepath">ファイルのパス</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="read">読み込み</cfcase>
+<cfcase value="write">書き込み</cfcase>
+<cfcase value="execute">実行</cfcase>
+<cfcase value="permissions">権限</cfcase>
+<cfcase value="addFile">ファイル / パスの追加</cfcase>
+<cfcase value="editFile">ファイル / パスの編集</cfcase>
+<cfcase value="file_active">保護されたファイルとディレクトリ</cfcase>
+<cfcase value="File">ファイルのパス</cfcase>
+<cfcase value="map_nomappings">マッピングはアクティブではありません。</cfcase>
+<cfcase value="step_files">
+このディレクトリでのテンプレート操作用にアクセスを<b>許可</b>するファイルを
+入力してください。
+</cfcase>
+<cfcase value="step_files_tip">
+ファイル権限は、パス名とそのパス名に有効な一連のアクションから
+構成されます。パス名は、指定のアクションに許可されたファイルま
+たはディレクトリのパス名です。"/*" 
+で終了するパス名は、そのディレクトリに存在するすべてのファイルとディレクトリを指します。"/-" 
+で終了するパス名は、そのディレクトリに存在するすべてのサブディレ
+クトリとファイル (再帰的) を指します。特殊トークン &quot;&lt;&lt;ALL FILES&gt;&gt;&quot; 
+があるパス名はすべてのファイルを指します。
+</cfcase>
+<cfcase value="serverIPPortPermissions">サーバー /IP とポートの権限 :</cfcase>
+<cfcase value="delete_server_confirmation">
+このサーバーを削除してもよろしいですか。
+</cfcase>
+<cfcase value="ip">サーバー /IP アドレス</cfcase>
+<cfcase value="l10n_secip_sport">1 つのポート</cfcase>
+<cfcase value="l10n_secip_portheigh">このポートとそれ以上</cfcase>
+<cfcase value="l10n_secip_portlow">このポートとそれ以下</cfcase>
+<cfcase value="l10n_secip_portrange">ポート範囲 (xxxx-xxxx)</cfcase>
+<cfcase value="addip">IP アドレスの追加</cfcase>
+<cfcase value="editip">IP アドレスの編集</cfcase>
+<cfcase value="enabled_ipport">有効化された IP/ ポート</cfcase>
+<cfcase value="ipport">IP: ポート</cfcase>
+<cfcase value="no_ipports">すべての IP: ポートが開いています。現在、制限はありません。</cfcase>
+<cfcase value="ip_port_explanation1">
+これらの設定は、たとえば、cfmail、cfpop、cfldap、cfhttp など、サードパーティのリソースを呼び出すタグで ColdFusion が
+アクセスできる IP アドレスとポートを制限します。
+</cfcase>
+<cfcase value="allRuntimePermissions">
+&lt;&lt;すべてのランタイム権限&gt;&gt;
+</cfcase>
+<cfcase value="otherspermissions">その他の権限 :</cfcase>
+<cfcase value="l10n_endata_runtime">有効化されたランタイム権限</cfcase>
+<cfcase value="l10n_disdata_runtime">無効化されたランタイム権限</cfcase>
+<cfcase value="step_ds_runtime">
+このディレクトリ内の ColdFusion ページに対するランタイム権限を無効にするには、[有効化されたランタイム権限] ボックスでランタイム権限を選択して、[無効化されたランタイム権限] ボックスに移動します。
+ColdFusion ページに対する複数のランタイム権限を無効にするには、Ctrl キーを押しながらランタイム権限の名前をクリックします。このディレクトリ内の ColdFusion ページでは、[無効化されたランタイム権限] ボックスに表示されているランタイム権限を使用できません。
+ <br />
+<br />
+<b>メモ :</b> デフォルトでは、すべてのランタイム権限が有効です。ただし、[有効化されているランタイム権限] ボックスに表示されている権限は有効化または無効化できます。 </cfcase>
+<cfcase value="cfadmin_login">ColdFusion Administrator ログイン</cfcase>
+<cfcase value="coldfusionVer">ColdFusion</cfcase>
+<cfcase value="required_userid">ユーザー名が必要です</cfcase>
+<cfcase value="label_userid">ユーザー名</cfcase>
+<cfcase value="required_password">パスワードが必要です</cfcase>
+<cfcase value="label_password">パスワード</cfcase>
+<cfcase value="null_user_id">ユーザー名が必要です。もう一度入力してください。</cfcase>
+<cfcase value="invalid_userid_or_password">無効なユーザー名またはパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="invalid_password">無効なパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="password_button">ログイン</cfcase>
+<cfcase value="copyright_cont1">Adobe、Adobe ロゴ、ColdFusion、Adobe ColdFusion は合衆国および諸国における Adobe Systems Incorporated の商標または登録商標です。その他すべての商標はそれぞれの所有者の所有物です。</cfcase>
+<cfcase value="cfcbrowser_login">コンポーネントブラウザログイン</cfcase>
+<cfcase value="componentbrowser">コンポーネントブラウザ</cfcase>
+<cfcase value="enterrdsoradminpasswordlogin">RDS または Admin のパスワードを以下に入力してください</cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_remove"><cfoutput>
+リクエストされた IP をデバッグサービスから削除する際に、
+エラーが発生しました。<br/>
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_get"><cfoutput>
+制限された IP アドレスのリストをデバッグサービスから取得する際に、
+エラーが発生しました。<br/>
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="password_confirm_error">新規のパスワードと確認パスワードが一致しなかったため、パスワードを変更できません。</cfcase>
+<cfcase value="error_set_seed"><cfoutput>
+新しいシード値を設定できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle"><cfoutput>
+Administrator 認証スイッチを設定できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_singleadminpassword"><cfoutput>
+Administrator 認証タイプを設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="errorheader">ルート Administrator パスワード</cfcase>
+<cfcase value="password_confirm_error1">新規のパスワードと確認パスワードが一致しないため、パスワードを変更できません。</cfcase>
+<cfcase value="error_toggle_setAdminPassword"><cfoutput>
+admin パスワードを設定できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_invalidDirectory">
+無効なディレクトリです。ディレクトリを調べて、再試行してください。<br/>
+</cfcase>
+<cfcase value="error_virtualDirectory">
+仮想ファイルシステムのディレクトリはサンドボックス化できません。<br />
+</cfcase>
+<cfcase value="map_error_update"><cfoutput>
+セキュリティ更新を適用できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_sec"><cfoutput>
+セキュリティを切り替えることができません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_sec1"><cfoutput>
+セキュリティを切り替えることができません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="adminAuth_error">現在、管理認証は admin ユーザーに対してのみ有効です。コンソールまたは Admin API に他のユーザーがアクセスできるようにするには、[セキュリティ]-[Administrator] に移動して、[別のユーザー名とパスワードで認証する] を有効にしてください</cfcase>
+<cfcase value="rdsAuth_error">現在、RDS 認証は admin ユーザーに対してのみ有効です。RDS に他のユーザーがアクセスできるようにするには、[セキュリティ]-[RDS] に移動して、[別のユーザー名とパスワードで認証する] を有効にしてください</cfcase>
+<cfcase value="username_error">
+ユーザー名を入力してください。
+</cfcase>
+<cfcase value="password_blank_error">新規のパスワードと確認パスワードが空白であるため、パスワードを変更できません。</cfcase>
+<cfcase value="map_error_add_ds"><cfoutput>
+選択したデータソースを追加できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_remove_ds"><cfoutput>
+選択したデータソースを削除できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_InvalidFilePermissions">
+無効なパスエラー、または許可のないパスエラーです。<br/>
+ファイルまたはディレクトリが存在し、許可のレベルが有効化されているすることを確認してください。この更新を完了できませんでした。
+</cfcase>
+<cfcase value="map_error_badip">
+不適切な IP/ ポート形式です。他の形式を試してください。
+</cfcase>
+<cfcase value="map_error_update_ds"><cfoutput>
+選択したデータソースを追加できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

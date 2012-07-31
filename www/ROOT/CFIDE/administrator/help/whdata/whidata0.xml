@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<indexdata>
+<key name="Aliases, logical" >
+  <key name="About" >
+    <topic name="About logical aliases for physical directories" url="about_logical_aliases_for_physical_directories.htm" />
+  </key>
+  <key name="Create" >
+    <topic name="Create logical mappings" url="crelogmap.htm" />
+  </key>
+</key>
+<key name="applets" >
+  <topic name="Add or Register Applet" url="addeditjavaapplet.htm" />
+</key>
+<key name="Archive" >
+  <key name="Build" >
+    <topic name="Generating an Archive" url="generating_archive.htm" />
+  </key>
+  <key name="Create" >
+    <topic name="Creating a Site Archive" url="creating_site_archive.htm" />
+  </key>
+  <key name="Delete" >
+    <topic name="Delete Archive Definition" url="delete_archive_definition.htm" />
+  </key>
+  <key name="Deploy" >
+    <topic name="Restoring an Archive" url="restoring_an_archive.htm" />
+  </key>
+  <key name="Modify" >
+    <topic name="Modifying an Archive Definition" url="modifying_a_site_archive.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Overview of Site Archiving" url="overview_of_site_archiving.htm" />
+  </key>
+</key>
+<key name="Archive Information Tab" >
+  <topic name="Archive_Information" url="archive_information_tab.htm" />
+</key>
+<key name="Archive Summary Tab" >
+  <topic name="Archive Summary Tab" url="archive_summary_tab.htm" />
+</key>
+<key name="Archive To Do List Tab" >
+  <topic name="Archive To Do List Tab" url="archive_to_do_list_tab.htm" />
+</key>
+<key name="Associated Files and Directories Tab" >
+  <topic name="Files and Directories Tab" url="files_directories_tab.htm" />
+</key>
+<key name="Basic configuration" >
+  <topic name="Overview of basic configuration" url="overview_of_basic_configuration.htm" />
+</key>
+<key name="Basic troubleshooting" >
+  <topic name="Overview of basic troubleshooting" url="overview_of_basic_troubleshooting.htm" />
+</key>
+<key name="Caching Preferences" >
+  <topic name="Set caching preferences" url="setcacpref.htm" />
+</key>
+<key name="CAR files" >
+  <topic name="Overview of Site Archiving" url="overview_of_site_archiving.htm" />
+  <topic name="Restoring an Archive" url="restoring_an_archive.htm" />
+</key>
+<key name="CF Mappings Tab" >
+  <topic name="Directory Mappings" url="directory_mappings_tab.htm" />
+</key>
+<key name="cfapplet" >
+  <topic name="Add or Register Applet" url="addeditjavaapplet.htm" />
+</key>
+<key name="CFX Tags" >
+  <key name="About" >
+    <topic name="CF Tags" url="cftags.htm" />
+  </key>
+  <key name="Register" >
+    <topic name="Add or Edit CF Tag" url="addeditcftag.htm" />
+  </key>
+</key>
+<key name="CFX Tags Tab" >
+  <topic name="CFX Tags Tab" url="cfx_tags_tab.htm" />
+</key>
+<key name="Client variables" >
+  <key name="Manage" >
+    <topic name="Manage client variables" url="mgeclivar.htm" />
+  </key>
+  <key name="Migrate" >
+    <topic name="Migrate client variable data" url="migclivar.htm" />
+  </key>
+</key>
+<key name="Code Compatibility Analyzer" >
+  <key name="Results" >
+    <topic name="About the code compatibility analyzer results" url="code_anal_results.htm" />
+  </key>
+  <key name="Using" >
+    <topic name="Using the Code Compatibility Analyzer" url="code_anal.htm" />
+  </key>
+</key>
+<key name="ColdFusion archive" >
+  <topic name="Overview of Site Archiving" url="overview_of_site_archiving.htm" />
+  <topic name="Restoring an Archive" url="restoring_an_archive.htm" />
+</key>
+<key name="ColdFusion MX Administrator" >
+  <key name="Anatomy" >
+    <topic name="Anatomy of the ColdFusion MX Administrator" url="layout_of_the_coldfusion_administrator.htm" />
+  </key>
+  <key name="Configure password" >
+    <topic name="Change Administrator password" url="chgadpwrd.htm" />
+  </key>
+  <key name="Key Features" >
+    <topic name="Key features of the ColdFusion MX Administrator" url="key_features_of_coldfusion_administrator.htm" />
+  </key>
+  <key name="Possible Tasks" >
+    <topic name="What you can do in ColdFusion MX Administrator" url="what_you_can_do_in_coldfusion_administrator.htm" />
+  </key>
+  <key name="Secure" >
+    <topic name="Change Administrator password" url="chgadpwrd.htm" />
+  </key>
+  <key name="Welcome" >
+    <topic name="Welcome to ColdFusion MX Administrator" url="welcome.htm" />
+  </key>
+</key>
+<key name="ColdFusion MX Server" >
+  <key name="ColdFusion processes on UNIX" >
+    <topic name="ColdFusion processes on UNIX" url="coldfusion_processes_on_unix.htm" />
+  </key>
+  <key name="Verify run status" >
+    <topic name="ColdFusion processes on UNIX" url="coldfusion_processes_on_unix.htm" />
+    <topic name="Verify that the ColdFusion MX Server is running" url="vercfserv.htm" />
+  </key>
+</key>
+<key name="ColdFusion Studio password" >
+  <topic name="Set ColdFusion Studio password" url="setcfstdpass.htm" />
+</key>
+<key name="Connection String" >
+  <topic name="Use connection string options" url="conxstringopt.htm" />
+</key>
+<key name="CORBA Connector" >
+  <topic name="Corba Extension" url="corbaext.htm" />
+</key>
+<key name="Custom Tag Paths" >
+  <topic name="Custom Tag Paths" url="customtag.htm" />
+</key>
+<key name="Data sources" >
+  <key name="About" >
+    <topic name="About the data sources page" url="about_the_data_sources_page.htm" />
+  </key>
+  <key name="Create" >
+    <topic name="Create a data source" url="create_a_data_source.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Overview of ColdFusion data sources" url="overview_of_coldfusion_data_sources.htm" />
+  </key>
+  <key name="Verify" >
+    <topic name="Verify ColdFusion MX data sources" url="verify_coldfusion_data_sources.htm" />
+  </key>
+</key>
+<key name="Data Sources Page" >
+  <topic name="About the data sources page" url="about_the_data_sources_page.htm" />
+</key>
+<key name="Data Sources Tab" >
+  <topic name="Data Sources Tab" url="data_sources_tab.htm" />
+</key>
+<key name="Database drivers" >
+  <topic name="About database drivers" url="about_database_drivers.htm" />
+</key>
+<key name="DB2 Universal Database" >
+  <topic name="Connect to DB2 Universal Database" url="db2_universal_db_connect_to.htm" />
+</key>
+<key name="Debugging IP Addresses" >
+  <topic name="Restrict debugging output" url="rstrdebug.htm" />
+</key>
+<key name="Debugging Settings" >
+  <key name="Configure" >
+    <topic name="Configure Debugging Settings" url="debgopt.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Overview of Debugging Settings" url="overview_of_debugging_settings.htm" />
+  </key>
+</key>
+<key name="Documentation" >
+  <topic name="Documentation" url="documentation.htm" />
+</key>
+<key name="Dreamweaver password" >
+  <topic name="Set ColdFusion Studio password" url="setcfstdpass.htm" />
+</key>
+<key name="E-mail" >
+  <topic name="Configure administrator mail" url="conadmail.htm" />
+</key>
+<key name="Example Applications" >
+  <topic name="Examples" url="examples.htm" />
+</key>
+<key name="Files and Directories Tab" >
+  <topic name="Files and Directories Tab" url="files_directories_tab.htm" />
+</key>
+<key name="Informix" >
+  <topic name="Connect to Informix" url="informix_connect_to.htm" />
+</key>
+<key name="Java and JVM Settings" >
+  <topic name="JVM and Java Settings" url="jvmandjava.htm" />
+</key>
+<key name="Java Applets" >
+  <topic name="Add or Register Applet" url="addeditjavaapplet.htm" />
+  <key name="About the Java Applet Page" >
+    <topic name="Java Applets" url="javaapplet.htm" />
+  </key>
+  <key name="Register an Applet" >
+    <topic name="Add or Register Applet" url="addeditjavaapplet.htm" />
+  </key>
+</key>
+<key name="Java Applets Tab" >
+  <topic name="Applets Tab" url="applets_tab.htm" />
+</key>
+<key name="Knowledge Base" >
+  <topic name="Knowledge Base" url="technotes.htm" />
+</key>
+<key name="Log Files" >
+  <key name="About" >
+    <topic name="Log Files" url="logfiles.htm" />
+  </key>
+  <key name="Analyze server activity with" >
+    <topic name="Analyze server activity in log files" url="analyze_server_activity_in_log_files.htm" />
+  </key>
+  <key name="Columns, raw format" >
+    <topic name="Log File columns" url="log_file_columns.htm" />
+  </key>
+  <key name="Types" >
+    <topic name="Types of Logs" url="logtypes.htm" />
+  </key>
+</key>
+<key name="Log Filter" >
+  <topic name="Log Filter" url="filter.htm" />
+</key>
+<key name="Log Viewer" >
+  <topic name="Log Viewer" url="logviewer.htm" />
+</key>
+<key name="Logging Settings" >
+  <topic name="Logging Settings" url="logsettings.htm" />
+</key>
+<key name="Logical aliases" >
+  <topic name="About logical aliases for physical directories" url="about_logical_aliases_for_physical_directories.htm" />
+</key>
+<key name="Mail" >
+  <topic name="Configure administrator mail" url="conadmail.htm" />
+</key>
+<key name="Memory variables" >
+  <topic name="Manage memory variables" url="mngmemvar.htm" />
+</key>
+<key name="Microsoft Access" >
+  <topic name="Connect to Microsoft Access" url="access_connect_to.htm" />
+</key>
+<key name="Microsoft SQL Server" >
+  <topic name="Connect to Microsoft SQL Server" url="sqlsvr_connect_to.htm" />
+</key>
+<key name="Migrate client variable data" >
+  <topic name="Migrate client variable data" url="migclivar.htm" />
+</key>
+<key name="MySQL database" >
+  <topic name="Connect to MySQL database" url="mysql_connect_to.htm" />
+</key>
+<key name="ODBC Socket" >
+  <topic name="Connect to ODBC Socket" url="odbc_socket_connect_to.htm" />
+</key>
+<key name="Online Help" >
+  <topic name="Online Help" url="online_help.htm" />
+</key>
+<key name="Optional configuration" >
+  <topic name="Overview of optional configuration" url="overview_of_optional_configuration.htm" />
+</key>
+<key name="Oracle" >
+  <topic name="Connect to Oracle" url="oracle_connect_to.htm" />
+</key>
+<key name="Other data sources" >
+  <topic name="Connect to other data sources" url="other_connect_to.htm" />
+</key>
+<key name="Performance Monitor" >
+  <key name="Configure" >
+    <topic name="Configure the Performance Monitor" url="configure_the_performance_monitor.htm" />
+  </key>
+  <key name="Enable" >
+    <topic name="Enable performance monitoring" url="enable_performance_monitoring.htm" />
+  </key>
+</key>
+<key name="Printing Tips" >
+  <topic name="Tips for printing" url="tips_for_printing.htm" />
+</key>
+<key name="RDS password" >
+  <topic name="Set ColdFusion Studio password" url="setcfstdpass.htm" />
+</key>
+<key name="Release Notes" >
+  <topic name="Release Notes" url="release_notes.htm" />
+</key>
+<key name="Scheduled Tasks" >
+  <key name="About the Scheduled Tasks page" >
+    <topic name="Schedule Task" url="schedtask.htm" />
+  </key>
+  <key name="Configure" >
+    <topic name="Add or Edit Task" url="addedittask.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Schedule Task Overview" url="schedule_task_overview.htm" />
+  </key>
+</key>
+<key name="Scheduled Tasks Tab" >
+  <topic name="Scheduled Tasks Tab" url="scheduled_tasks_tab.htm" />
+</key>
+<key name="Security" >
+  <key name="Configure" >
+    <topic name="Configure ColdFusion Security" url="sandbox_sec.htm" />
+  </key>
+  <key name="Importance" >
+    <topic name="Why security is important" url="why_security_is_important.htm" />
+  </key>
+  <key name="Set Administrator Password" target="_blank" >
+    <topic name="Set ColdFusion MX Administrator password" url="setcfpsswrd.htm" />
+  </key>
+</key>
+<key name="Server settings" >
+  <key name="Configure" >
+    <topic name="Apply server settings" url="appserset.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Overview of server settings" url="overview_of_server_settings.htm" />
+  </key>
+</key>
+<key name="Settings Summary" >
+  <topic name="Settings Summary" url="setsummary.htm" />
+</key>
+<key name="Start and Stop ColdFusion" >
+  <topic name="Start and stop ColdFusion" url="start_and_stop_coldfusion.htm" />
+</key>
+<key name="Sybase" >
+  <topic name="Connect to Sybase" url="sybase_connect_to.htm" />
+  <key name="Connect" >
+    <topic name="Connect to Sybase" url="sybase_connect_to.htm" />
+  </key>
+</key>
+<key name="TechNotes" >
+  <topic name="Knowledge Base" url="technotes.htm" />
+</key>
+<key name="Uninstall" >
+  <topic name="Uninstall ColdFusion Server in Windows" url="uninstall_coldfusion_mx.htm" />
+</key>
+<key name="UNIX processes, ColdFusion" >
+  <topic name="ColdFusion processes on UNIX" url="coldfusion_processes_on_unix.htm" />
+</key>
+<key name="User account" >
+  <topic name="Change ColdFusion MX user account" url="change_coldfusion_user_account.htm" />
+</key>
+<key name="Verity" >
+  <topic name="Verity supported file types" url="verity_supported_file_types.htm" />
+</key>
+<key name="Verity collections" >
+  <key name="Create" >
+    <topic name="Create a Verity collection" url="crevercllx.htm" />
+  </key>
+  <key name="Index" >
+    <topic name="Populate a Verity collection" url="popvercllx.htm" />
+  </key>
+  <key name="Manage" >
+    <topic name="Manage Verity collections" url="manage_verity_collections.htm" />
+  </key>
+  <key name="Overview" >
+    <topic name="Overview of Verity collections" url="overview_of_verity_collections.htm" />
+  </key>
+  <key name="Populate" >
+    <topic name="Populate a Verity collection" url="popvercllx.htm" />
+  </key>
+</key>
+<key name="Verity Collections Tab" >
+  <topic name="Verity Collections Tab" url="verity_collections_tab.htm" />
+</key>
+<key name="Verity K2 Server" >
+  <topic name="Use Verity Server" url="verk2.htm" />
+</key>
+<key name="Version information" >
+  <topic name="Version information" url="idcfinf.htm" />
+</key>
+<key name="Web Services" >
+  <topic name="Web Services" url="webservices.htm" />
+</key>
+<key name="Welcome" >
+  <topic name="Welcome to ColdFusion MX Administrator" url="welcome.htm" />
+</key>
+<key name="What's new in this release" >
+  <topic name="What's new in this release" url="what_s_new_in_this_release.htm" />
+</key>
+<key name="Windows 98/ME" >
+  <topic name="About database drivers" url="about_database_drivers.htm" />
+  <topic name="Connect to ODBC Socket" url="odbc_socket_connect_to.htm" />
+</key>
+
+</indexdata>

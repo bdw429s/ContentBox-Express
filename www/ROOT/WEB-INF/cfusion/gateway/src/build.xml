@@ -1,0 +1,52 @@
+<!--
+  This is an ant (http://ant.apache.org/) build script to compile
+  the sample Event Gateway applications found in this directory.
+
+  To run this script, insure ant is on your execution path and type:
+     ant
+
+  If you are using the J2EE version of ColdFusion, you will need to point
+  to a jar file that contains the JMS (Java Message Service) class files as
+  provided by your J2EE vendor. See http://java.sun.com/products/jms/
+  for more information.
+
+-->
+<project name="examples" default="make" basedir=".">
+    <property name="java.home" value="env.JAVA_HOME"/>
+    <property name="cfusionjar" value="${basedir}/../../lib/cfusion.jar"/>
+    <property name="log4jjar" value="${basedir}/../../lib/log4j-1.2.12.jar"/>
+    <property name="jrun4jar" value="${basedir}/../../runtime/lib/jrun.jar"/>
+    <property name="jrun4jar2" value="${basedir}/../../../../../../../lib/jrun.jar"/>
+
+    <!-- The default target -->
+    <target name="make" depends="clean,compile,jar" description="The default: build everything"></target>
+
+    <!-- Create the jar file, move any existing file out of the way -->
+    <target name="jar" description="Create the jar file">
+
+        <move file="${basedir}/../lib/examples.jar" tofile="${basedir}/../lib/examples.jar.ORIG" failonerror="no"/>
+
+        <jar destfile="${basedir}/../lib/examples.jar">
+            <fileset dir="${basedir}/../classes"/>
+        </jar>
+    </target>
+
+    <!-- Remove the jar file -->
+    <target name="clobber" depends="clean" description="Remove the classes and the jar file." >
+        <delete file="${basedir}/../lib/examples.jar"/>
+    </target>
+
+    <!-- Remove classes -->
+    <target name="clean" description="Remove compiled classes (but not the jar)" >
+        <delete failonerror="no">
+            <fileset dir="${basedir}/../classes"/>
+        </delete>
+    </target>
+
+    <!-- Compile the classes -->
+    <target name="compile" description="Compile the java classes" >
+        <mkdir dir="${basedir}/../classes"/>
+        <javac srcdir="${basedir}" destdir="${basedir}/../classes" fork="true" classpath="${cfusionjar}:${log4jjar}:${jrun4jar}:${jrun4jar2}"/>
+    </target>
+
+</project>

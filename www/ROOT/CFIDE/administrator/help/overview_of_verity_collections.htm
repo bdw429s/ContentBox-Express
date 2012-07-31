@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 25, 2001 10:01:34 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Verity collections overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nColdFusion Collections\nVerity Collections\nVerity collections overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"crevercllx.htm\">ColdFusion Collections<\/a> > <a href=\"overview_of_verity_collections.htm\">Verity Collections<\/a> > Verity collections overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Verity collections overview</h1>
+<p>ColdFusion incorporates Verity searching and indexing technology. It 
+ provides a means for creating and managing collections of indexed data 
+ that are optimized for fast retrieval.</p>
+<p>&#160;</p>
+<h3 class="Procedure"><a name="Create_a_Verity_collection" title="Create_a_Verity_collection"></a>Create a 
+ Verity collection</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">On the Verity Collections 
+	 page, enter a name for your collection in the Name field. The name 
+	 can contain multiple words and spaces.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) In the Path field, 
+	 specify a path to place the collection on another machine or in another 
+	 location on the system. The default path at installation is <span 
+	 style="font-style: italic;"><i>cf_root</i></span><span style="font-style: italic; 
+													 font-family: Arial, sans-serif;"><i>/</i></span><span 
+	 style="font-family: Arial, sans-serif;">verity/collections (Server 
+	 configuration) or cf_webapp_root/WEB-INF/cfusion/verity (J2EE configuration).</span></p></li>
+</ol>
+<p class="NormalIndented" style="margin-left: 0px;"><span style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;&#160;&#160;</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;"><b>Note:</b></span> 
+ This is the location for the collection, not for the files that you search.</p>
+<ol start="3">
+	<li class="p-NumList"><p class="NumList">(Optional) Select a language 
+	 other than English for the collection from the Language pop-up menu.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) Enable support 
+	 for Verity categories by selecting the Enable Category Support option.</p></li>
+	<li class="p-NumList"><p class="NumList">Select Verity Collection option.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Create Collection. The 
+	 Verity Collections table at the lower edge of the page shows the collection. 
+	 You can now populate the collection. For details, see <a href="popvercllx.htm" title="popvercllx.htm">Populate 
+	 a Verity collection</a>.<br />
+	&#160;</p></li>
+</ol>
+<p style="font-weight: bold;"><span><b>Notes:</b></span></p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>When you add your first 
+	 Verity collection, buttons for managing Verity collections appear 
+	 along the lower edge of the table. For details, see <a href="manage_verity_collections.htm" title="manage_verity_collections.htm">Manage 
+	 Verity collections</a>.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>If the collection you 
+	 are trying to create exists on the disk but is not registered with 
+	 ColdFusion, the Administrator registers the collection with the Verity 
+	 server. Such a collection may have been copied from another ColdFusion 
+	 server instance or may have been created with the Verity mkvdk utility.</p></li>
+</ul>
+<h3 class="Procedure">Use Verity indexing and searching technology</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">Create a collection by using 
+	 the ColdFusion Administrator or using the <span style="font-family: 'Courier New', monospace;">cfcollection</span> 
+	 tag at run time. For details, see <a href="crevercllx.htm" title="crevercllx.htm">Create 
+	 a Verity collection</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">Populate a collection with 
+	 data to index specific directories. You can also populate a collection 
+	 by using the <span style="font-family: 'Courier New', monospace;">cfindex</span> 
+	 <span style="font-family: Arial, sans-serif;">tag</span> at run time. 
+	 For details, see <a href="popvercllx.htm" title="popvercllx.htm">Populate a Verity collection</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">Build searching and indexing 
+	 capabilities into your application with the <span style="font-family: 'Courier New', monospace;">cfindex</span> 
+	 and <span style="font-family: 'Courier New', monospace;">cfsearch</span> 
+	 tags.</p></li>
+</ol>
+<p>&#160;</p>
+<p style="font-weight: bold;"><span><b>Notes:</b></span></p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>After you create and populate 
+	 collections, you manage them by using the Verity Collections page. 
+	 You can <a href="manage_verity_collections.htm#repair" title="manage_verity_collections.htm#repair">repair</a> 
+	 or <a href="manage_verity_collections.htm#optimize" title="manage_verity_collections.htm#optimize">optimize</a> collections 
+	 that return erroneous data or have other problems. You can <a href="manage_verity_collections.htm#delete" title="manage_verity_collections.htm#delete">delete</a> 
+	 obsolete or extra collections or <a href="manage_verity_collections.htm#purge" title="manage_verity_collections.htm#purge">purge</a> 
+	 data without removing the collection itself.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>You can optionally install 
+	 the Verity server used by ColdFusion on a different host from the 
+	 ColdFusion server computer. If you do this, you must specify the IP 
+	 address of the Verity server host computer by using the <a href="verk2.htm" title="verk2.htm">Verity 
+	 K2 Server</a> page. Additionally, you use this page to configure a 
+	 connection to separately a purchased Verity server.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>ColdFusion does not restrict 
+	 the number of collections that you can use. However, you can experience 
+	 reduced performance when the number of collections in use increases 
+	 due to caching and threading issues.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>When you create a collection 
+	 for which the collection directory structure already exists (also 
+	 called an unregistered collection), you must select the same language 
+	 that was used to create the collection. Currently, if you select a 
+	 different language for collection, no error appears. However, if you 
+	 subsequently index the collection in a language other than the one 
+	 in which it was created, you may damage the collection's index and 
+	 your ability to search the collection.</p></li>
+</ul>
+<p class="NormalIndented">Examples of unregistered collections include 
+ the following:</p>
+<ul type="disc">
+	<li class="p"><p>Collections on another server</p></li>
+	<li class="p"><p>Collections created with mkvdk</p></li>
+</ul>
+<ul type="disc">
+	<li class="p-NormalIndented" style="margin-left: -20px;"><p class="NormalIndented" 
+		 style="margin-left: 0px;">ColdFusion uses an OEM-restricted license 
+	 of Verity. For more information, see <span style="font-style: italic;"><i>Installing 
+	 and Using ColdFusion</i></span> and <span style="font-style: italic;"><i>Configuring 
+	 and Administering ColdFusion</i></span>.</p></li>
+</ul>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="popvercllx.htm" title="popvercllx.htm">Populate 
+	 a Verity collection</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verity_supported_file_types.htm" title="verity_supported_file_types.htm">Verity 
+	 supported file types</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="manage_verity_collections.htm" title="manage_verity_collections.htm">Manage 
+	 Verity collections</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verk2.htm" title="verk2.htm">Use 
+	 Verity K2 Server</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

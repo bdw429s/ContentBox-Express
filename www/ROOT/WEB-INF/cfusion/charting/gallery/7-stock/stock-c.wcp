@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="400" height="300" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<frameChart is3D="false" isTransposed="false" seriesTitle="" decoration="None"
+				font="Arial-11" foreground="black" isMultiline="false">
+				<frame topRatio="50" topSeries="0" xDepth="5" yDepth="5"
+					xTilt="0" type="Simple" outline="blue" lightColor="#F4F4F4"
+					darkColor="#E6E6E6" frameSize="6" dashSize="4" xAxisInside="true"
+					leftAxisPlacement="Default" rightAxisPlacement="Default" isHGridVisible="true" isVGridVisible="false"
+					isHStripVisible="false" isVStripVisible="false" gridColor="light_gray" stripColor="#64AACCEE">
+					<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+						imageLocation=""/>
+				</frame>
+				<xAxis type="DateTime" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="ShortDate">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Week" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Parallel"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</xAxis>
+				<yAxis type="Scale" isVisible="true" isAbsolute="true" scaleMin="0"
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis>
+				<yAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</yAxis2>
+				<topYAxis type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</topYAxis>
+				<topYAxis2 type="Scale" isVisible="true" isAbsolute="true" scaleMin=""
+					scaleMax="" labelCount="0" isReversed="false" isBucketed="true">
+					<labelFormat style="Number">
+						<locale/>
+					</labelFormat>
+					<parseFormat style="None">
+						<locale/>
+					</parseFormat>
+					<dateTimeStyle majorUnit="Day" majorStep="1" minorUnit="Day" minorStep="1"/>
+					<logStyle type="IncludeEven" base="10"/>
+					<labelStyle isMultiline="true" isMultilevel="false" orientation="Horizontal"/>
+					<titleStyle isVisible="true" font="Arial-14-bold" isMultiline="true">
+					</titleStyle>
+				</topYAxis2>
+				<dataLabels style="None" placement="Outside" decoration="None" background="#00000000"
+					font="Arial-12" isMultiline="false">
+				<![CDATA[
+$(colLabel) $(value)\n$(colPercent) of $(colTotal)
+				]]>
+				</dataLabels>
+				<legend spacing="5" allowSpan="false" equalCols="true" isVisible="true"
+					placement="Top" valign="Middle" halign="Center" decoration="Shadow"
+					background="#00000000" isMultiline="false"
+				/>
+				<elements place="Clustered" shape="HighLowOpenCloseExcel" markerSize="0" shapeSize="80"
+					lineWidth="2" drawOutline="false" drawShadow="false" showMarkers="true"
+					fixedWidth="5">
+					<movie framesPerSecond="16" frameCount="25"/>
+					<morph morph="Blur" stage="Rows"/>
+					<series index="4" shape="Bar" isSecondAxis="false" forceBreak="false">
+						<morph/>
+						<marker type="Rectangle" bitmap="marker.gif"/>
+						<paint color="#CCCCCCCC" image=""/>
+					</series>
+				</elements>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					decoration="Shadow" background="#00000000" font="Arial-16-bold" isMultiline="true">
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Standard" paint="Plain" isVertical="false" min="0"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</frameChart>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>3/5/04</COL>
+<COL>3/6/04</COL>
+<COL>3/7/04</COL>
+<COL>3/8/04</COL>
+<COL>3/9/04</COL>
+<COL>3/10/04</COL>
+<COL>3/11/04</COL>
+<COL>3/12/04</COL>
+<COL>3/13/04</COL>
+<COL>3/14/04</COL>
+<COL>3/15/04</COL>
+<COL>3/16/04</COL>
+<COL>3/17/04</COL>
+<COL>3/18/04</COL>
+<COL>3/19/04</COL>
+<COL>3/20/04</COL>
+<COL>3/21/04</COL>
+<COL>3/22/04</COL>
+<COL>3/23/04</COL>
+<COL>3/24/04</COL>
+<COL>3/25/04</COL>
+<COL>3/26/04</COL>
+<COL>3/27/04</COL>
+<COL>3/28/04</COL>
+<COL>3/29/04</COL>
+<COL>3/30/04</COL>
+<COL>3/31/04</COL>
+<COL>4/1/04</COL>
+<COL>4/2/04</COL>
+<COL>4/3/04</COL>
+<ROW col0="174.0" col1="170.0" col2="245.0" col3="244.0" col4="168.0" col5="198.0" col6="215.0" col7="232.0" col8="170.0" col9="230.0" col10="200.0" col11="172.0" col12="191.0" col13="235.0" col14="211.0" col15="237.0" col16="241.0" col17="183.0" col18="155.0" col19="168.0" col20="169.0" col21="196.0" col22="247.0" col23="158.0" col24="220.0" col25="206.0" col26="175.0" col27="227.0" col28="250.0" col29="235.0">Sample 0:</ROW>
+<ROW col0="74.0" col1="70.0" col2="145.0" col3="144.0" col4="68.0" col5="98.0" col6="115.0" col7="132.0" col8="70.0" col9="130.0" col10="100.0" col11="72.0" col12="91.0" col13="135.0" col14="111.0" col15="137.0" col16="141.0" col17="83.0" col18="55.0" col19="68.0" col20="69.0" col21="96.0" col22="147.0" col23="58.0" col24="120.0" col25="106.0" col26="75.0" col27="127.0" col28="150.0" col29="135.0">Sample 1:</ROW>
+<ROW col0="104.0" col1="140.0" col2="175.0" col3="214.0" col4="98.0" col5="168.0" col6="145.0" col7="202.0" col8="100.0" col9="200.0" col10="130.0" col11="142.0" col12="121.0" col13="205.0" col14="141.0" col15="207.0" col16="171.0" col17="153.0" col18="85.0" col19="138.0" col20="99.0" col21="166.0" col22="177.0" col23="128.0" col24="150.0" col25="176.0" col26="105.0" col27="197.0" col28="180.0" col29="205.0">Sample 2:</ROW>
+<ROW col0="144.0" col1="100.0" col2="215.0" col3="174.0" col4="138.0" col5="128.0" col6="185.0" col7="162.0" col8="140.0" col9="160.0" col10="170.0" col11="102.0" col12="161.0" col13="165.0" col14="181.0" col15="167.0" col16="211.0" col17="113.0" col18="125.0" col19="98.0" col20="139.0" col21="126.0" col22="217.0" col23="88.0" col24="190.0" col25="136.0" col26="145.0" col27="157.0" col28="220.0" col29="165.0">Sample 3:</ROW>
+<ROW col0="144.0" col1="100.0" col2="215.0" col3="174.0" col4="138.0" col5="128.0" col6="185.0" col7="162.0" col8="140.0" col9="160.0" col10="170.0" col11="102.0" col12="161.0" col13="165.0" col14="181.0" col15="167.0" col16="211.0" col17="113.0" col18="125.0" col19="98.0" col20="139.0" col21="126.0" col22="217.0" col23="88.0" col24="190.0" col25="136.0" col26="145.0" col27="157.0" col28="220.0" col29="165.0">Sample 4:</ROW>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

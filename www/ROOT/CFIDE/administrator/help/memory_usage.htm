@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Memory Usage</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Monitoring\nServer Monitor Memory Usage");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"server_monitor.htm\">Server Monitoring<\/a> > Server Monitor Memory Usage<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<br />
+<hr align="left" width="100.145%" size="1" />
+<h1>Server Monitor Memory Usage</h1>
+<p style="font-weight: bold;">Server Monitoring &gt; Server Monitor</p>
+<p style="font-weight: bold;">&#160;</p>
+<p>The Memory Usage section contains the following pages:</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Memory_Usage_Summary_page" id="Memory_Usage_Summary_page" title="Memory_Usage_Summary_page"></a>Memory Usage Summary page</p>
+<p>The Memory Usage Summary page displays a graph that shows the estimated memory consumption by persistent scopes on the server, including the server scope, the application scopes, and the session scopes. If your server is consuming too much memory, the graph provides information about which scope is using too much memory, and when the increased memory consumption began. Detailed reports let you examine estimated memory consumption for the server scope and all active application and session scopes.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> Memory usage information displayed in the Server Monitor is estimated and may vary from the actual memory usage. The information in the memory usage report is based on empirical estimates of how different Java types, and their corresponding ColdFusion types, consume memory. Use the information provided in the memory usage report as an indicator rather than an absolute measure.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Requests_by_Memory_Usage" id="Requests_by_Memory_Usage" title="Requests_by_Memory_Usage"></a>Requests by Memory Usage page</p>
+<p>The Requests by Memory Usage page lists the requests that have used the most memory. You can view a list or a detailed view. The detailed view lists the variables that have used the most memory during the execution of the request.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: bold;"><b><a name="ColdFusion_Threads_by_Memory_Usage1" id="ColdFusion_Threads_by_Memory_Usage1" title="ColdFusion_Threads_by_Memory_Usage1"></a>ColdFusion Threads by Memory Usage page</b></span></p>
+<p>The ColdFusion Threads by Memory Usage page lists the threads launched by the cfthread tag that have used the most memory. You can view a list or a detailed view.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Queries_by_Memory_Usage" id="Queries_by_Memory_Usage" title="Queries_by_Memory_Usage"></a>Queries by Memory Usage page</p>
+<p>The Queries by Memory Usage page lists the queries that have used the most memory. When a query appears in this report, you may want to tune the query to reduce the size of the result set, or cache the query to reduce memory consumption and network traffic. This report does not include information about cached queries. Use the Threshold option to specify the smallest query to appear in the list.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Sessions_by_Memory_Usage" id="Sessions_by_Memory_Usage" title="Sessions_by_Memory_Usage"></a>Sessions by Memory Usage page</p>
+<p>The Sessions by Memory Usage page lists the sessions that have used the most memory. Use the Threshold option to specify the smallest session to appear in the list.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Application_Scope_Memory_Usage_page" id="Application_Scope_Memory_Usage_page" title="Application_Scope_Memory_Usage_page"></a>Application Scope Memory Usage page</p>
+<p>The Application Scope Memory Usage page lists the application scopes that have used the most memory. The detail lists the application scope variables that have used the most memory.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;"><a name="Server_Scope_Memory_Usage_page" id="Server_Scope_Memory_Usage_page" title="Server_Scope_Memory_Usage_page"></a>Server Scope Memory Usage page</p>
+<p>The Server Scope Memory Usage page lists the server scope variables that have used the most memory.</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

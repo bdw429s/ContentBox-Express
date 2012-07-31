@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 25, 2001 12:47:30 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>ColdFusion MX services in Windows</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addButton("show",BTN_TEXT,"Show TOC","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide TOC","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("what_s_new_in_this_release.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<h5 style="font-weight: normal;" align="right"><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Overview</a></h5>
+<hr align="left" width="100.145%" size="1" />
+<h2>ColdFusion services in Windows</h2>
+<p>The ColdFusion installation creates the following services in Windows 2000, Windows XP, and Windows 2003:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+<col style="width: 18.231%;" />
+<col style="width: 81.769%;" />
+<tr valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Service</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold;">Description</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p>ColdFusion 8 Application Server</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p>The main ColdFusion service. ColdFusion pages cannot be processed if this service is not running.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> This does not apply when deploying ColdFusion on a J2EE server.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p>ColdFusion 8 .NET extension</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p>The extension that lets you access .NET assembly classes as ColdFusion objects. Uses Java proxies to represent the .NET classes on the ColdFusion system, and requires that the ColdFusion .NET-side agent run on the system where the assemblies are located.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p>ColdFusion 8 ODBC Agent</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p>The service that configures data sources for the ColdFusion ODBC Server.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p>ColdFusion 8 ODBC Server</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p>The middle-tier service for ODBC connections that use the ColdFusion DataDirect drivers for Microsoft Access and ODBC Socket.</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 18.231%; padding-right: 10px; padding-left: 10px;">
+<p>ColdFusion 8 Search Server</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 81.769%; padding-right: 10px; padding-left: 10px;">
+<p>Manages and controls configuration and services of a Verity K2 domain. This service invokes k2admin.exe, which invokes k2server.exe and k2index.exe.</p>
+</td>
+</tr>
+</table>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="overview_of_services_and_processes.htm" title="overview_of_services_and_processes.htm">Services and processes overview</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="coldfusion_processes_on_unix.htm" title="coldfusion_processes_on_unix.htm">ColdFusion processes on UNIX</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="start_and_stop_coldfusion.htm" title="start_and_stop_coldfusion.htm">Start and stop ColdFusion</a></p>
+</li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

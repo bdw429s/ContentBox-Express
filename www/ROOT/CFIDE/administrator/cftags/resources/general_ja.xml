@@ -1,0 +1,303 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: General
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="default_pagename">ColdFusion Administrator</cfcase>
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="lic_dev">デベロッパー</cfcase>
+<cfcase value="lic_eva">評価</cfcase>
+<cfcase value="lic_pro">プロフェッショナル</cfcase>
+<cfcase value="lic_standard">スタンダード</cfcase>
+<cfcase value="lic_ent">エンタープライズ</cfcase>
+<cfcase value="productname_ibm">ColdFusion for IBM WebSphere</cfcase>
+<cfcase value="productname_mx">ColdFusion</cfcase>
+<cfcase value="productname_j2ee">ColdFusion for J2EE</cfcase>
+<cfcase value="productname_standalone">ColdFusion</cfcase>
+<cfcase value="cfmxtrial"><cfoutput>#CALLER.productName# トライアル版</cfoutput></cfcase>
+<cfcase value="cfmxdeved"><cfoutput>#CALLER.productName# デベロッパー版</cfoutput></cfcase>
+<cfcase value="cfmxedued"><cfoutput>#CALLER.productName# #CALLER.getEdition()#</cfoutput></cfcase>
+<cfcase value="cfmxcomed"><cfoutput>#CALLER.productName# #CALLER.getEdition()#</cfoutput></cfcase>
+<cfcase value="fd_selectdir">サーバーのディレクトリの選択</cfcase>
+<cfcase value="fs_selectfile">サーバーのファイルの選択</cfcase>
+<cfcase value="button_cancel">キャンセル</cfcase>
+<cfcase value="button_apply">適用</cfcase>
+<cfcase value="fd_caption">ColdFusion サーバー</cfcase>
+<cfcase value="fd_applet_tip">
+このアプレットによりサーバーのファイルツリーが表示されるため、ユーザーはそのコンテンツをブラウズできます。ご使用のブラウザは、Java アプレットを使用するように正しく設定されていません。Java Runtime Environment (JRE) をインストールし、ブラウザプラグインがインストールされていることを確認してください。
+</cfcase>
+<cfcase value="fd_pagename">サーバーのブラウズ</cfcase>
+<cfcase value="cfadmin_about">ColdFusion Administrator について</cfcase>
+<cfcase value="coldfusionmx">Scorpio</cfcase>
+<cfcase value="version6">バージョン :</cfcase>
+<cfcase value="ssnumabout">シリアル番号 :</cfcase>
+<cfcase value="copyright_cont"><cfoutput>
+Copyright 1997-2010 Adobe Systems Incorporated. All Rights Reserved.
+Adobe, the Adobe logo, and ColdFusion are either registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries.
+Protected by U.S. patents 5,200,740; 5,233,336; 5,255,357; 5,929,866; 5,943,063; 6,754,382; 7,071,941; 7,305,617. Patents Pending in the U.S. and/or other countries. <BR>
+
+Adobeip##0000862<BR>
+
+Portions utilize Microsoft Windows Media Technologies. Copyright 1999-2004 Microsoft Corporation. All Rights Reserved.
+Portions include technology used under license from Autonomy, and are copyrighted.
+This Product includes code licensed from RSA Data Security
+Notices, terms and conditions pertaining to third party software are located at http://www.adobe.com/go/thirdparty/ and incorporated by reference herein.
+
+                              </cfoutput></cfcase>
+<cfcase value="ContributingMembers">寄与メンバー</cfcase>
+<cfcase value="feature_not_available_msg">この機能は、このエディションの ColdFusion サーバーでは使用できません。</cfcase>
+<cfcase value="launchmigrationwizard">
+別のウィンドウで、インストール後のセットアップウィザードが起動されました。<br />
+ウィザードが表示されない場合は、ポップアップウィンドウをブロックするソフトウェアが原因であると考えられます。<br />
+ここをクリックして、セットアップウィザードを起動してください。<a href="setup/index.cfm">ウィザードの起動</a>
+</cfcase>
+<cfcase value="copyrightinforhp"><cfoutput>
+Copyright &copy; 1995-2010 Adobe Systems, Inc. All rights reserved. U.S. Patents Pending.
+<hr noshade="true" size="1" />
+サードパーティ製ソフトウェアのライセンスに関する注意事項とその他の条件は <a href="http://www.adobe.com/go/thirdparty/#CALLER.golocale#" style="color:##C35617" target="extwebsite" class="copyrightLink">http://www.adobe.com/go/thirdparty_jp/</a> に記載し、この参照をもって本内容に含まれることとします。
+</cfoutput></cfcase>
+<cfcase value="ibmcopyright"> &reg; IBM と WebSphere は、合衆国および諸国における IBM Corp. の商標または登録商標です。</cfcase>
+<cfcase value="forbidden_pagename">禁止</cfcase>
+<cfcase value="forbidden_pageHeader">禁止ページ</cfcase>
+<cfcase value="forbidden_message">このページにアクセスできるのは、ルート管理ユーザーのみです。システム管理者に連絡してください。</cfcase>
+<cfcase value="forbidden_message1">要求されたページにアクセスする権限がありません。管理者にお問い合わせください。</cfcase>
+<cfcase value="cfadmin_title">ColdFusion Administrator</cfcase>
+<cfcase value="productname_ibm_extended"><cfoutput>Adobe &reg; ColdFusion for #CALLER.getEdition()#&reg;、WebSphere Application Server 製品ファミリーのメンバー</cfoutput></cfcase>
+<cfcase value="productname_extended"><cfoutput>Adobe &reg; #CALLER.productName# &reg;</cfoutput></cfcase>
+<cfcase value="cfmx">ColdFusion</cfcase>
+<cfcase value="home_pageHeader">ColdFusion Administrator へようこそ</cfcase>
+<cfcase value="daysleft"><cfoutput>お試し期間に、あと <font color="ff6600">#CALLER.days#</font> 日残っています</cfoutput></cfcase>
+<cfcase value="trialtextifedition">
+ColdFusion デベロッパー版をトライアルモードで使用しています。トライアルモードには複数の IP アドレスからアクセスでき、30 日のお試し期間中、ColdFusion エンタープライズ版のフル機能を評価できます。<br/><br/>
+</cfcase>
+<cfcase value="trialtext"><cfoutput>
+お試し期間に、あと <font color="ff6600">#CALLER.days#</font> 日残っています。お試し期間後、ソフトウェアは自動的にトライアルモードを解除します。その後、ローカルマシンともう 2 つの IP アドレスからデベロッパー版にアクセスして、スタンドアローンのワークステーション上で ColdFusion アプリケーションを開発できます。<br/><br/>ColdFusion アプリケーションをデプロイするために、ColdFusion エディションのいずれかのライセンスをご購入いただくか、ColdFusion ホスティングサービスをご利用いただく必要があります
+</cfoutput></cfcase>
+<cfcase value="hpdevdescifedition">
+<b>ColdFusion デベロッパー版</b>を使用しています。この無料版には ColdFusion エンタープライズ版の機能がありますが、ローカルマシンともう 2 つの IP アドレスからのみアクセスできます。デベロッパー版を使用して、スタンドアローンワークステーション上で ColdFusion アプリケーションを学び、開発できます。ColdFusion アプリケーションをデプロイするために、ColdFusion エディションのいずれかのライセンスをご購入いただくか、ColdFusion ホスティングサービスをご利用いただく必要があります
+</cfcase>
+<cfcase value="cfmarketingheader"><cfoutput>
+                        <p style="font-size:24px; font-weight:bold; color:##999999;">Create better Internet applications quickly and easily</p><strong>Thank you for trying ColdFusion 9</strong><br />
+                        You've just made your life as a developer a little easier! We're confident you'll find that Adobe&reg; ColdFusion&reg; 9 software will help you create compelling Internet applications while solving day-to-day developer challenges. Now you can quickly deliver rich and engaging application experiences to your users. We encourage you to explore
+the new and enhanced capabilities with these helpful tips and demonstrations.
+</cfoutput></cfcase>
+<cfcase value="cfmarketingdemo">
+<strong>今すぐお試し</strong><br/>マルチメディアデモを使用すると、<br/>製品を最大限に<br/>体験できます。<br/>
+                        </cfcase>
+<cfcase value="cfmarketingviewdemos">デモの表示</cfcase>
+<cfcase value="cfmarketinghighlights"><strong>機能のハイライト</strong><br/>ハイライトページを使用すると、<br/>ColdFusion 9 の新機能を<br/>すばやく学習できます。<br/></cfcase>
+<cfcase value="cfmarketingviewfeatures">新機能の表示</cfcase>
+<cfcase value="cfmarketingbuy"><strong>購入</strong><br/>購入オプションの<br/>詳細について<br/><br/></cfcase>
+<cfcase value="cfmarketingbuynow">今すぐ購入</cfcase>
+<cfcase value="enttextifeditionStandard">
+<p>ColdFusion スタンダード版により、単一のサーバーでパワフルな Web サイトとアプリケーションを管理できます。管理設定が簡単で、PDF や FlashPaper のドキュメント生成、強力な新機能、リッチフラッシュフォームなど、ColdFusion の RAD 開発機能のすべてを搭載しており、小中規模のビジネスに最適です。</p>
+
+<p>1 つか複数のサーバー、または、既存の J2EE サーバーで複数の Web サイトとアプリケーションを管理する場合は、ColdFusion エンタープライズ版が適しています。エンタープライズ版には、ColdFusion スタンダード版の全機能に加えて、複数のアプリケーション環境を管理するための特殊機能が提供されているので、重要なビジネスアプリケーションを実装する際のスケーラビリティと信頼性を高めることができます。</p>
+
+</cfcase>
+<cfcase value="enttext">
+ColdFusion の他のエディションや機能についてお知りになりたい方は、次のリンクをクリックしてください。
+</cfcase>
+<cfcase value="enttextifeditionEnterprise">
+ColdFusion エンタープライズ版は、1 台または複数台のサーバー、あるいは既存の J2EE サーバー
+で複数の Web サイトとアプリケーションを提供するためのソリューションです。
+エンタープライズ版には、ColdFusion スタンダード版の全機能に加えて、複数のアプリケーション
+環境を管理するための特殊機能が組み込まれているので、重要なビジネスアプリケーションを実装
+する際のスケーラビリティと信頼性を高めることができます。まったく新しくなったエンタープライズマネージャ
+を使用すると、1 台の物理サーバー上にある複数の独立したアプリケーションやアプリケーションクラスタの設定と
+管理が容易になります。電子メールや全文検索などの機能では、パフォーマンスに優れたマルチスレッドアーキ
+テクチャが採用され、いっそう柔軟な設定が可能になっています。
+また、ColdFusion エンタープライズ版は、他のエンタープライズクラスのシステムやデータベースと組み合わせて
+使用でき、ColdFusion アプリケーションを標準の J2EE EAR/WAR ファイルとして WebSphere や WebLogic などの
+代表的 J2EE アプリケーションサーバーにデプロイできます。
+</cfcase>
+<cfcase value="defaulttextifedition">
+ColdFusion のライセンスバージョンを使用して、最短時間で ColdFusion アプリケーションの構築、テスト、デプロイを行うことができます。
+</cfcase>
+<cfcase value="defaulttext">
+ColdFusion の他のエディションや機能についてお知りになりたい方は、次のリンクをクリックしてください。
+</cfcase>
+<cfcase value="cfresources">ColdFusion のリソース</cfcase>
+<cfcase value="resourceHeaderText">製品内および外部サイトにある有益なリソースへのリンクを次に示します。</cfcase>
+<cfcase value="gettingStartedURL">http://www.adobe.com/go/cf9_getstarted</cfcase>
+<cfcase value="devCenterURL">http://www.adobe.com/go/cf9_devcenter</cfcase>
+<cfcase value="techNotesURL">http://www.adobe.com/go/cf9_prod_technotes</cfcase>
+<cfcase value="releaseNotesURL">http://www.adobe.com/go/cf9_releasenotes</cfcase>
+<cfcase value="editionsURL">http://www.adobe.com/go/cf9_editions</cfcase>
+<cfcase value="systemReqURL">http://www.adobe.com/go/cf9_sysreqs</cfcase>
+<cfcase value="prodInfoURL">http://www.adobe.com/go/prod_prodinfo</cfcase>
+
+<cfcase value="cfBugTrackerURL">http://www.adobe.com/go/CF_bugs</cfcase>
+
+<cfcase value="builderBugTrackerURL">http://www.adobe.com/go/CFB_bugs</cfcase>
+
+<cfcase value="bugtrackerzone">バグのロギング</cfcase>
+<cfcase value="prodSupportURL">http://www.adobe.com/go/prod_support</cfcase>
+<cfcase value="prodDocURL">http://www.adobe.com/go/cf9_prod_doc</cfcase>
+<cfcase value="prodTrainingURL">http://www.adobe.com/go/prod_training</cfcase>
+<cfcase value="cfBooksURL">http://www.adobe.com/support/documentation/en/coldfusion/index.html</cfcase>
+<cfcase value="reportBuilderURL">http://www.adobe.com/go/report_builder</cfcase>
+<cfcase value="cfExtURL">http://www.adobe.com/go/cf_extensions</cfcase>
+<cfcase value="prodUpdatesURL">http://www.adobe.com/go/prod_produpdates</cfcase>
+<cfcase value="cfHotfixesURL">http://www.adobe.com/go/cf_hotfixes</cfcase>
+<cfcase value="techArticlesURL">http://www.adobe.com/go/prod_techarticles</cfcase>
+<cfcase value="devExchangeURL">http://www.adobe.com/go/prod_developersexchange</cfcase>
+<cfcase value="newsLetterURL">http://www.adobe.com/go/prod_newsletters</cfcase>
+<cfcase value="userGroupsURL">http://www.adobe.com/go/prod_usergroups</cfcase>
+<cfcase value="cfHostingURL">http://www.adobe.com/go/cf_hosting</cfcase>
+<cfcase value="securityZoneURL">http://www.adobe.com/go/prod_securityzone</cfcase>
+<cfcase value="securityNoteURL">http://www.adobe.com/go/prod_securitynote</cfcase>
+<cfcase value="hpgetstart">ファーストステップ</cfcase>
+<cfcase value="hpgetstartwin">ファーストステップ</cfcase>
+<cfcase value="hpexwin">サンプルアプリケーション</cfcase>
+<cfcase value="cfdevcenter">ColdFusion デベロッパーセンターファーストステップ</cfcase>
+<cfcase value="hpprodinfo">製品情報</cfcase>
+<cfcase value="aboutcoldfusion">ColdFusion について</cfcase>
+<cfcase value="documentation">マニュアル</cfcase>
+<cfcase value="knowledge_base">テクニカルノート</cfcase>
+<cfcase value="release_notes">リリースノート</cfcase>
+<cfcase value="producteditions">製品のエディション</cfcase>
+<cfcase value="systemrequirements">必要なシステム条件</cfcase>
+<cfcase value="prodlnews">最新の製品情報</cfcase>
+
+<cfcase value="cfbugtracker">ColdFusion Bug Tracker</cfcase>
+
+<cfcase value="cfbuilderbugtracker">ColdFusion Builder Bug Tracker</cfcase>
+<cfcase value="hptechsup">テクニカルサポートとトレーニング</cfcase>
+<cfcase value="cfmxtechnotes">ColdFusion テクニカルノート</cfcase>
+<cfcase value="supcenter">ColdFusion サポートセンター</cfcase>
+<cfcase value="hplatedoc">追加のマニュアル</cfcase>
+<cfcase value="hptrainingbooks">オンライン / クラスのトレーニング</cfcase>
+<cfcase value="hpbooks">ColdFusion 書籍</cfcase>
+<cfcase value="additionalheader">その他のインストーラ</cfcase>
+<cfcase value="CFReportBuilderInstall">ColdFusion Report Builder</cfcase>
+<cfcase value="DWExtensionsInstall">Eclipse 用の ColdFusion 拡張機能</cfcase>
+<cfcase value="hpprodup">製品アップデート</cfcase>
+<cfcase value="checkprodup">製品更新のチェック</cfcase>
+<cfcase value="checkhotfix">ホットフィックスのチェック</cfcase>
+<cfcase value="hpcommunity">コミュニティ</cfcase>
+<cfcase value="hptechart">ColdFusion 開発センター</cfcase>
+<cfcase value="hpdevex">CF 開発者エクスチェンジ</cfcase>
+<cfcase value="hpnewsletters">ニュースレター</cfcase>
+<cfcase value="hpusergroups">ユーザーグループ</cfcase>
+<cfcase value="learnhosting">ColdFusion ホストパートナー情報</cfcase>
+<cfcase value="hpseczone">セキュリティゾーン</cfcase>
+<cfcase value="keepsecure">サーバーを安全に保つ方法</cfcase>
+<cfcase value="secemail">セキュリティ情報を受け取る方法</cfcase>
+<cfcase value="frmnavttle">ナビゲーション</cfcase>
+<cfcase value="frmresttle">リソースリンク</cfcase>
+<cfcase value="frmmainttle">メインウィンドウ</cfcase>
+<cfcase value="frmtopttle">トップウィンドウのナビゲーション</cfcase>
+<cfcase value="browser_warning">
+ColdFusion Administrator では、フレームをサポートするブラウザが必要です。<br/>HTML 3.0 準拠かそれ以降のブラウザを入手してください。
+</cfcase>
+<cfcase value="ld_electdoc"><cfoutput><p class="sentance">オンラインマニュアルはこのシステムにインストールされていません。</p> <p class="sentance"><a href="#CALLER.doclink#" target="Adobe website">ここをクリック</a>すると、Adobe.com のオンラインマニュアルが開きます。<br/><br/>
+
+</p></cfoutput></cfcase>
+<cfcase value="ld_exmples"><cfoutput><p class="sentance">サンプルは現在インストールされていません。</p> <p class="sentance"><a href="http://www.adobe.com/go/prod_examples_jp" target="Adobe website">ここをクリック</a>すると、ColdFusion 用のサンプルアプリケーションがダウンロードされます。<br/></p></cfoutput></cfcase>
+<cfcase value="cfadmin_login">ColdFusion Administrator ログイン</cfcase>
+<cfcase value="coldfusionVer">ColdFusion</cfcase>
+<cfcase value="required_userid">ユーザー名が必要です</cfcase>
+<cfcase value="label_userid">ユーザー名</cfcase>
+<cfcase value="required_password">パスワードが必要です</cfcase>
+<cfcase value="label_password">パスワード</cfcase>
+<cfcase value="null_user_id">ユーザー名が必要です。もう一度入力してください。</cfcase>
+<cfcase value="invalid_userid_or_password">無効なユーザー名またはパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="invalid_password">無効なパスワードです。もう一度入力してください。</cfcase>
+<cfcase value="password_button">ログイン</cfcase>
+<cfcase value="copyright_cont1">Adobe、Adobe ロゴ、ColdFusion、Adobe ColdFusion は合衆国および諸国における Adobe Systems Incorporated の商標または登録商標です。その他すべての商標はそれぞれの所有者の所有物です。</cfcase>
+<cfcase value="cfcbrowser_login">コンポーネントブラウザログイン</cfcase>
+<cfcase value="componentbrowser">コンポーネントブラウザ</cfcase>
+<cfcase value="enterrdsoradminpasswordlogin">RDS または Admin のパスワードを以下に入力してください</cfcase>
+<cfcase value="configAndSettingsWizard">設定の移行ウィザード</cfcase>
+<cfcase value="configAndSettingsWizardDesc">
+ColdFusion のインストールに成功しました。このウィザードは残りのサーバー設定手順をご案内します。また、必要に応じて、以前のバージョンの ColdFusion の設定を移行します。</cfcase>
+<cfcase value="configAndSettingsWizardSecurity">サーバーのセキュリティを確保するために、ColdFusion Administrator パスワードを入力してください。</cfcase>
+<cfcase value="Coldfusionadministrator">ColdFusion Administrator</cfcase>
+<cfcase value="navserver">サーバー :&nbsp;</cfcase>
+<cfcase value="navbarwelcome">ユーザー :&nbsp;</cfcase>
+<cfcase value="l10n_nav_settings">設定</cfcase>
+<cfcase value="l10n_nav_serversettings">サーバーの設定</cfcase>
+<cfcase value="l10n_nav_limits">リクエストの調整</cfcase>
+<cfcase value="l10n_nav_caching">キャッシュ機能</cfcase>
+<cfcase value="l10n_nav_cvariables">クライアント変数</cfcase>
+<cfcase value="l10n_nav_mvariables">メモリ変数</cfcase>
+<cfcase value="l10n_nav_mappings">マッピング</cfcase>
+<cfcase value="l10n_nav_mailserver">メール</cfcase>
+<cfcase value="l10n_nav_charting">チャート</cfcase>
+<cfcase value="l10n_nav_fonts">フォント管理</cfcase>
+<cfcase value="l10n_nav_documents">ドキュメント</cfcase>
+<cfcase value="l10n_nav_java">Java と JVM</cfcase>
+<cfcase value="l10n_nav_serversum">設定要約</cfcase>
+<cfcase value="l10n_nav_data">データソース</cfcase>
+<cfcase value="l10n_nav_verity">ColdFusion コレクション</cfcase>
+<cfcase value="l10n_nav_k2server">Verity K2 サーバー</cfcase>
+<cfcase value="l10n_nav_solrserver">Solr サーバー</cfcase>
+<cfcase value="l10n_nav_migrate_verity">Verity コレクションの移行</cfcase>
+<cfcase value="l10n_nav_webservices">Web サービス</cfcase>
+<cfcase value="l10n_nav_flexintegration">Flex 統合</cfcase>
+<cfcase value="l10n_nav_debugset">デバッグ出力の設定</cfcase>
+<cfcase value="l10n_nav_dbugip">デバッグする IP アドレス</cfcase>
+<cfcase value="l10n_nav_linedebugger">デバッガの設定</cfcase>
+<cfcase value="l10n_nav_logset">ロギングの設定</cfcase>
+<cfcase value="l10n_nav_log">ログファイル</cfcase>
+<cfcase value="l10n_nav_sched">スケジュールされたタスク</cfcase>
+<cfcase value="l10n_nav_sysprobe">システムプローブ</cfcase>
+<cfcase value="l10n_nav_anyzr">コードアナライザ</cfcase>
+<cfcase value="l10n_nav_scanner">ライセンススキャナー</cfcase>
+<cfcase value="l10n_nav_servermonitor">サーバーモニタ</cfcase>
+
+<cfcase value="l10n_nav_servermonitorsettings">監視の設定</cfcase>
+<cfcase value="l10n_nav_multiservermonitor">マルチサーバーモニタ</cfcase>
+<cfcase value="l10n_nav_applets">Java アプレット</cfcase>
+<cfcase value="l10n_nav_cfx">CFX タグ</cfcase>
+<cfcase value="l10n_nav_customtag">カスタムタグのパス</cfcase>
+<cfcase value="l10n_nav_corba">CORBA コネクタ</cfcase>
+<cfcase value="l10n_nav_gatewayset">設定</cfcase>
+<cfcase value="l10n_nav_gatewaytypes">ゲートウェイタイプ</cfcase>
+<cfcase value="l10n_nav_gateways">ゲートウェイインスタンス</cfcase>
+<cfcase value="l10n_nav_adminpass">Administrator</cfcase>
+<cfcase value="l10n_nav_studiopass">RDS</cfcase>
+<cfcase value="l10n_nav_ressec">リソースセキュリティ</cfcase>
+<cfcase value="l10n_nav_sandbox">サンドボックスセキュリティ</cfcase>
+<cfcase value="l10n_nav_usermanager">ユーザーマネージャ</cfcase>
+<cfcase value="l10n_nav_userpassword">パスワードの変更</cfcase>
+<cfcase value="l10n_nav_allowedIPAddress">使用できる IP アドレス</cfcase>
+<cfcase value="l10n_car_files">ColdFusion アーカイブ</cfcase>
+<cfcase value="l10n_j2ee_archives">J2EE アーカイブ</cfcase>
+<cfcase value="l10n_app_installer">アプリケーションインストーラ</cfcase>
+<cfcase value="l10n_nav_dataserv">データとサービス</cfcase>
+<cfcase value="l10n_nav_debug">デバッグとロギング</cfcase>
+<cfcase value="l10n_nav_monitoring">ColdFusion サーバーの監視</cfcase>
+<cfcase value="l10n_nav_exten">拡張機能</cfcase>
+<cfcase value="l10n_nav_eventgateways">イベントゲートウェイ</cfcase>
+<cfcase value="security">セキュリティ</cfcase>
+<cfcase value="l10n_nav_packaging">パッケージとデプロイ</cfcase>
+<cfcase value="iman">インスタンスマネージャ</cfcase>
+<cfcase value="cluman">クラスタマネージャ</cfcase>
+<cfcase value="l10n_nav_entman">エンタープライズマネージャ</cfcase>
+<cfcase value="mm_extensions">Adobe</cfcase>
+<cfcase value="custom_extensions">カスタム拡張機能</cfcase>
+<cfcase value="expandall">すべてを拡張</cfcase>
+<cfcase value="Collapseall">すべてをたたむ</cfcase>
+<cfcase value="version_information">システム情報</cfcase>
+<cfcase value="help">ヘルプ</cfcase>
+<cfcase value="resources">情報源</cfcase>
+<cfcase value="logout">ログアウト</cfcase>
+<cfcase value="errormsg_goback">戻る</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

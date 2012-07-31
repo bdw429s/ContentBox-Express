@@ -1,0 +1,25 @@
+Directory List CFX example
+
+Assuming you installed coldfusion in /opt/coldfusion,
+here is how you would install this sample CFX.
+
+1. Build directorylist.so 
+     cd /opt/coldfusion/cfx/examples/directorylist
+     cp <platform>/Makefile Makefile
+     make
+
+2. Run the Cold Fusion Administrator and select the "CFX Tags" screen.
+   Add the new tag:
+
+     Tag Name: CFX_DIRECTORYLIST
+     Server Library: /opt/coldfusion/cfx/examples/directorylist/directorylist.so
+     Procedure: ProcessTagRequest
+
+3. Run a test template such as the following:
+
+    <CFX_DIRECTORYLIST NAME="RootDir" DIRECTORY="/tmp"> 
+
+    <CFOUTPUT QUERY="RootDir"> 
+    (#Type#) #Name# - #Date# #Size# <BR>
+    </CFOUTPUT>
+

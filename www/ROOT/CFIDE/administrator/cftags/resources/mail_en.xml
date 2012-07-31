@@ -1,0 +1,169 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Mail
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="pagename_mailset">Mail Settings</cfcase>
+<cfcase value="conn_ok">Connection Verification Successful.</cfcase>
+<cfcase value="conn_fail">Connection Verification Failed!</cfcase>
+<cfcase value="pageHeader_mail">Server Settings &gt; Mail</cfcase>
+<cfcase value="connection">Mail Server Settings</cfcase>
+<cfcase value="mailserver">Mail Server</cfcase>
+<cfcase value="server_tip"> Specifies the server for
+sending SMTP mail messages. You can specify an Internet address (for
+example, mail.company.com) or the IP address of the mail server (for example,
+127.0.0.1).
+</cfcase>
+<cfcase value="mailserverUsername">User name</cfcase>
+<cfcase value="mailserverPassword">Password</cfcase>
+<cfcase value="username_tip">
+If your mail server requires authentication, you can specify a
+user name and password to use.
+</cfcase>
+<cfcase value="Sign">Sign</cfcase>
+<cfcase value="sign_tip">
+Select this check box to have ColdFusion Sign the Mail.
+</cfcase>
+<cfcase value="button_browse">Browse Server</cfcase>
+<cfcase value="Keystore">Keystore</cfcase>
+<cfcase value="keystore_tip">
+"Location of the Keystore" - Keystore containing the private key and certificate. The supported type is JKS (java key store) and pkcs12.
+    </cfcase>
+<cfcase value="KeystorePassword">KeystorePassword</cfcase>
+<cfcase value="keystorepassword_tip">
+Password of the Keystore.
+    </cfcase>
+<cfcase value="KeyAlias">KeyAlias</cfcase>
+<cfcase value="keyalias_tip">
+     Alias of the key with which the certificate and private key is stored in Keystore. If it is not specified then the first entry in the Keystore will be picked up.
+    </cfcase>
+<cfcase value="KeyPassword">KeyPassword</cfcase>
+<cfcase value="keypassword_tip">
+Password with which the private key is stored. If it is not specified, KeystorePassword will be used as KeyPassword as well.
+    </cfcase>
+<cfcase value="verify">Verify mail server connection</cfcase>
+<cfcase value="verify_tip"> Select this check box
+to have ColdFusion verify that it can connect to this mail server when you
+submit this form. </cfcase>
+<cfcase value="server_port">Server Port</cfcase>
+<cfcase value="port_tip"> The default port number for
+mail servers. The standard SMTP mail server port is 25. </cfcase>
+<cfcase value="BackupMailServers">Backup Mail Servers</cfcase>
+<cfcase value="BackupMailServers_tip">
+  <br>Specifies backup servers for sending SMTP mail messages. Use a comma to separate
+    the names of multiple servers. To specify a port number other than the default,
+    use a colon (for example, mail.company.com:123). If your mail server requires
+    authentication different from the default server, you can specify a user name and password in the format <strong>
+            user:password@mail.company.com</strong>.
+    </cfcase>
+<cfcase value="MaintainConnections">Maintain connection to mail server</cfcase>
+<cfcase value="MaintainConnections_tip"> Select
+this check box to keep the connection to a mail server open for reuse
+after delivering a message (recommended).</cfcase>
+<cfcase value="connectiontimeout_sec">Connection Timeout (seconds)</cfcase>
+<cfcase value="timeout_tip"> Specifies the time that ColdFusion should wait for a response from the mail server.</cfcase>
+<cfcase value="enableSSL">Enable SSL socket connections to mail server</cfcase>
+<cfcase value="enableSSL_tip">Select this check box to enable SSL encryption on the connections to the mail server.</cfcase>
+<cfcase value="enableTLS">Enable TLS connection to mail server</cfcase>
+<cfcase value="enableTLS_tip"> Select this check box to enable Transport Level Security (TLS) on the connection to the mail server.</cfcase>
+<cfcase value="spoolsettings">Mail Spool Settings</cfcase>
+<cfcase value="scheduler">Spool Interval (seconds)</cfcase>
+<cfcase value="scheduler_tip"> Specifies the time the
+mail spooler waits to process spooled mail. </cfcase>
+<cfcase value="MaxDeliveryThreads">Mail
+Delivery Threads</cfcase>
+<cfcase value="MaxDeliveryThreads_tip">
+Specifies the maximum number of simultaneous threads that ColdFusion uses to deliver
+spooled mail. A higher number indicates an increase in the volume of mail
+messages that are delivered.
+</cfcase>
+<cfcase value="SpoolEnable">Spool mail messages
+  for delivery</cfcase>
+<cfcase value="SpoolToMemory">to</cfcase>
+<cfcase value="spoolto_disk">Disk</cfcase>
+<cfcase value="spoolto_memory">Memory</cfcase>
+<cfcase value="SpoolEnable_tip"> Select this check
+box to spool messages for delivery by the mail spooler (recommended). When
+not selected, the mail spooler attempts to deliver messages during page
+processing.</cfcase>
+<cfcase value="SpoolToMemory_tip"> Spooling to disk is more robust, because
+the messages are written to disk and are delivered even if you restart
+ColdFusion. Spooling to memory substantially increases performance,
+but it requires additional memory and places the messages in volatile
+storage. </cfcase>
+<cfcase value="MaxMessagesInMemory">Maximum
+number of messages spooled to memory</cfcase>
+<cfcase value="MaxMessagesInMemory_tip">
+Specifies the maximum number of messages that ColdFusion holds in memory before switching
+to spooling messages to disk. </cfcase>
+<cfcase value="view_undelivered_mail">View Undelivered Mail</cfcase>
+<cfcase value="maillogging">Mail Logging Settings</cfcase>
+<cfcase value="severity">Error Log Severity</cfcase>
+<cfcase value="severity_debug">Debug</cfcase>
+<cfcase value="severity_information">Information</cfcase>
+<cfcase value="severity_warning">Warning</cfcase>
+<cfcase value="severity_tip">
+Select the type of SMTP-related error messages to log.
+</cfcase>
+<cfcase value="logsent">Log all mail messages sent
+by ColdFusion</cfcase>
+<cfcase value="logsent_tip"> Select this check box
+to save the To, From, and Subject fields of messages to a log file. </cfcase>
+<cfcase value="charsetsetting">Mail Charset Setting</cfcase>
+<cfcase value="charset"><strong>Default CFMail Charset</strong></cfcase>
+<cfcase value="subject">Subject</cfcase>
+<cfcase value="sender">Sender</cfcase>
+<cfcase value="to">To</cfcase>
+<cfcase value="filesize">File Size</cfcase>
+<cfcase value="date">Date</cfcase>
+<cfcase value="delete">Delete</cfcase>
+<cfcase value="respool">Respool</cfcase>
+<cfcase value="message_deleted">message(s) successfully deleted</cfcase>
+<cfcase value="message_respooled">message(s) successfully respooled</cfcase>
+<cfcase value="pageHeader_undeliveredMail">Server Settings > Mail > Undelivered Mail</cfcase>
+<cfcase value="ss_error_mail_smtpport">
+Server port must be numeric and greater than zero.
+</cfcase>
+<cfcase value="ss_error_mail_timeout">
+Timeout value must be numeric and greater than zero.
+</cfcase>
+<cfcase value="ss_error_mail_schedule">
+Spool interval must be numeric and greater than zero.
+</cfcase>
+<cfcase value="ss_error_mail_maxdeliverythreads">
+Maximum number of simultaneous threads must be numeric and greater than zero.
+</cfcase>
+<cfcase value="ss_error_mail_maxmessagesinmemory">
+Maximum number of messages spooled to memomy must be numeric and greater than zero.
+</cfcase>
+<cfcase value="error_update"><cfoutput>
+Unable to update mail settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="error_notest">
+The mail server connection was not tested.<br />
+</cfcase>
+<cfcase value="error_get"><cfoutput>
+Unable to retrieve mail settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="severity_error">Error</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

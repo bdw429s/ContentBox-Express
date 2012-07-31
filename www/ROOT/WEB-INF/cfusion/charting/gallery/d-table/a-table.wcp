@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project width="325" height="242" xmlStyleFilename="" embedStyles="true"
+	imageType="PNG" palette="#FDFEF6;#E2FFFF" xmlModelFilename="" source="Embedded Xml">
+		<style>
+			<table font="Arial-11" foreground="black" isMultiline="false">
+				<table isTransposed="false" cellSpacing="4" cellPadding="0" rowZebraBackground="#E2FFFF"
+					border="Outer">
+					<colLabels hAlign="Center" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</colLabels>
+					<rowLabels hAlign="Left" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</rowLabels>
+					<cells hAlign="Right" vAlign="Middle" isVisible="true" background="#00000000"
+						isMultiline="true">
+						<decoration style="None" foreColor="black"/>
+					</cells>
+					<format style="Number">
+						<locale/>
+					</format>
+				</table>
+				<title placement="Top" valign="Middle" halign="Center" spacing="5"
+					background="#00000000" font="Arial-16-bold" isMultiline="true">
+					<decoration style="Shadow" foreColor="black"/>
+				</title>
+				<background type="PlainColor" minColor="white" maxColor="blue" imagePlacement="Centered"
+					imageLocation=""/>
+				<decoration style="RoundShadow" foreColor="black"/>
+				<popup showOn="MouseOver" decoration="Simple" background="#80FFFF00" foreground="blue"
+					isMultiline="false"/>
+				<paint palette="Standard" paint="Shade" isVertical="false" min="0"
+					max="50" image=""/>
+				<insets left="0" top="0" right="0" bottom="0"/>
+			</table>
+	</style>
+		<model>
+		<![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<XML type="default">
+<COL>2000</COL>
+<COL>2001</COL>
+<COL>2002</COL>
+<COL>2003</COL>
+<COL>2004</COL>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+<ROW col0="100.0" col1="200.0" col2="100.0" col3="180.0" col4="200.0">Sample 0:</ROW>
+</XML>
+		]]>
+		</model>
+		<importOptions filename="" sep="," quote="" hasColLabels="false"
+			hasRowLabels="false" isCrosstab="false"/>
+		<databaseOptions driver="sun.jdbc.odbc.JdbcOdbcDriver" connection="jdbc:odbc:..." username="" encryptedPassword=""
+			isCrosstab="false" hasRowLabels="false">
+		</databaseOptions>
+</project>

@@ -1,0 +1,30 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Archives
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+<cfcase value="fail_12341">Failed</cfcase>
+<cfcase value="0k_64564">OK</cfcase>
+<cfcase value="probe_local">Probe requests must originate from 127.0.0.1</cfcase>
+<cfcase value="probe_enterprise">Probes require the Enterprise edition of ColdFusion.</cfcase>
+<cfcase value="probe_non200">HTTP request returned non-200 status code</cfcase>
+<cfcase value="probe_stringnotfound">Required string not found</cfcase>
+<cfcase value="probe_foundstring">Found the string</cfcase>
+<cfcase value="probe_regexnotmatched">Required regular expression not matched</cfcase>
+<cfcase value="probe_matchedregex">Matched the regular expression</cfcase>
+<cfcase value="probe_cfprobefailure">ColdFusion Probe Failure</cfcase>
+<cfcase value="proberun_fail">The probe failed.</cfcase>
+<cfcase value="probe_name">Probe Name</cfcase>
+<cfcase value="execution_time">Execution Time</cfcase>
+<cfcase value="response_contents">Response contents</cfcase>
+<cfcase value="probe_notfound">Probe not found</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

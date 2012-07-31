@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>About simultaneous request tuning</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nSimultaneous request tuning overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Simultaneous request tuning overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<br />
+
+<hr size="1" width="100.145%" align="left" />
+<h1>Simultaneous request tuning overview</h1>
+<p>You can specify the number of simultaneous requests that can be processed 
+ for each of the following types of requests:</p>
+<p>&#160;</p>
+<ul type="disc">
+	<li class="p"><p>CFM page requests</p></li>
+	<li class="p"><p>CFC method invocations (via an HTTP GET)</p></li>
+	<li class="p"><p>Flash Remoting requests</p></li>
+	<li class="p"><p>Web Service requests</p></li>
+</ul>
+<p>&#160;</p>
+<p>The settings are contained completely within ColdFusion code and work 
+ across all J2EE application servers. You do not have to restart the ColdFusion 
+ server for changes to the configuration to take effect. JSP processing 
+ is not affected by these changes.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span>&#160;The Flash Remoting 
+ request control setting applies to remoting that uses ActionScript 2.0 
+ and ActionScript 3.0, with each type treated independently. For example, 
+ a setting of 5 means that up to 5 ActionScript 2.0 Flash Remoting and 
+ 5 ActionScript 3.0 Flash Remoting requests are allowed simultaneously.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Capabilities by edition</p>
+<p>Standard Edition: Only the Async CFML, DirectoryWatcher, Socket, and 
+ user written event gateways are enabled. The maximum number of threads 
+ in the pool for the cfthread tag is limited to 10. Only the CFM page request 
+ limit is adjustable; this changes the activeHandlerThreads in JRun, exactly 
+ like ColdFusion  7.</p>
+<p>&#160;</p>
+<p>Enterprise Edition: All event gateways are supported. The number of 
+ threads in the pool for the cfthread tag is unlimited. You can adjust 
+ the limits for each request type (CFM page, CFC, Flash Remoting, and Web 
+ Service) independently.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

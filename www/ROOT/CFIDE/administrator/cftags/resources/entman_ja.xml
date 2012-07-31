@@ -1,0 +1,193 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: entman
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="entman_pagename_editserver"><cfoutput>サーバーの編集 :#URL.serverName#</cfoutput></cfcase>
+<cfcase value="entman_pagename_addserver">サーバーの追加</cfcase>
+<cfcase value="entman_description">
+ColdFusion エンタープライズ版では、同じコンピュータ上で複数の ColdFusion サーバーを作成し、管理することができます。
+</cfcase>
+<cfcase value="_serverexists">以下のサーバー名が使用中です。</cfcase>
+<cfcase value="entman_addserver_description">
+ColdFusion エンタープライズ版により、リモートサーバーを追加できます。そのリモートサーバーを、ローカルマシンに置かれたサーバーによるクラスタに加えることができます。インスタンス名は、リモートホスト上のインスタンス名と一致する必要があります。
+</cfcase>
+<cfcase value="entman_editremoteserverproperties">
+リモートサーバープロパティの編集
+</cfcase>
+<cfcase value="addremoteserver">リモート ColdFusion インスタンスの追加</cfcase>
+<cfcase value="remote_server_name">ColdFusion インスタンス名</cfcase>
+<cfcase value="remote_server_ip">リモートホスト (IP アドレスまたは DNS 名)</cfcase>
+<cfcase value="remote_server_port">リモートポート</cfcase>
+<cfcase value="button_gatewaty_addz">送信</cfcase>
+<cfcase value="button_gatewaty_addx">キャンセル</cfcase>
+<cfcase value="cluster">クラスタマネージャ</cfcase>
+<cfcase value="badclustchar">クラスタ名には文字と数字を使用できます。句読点と空の名前は使用できません。</cfcase>
+<cfcase value="badclustcharmsg"><cfoutput>無効なクラスタ名 :<strong>#FORM.clustername#</strong></cfoutput></cfcase>
+<cfcase value="newcluster_addedSuccessfully">
+新規のクラスタが正常に追加されました。
+</cfcase>
+<cfcase value="clustermanager">
+クラスタマネージャ
+</cfcase>
+<cfcase value="addnewclust">新規クラスタの追加</cfcase>
+<cfcase value="clustname">クラスタ名</cfcase>
+<cfcase value="button_add"> 追加 </cfcase>
+<cfcase value="configdclust">設定済みクラスタ</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="clustername">クラスタ名</cfcase>
+<cfcase value="serversincluster">クラスタ内のサーバー</cfcase>
+<cfcase value="arch_noclustersDefined">クラスタが定義されていません。</cfcase>
+<cfcase value="button_edit">編集</cfcase>
+<cfcase value="button_delete">削除</cfcase>
+<cfcase value="delete_cluster_confirmation"><cfoutput>クラスタ #CALLER.name# を削除してよろしいですか。</cfoutput></cfcase>
+<cfcase value="bad_char1">
+リモートサーバーには使用できない文字が含まれています。フォームフィールドを空にはできません。また、サーバー名に句読点や英数字以外の文字も使用できません。
+</cfcase>
+<cfcase value="entman_pagename_instanceManager">インスタンスマネージャ</cfcase>
+<cfcase value="server_updatedSuccessfully"><cfoutput>
+サーバー #FORM.servername# は正常に更新されました。
+</cfoutput></cfcase>
+<cfcase value="instance_manager">インスタンスマネージャ</cfcase>
+<cfcase value="entman_welc">
+ColdFusion エンタープライズ版を使用して、新しいサーバーインスタンスを作成し、管理できます。インスタンスはローカル (このマシン上) か、クラスタで登録できるリモートサーバー上で作成して実行できます。
+</cfcase>
+<cfcase value="slocal">新規インスタンスの追加</cfcase>
+<cfcase value="sremote">リモートインスタンスの登録</cfcase>
+<cfcase value="badchar1"><cfoutput>
+アーカイブ名の <i>#FORM.servername#</i> には使用できない文字が含まれています。サーバー名には文字と数字のみを使用できます。句読点、英数字以外の文字、空の名前なども使用できません。
+</cfoutput></cfcase>
+<cfcase value="noarchive">指定のターゲットアーカイブは存在しません。</cfcase>
+<cfcase value="notearwar">指定のターゲットアーカイブは EAR ファイルでも WAR ファイルでもありません。.war ファイルまたは .ear ファイルを指定してください。</cfcase>
+<cfcase value="doopname"><cfoutput>
+サーバー名の <i>#FORM.servername#</i> は既に使用されています。別のサーバー名を選択してください。
+</cfoutput></cfcase>
+<cfcase value="entman_pagename_enterpriseAdmin">エンタープライズ Administrator ― 新規 CF インスタンスの作成中</cfcase>
+<cfcase value="s1">[手順 1/4] 新規 CF インスタンスの作成中... </cfcase>
+<cfcase value="s2">[手順 2/4] CF ランタイムの作成中。時間のかかる場合があります... </cfcase>
+<cfcase value="s3">[手順 3/4] デプロイ中。時間のかかる場合があります... </cfcase>
+<cfcase value="s4">[手順 4/4] 新規 CF インスタンスの起動中... </cfcase>
+<cfcase value="s5">新規 CF インスタンスが起動しました。</cfcase>
+<cfcase value="admin">ここをクリックして、新規サーバーの CF Admin にアクセス</cfcase>
+<cfcase value="clickhere">エンタープライズマネージャに戻ります</cfcase>
+<cfcase value="instancedone">完了</cfcase>
+<cfcase value="doopname_1"><cfoutput>Windows サービス #CALLER.regname# は既に登録されています</cfoutput></cfcase>
+<cfcase value="sserver">サーバーを起動する際に、問題がありました</cfcase>
+<cfcase value="problemWithURL">定義された URL に問題がありました</cfcase>
+<cfcase value="sport"><cfoutput>新規サーバーの HTTP ポート :#CALLER._servport#</cfoutput></cfcase>
+<cfcase value="xedit">新規サーバーのプロパティの編集 :</cfcase>
+<cfcase value="cluster_editserver"><cfoutput>サーバーの編集 :#FORM.servername#</cfoutput></cfcase>
+<cfcase value="pagenamemsg_updateserversettings">サーバー設定の更新中</cfcase>
+<cfcase value="headlinePleasewait">作業中です。しばらくお待ちください。</cfcase>
+<cfcase value="master"> - [デフォルトの ColdFusion サーバー]</cfcase>
+<cfcase value="clustall">&lt;&lt;すべて&gt;&gt;</cfcase>
+<cfcase value="cfservers_in_cluster"><cfoutput>クラスタ内のサーバー : #URL.cluster# </cfoutput></cfcase>
+<cfcase value="available_servers">使用可能なサーバー</cfcase>
+<cfcase value="filterByCluster">クラスタによるフィルタ</cfcase>
+<cfcase value="ccname">名前</cfcase>
+<cfcase value="servdirt">サーバーディレクトリ</cfcase>
+<cfcase value="http__port">HTTP ポート</cfcase>
+<cfcase value="clusport">リモートポート</cfcase>
+<cfcase value="svr__hst">ホスト</cfcase>
+<cfcase value="svr__cluster_weight">サーバーの重みづけ</cfcase>
+<cfcase value="svr__cluster">クラスタ</cfcase>
+<cfcase value="weightwrong">0 ～ 100 の数字を入力してください。</cfcase>
+<cfcase value="entadmin_edit">編集</cfcase>
+<cfcase value="entadmin_strtedit">編集するサーバーの起動</cfcase>
+<cfcase value="entadmin_view">Web サイト</cfcase>
+<cfcase value="entadmin_admin">CF Admin</cfcase>
+<cfcase value="entadmin_run">起動中</cfcase>
+<cfcase value="entadmin_notrun">停止済み</cfcase>
+<cfcase value="entadmin_stop">停止</cfcase>
+<cfcase value="entadmin_start">起動</cfcase>
+<cfcase value="entadmin_refresh">再起動</cfcase>
+<cfcase value="entadmin_delete">削除</cfcase>
+<cfcase value="delete_confirmation">このサーバーを削除してもよろしいですか。すべてのリソースが削除されます。復元はできません。</cfcase>
+<cfcase value="remote_delete_confirmation">このリモートサーバーを削除してもよろしいですか。このマシンで定義されているすべてのクラスタから削除されます。</cfcase>
+<cfcase value="delete_running">起動中のサーバーは削除できません。サーバーを停止してから削除できます。</cfcase>
+<cfcase value="admin_delete">JRun Admin アプリケーションは削除できません</cfcase>
+<cfcase value="_admin">CF Admin</cfcase>
+<cfcase value="entadmin_noclust">なし</cfcase>
+<cfcase value="refresh_">更新</cfcase>
+<cfcase value="updateserverweight">サーバーの重みづけの更新</cfcase>
+<cfcase value="cluster_editcluster"><cfoutput>クラスタ #URL.cluster# の編集</cfoutput></cfcase>
+<cfcase value="no_clust_rep">クラスタ内のサーバーは起動していません。このクラスタ用の設定を取得できません。ローカルマシン上で少なくとも 1 つのクラスタメンバーを起動してください。リモートサーバーのいずれかがクラスタの部分である場合は、それも起動する必要があります。<br/>クラスタ設定に加えた修正を処理することはできません。</cfcase>
+<cfcase value="no_clust_msg">クラスタは無効化されました。</cfcase>
+<cfcase value="no_clustx_rep"><cfoutput>リモートサーバー <strong>#CALLER.adds[x]#</strong> をクラスタに追加できません。起動していないようです。クラスタに追加する前に、サーバーを起動してください。</cfoutput></cfcase>
+<cfcase value="no_clustx_msg"><cfoutput>サーバー #CALLER.adds[x]# は起動していません</cfoutput></cfcase>
+<cfcase value="cluster_updatedSuccessfully">
+クラスタは正常に更新されました。
+</cfcase>
+<cfcase value="clustman_welcome"><cfoutput>
+クラスタの修正 :#URL.cluster#
+</cfoutput></cfcase>
+<cfcase value="modifyServersInCluster"><cfoutput>クラスタ内のサーバーの修正 :&nbsp;#URL.cluster#</cfoutput></cfcase>
+<cfcase value="notclust">サーバーはクラスタ化されていません</cfcase>
+<cfcase value="clust">クラスタ内のサーバー</cfcase>
+<cfcase value="cluster_algorithm">クラスタアルゴリズム</cfcase>
+<cfcase value="rrobin">ラウンドロビン</cfcase>
+<cfcase value="weightedrr">重みづけされたラウンドロビン</cfcase>
+<cfcase value="randomweight">ランダムな重みづけ</cfcase>
+<cfcase value="cluststickon">スティッキーセッション *</cfcase>
+<cfcase value="cluststickoff">セッションの複製 *</cfcase>
+<cfcase value="can">キャンセル</cfcase>
+<cfcase value="button_submit"> 送信 </cfcase>
+<cfcase value="wclust"><cfoutput>重みづけされたクラスタリングアルゴリズムの 1 つが選択されました。一般的に、これらは、クラスタメンバー間のハードウェア機能が異なるクラスタ内で使用されます。たとえば、server1 に 4 CPU と 4 GB の RAM があり、server2 に 1 つの CPU と 1 GB の RAM しかない場合などです。この場合は、リクエストの大部分を server1 に送ると良いでしょう。<a target="_self" href="index.cfm?cluster=#URL.cluster#">このクラスタにサーバーの重みを設定する場合は、ここをクリック</a>
+</cfoutput></cfcase>
+<cfcase value="j2eesession_note">* メモ :セッションレプリケーションまたはスティッキーセッションには J2EE セッションを使用する必要があります。クラスタに関連するすべてのインスタンスは、J2EE セッションを使用する必要があります。そのため、[サーバーの設定] ---&gt; [メモリ変数] を選択し、クラスタメンバーごとに [J2EE セッション変数の使用] チェックボックスを選択する必要があります。
+</cfcase>
+<cfcase value="ntrun">このクラスタのメンバーは起動していません。クラスタ設定を変更する場合は、クラスタ内のすべてのサーバーを起動する必要があります。サーバーを起動し、それから、変更を再送信してください。</cfcase>
+<cfcase value="svrn"><cfoutput>次のサーバーを起動してください :<strong>#CALLER.svrObj.getName()#</strong></cfoutput></cfcase>
+<cfcase value="addserver">新規 ColdFusion サーバーの追加</cfcase>
+<cfcase value="local_server_name">サーバー名</cfcase>
+<cfcase value="local_server_directory">サーバーディレクトリ</cfcase>
+<cfcase value="button_browse">サーバーのブラウズ</cfcase>
+<cfcase value="create_from_war">EAR/WAR からの作成<br/>&nbsp;&nbsp;(オプション)</cfcase>
+<cfcase value="create_service">Windows サービスの作成</cfcase>
+<cfcase value="create_service_restart">サービスの自動再起動</cfcase>
+<cfcase value="sub">送信</cfcase>
+<cfcase value="nojws">
+JRun Web サービスを使用できません。このサーバー用の jrun.xml を編集して、JWS を有効にしてください。
+</cfcase>
+<cfcase value="_nojws">
+JWS を使用できません
+</cfcase>
+<cfcase value="entman_changeswillrestart">
+このページに加えられた変更により CF インスタンスが再起動されますので、ご注意ください。 
+</cfcase>
+<cfcase value="editserver"><cfoutput>ColdFusion サーバーの編集 :#URL.servername#</cfoutput></cfcase>
+<cfcase value="httpport">内部 Web サーバーポート</cfcase>
+<cfcase value="enable_jws">JWS の有効化 (内部 Web サーバー)</cfcase>
+<cfcase value="enable_dirbrowse">ディレクトリのブラウズ</cfcase>
+<cfcase value="archive_error"><cfoutput>
+問題が発生しました<br/>
+<cfoutput>
+<b>メッセージ</b> :#CALLER.exceptions.message#<br/> <b>詳細</b> : #CALLER.exceptions.detail#
+</cfoutput>
+</cfoutput></cfcase>
+<cfcase value="entman_error"><cfoutput>
+問題が発生しました<br/>
+<cfoutput>
+<b>メッセージ</b> :#CALLER.exceptions.message#<br/> <b>詳細</b> : #CALLER.exceptions.detail#
+</cfoutput>
+</cfoutput></cfcase>
+<cfcase value="clustdomainerror">ネットワークエラー</cfcase>
+<cfcase value="remotesvrerror"><cfoutput>クラスタ <strong>#URL.cluster#</strong> 内の以下のリモートサーバーに接続できません。ネットワーク経由で到達できないか、起動していないことが原因です。そのため、クラスタに加えた変更はすべてのクラスタメンバーに適用されませんでした。この設定を有効にするには、クラスタ内のすべてのリモートサーバーに到達できる必要があります。ネットワーク / サーバーステータスを調べ、設定を再送信してください。
+</cfoutput></cfcase>
+<cfcase value="Zentman_error"><cfoutput>
+問題が発生しました<br/>
+<cfoutput>
+<b>メッセージ</b> :#CALLER.exceptions.message#<br/> <b>詳細</b> : #CALLER.exceptions.detail#
+</cfoutput>
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

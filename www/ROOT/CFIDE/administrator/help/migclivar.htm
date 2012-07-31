@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="02 19, 2002 3:56:28 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Migrate client variable data</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nMigrate client variable data");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Migrate client variable data<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h2>Migrate client variable data</h2>
+<p>You should understand the structure of the database tables that store 
+ client information if you have to migrate client variable data to another 
+ data source.</p>
+<p>&#160;</p>
+<p>Client variables that are stored externally use the database tables 
+ with the structure shown in the following tables:</p>
+<p>&#160;</p>
+<table cellspacing="0" width="86.879%">
+	<col style="width: 30.537%;" />
+	<col style="width: 69.463%;" />
+	<tr valign="top">
+		<td colspan="2" style="border: Solid 1px #c0c0c0; width: 100%; 
+			 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">CDATA</p></td>
+		
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Column</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Data type</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>cfid</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>CHAR(64), 
+		 TEXT, VARCHAR, or equivalent</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>app</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>CHAR(64), 
+		 TEXT, VARCHAR, or equivalent</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>data</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>MEMO, 
+		 LONGTEXT, LONG VARCHAR , or equivalent</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<table cellspacing="0" width="86.879%">
+	<col style="width: 30.537%;" />
+	<col style="width: 69.463%;" />
+	<tr valign="top">
+		<td colspan="2" style="border: Solid 1px #c0c0c0; width: 100%; 
+			 padding-right: 10px; padding-left: 10px;"><p style="font-weight: bold;">CGLOBAL</p></td>
+		
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Column</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p 
+			 style="font-weight: bold;">Data type</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>cfid</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>CHAR(64), 
+		 TEXT, VARCHAR, or equivalent</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>data</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>MEMO, 
+		 LONGTEXT, LONG VARCHAR, or equivalent</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.537%; padding-right: 10px; 
+			 padding-left: 10px;"><p>lvisit</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 69.463%; padding-right: 10px; padding-left: 10px;"><p>TIMESTAMP, 
+		 DATETIME, DATE, or equivalent</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p>Different DBMSs require different data types. Ensure that you choose 
+ the data type that applies to your DBMS. For information about creating 
+ client variable tables, see <span style="font-style: italic;"><i>ColdFusion 
+ Developer's Guide</i></span>.</p>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="about_coldfusion_data_sources.htm" title="about_coldfusion_data_sources.htm">ColdFusion 
+	 data sources overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="mgeclivar.htm" title="mgeclivar.htm">Manage 
+	 client variables</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="client_variable_planning.htm" title="client_variable_planning.htm">Client 
+	 variable planning</a></p></li>
+</ul>
+<p class="RelatedTopics">&#160;</p>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

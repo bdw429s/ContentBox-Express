@@ -1,0 +1,168 @@
+﻿[OPTIONS]
+Compiled File=CFAdminHelp.chm
+Title=CFAdminHelp
+Contents File=CFAdminHelp.hhc
+Index File=CFAdminHelp.hhk
+Default topic=Whats_new_in_this_release.htm.htm
+Default Window=NewWindow
+Error log file=
+Display compile progress=No
+Display compile notes=No
+Full-text search=Yes
+Binary Index=No
+Auto Index=No
+Enhanced decompilation=No
+Binary TOC=No
+Flat=No
+
+[WINDOWS]
+NewWindow="New Window Caption","CFAdminHelp.hhc","CFAdminHelp.hhk","","",,,,,0x40000520,0,0x200e,[0,0,500,400],0x0,0x0,,0,0,0
+
+[FILES]
+Restoring_an_Archive.htm
+modifying_a_site_archive.htm
+Generating_Archive.htm
+creating_site_archive.htm
+Overview_of_Site_Archiving.htm
+Archive_Summary_Tab.htm
+Online_Help.htm
+Tips_for_printing.htm
+About_database_drivers.htm
+About_ColdFusion_data_sources.htm
+Overview_of_Server_Settings.htm
+mngmemvar.htm
+crelogmap.htm
+About_logical_aliases_for_physical_directories.htm
+rstrdebug.htm
+debgopt.htm
+Verify_ColdFusion_data_sources.htm
+Overview_of_Verity_Collections.htm
+setcfstdpass.htm
+Overview_of_Optional_Configuration.htm
+setcfpsswrd.htm
+appserset.htm
+Client_Variable_Planning.htm
+Overview_of_Basic_Configuration.htm
+chgadpwrd.htm
+Why_security_is_important.htm
+migclivar.htm
+mgeclivar.htm
+conadmail.htm
+conxstringopt.htm
+Manage_Verity_collections.htm
+Verity_Supported_File_Types.htm
+crevercllx.htm
+popvercllx.htm
+idCFinf.htm
+verK2.htm
+setcacpref.htm
+jvmandjava.htm
+javaapplet.htm
+verwebserv.htm
+schedtask.htm
+addedittask.htm
+verCFserv.htm
+logsettings.htm
+logfiles.htm
+logviewer.htm
+filter.htm
+customtag.htm
+addeditcftag.htm
+cftags.htm
+addeditjavaapplet.htm
+corbaext.htm
+setsummary.htm
+Delete_Archive_Definition.htm
+logtypes.htm
+Schedule_Task_Overview.htm
+Overview_of_Basic_Troubleshooting.htm
+Analyze_server_activity_in_log_files.htm
+Documentation.htm
+Overview_of_ColdFusion_data_sources.htm
+About_Java_settings_for_ColdFusion_MX.htm
+Overview_of_Debugging_Settings.htm
+What_you_can_do_in_ColdFusion_Administrator.htm
+Change_ColdFusion_user_account.htm
+Overview_of_ColdFusion_performance_monitoring.htm
+Configure_the_Performance_Monitor.htm
+Enable_performance_monitoring.htm
+About_the_data_sources_page.htm
+Layout_of_the_ColdFusion_Administrator.htm
+charting.htm
+db2_universal_db_connect_to.htm
+webservices.htm
+sandbox_sec.htm
+informix_connect_to.htm
+mysql_connect_to.htm
+odbc_socket_connect_to.htm
+oracle_connect_to.htm
+code_anal.htm
+Log_File_columns.htm
+access_connect_to.htm
+sqlsvr_connect_to.htm
+sybase_connect_to.htm
+create_a_data_source.htm
+other_connect_to.htm
+Suspending_Probe_Operation.htm
+probe_types.htm
+Adding_Probes.htm
+About_the_ColdFusion_Probe_Page.htm
+license_scanner.htm
+event_gateways.htm
+event_gateway_overview.htm
+event_gateway_settings.htm
+access_unicode_connect_to.htm
+j2ee_archive.htm
+j2ee_packaging_overview.htm
+adding_and_editing_j2ee_archives.htm
+About_the_Cluster_Manager.htm
+event_gateway_types.htm
+About_the_Server_Manager_Page.htm
+font_management.htm
+add_coldfusion_instance.htm
+connect_through_jndi.htm
+edit_cluster_page.htm
+Server_Monitor.htm
+User_Manager.htm
+Set_request_tuning.htm
+Connect_to_PostgreSQL.htm
+Server_Monitor_Summary.htm
+flex_data_service.htm
+Memory_Usage.htm
+Server_Monitor_Database.htm
+Server_Monitor_Errors_Section.htm
+Server_Monitor_Alerts_and_Snapshots_Section.htm
+About_simultaneous_request_tuning.htm
+Change_password.htm
+Multi_Server_monitor.htm
+Set_Line_Debugger_Settings.htm
+Connect_to_Apache_Derby_Client.htm
+Setting_per_application_settings.htm
+Connect_to_Apache_Derby_Embedded.htm
+Server_Manager_client.htm
+Document_page.htm
+Manage_Undelivered_Mails.htm
+Allowed_IP_Addresses.htm
+Server_Monitor_Request_statistics.htm
+Edit_User_Configuration.htm
+Solr_Collections.htm
+Manage_Solr_collections.htm
+Whats_new_in_this_release.htm.htm
+Migrate_verity_collections.htm
+Populate_a_Solr_Collection.htm
+Archive_To_Do_List_Tab.htm
+Archive_Information_tab.htm
+RoboHHRE.lng
+
+CFAdminHelp.glo
+CFAdminHelp.brs
+[ALIAS]
+#include CFAdminHelp.ali
+
+[MAP]
+#include BSSCDefault.h
+
+[TEXT POPUPS]
+BSSCDefault.h
+
+

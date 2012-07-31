@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="02 15, 2002 8:53:24 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Why security is important</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Security \nWhy security is important");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"why_security_is_important.htm\">Security <\/a> > Why security is important<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h2>Why security is important</h2>
+<p>Whether you have an e-commerce site where customers enter credit card 
+ information or a global collaboration site where users share confidential 
+ data, you should understand the security risks that could threaten your 
+ web applications.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Snooping and eavesdropping:</b></span> 
+ Someone can monitor data sent over the public connections of the web.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>User impersonation: </b></span>Someone 
+ can impersonate a trusted user to gain access to information that only 
+ the trusted user should see or download.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Unauthorized access: </b></span>Unauthorized 
+ users can gain access to sensitive information. This security risk is 
+ the most complex because the Internet links every computer to one large 
+ network. Completely allowing or disallowing access to a given system or 
+ data source is relatively straight-forward, but allowing the partial access 
+ required for an application to be useful remains risky. For example, a 
+ bank can easily publish a public, freely accessible site with general 
+ banking information. Creating an account maintenance site where users 
+ have exclusive access to their own personal account information is more 
+ difficult.</p>
+<p>&#160;</p>
+<p>ColdFusion provides a highly secure environment for web application 
+ development and deployment. It helps you reduce security risks in the 
+ following ways:</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Encryption: </b></span>Use of the Secure 
+ Sockets Layer (SSL) protocol prevents snooping, eavesdropping, and message 
+ tampering as information passes between clients and servers. SSL, which 
+ is supported by most web servers, encrypts Internet protocols (such as 
+ HTTP) with public key cryptography. A private key resides on the server 
+ to decrypt inbound data and encrypt outbound data. After the key is installed, 
+ the web server automatically handles encryption and decryption.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Authentication: </b></span><span>Au</span>thentication checks whether 
+ someone is a valid system user. It prompts a user for a unique login or 
+ user name, and a password or personal identification number (PIN).</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Access Control:</b></span> Authenticated 
+ users have access to particular features or components based on security 
+ clearance, group affiliation, or other criteria specified by the developer.</p>
+<h5>&#160;</h5>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="kadov-p" style="font-size: 10pt;"><span><a href="setcfpsswrd.htm" style="font-size: 10pt;" title="setcfpsswrd.htm">Set 
+	 ColdFusion Administrator password</a></span></li>
+	<li class="kadov-p" style="font-size: 10pt;"><span><a href="setcfstdpass.htm" style="font-size: 10pt;" title="setcfstdpass.htm">Set 
+	 RDS password</a></span></li>
+	<li class="kadov-p" style="font-size: 10pt;"><a href="sandbox_sec.htm" style="font-size: 10pt;" title="sandbox_sec.htm">Configure 
+	 ColdFusion Security</a></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

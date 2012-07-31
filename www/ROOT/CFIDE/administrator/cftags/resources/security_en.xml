@@ -1,0 +1,424 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Security
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+
+<cfcase value="alert">ALERT!</cfcase>
+
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="ip_pagename">Debugging IP Address</cfcase>
+<cfcase value="pageHeader_allowipaddress">Security &gt; Allowed IP Addresses</cfcase>
+<cfcase value="ip_welcometext">
+Specify client IP addresses that should be allowed to invoke exposed services.
+This can be individual IP addresses, IP address ranges of the form 10-30, or * wild cards.
+Both IPv4 and IPv6 addresses are supported.
+To include an IP address in the list, enter the address and click Add.
+To delete an IP address from the list, select the address and click Remove Selected.
+When no IP addresses are selected, no user can invoke exposed services
+</cfcase>
+<cfcase value="selectIP">Select Allowed IP Addresses for Exposed Services</cfcase>
+<cfcase value="ip_address">IP Address</cfcase>
+<cfcase value="add_button">Add</cfcase>
+<cfcase value="viewdeleteIP">View / Remove Selected IP Addresses for Exposed Services</cfcase>
+<cfcase value="remove_button">Remove Selected</cfcase>
+<cfcase value="err_seedLength">Seed must be minimum 8 characters</cfcase>
+<cfcase value="adminpasswordpagename">ColdFusion Administrator password</cfcase>
+<cfcase value="pageHeader_adminpassword">Security &gt; Administrator</cfcase>
+<cfcase value="cfadmin_password">ColdFusion Administration Authentication</cfcase>
+<cfcase value="cfadmin_password_explanation">
+You should restrict access to the ColdFusion Administrator to trusted
+users. By default the ColdFusion Administrator requires authentication to access
+these pages. However, if you configure your web server to restrict access to
+these pages, you can disable this authentication and
+rely on your web server's security instead. (Consult your web server
+documentation for details on securing pages.)
+</cfcase>
+<cfcase value="cfadmin_username_explanation">
+Select the type of Administrator authentication:
+</cfcase>
+<cfcase value="cfadmin_singlepassword">Use a single password only (default)</cfcase>
+<cfcase value="cfadmin_usernames">Separate user name and password authentication (allows multiple users)</cfcase>
+<cfcase value="cfadmin_securitydisabled">No authentication needed (not recommended)</cfcase>
+<cfcase value="cfadmin_changePassword">
+To change the ColdFusion Administrator password for the root administrative user,
+enter a new password and confirm it below:
+</cfcase>
+<cfcase value="cfadmin_Newpassword">New Password</cfcase>
+<cfcase value="cfadmin_NewpasswordConfirm">Confirm Password</cfcase>
+<cfcase value="cfadmin_passwordlength">(50-character limit.)</cfcase>
+<cfcase value="seedHeader">Password Seed</cfcase>
+<cfcase value="cfadmin_changeSeed">
+To specify a new seed value to encrypt data source passwords
+</cfcase>
+<cfcase value="newSeed">New Seed</cfcase>
+<cfcase value="cfadmin_seedlength">(8-character minimum and 500-character limit.)</cfcase>
+<cfcase value="RDSpagename">RDS Password</cfcase>
+<cfcase value="disableRDSLabel">Enable RDS Service</cfcase>
+<cfcase value="enableRDS_desc">
+The ColdFusion RDS service allows you to connect to this server using the RDS Password you define below.
+This is intended for development use only. If this is a production machine please check the checkbox to disable RDS.
+</cfcase>
+<cfcase value="pageHeader_rdspassword">Security &gt; RDS</cfcase>
+<cfcase value="cfrds_password">RDS authentication</cfcase>
+<cfcase value="rds_password_explanation">
+You should restrict access to RDS to trusted
+users. By default RDS requires authentication. However, you may disable this authentication and
+rely on your web server's security instead.
+</cfcase>
+<cfcase value="cfrds_username_explanation">
+Select the type of RDS authentication:
+</cfcase>
+<cfcase value="cfrds_singlepassword">Use a single password only (default)</cfcase>
+<cfcase value="cfrds_usernames">Separate user name and password authentication (allows multiple users)</cfcase>
+<cfcase value="cfrds_securitydisabled">No authentication needed (not recommended)</cfcase>
+<cfcase value="rds_pass">RDS Single Password</cfcase>
+<cfcase value="rds_superpassword_explanation">
+To change the single RDS password, enter a new password and confirm it below:
+</cfcase>
+<cfcase value="rdsN_Newpassword">New Password</cfcase>
+<cfcase value="rdsN_NewpasswordConfirm">Confirm Password</cfcase>
+<cfcase value="pagename1">Sandbox Security Permissions</cfcase>
+<cfcase value="delete_sandbox_confirmation">
+Are you sure you want to delete this security sandbox?
+</cfcase>
+<cfcase value="pagename2">Security Settings</cfcase>
+<cfcase value="pageHeader_sandbox">Security &gt; Sandbox Security</cfcase>
+<cfcase value="enable_switch_security">Enable ColdFusion Security</cfcase>
+<cfcase value="welcome">
+ColdFusion's sandbox security uses the location of your ColdFusion pages to control access to ColdFusion resources. A sandbox is a designated area (files or directories) of your site to which you apply security restrictions. By default, a subdirectory (or child directory) inherits the sandbox settings of the directory one level above it (the parent directory). If you define sandbox settings for a subdirectory, you override the sandbox settings inherited from the parent directory.
+<br />
+<br />
+<b>Note:</b> You can configure these settings prior to enabling them on the server. Also, you must restart the ColdFusion application server to enable this setting.
+</cfcase>
+<cfcase value="j2ee_enableSBS">
+To use sandbox security in the multiserver and J2EE editions, the application server must be running a security manager (java.lang.SecurityManager) and you must define the JVM arguments, as describe in the Configuring and Administering ColdFusion manual and in the ColdFusion Administrator online Help.
+</cfcase>
+<cfcase value="jrun_turn_off_security">
+To disable Sandbox Security, see the JRun section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="jrun_turn_on_security">
+To enable Sandbox Security, see the JRun section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="sunone_turn_off_security">
+To diable Sandbox Security, see the Sun ONE section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="sunone_turn_on_security">
+To enable Sandbox Security, see the Sun ONE section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="oracle_turn_off_security">
+To disable Sandbox Security, see the Oracle section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="oracle_turn_on_security">
+To enable Sandbox Security, see the Oracle section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="weblogic_turn_off_security">
+To disable Sandbox Security, see the BEA WebLogic section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="weblogic_turn_on_security">
+To enable Sandbox Security, see the BEA WebLogic section of the <a href="http://www.adobe.com/go/prod_releasenotes" target="Adobe website">release notes</a>.
+</cfcase>
+<cfcase value="l10n_addsandbox">Add Security Sandbox</cfcase>
+<cfcase value="browse_button">Browse Server</cfcase>
+<cfcase value="new_sandbox">New sandbox, or pick one to copy from</cfcase>
+<cfcase value="defined_dirs">Defined Directory Permissions</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="dirpat">Directory</cfcase>
+<cfcase value="rootsecuritycntx">Root Security Context</cfcase>
+<cfcase value="edit">Edit</cfcase>
+<cfcase value="delete">Delete</cfcase>
+<cfcase value="cfide_dir">( ColdFusion CFIDE system directory )</cfcase>
+<cfcase value="webinf_dir">( ColdFusion WEB-INF system directory )</cfcase>
+<cfcase value="no_dir_perm">No directory permissions exist.</cfcase>
+<cfcase value="sandbox_apply">For these changes to take effect, you must restart ColdFusion.</cfcase>
+<cfcase value="pagename_resourcesecurity">Resource Security</cfcase>
+<cfcase value="pagename_securityPermissions">Security Permissions</cfcase>
+<cfcase value="enable_switch_sandbox">Enable ColdFusion Sandbox Security</cfcase>
+<cfcase value="welcome_1">
+Security Settings let users enable and disable access to ColdFusion tags, functions, and enterprise resources like data sources. <br />
+<b>Note:</b> You must restart ColdFusion to enable this setting.
+</cfcase>
+<cfcase value="directory">Directory</cfcase>
+<cfcase value="default">default</cfcase>
+<cfcase value="webapp">Web Application</cfcase>
+<cfcase value="subtitle1">User RDS and Administrator access</cfcase>
+<cfcase value="subtitle2">User Sandboxes</cfcase>
+<cfcase value="subtitle3">Exposed Services</cfcase>
+<cfcase value="userManagerPagename">User Manager</cfcase>
+<cfcase value="username">User name:</cfcase>
+<cfcase value="Password">Password:</cfcase>
+<cfcase value="ConfirmPassword">Confirm Password:</cfcase>
+<cfcase value="DescriptionLabel">Description:</cfcase>
+<cfcase value="AllowRDSAccessLabel">Allow RDS access</cfcase>
+<cfcase value="AllowAdminAccessLabel">Allow Administrative Access</cfcase>
+<cfcase value="APIAccessOnlyLabel">API Access Only</cfcase>
+<cfcase value="AdminConsoleAndAPILabel">Administrator Console & API Access</cfcase>
+<cfcase value="AllowedRolesLabel">Allowed Roles:</cfcase>
+<cfcase value="ProhibitedRolesLabel">Prohibited Roles:</cfcase>
+<cfcase value="AllowedServicesLabel">Allowed Services:</cfcase>
+<cfcase value="ProhibitedServicesLabel">Prohibited Services:</cfcase>
+<cfcase value="AllowedSandboxesLabel">Allowed Sandboxes:</cfcase>
+<cfcase value="ProhibitedSandboxesLabel">Prohibited Sandboxes:</cfcase>
+<cfcase value="addUserBtn">Add User</cfcase>
+<cfcase value="editUserBtn">Edit User</cfcase>
+<cfcase value="cancelEditBtn">Cancel Edit</cfcase>
+<cfcase value="cancelAdd">Cancel</cfcase>
+<cfcase value="addUser">User Authentication (Add Mode)</cfcase>
+<cfcase value="editUser">User Authentication (Edit Mode)</cfcase>
+<cfcase value="GridHeaderAction">Action</cfcase>
+<cfcase value="GridHeaderUser">User</cfcase>
+<cfcase value="GridHeaderSandBoxes">Sandboxes</cfcase>
+<cfcase value="GridHeaderRoles">Roles</cfcase>
+<cfcase value="GridHeaderAccess">Access</cfcase>
+<cfcase value="CFAdminAccessLabel">CF Admin</cfcase>
+<cfcase value="RDSAccessLabel">RDS</cfcase>
+<cfcase value="AdminAPIAccessLabel">Admin API</cfcase>
+<cfcase value="err_usernameAlreadyExists">Unable to create user: this user name already exists.</cfcase>
+<cfcase value="err_cantcreateroot">Unable to create user: You are attempting to create a user with the same ID as the root user.</cfcase>
+<cfcase value="err_userDoesntExist">The selected user doesn't exist</cfcase>
+<cfcase value="pageHeader_usermanager">Security &gt; User Manager</cfcase>
+<cfcase value="deleteConfirmation">Are you sure you want to delete this user?</cfcase>
+<cfcase value="err_passwordlength">Password should be greater than or equal to 5 characters</cfcase>
+<cfcase value="err_usernamelength">User name should be between 5 and 20 characters</cfcase>
+<cfcase value="err_usernamenonchars">User name can contain only alphanumeric characters</cfcase>
+<cfcase value="err_passwordmismatch">Password and Confirm Password do not match</cfcase>
+<cfcase value="pagedesc">Add and manage users.  Users can be granted access to roles and sandboxes</cfcase>
+<cfcase value="charHelpString">(Minimum 5 characters)</cfcase>
+<cfcase value="username_empty">User name cannot be empty</cfcase>
+<cfcase value="password_empty">Password cannot be empty</cfcase>
+<cfcase value="usermngrpagename1">User Manager</cfcase>
+<cfcase value="GridHeaderDescription">Description</cfcase>
+<cfcase value="AdminAccessLabel">Administrative Access</cfcase>
+<cfcase value="CFAdminAPIAccessLabel">API Only</cfcase>
+<cfcase value="CFAdminConsoleAPIAccessLabel">Console & API</cfcase>
+<cfcase value="pagedesc1">Add and manage users.  Users can be granted access to roles and sandboxes.</cfcase>
+<cfcase value="YesLabel">Yes</cfcase>
+<cfcase value="NoLabel">No</cfcase>
+<cfcase value="add_new_user">Add New User</cfcase>
+<cfcase value="button_add"> Add User</cfcase>
+<cfcase value="connected">Defined Users</cfcase>
+<cfcase value="adminuserpasswordpagename">ColdFusion Administrative User password</cfcase>
+<cfcase value="pageHeader_adminuserpassword">
+Security &gt; Change Password</cfcase>
+<cfcase value="adminuser_password_explanation">
+To change your ColdFusion Administrator password, enter a new password and confirm it below:
+</cfcase>
+<cfcase value="cfadminuser_newpassword">New Password</cfcase>
+<cfcase value="cfadminuser_newpasswordConfirm">Confirm Password</cfcase>
+<cfcase value="l10n_secdsource">Data Sources</cfcase>
+<cfcase value="l10n_cftags">CF Tags</cfcase>
+<cfcase value="l10n_cffunctions">CF Functions</cfcase>
+<cfcase value="l10n_cfilesdir">Files/Dirs</cfcase>
+<cfcase value="ipports">Server/Ports</cfcase>
+<cfcase value="Others">Others</cfcase>
+<cfcase value="cffunctionPermissions">CF Function Permissions:</cfcase>
+<cfcase value="l10n_enfunc">Enabled Functions</cfcase>
+<cfcase value="l10n_disfunc">Disabled Functions</cfcase>
+<cfcase value="finish">Finish</cfcase>
+<cfcase value="step_functions">
+Select ColdFusion functions that you want to disable.
+ColdFusion pages in this sandbox cannot use functions that are listed in the Disabled Functions box.
+</cfcase>
+<cfcase value="cftagpermissions">CF Tag Permissions:</cfcase>
+<cfcase value="l10nentags">Enabled Tags</cfcase>
+<cfcase value="l10n_distags">Disabled Tags</cfcase>
+<cfcase value="step_tags">
+Select the ColdFusion tags that you want to disable.
+ColdFusion pages in this sandbox cannot use tags that are listed in the Disabled Tags box.
+</cfcase>
+<cfcase value="allDatasources">
+&lt;&lt;ALL DATASOURCES&gt;&gt;
+</cfcase>
+<cfcase value="datasourcepermissions">Data Source Permissions:</cfcase>
+<cfcase value="l10n_endata">Enabled Data sources</cfcase>
+<cfcase value="l10n_disdata">Disabled Data sources</cfcase>
+<cfcase value="step_ds">
+Select the data sources that can be used by ColdFusion pages in this directory.
+To select more than one data source, hold down the Control key and click the name of the data source.
+ColdFusion pages in the directory cannot use data sources listed in the Disabled Data Sources box. <br />
+<br />
+<b>Please note:</b> The ALL DATASOURCES option includes all data sources not otherwise specified as enabled or disabled
+as well as all future data sources created in the Data Sources section of the ColdFusion administrator.</cfcase>
+<cfcase value="addEditSecuredFileDir">Add / Edit Secured Files and Directories:</cfcase>
+<cfcase value="logical_filepath">File Path</cfcase>
+<cfcase value="button_browse">Browse Server</cfcase>
+<cfcase value="read">Read</cfcase>
+<cfcase value="write">Write</cfcase>
+<cfcase value="execute">Execute</cfcase>
+<cfcase value="permissions">Permissions</cfcase>
+<cfcase value="addFile">Add Files / Paths</cfcase>
+<cfcase value="editFile">Edit Files / Paths</cfcase>
+<cfcase value="file_active">Secured Files and Directories</cfcase>
+<cfcase value="File">File Path</cfcase>
+<cfcase value="map_nomappings">No mappings are active.</cfcase>
+<cfcase value="step_files">
+Enter files that you would like to <b>grant</b> access for 
+templates operations under this directory.
+</cfcase>
+<cfcase value="step_files_tip">
+A file permission consists of a pathname and a set of actions valid 
+for that pathname. A pathname is the pathname of the file or 
+directory granted the specified actions. A pathname that ends in "/*" 
+indicates all the files and directories contained in that directory. 
+A pathname that ends with "/-" indicates (recursively) all files and 
+subdirectories contained in that directory. A pathname consisting of the 
+special token &quot;&lt;&lt;ALL FILES&gt;&gt;&quot; matches any file.
+</cfcase>
+<cfcase value="serverIPPortPermissions">Server/IP and Port Permissions:</cfcase>
+<cfcase value="delete_server_confirmation">
+Are you sure you want to delete this server?
+</cfcase>
+<cfcase value="ip">Server/IP Address</cfcase>
+<cfcase value="l10n_secip_sport">Single port</cfcase>
+<cfcase value="l10n_secip_portheigh">This port and higher</cfcase>
+<cfcase value="l10n_secip_portlow">This port and lower</cfcase>
+<cfcase value="l10n_secip_portrange">Port range (xxxx-xxxx)</cfcase>
+<cfcase value="addip">Add IP Address</cfcase>
+<cfcase value="editip">Edit IP Address</cfcase>
+<cfcase value="enabled_ipport">Enabled IP/Ports</cfcase>
+<cfcase value="ipport">IP:Port</cfcase>
+<cfcase value="no_ipports">All ip:ports are open. There are currently no restrictions.</cfcase>
+<cfcase value="ip_port_explanation1">
+These settings restrict the IP addresses and ports that ColdFusion can access with the tags that call third-party resources;
+for example, the cfmail, cfpop, cfldap, and cfhttp tags.
+</cfcase>
+<cfcase value="allRuntimePermissions">
+&lt;&lt;ALL RuntimePermissions&gt;&gt;
+</cfcase>
+<cfcase value="otherspermissions">Other Permissions:</cfcase>
+<cfcase value="l10n_endata_runtime">Enabled Runtime Permissions</cfcase>
+<cfcase value="l10n_disdata_runtime">Disabled Runtime Permissions</cfcase>
+<cfcase value="step_ds_runtime">
+To disable the Runtime Permissions for a ColdFusion page in this directory, select the Runtime Permission from the Enable Runtime Permissions box and move it to the Disabled Runtime Permissions box.
+To disable more than one Runtime Permissions for a ColdFusion page, hold down the Control key and click the name of the Runtime Permissions. ColdFusion pages in the directory cannot use Runtime Permissions that are listed in the Disabled Runtime Permissions box.
+ <br />
+<br />
+<b>Please note:</b> By default, all Runtime Permissions are enabled. However, you can choose to enable or disable the permissions listed in the Enabled Runtime Permissions box. </cfcase>
+<cfcase value="cfadmin_login">ColdFusion Administrator Login</cfcase>
+<cfcase value="coldfusionVer">ColdFusion</cfcase>
+<cfcase value="required_userid">User Name Required</cfcase>
+<cfcase value="label_userid">User name</cfcase>
+<cfcase value="required_password">Password Required</cfcase>
+<cfcase value="label_password">Password</cfcase>
+<cfcase value="null_user_id">User name required. Please try again.</cfcase>
+<cfcase value="invalid_userid_or_password">Invalid User name or Password. Please try again.</cfcase>
+<cfcase value="invalid_password">Invalid Password. Please try again.</cfcase>
+<cfcase value="password_button">Login</cfcase>
+<cfcase value="copyright_cont1">Adobe, the Adobe logo, ColdFusion, and Adobe ColdFusion are trademarks or registered trademarks of Adobe Systems Incorporated in the United States and/or other countries.  All other trademarks are the property of their respective owners.</cfcase>
+<cfcase value="cfcbrowser_login">Component Browser Login</cfcase>
+<cfcase value="componentbrowser">Component Browser</cfcase>
+<cfcase value="enterrdsoradminpasswordlogin">Enter your RDS or Admin password below</cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format.
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format. <br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_remove"><cfoutput>
+An error occurred attempting to remove the requested IP(s).
+from the Debugging Service.<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_get"><cfoutput>
+An error occurred attempting to retrieve a list of restricted IP addresses
+from the Debugging Service.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="password_confirm_error">Your password could not be changed because the new and confirmation passwords did not match.</cfcase>
+<cfcase value="error_set_seed"><cfoutput>
+Unable to set the new seed value.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle"><cfoutput>
+Unable to set Administrator authentication switch.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_singleadminpassword"><cfoutput>
+Unable to set Administrator authentication type.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="errorheader">Root Administrator Password</cfcase>
+<cfcase value="password_confirm_error1">Password could not be changed as the new and confirmation passwords do not match.</cfcase>
+<cfcase value="error_toggle_setAdminPassword"><cfoutput>
+Unable to set admin password.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_invalidDirectory">
+Invalid Directory, please check your directory and try again.<br />
+</cfcase>
+<cfcase value="error_virtualDirectory">
+Virtual File System directories are not allowed to be sandboxed.<br />
+</cfcase>
+<cfcase value="map_error_update"><cfoutput>
+Unable to apply security updates:<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_sec"><cfoutput>
+Unable to toggle security.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_toggle_sec1"><cfoutput>
+Unable to toggle security.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="adminAuth_error">Administrative Authentication is currently only enabled for the admin user.  To enable access to the Console or Admin API by other users, go to Security > Administrator to enable Separate User name and Password Authentication</cfcase>
+<cfcase value="rdsAuth_error">RDS Authentication is currently only enabled for the admin user.  To enable access to RDS by other users, go to Security > RDS to enable Separate User name and Password Authentication</cfcase>
+<cfcase value="username_error">
+Please enter a user name.
+</cfcase>
+<cfcase value="password_blank_error">Your password could not be changed because the new and confirmation passwords are blank.</cfcase>
+<cfcase value="map_error_add_ds"><cfoutput>
+Unable to add selected data source:<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="map_error_remove_ds"><cfoutput>
+Unable to remove selected data sources:<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="error_InvalidFilePermissions">
+Invalid path or path without permisions error.<br />
+Please make sure the file or directory exists and some level of permision is enabled.
+This update could not be completed.
+</cfcase>
+<cfcase value="map_error_badip">
+Bad IP/Port format, please try another format.
+</cfcase>
+<cfcase value="map_error_update_ds"><cfoutput>
+Unable to add selected data source:<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<tocdata>
+<item name="Welcome to the ColdFusion MX Administrator" url="welcome.htm" />
+<book name="Introduction" >
+  <item name="Key features of the ColdFusion MX Administrator" url="key_features_of_coldfusion_administrator.htm" />
+  <item name="What's new in this release" url="what_s_new_in_this_release.htm" />
+  <item name="What you can do in the ColdFusion MX Administrator" url="what_you_can_do_in_coldfusion_administrator.htm" />
+  <book name="Working Environment" >
+    <item name="Layout of the ColdFusion MX Administrator" url="layout_of_the_coldfusion_administrator.htm" />
+    <book name="Sources of Information" >
+      <item name="Code Examples" url="examples.htm" />
+      <item name="Documentation" url="documentation.htm" />
+      <item name="TechNotes" url="technotes.htm" />
+      <item name="Release Notes" url="release_notes.htm" />
+      <item name="System Information" url="idcfinf.htm" />
+    </book>
+  </book>
+  <book name="Getting Help" >
+    <item name="Online Help" url="online_help.htm" />
+    <item name="Tips for printing" url="tips_for_printing.htm" />
+  </book>
+  <book name="Getting Started " >
+    <book name="Services and Processes" >
+      <item name="Overview of services and processes" url="overview_of_services_and_processes.htm" />
+      <item name="ColdFusion MX services on Windows" url="coldfusion_mx_services_in_windows.htm" />
+      <item name="ColdFusion processes on UNIX" url="coldfusion_processes_on_unix.htm" />
+      <item name="Start and stop ColdFusion" url="start_and_stop_coldfusion.htm" />
+      <item name="Uninstall ColdFusion MX" url="uninstall_coldfusion_mx.htm" />
+    </book>
+    <book name="Basic Configuration" >
+      <item name="Overview of basic configuration" url="overview_of_basic_configuration.htm" />
+      <item name="Change Administrator password" url="chgadpwrd.htm" />
+      <item name="About ColdFusion data sources" url="about_coldfusion_data_sources.htm" />
+      <item name="About Java settings for ColdFusion" url="about_java_settings_for_coldfusion_mx.htm" />
+      <book name="Performance Monitor" >
+        <item name="Overview of ColdFusion performance monitoring" url="overview_of_coldfusion_performance_monitoring.htm" />
+        <item name="Enable performance monitoring" url="enable_performance_monitoring.htm" />
+        <item name="Configure the Performance Monitor" url="configure_the_performance_monitor.htm" />
+      </book>
+    </book>
+    <book name="Optional Configuration" >
+      <item name="Overview of optional configuration" url="overview_of_optional_configuration.htm" />
+      <item name="Client variable planning" url="client_variable_planning.htm" />
+      <item name="About logical aliases for physical directories" url="about_logical_aliases_for_physical_directories.htm" />
+    </book>
+    <book name="Basic Troubleshooting" >
+      <item name="Overview of basic troubleshooting" url="overview_of_basic_troubleshooting.htm" />
+      <item name="Verify that the web server is running" url="verwebserv.htm" />
+      <item name="Verify that the ColdFusion MX server is running" url="vercfserv.htm" />
+      <item name="Change ColdFusion MX user account" url="change_coldfusion_user_account.htm" />
+      <item name="Analyze server activity in log files" url="analyze_server_activity_in_log_files.htm" />
+    </book>
+  </book>
+</book>
+<book name="Server Settings" >
+  <item name="Overview of server settings" url="overview_of_server_settings.htm" />
+  <item name="Apply server settings" url="appserset.htm" />
+  <item name="Set caching preferences" url="setcacpref.htm" />
+  <item name="Manage client variables" url="mgeclivar.htm" />
+  <item name="Migrate client variable data" url="migclivar.htm" />
+  <item name="Manage memory variables" url="mngmemvar.htm" />
+  <item name="Create mappings" url="crelogmap.htm" />
+  <item name="Configure mail server and logging" url="conadmail.htm" />
+  <item name="Charting settings" url="charting.htm" />
+  <item name="Java and JVM settings" url="jvmandjava.htm" />
+  <book name="Archives and Deployment" >
+    <item name="Overview" url="overview_of_site_archiving.htm" />
+    <item name="Create site archive definition" url="creating_site_archive.htm" />
+    <item name="Delete site archive definition" url="delete_archive_definition.htm" />
+    <item name="Modify site archive definition" url="modifying_a_site_archive.htm" />
+    <item name="Build site archive" url="generating_archive.htm" />
+    <item name="Deploy site archive" url="restoring_an_archive.htm" />
+  </book>
+  <item name="Settings Summary" url="setsummary.htm" />
+</book>
+<book name="Data &amp; Services" >
+  <book name="Data Sources" >
+    <item name="Overview of ColdFusion data sources" url="overview_of_coldfusion_data_sources.htm" />
+    <item name="About the Data Sources page" url="about_the_data_sources_page.htm" />
+    <item name="Create a data source" url="create_a_data_source.htm" />
+    <item name="Verify a data source" url="verify_coldfusion_data_sources.htm" />
+    <item name="About database drivers" url="about_database_drivers.htm" />
+    <item name="Use the connection string" url="conxstringopt.htm" />
+    <item name="Connect to DB2 Universal Database" url="db2_universal_db_connect_to.htm" />
+    <item name="Connect to Informix" url="informix_connect_to.htm" />
+    <item name="Connect to Microsoft Access" url="access_connect_to.htm" />
+    <item name="Connect to Microsoft Access Unicode" url="access_unicode_connect_to.htm" />
+    <item name="Connect to Microsoft SQL Server" url="sqlsvr_connect_to.htm" />
+    <item name="Connect to MySQL" url="mysql_connect_to.htm" />
+    <item name="Connect to ODBC Socket" url="odbc_socket_connect_to.htm" />
+    <item name="Connect to Oracle" url="oracle_connect_to.htm" />
+    <item name="Connect to other data sources" url="other_connect_to.htm" />
+    <item name="Connect to Sybase" url="sybase_connect_to.htm" />
+    <item name="Connect to JDBC-ODBC bridge" url="bridge_connect_to.htm" />
+  </book>
+  <book name="Verity collections" >
+    <item name="Overview of Verity collections" url="overview_of_verity_collections.htm" />
+    <item name="Create a Verity collection" url="crevercllx.htm" />
+    <item name="Populate a Verity collection" url="popvercllx.htm" />
+    <item name="Verity supported file types" url="verity_supported_file_types.htm" />
+    <item name="Manage Verity collections" url="manage_verity_collections.htm" />
+    <item name="Use Verity K2 server" url="verk2.htm" />
+  </book>
+  <item name="Web Services" url="webservices.htm" />
+</book>
+<book name="Debugging &amp; Logging" >
+  <book name="Debugging" >
+    <item name="Overview of Debugging Settings" url="overview_of_debugging_settings.htm" />
+    <item name="Configure Debugging Settings" url="debgopt.htm" />
+    <item name="Configure Debugging IP Addresses" url="rstrdebug.htm" />
+  </book>
+  <book name="Logging" >
+    <item name="Configure Logging Settings" url="logsettings.htm" />
+    <item name="About the Log Files page" url="logfiles.htm" />
+    <item name="View and search log content" url="logviewer.htm" />
+    <item name="Filter log content" url="filter.htm" />
+    <item name="Log files generated by ColdFusion" url="logtypes.htm" />
+    <item name="Log File columns" url="log_file_columns.htm" />
+  </book>
+  <book name="Scheduled Tasks" >
+    <item name="Overview" url="schedule_task_overview.htm" />
+    <item name="About the Schedule Tasks page" url="schedtask.htm" />
+    <item name="Add or edit a task to run" url="addedittask.htm" />
+  </book>
+  <book name="System Probes" >
+    <item name="Understanding ColdFusion System Probes" url="probe_types.htm" />
+    <item name="About the System Probes Page" url="about_the_coldfusion_probe_page.htm" />
+    <item name="Adding and Configuring Probes" url="adding_probes.htm" />
+    <item name="Suspending Probe Operation" url="suspending_probe_operation.htm" />
+  </book>
+  <item name="Code Analyzer" url="code_anal.htm" />
+</book>
+<book name="Extensions" >
+  <item name="About the Java Applets page" url="javaapplet.htm" />
+  <item name="Register Java Applets" url="addeditjavaapplet.htm" />
+  <item name="About the CFX Tags page" url="cftags.htm" />
+  <item name="Register CFX tags" url="addeditcftag.htm" />
+  <item name="Custom Tag Paths page" url="customtag.htm" />
+  <item name="Add CORBA Connectors" url="corbaext.htm" />
+</book>
+<book name="Security " >
+  <item name="Why security is important" url="why_security_is_important.htm" />
+  <item name="Set ColdFusion Administrator password" url="setcfpsswrd.htm" />
+  <item name="Set RDS password" url="setcfstdpass.htm" />
+  <item name="Configure ColdFusion security" url="sandbox_sec.htm" />
+</book>
+
+</tocdata>

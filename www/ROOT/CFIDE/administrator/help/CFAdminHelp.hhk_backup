@@ -1,0 +1,1055 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="index">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="MySQL database">
+    <param name="Name" value="Connect to MySQL database">
+    <param name="Local" value="mysql_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="User account">
+    <param name="Name" value="Change ColdFusion MX user account">
+    <param name="Local" value="Change_ColdFusion_user_account.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CORBA Connector">
+    <param name="Name" value="Corba Extension">
+    <param name="Local" value="corbaext.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verity">
+    <param name="Name" value="Verity supported file types">
+    <param name="Local" value="Verity_Supported_File_Types.htm">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="E-mail">
+    <param name="Name" value="Configure administrator mail">
+    <param name="Local" value="conadmail.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mail">
+    <param name="Name" value="Configure administrator mail">
+    <param name="Local" value="conadmail.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ColdFusion MX Administrator">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Secure">
+      <param name="Name" value="Change Administrator password">
+      <param name="Local" value="chgadpwrd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure password">
+      <param name="Name" value="Change Administrator password">
+      <param name="Local" value="chgadpwrd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Key Features">
+      <param name="Name" value="Key features of the ColdFusion MX Administrator">
+      <param name="Local" value="Key_features_of_ColdFusion_Administrator.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Welcome">
+      <param name="Name" value="Welcome to ColdFusion MX Administrator">
+      <param name="Local" value="Welcome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Possible Tasks">
+      <param name="Name" value="What you can do in ColdFusion MX Administrator">
+      <param name="Local" value="What_you_can_do_in_ColdFusion_Administrator.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Anatomy">
+      <param name="Name" value="Anatomy of the ColdFusion MX Administrator">
+      <param name="Local" value="Layout_of_the_ColdFusion_Administrator.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Dreamweaver password">
+    <param name="Name" value="Set ColdFusion Studio password">
+    <param name="Local" value="setcfstdpass.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="RDS password">
+    <param name="See Also" value="ColdFusion Studio password">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ColdFusion Studio password">
+    <param name="Name" value="Set ColdFusion Studio password">
+    <param name="Local" value="setcfstdpass.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Microsoft Access">
+    <param name="Name" value="Connect to Microsoft Access">
+    <param name="Local" value="access_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Sybase">
+    <param name="Name" value="Connect to Sybase">
+    <param name="Local" value="sybase_connect_to.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Connect">
+      <param name="Name" value="Connect to Sybase">
+      <param name="Local" value="sybase_connect_to.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Informix">
+    <param name="Name" value="Connect to Informix">
+    <param name="Local" value="informix_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Log Viewer">
+    <param name="Name" value="Log Viewer">
+    <param name="Local" value="logviewer.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Debugging Settings">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Overview of Debugging Settings">
+      <param name="Local" value="Overview_of_Debugging_Settings.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure">
+      <param name="Name" value="Configure Debugging Settings">
+      <param name="Local" value="debgopt.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Code Compatibility Analyzer">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Using">
+      <param name="Name" value="Using the Code Compatibility Analyzer">
+      <param name="Local" value="code_anal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Results">
+      <param name="Name" value="About the code compatibility analyzer results">
+      <param name="Local" value="code_anal_results.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Example Applications">
+    <param name="Name" value="Examples">
+    <param name="Local" value="Examples.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Java Applets">
+    <param name="Name" value="Add or Register Applet">
+    <param name="Local" value="addeditjavaapplet.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Register an Applet">
+      <param name="Name" value="Add or Register Applet">
+      <param name="Local" value="addeditjavaapplet.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About the Java Applet Page">
+      <param name="Name" value="Java Applets">
+      <param name="Local" value="javaapplet.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Connection String">
+    <param name="Name" value="Use connection string options">
+    <param name="Local" value="conxstringopt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Java and JVM Settings">
+    <param name="Name" value="JVM and Java Settings">
+    <param name="Local" value="jvmandjava.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Migrate client variable data">
+    <param name="Name" value="Migrate client variable data">
+    <param name="Local" value="migclivar.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Basic configuration">
+    <param name="Name" value="Overview of basic configuration">
+    <param name="Local" value="Overview_of_Basic_Configuration.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Server settings">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Overview of server settings">
+      <param name="Local" value="Overview_of_Server_Settings.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure">
+      <param name="Name" value="Apply server settings">
+      <param name="Local" value="appserset.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verity Collections Tab">
+    <param name="Name" value="Verity Collections Tab">
+    <param name="Local" value="Verity_Collections_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Oracle">
+    <param name="Name" value="Connect to Oracle">
+    <param name="Local" value="oracle_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Client variables">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Migrate">
+      <param name="Name" value="Migrate client variable data">
+      <param name="Local" value="migclivar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Manage">
+      <param name="Name" value="Manage client variables">
+      <param name="Local" value="mgeclivar.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Data sources">
+    <param name="Name" value="Connect through JNDI">
+    <param name="Local" value="connect_through_jndi.htm">
+    <param name="Name" value="Connect to DB2 Universal Database">
+    <param name="Local" value="db2_universal_db_connect_to.htm">
+    <param name="Name" value="Connect to Informix">
+    <param name="Local" value="informix_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft Access">
+    <param name="Local" value="access_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft Access with Unicode">
+    <param name="Local" value="access_unicode_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft SQL Server">
+    <param name="Local" value="sqlsvr_connect_to.htm">
+    <param name="Name" value="Connect to MySQL">
+    <param name="Local" value="mysql_connect_to.htm">
+    <param name="Name" value="Connect to ODBC Socket">
+    <param name="Local" value="odbc_socket_connect_to.htm">
+    <param name="Name" value="Connect to Oracle">
+    <param name="Local" value="oracle_connect_to.htm">
+    <param name="Name" value="Connect to other data sources">
+    <param name="Local" value="other_connect_to.htm">
+    <param name="Name" value="Connect to Sybase">
+    <param name="Local" value="sybase_connect_to.htm">
+    <param name="Name" value="Use connection string options">
+    <param name="Local" value="conxstringopt.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About">
+      <param name="Name" value="About the data sources page">
+      <param name="Local" value="About_the_data_sources_page.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Create">
+      <param name="Name" value="Create a data source">
+      <param name="Local" value="create_a_data_source.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Verify">
+      <param name="Name" value="Verify ColdFusion MX data sources">
+      <param name="Local" value="Verify_ColdFusion_data_sources.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Overview of ColdFusion data sources">
+      <param name="Local" value="Overview_of_ColdFusion_data_sources.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Aliases, logical">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Create">
+      <param name="Name" value="Create logical mappings">
+      <param name="Local" value="crelogmap.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About">
+      <param name="Name" value="About logical aliases for physical directories">
+      <param name="Local" value="About_logical_aliases_for_physical_directories.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Log Files">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Columns, raw format">
+      <param name="Name" value="Log File columns">
+      <param name="Local" value="Log_File_columns.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About">
+      <param name="Name" value="Log Files">
+      <param name="Local" value="logfiles.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Types">
+      <param name="Name" value="Types of Logs">
+      <param name="Local" value="logtypes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Analyze server activity with">
+      <param name="Name" value="Analyze server activity in log files">
+      <param name="Local" value="Analyze_server_activity_in_log_files.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Security">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Importance">
+      <param name="Name" value="Why security is important">
+      <param name="Local" value="Why_security_is_important.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure">
+      <param name="Name" value="Configure ColdFusion Security">
+      <param name="Local" value="sandbox_sec.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Set Administrator Password">
+      <param name="Name" value="Set ColdFusion MX Administrator password">
+      <param name="Local" value="setcfpsswrd.htm">
+      <param name="FrameName" value="_blank">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Logical aliases">
+    <param name="Name" value="About logical aliases for physical directories">
+    <param name="Local" value="About_logical_aliases_for_physical_directories.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CFX Tags Tab">
+    <param name="Name" value="CFX Tags Tab">
+    <param name="Local" value="CFX_Tags_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Other helpful resources">
+    <param name="Name" value="Other helpful resources">
+    <param name="Local" value="Other_helpful_resources.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Archive Summary Tab">
+    <param name="Name" value="Archive Summary Tab">
+    <param name="Local" value="Archive_Summary_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Documentation">
+    <param name="Name" value="Documentation">
+    <param name="Local" value="Documentation.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Version information">
+    <param name="Name" value="Version information">
+    <param name="Local" value="idCFinf.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Memory variables">
+    <param name="Name" value="Manage memory variables">
+    <param name="Local" value="mngmemvar.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Java Applets Tab">
+    <param name="Name" value="Applets Tab">
+    <param name="Local" value="Applets_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Archive To Do List Tab">
+    <param name="Name" value="Archive To Do List Tab">
+    <param name="Local" value="Archive_To_Do_List_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verity K2 Server">
+    <param name="Name" value="Use Verity Server">
+    <param name="Local" value="verK2.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Custom Tag Paths">
+    <param name="Name" value="Custom Tag Paths">
+    <param name="Local" value="customtag.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Optional configuration">
+    <param name="Name" value="Overview of optional configuration">
+    <param name="Local" value="Overview_of_Optional_Configuration.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Debugging IP Addresses">
+    <param name="Name" value="Restrict debugging output">
+    <param name="Local" value="rstrdebug.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CFX Tags">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About">
+      <param name="Name" value="CF Tags">
+      <param name="Local" value="cftags.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Register">
+      <param name="Name" value="Add or Edit CF Tag">
+      <param name="Local" value="addeditcftag.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Verity collections">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Index">
+      <param name="Name" value="Populate a Verity collection">
+      <param name="Local" value="popvercllx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Create">
+      <param name="Name" value="Create a Verity collection">
+      <param name="Local" value="crevercllx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Populate">
+      <param name="Name" value="Populate a Verity collection">
+      <param name="Local" value="popvercllx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Overview of Verity collections">
+      <param name="Local" value="Overview_of_Verity_Collections.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Manage">
+      <param name="Name" value="Manage Verity collections">
+      <param name="Local" value="Manage_Verity_collections.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Scheduled Tasks Tab">
+    <param name="Name" value="Scheduled Tasks Tab">
+    <param name="Local" value="Scheduled_Tasks_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CF Mappings Tab">
+    <param name="Name" value="Directory Mappings">
+    <param name="Local" value="Directory_Mappings_tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Web Services">
+    <param name="Name" value="Web Services">
+    <param name="Local" value="webservices.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="What's new in this release">
+    <param name="Name" value="What's new in this release">
+    <param name="Local" value="What's_new_in_this_release.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Using left-hand tabs">
+    <param name="Name" value="Using left-hand tabs">
+    <param name="Local" value="Using_the_tabs.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Welcome">
+    <param name="Name" value="Welcome to ColdFusion MX Administrator">
+    <param name="Local" value="Welcome.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Associated Files and Directories Tab">
+    <param name="Name" value="Files and Directories Tab">
+    <param name="Local" value="Files_Directories_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Files and Directories Tab">
+    <param name="Name" value="Files and Directories Tab">
+    <param name="Local" value="Files_Directories_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Logging Settings">
+    <param name="Name" value="Logging Settings">
+    <param name="Local" value="logsettings.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Printing Tips">
+    <param name="Name" value="Tips for printing">
+    <param name="Local" value="Tips_for_printing.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Online Help">
+    <param name="Name" value="Online Help">
+    <param name="Local" value="Online_Help.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="DB2 Universal Database">
+    <param name="Name" value="Connect to DB2 Universal Database">
+    <param name="Local" value="db2_universal_db_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ODBC Socket">
+    <param name="Name" value="Connect to ODBC Socket">
+    <param name="Local" value="odbc_socket_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Knowledge Base">
+    <param name="Name" value="Knowledge Base">
+    <param name="Local" value="TechNotes.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Site Archive">
+    <param name="See Also" value="Archive">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="UNIX processes, ColdFusion">
+    <param name="Name" value="ColdFusion processes on UNIX">
+    <param name="Local" value="ColdFusion_processes_on_UNIX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Basic troubleshooting">
+    <param name="Name" value="Overview of basic troubleshooting">
+    <param name="Local" value="Overview_of_Basic_Troubleshooting.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Archive">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Build">
+      <param name="Name" value="Generating an Archive">
+      <param name="Local" value="Generating_Archive.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Deploy">
+      <param name="Name" value="Restoring an Archive">
+      <param name="Local" value="Restoring_an_Archive.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Modify">
+      <param name="Name" value="Modifying an Archive Definition">
+      <param name="Local" value="modifying_a_site_archive.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Delete">
+      <param name="Name" value="Delete Archive Definition">
+      <param name="Local" value="Delete_Archive_Definition.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Overview of Site Archiving">
+      <param name="Local" value="Overview_of_Site_Archiving.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Create">
+      <param name="Name" value="Creating a Site Archive">
+      <param name="Local" value="creating_site_archive.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Data Sources Page">
+    <param name="Name" value="About the data sources page">
+    <param name="Local" value="About_the_data_sources_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Data Sources Tab">
+    <param name="Name" value="Data Sources Tab">
+    <param name="Local" value="Data_Sources_Tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Database drivers">
+    <param name="Name" value="About database drivers">
+    <param name="Local" value="About_database_drivers.htm">
+    <param name="Name" value="Connect to DB2 Universal Database">
+    <param name="Local" value="db2_universal_db_connect_to.htm">
+    <param name="Name" value="Connect to Informix">
+    <param name="Local" value="informix_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft Access">
+    <param name="Local" value="access_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft Access with Unicode">
+    <param name="Local" value="access_unicode_connect_to.htm">
+    <param name="Name" value="Connect to Microsoft SQL Server">
+    <param name="Local" value="sqlsvr_connect_to.htm">
+    <param name="Name" value="Connect to MySQL">
+    <param name="Local" value="mysql_connect_to.htm">
+    <param name="Name" value="Connect to ODBC Socket">
+    <param name="Local" value="odbc_socket_connect_to.htm">
+    <param name="Name" value="Connect to Oracle">
+    <param name="Local" value="oracle_connect_to.htm">
+    <param name="Name" value="Connect to other data sources">
+    <param name="Local" value="other_connect_to.htm">
+    <param name="Name" value="Connect to Sybase">
+    <param name="Local" value="sybase_connect_to.htm">
+    <param name="Name" value="Connect through JNDI">
+    <param name="Local" value="connect_through_jndi.htm">
+    <param name="Name" value="Data sources overview">
+    <param name="Local" value="Overview_of_ColdFusion_data_sources.htm">
+    <param name="Name" value="Use connection string options">
+    <param name="Local" value="conxstringopt.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Log Filter">
+    <param name="Name" value="Log Filter">
+    <param name="Local" value="filter.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Microsoft SQL Server">
+    <param name="Name" value="Connect to Microsoft SQL Server">
+    <param name="Local" value="sqlsvr_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Release Notes">
+    <param name="Name" value="Release Notes">
+    <param name="Local" value="Release_Notes.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Caching Preferences">
+    <param name="Name" value="Set caching preferences">
+    <param name="Local" value="setcacpref.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Mappings">
+    <param name="See Also" value="Aliases, logical">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ColdFusion MX Server">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Verify run status">
+      <param name="Name" value="Verify that the ColdFusion MX Server is running">
+      <param name="Local" value="verCFserv.htm">
+      <param name="Name" value="ColdFusion processes on UNIX">
+      <param name="Local" value="ColdFusion_processes_on_UNIX.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ColdFusion processes on UNIX">
+      <param name="Name" value="ColdFusion processes on UNIX">
+      <param name="Local" value="ColdFusion_processes_on_UNIX.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ColdFusion services on Windows">
+      <param name="Name" value="ColdFusion services on Windows">
+      <param name="Local" value="ColdFusion_services_in_Windows.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Start and Stop ColdFusion">
+    <param name="Name" value="Start and stop ColdFusion">
+    <param name="Local" value="Start_and_stop_ColdFusion.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Other data sources">
+    <param name="Name" value="Connect to other data sources">
+    <param name="Local" value="other_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Browser-based working environment">
+    <param name="Name" value="Browser-based working environment">
+    <param name="Local" value="Browser-based_working_environment.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Archive Information Tab">
+    <param name="Name" value="Archive_Information">
+    <param name="Local" value="Archive_Information_tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Uninstall">
+    <param name="Name" value="Uninstall ColdFusion Server in Windows">
+    <param name="Local" value="Uninstall_ColdFusion_MX.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Performance Monitor">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure">
+      <param name="Name" value="Configure the Performance Monitor">
+      <param name="Local" value="Configure_the_Performance_Monitor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Enable">
+      <param name="Name" value="Enable performance monitoring">
+      <param name="Local" value="Enable_performance_monitoring.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Windows services">
+    <param name="Name" value="ColdFusion services on Windows">
+    <param name="Local" value="ColdFusion_services_in_Windows.htm">
+    <param name="Name" value="Add ColdFusion instance">
+    <param name="Local" value="add_coldfusion_instance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Scheduled Tasks">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Configure">
+      <param name="Name" value="Add or Edit Task">
+      <param name="Local" value="addedittask.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Overview">
+      <param name="Name" value="Schedule Task Overview">
+      <param name="Local" value="Schedule_Task_Overview.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="About the Scheduled Tasks page">
+      <param name="Name" value="Schedule Task">
+      <param name="Local" value="schedtask.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Settings Summary">
+    <param name="Name" value="Settings Summary">
+    <param name="Local" value="setsummary.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="TechNotes">
+    <param name="See Also" value="Knowledge Base">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ColdFusion archive">
+    <param name="Name" value="Restoring an Archive">
+    <param name="Local" value="Restoring_an_Archive.htm">
+    <param name="Name" value="Overview of Site Archiving">
+    <param name="Local" value="Overview_of_Site_Archiving.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="CAR files">
+    <param name="Name" value="Overview of Site Archiving">
+    <param name="Local" value="Overview_of_Site_Archiving.htm">
+    <param name="Name" value="Restoring an Archive">
+    <param name="Local" value="Restoring_an_Archive.htm">
+    <param name="Name" value="Event Gateways tab">
+    <param name="Local" value="event_gateways_tab.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="applets">
+    <param name="Name" value="Add or Register Applet">
+    <param name="Local" value="addeditjavaapplet.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="cfapplet">
+    <param name="Name" value="Add or Register Applet">
+    <param name="Local" value="addeditjavaapplet.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="services, Windows">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+    <param name="Name" value="Add ColdFusion instance">
+    <param name="Local" value="add_coldfusion_instance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Windows service names">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ODBC Agent">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ODBC Server">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Search Server">
+    <param name="Name" value="ColdFusion MX services in Windows">
+    <param name="Local" value="ColdFusion_MX_services_in_Windows.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="fonts">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="user-defined fonts">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="system fonts">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="PDF">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="FlashPaper">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="SWF">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="TrueType">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Acrobat">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="cfreport">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="cfdocument">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="embedded fonts">
+    <param name="Name" value="Font management overview">
+    <param name="Local" value="font_management_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="port">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Verity K2 Server">
+      <param name="Name" value="Use Verity K2 Server">
+      <param name="Local" value="verK2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="JRun HTTP">
+      <param name="Name" value="About the Instance Manager">
+      <param name="Local" value="About_the_Server_Manager_Page.htm">
+      <param name="Name" value="Add ColdFusion instance">
+      <param name="Local" value="add_coldfusion_instance.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Remote (JNDI)">
+      <param name="Name" value="Add ColdFusion instance">
+      <param name="Local" value="add_coldfusion_instance.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="JRun">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+    <param name="Name" value="About the Instance Manager">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+    <param name="Name" value="Add ColdFusion instance">
+    <param name="Local" value="add_coldfusion_instance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="server instance">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+    <param name="Name" value="About the Instance Manager">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+    <param name="Name" value="About the Cluster Manager page">
+    <param name="Local" value="About_the_Cluster_Manager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="clustering">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+    <param name="Name" value="About the Instance Manager">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+    <param name="Name" value="About the Cluster Manager page">
+    <param name="Local" value="About_the_Cluster_Manager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="sticky sessions">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="algorithm, cluster">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="cluster algorithm">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="round robin">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="weighted round robin">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="random weighted">
+    <param name="Name" value="Edit Cluster">
+    <param name="Local" value="edit_cluster_page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="SMS gateway">
+    <param name="Name" value="Event Gateway Overview">
+    <param name="Local" value="event_gateway_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="XMPP gateway">
+    <param name="Name" value="Event Gateway Overview">
+    <param name="Local" value="event_gateway_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="IM gateway">
+    <param name="Name" value="Event Gateway Overview">
+    <param name="Local" value="event_gateway_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="event gateways">
+    <param name="Name" value="Event Gateway Overview">
+    <param name="Local" value="event_gateway_overview.htm">
+    <param name="Name" value="Event Gateway Settings">
+    <param name="Local" value="event_gateway_settings.htm">
+    <param name="Name" value="Event Gateways tab">
+    <param name="Local" value="event_gateways_tab.htm">
+    <param name="Name" value="Gateway Instances">
+    <param name="Local" value="event_gateways.htm">
+    <param name="Name" value="Gateway Types">
+    <param name="Local" value="event_gateway_types.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="gateways">
+    <param name="Name" value="Event Gateway Overview">
+    <param name="Local" value="event_gateway_overview.htm">
+    <param name="Name" value="Event Gateway Settings">
+    <param name="Local" value="event_gateway_settings.htm">
+    <param name="Name" value="Event Gateways tab">
+    <param name="Local" value="event_gateways_tab.htm">
+    <param name="Name" value="Gateway Instances">
+    <param name="Local" value="event_gateways.htm">
+    <param name="Name" value="Gateway Types">
+    <param name="Local" value="event_gateway_types.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="security.properties file">
+    <param name="Name" value="About the Instance Manager page">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="multiple instances">
+    <param name="Name" value="About the Instance Manager page">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+    <param name="Name" value="Add ColdFusion instance">
+    <param name="Local" value="add_coldfusion_instance.htm">
+    <param name="Name" value="About the Cluster Manager page">
+    <param name="Local" value="About_the_Cluster_Manager.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="instance creation">
+    <param name="Name" value="About the Instance Manager page">
+    <param name="Local" value="About_the_Server_Manager_Page.htm">
+    <param name="Name" value="Add ColdFusion instance">
+    <param name="Local" value="add_coldfusion_instance.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="J2EE archive">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="EAR file">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="WAR file">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Web Application Archive (WAR)">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Enterprise Application Archive (EAR)">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="deployment, J2EE">
+    <param name="Name" value="J2EE archive">
+    <param name="Local" value="j2ee_archive.htm">
+    <param name="Name" value="J2EE Packaging overview">
+    <param name="Local" value="j2ee_packaging_overview.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="license scanner">
+    <param name="Name" value="License Scanner">
+    <param name="Local" value="license_scanner.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="scanner, license">
+    <param name="Name" value="License Scanner">
+    <param name="Local" value="license_scanner.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="subnet">
+    <param name="Name" value="License Scanner">
+    <param name="Local" value="license_scanner.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="JNDI data source">
+    <param name="Name" value="Connect through JNDI">
+    <param name="Local" value="connect_through_jndi.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Microsoft Access with Unicode">
+    <param name="Name" value="Connect to Microsoft Access with Unicode">
+    <param name="Local" value="access_unicode_connect_to.htm">
+  </object>
+  <li><object type="text/sitemap">
+    <param name="Name" value="JDBC">
+    <param name="Name" value="Data sources overview">
+    <param name="Local" value="Overview_of_ColdFusion_data_sources.htm">
+  </object>
+</ul>
+</html>

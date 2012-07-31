@@ -1,0 +1,194 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Debugging
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">Server has been updated successfully</cfcase>
+<cfcase value="click_normal">Click the button on the right to update</cfcase>
+<cfcase value="alert">ALERT!</cfcase>
+<cfcase value="important_notice">Important notice about last submission</cfcase>
+<cfcase value="click_return">Click arrow on left to return without submitting changes</cfcase>
+<cfcase value="submit_changes">Submit Changes</cfcase>
+<cfcase value="options_pagename">Debug Output Settings</cfcase>
+<cfcase value="pageHeader_debugging">Debugging &amp; Logging &gt; Debug Output Settings</cfcase>
+<cfcase value="enable_robust">Enable Robust Exception Information</cfcase>
+<cfcase value="enable_robust_desc">
+Allow visitors to see the following information in the exceptions page:
+<ul>
+<li>Physical path of template</li>
+<li>URI of template</li>
+<li>Line number and line snippet</li>
+<li>SQL statement used (if any)</li>
+<li>Data source name (if any)</li>
+<li>Java stack trace</li>
+</ul>
+</cfcase>
+<cfcase value="ajax_enabled">Enable AJAX Debug Log Window</cfcase>
+<cfcase value="ajax_enabled_tip">
+Allows display of the AJAX debug log window when the cfdebug flag is passed
+in the URL. If you disable this option, the AJAX debug log window does not
+display, even if the cfdebug flag is specified.
+</cfcase>
+<cfcase value="enable">Enable Request Debugging Output</cfcase>
+<cfcase value="enable_tip">
+Enables the page-level debugging output on CFML pages. 
+Uncheck this box to override all of the settings below. 
+Debugging information is appended to the end of each request.
+</cfcase>
+<cfcase value="customDebugOutput">Custom Debugging Output</cfcase>
+<cfcase value="debug_template_output">Select Debugging Output Format</cfcase>
+<cfcase value="debug_template_tip">
+ColdFusion offers several debugging output formats: <br />
+<b>classic.cfm</b> - The format available in ColdFusion 5 and earlier. It provides a basic view and few browser restrictions. <br />
+<b>dockable.cfm</b> - A dockable tree-based debugging panel. For details about the panel and browser restrictions, see the online Help.</cfcase>
+<cfcase value="template">Report Execution Times</cfcase>
+<cfcase value="debugslowtemplathighlight">Highlight templates taking longer than the following (ms)</cfcase>
+<cfcase value="template_using">using the following output mode</cfcase>
+<cfcase value="template_mode_summary">summary</cfcase>
+<cfcase value="template_mode_tree">tree</cfcase>
+<cfcase value="template_tip">
+Execution times for templates, includes, modules, custom tags, and component method calls. Template execution times over this minimum highlight time appear in red. The default is 250 ms. ColdFusion offers the following template modes:
+<br />
+<b>summary</b> - A summary of each page called. Columns include Total Time, Avg Time, Count, and Template. Sorted by highest total time. <br />
+<b>tree</b> - Hierarchical tree view of individual page executions. <i>Note: Processing time and output will be longer than summary.</i>
+</cfcase>
+<cfcase value="general">General Debug Information</cfcase>
+<cfcase value="general_tip">
+Select this option to show general information about this request. 
+General items are ColdFusion Server Version, Template, Time Stamp, User Locale, User Agent, User IP, and Host Name.
+</cfcase>
+<cfcase value="da">Database Activity</cfcase>
+<cfcase value="da_tip">
+Select this option to show the database activity for the SQL Query events and Stored Procedure events in the debugging output.
+</cfcase>
+<cfcase value="exception">Exception Information</cfcase>
+<cfcase value="exception_tip">
+Select this option to collect all ColdFusion exceptions raised for the request in the debugging output. 
+</cfcase>
+<cfcase value="trace">Tracing Information</cfcase>
+<cfcase value="trace_tip">
+Select this option to show trace event information in the debugging output. 
+Tracing lets a developer track program flow and efficiency through the use of the CFTRACE tag. 
+</cfcase>
+<cfcase value="timer">Timer Information</cfcase>
+<cfcase value="timer_tip">
+Select this option to show timer event information in the debugging output. 
+Timers let a developer track the execution time of the code between the start and end tags of the CFTIMER tag.
+</cfcase>
+<cfcase value="vars">Variables</cfcase>
+<cfcase value="vars_tip">
+Select this option to enable variable reporting. Select the following variables:
+</cfcase>
+<cfcase value="applicationvar">Application</cfcase>
+<cfcase value="cookievar">Cookie</cfcase>
+<cfcase value="servervar">Server</cfcase>
+<cfcase value="cgivar">CGI</cfcase>
+<cfcase value="formvar">Form</cfcase>
+<cfcase value="sessionvar">Session</cfcase>
+<cfcase value="clientvar">Client</cfcase>
+<cfcase value="requestvar">Request</cfcase>
+<cfcase value="urlvar">URL</cfcase>
+<cfcase value="enable_perfmon">Enable Performance Monitoring</cfcase>
+<cfcase value="enable_perfmon_desc">
+Select this option so the standard NT Performance Monitor application shows information about a running ColdFusion application server.
+</cfcase>
+<cfcase value="enable_cfstat">Enable CFSTAT</cfcase>
+<cfcase value="enable_cfstat_desc">
+The cfstat command-line utility provides real-time performance metrics for ColdFusion. 
+Using a socket connection to obtain metric data, cfstat displays the information 
+that ColdFusion writes to System Monitor without actually using the System Monitor application.
+</cfcase>
+<cfcase value="hf_apply">For these changes to take effect, you must restart ColdFusion.</cfcase>
+<cfcase value="ip_pagename">Debugging IP Address</cfcase>
+<cfcase value="pageHeader_iplist">Debugging &amp; Logging &gt; Debugging IP Addresses</cfcase>
+<cfcase value="ip_welcometext">
+Specify the IP addresses that should receive debugging messages, including messages for the
+AJAX Debug Log window.
+To include an IP address in the list, enter the address and click Add.
+To delete an IP address from the list, select the address and click Remove Selected.
+When no IP addresses are selected, all users receive debugging information.
+</cfcase>
+<cfcase value="selectIP">Select IP Addresses for Debug Output</cfcase>
+<cfcase value="ip_address">IP Address</cfcase>
+<cfcase value="add_button">Add</cfcase>
+<cfcase value="add_current_button">Add Current</cfcase>
+<cfcase value="viewdeleteIP">View / Remove Selected IP Addresses for Debug Output</cfcase>
+<cfcase value="remove_button">Remove Selected</cfcase>
+<cfcase value="ds_msg_restartServer">To ensure that the changes that you specify on this page take effect, you must restart ColdFusion.</cfcase>
+<cfcase value="ds_msg_selectUnusedPort">Warning: Specifying a debugger port that is already in use prevents the ColdFusion server from starting.</cfcase>
+<cfcase value="options_pagename_linedebug">Debugger Settings</cfcase>
+<cfcase value="pageHeader_lineDebugger">Debugging &amp; Logging &gt; Debugger Settings</cfcase>
+<cfcase value="linedebugsettings">Line Debugger Settings</cfcase>
+<cfcase value="allow_line_debugging">Allow Line Debugging</cfcase>
+<cfcase value="ip_debugger_port">Debugger Port:</cfcase>
+<cfcase value="linedebugger_debugport_warning">You must specify this debugger port in the JVM settings of your application server, for example:
+ <br>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=</cfcase>
+<cfcase value="linedebugger_debugport_warning_part2">, and restart the server.</cfcase>
+<cfcase value="max_debugging_sessions">Maximum Simultaneous Debugging Sessions:</cfcase>
+<cfcase value="debugger_server">Debugging Server</cfcase>
+<cfcase value="debugger_server_desc">The debugging server runs as a process separate from the ColdFusion Server. 
+You can start, stop or restart the debugging server from this page, however, this is usually not necessary because the debug process is managed automatically when a debug session is started.</cfcase>
+<cfcase value="start_debugger_server">Start Debugger Server</cfcase>
+<cfcase value="stop_debugger_server">Stop Debugger Server</cfcase>
+<cfcase value="restart_debugger_server">Restart Debugger Server</cfcase>
+<cfcase value="page_desc">Enable the Allow Line Debugging option to use the ColdFusion Debugger that runs in Eclipse. Specify the port and the maximum number of simultaneous debugging sessions.</cfcase>
+<cfcase value="port_in_use_warning">The port number that you specifed for the debugger is currently being used, possibly by the ColdFusion debugger. If you use this port for any purpose other than debugging this ColdFusion server, enter an available port number and restart the server.</cfcase>
+<cfcase value="debug_error_update"><cfoutput>
+Unable to update debugging settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="debug_error_get"><cfoutput>
+Unable to retrieve debugging settings.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="flashformcompileerrors">Flash Form Compile Errors and Messages</cfcase>
+<cfcase value="flashformcompileerrors_tip">
+ (Development use only) Select this option to have ColdFusion display ActionScript errors in 
+ the browser when compiling Flash forms; this affects the display time of the page.
+</cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format.
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+The IP you attempted to add (#FORM.IPtoBeAdded#) is not valid.
+IPs are four sets of numbers from 0 to 255 separated by periods (e.g., 127.0.0.1) in IPv4 addressing format
+or eight sets of hexadecimal numbers from 0 to FFFF seperated by colon (e.g., 0:0:0:0:0:0:0:1) in IPv6 addressing format. <br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_add_current"><cfoutput>
+An error occurred attempting to add the current IP (#CGI.Remote_Addr#)
+to the Debugging Service. <br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_remove"><cfoutput>
+An error occurred attempting to remove the requested IP(s).
+from the Debugging Service.<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_get"><cfoutput>
+An error occurred attempting to retrieve a list of restricted IP addresses
+from the Debugging Service.<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ds_error_portnum">Port number must be numeric and greater than zero.</cfcase>
+<cfcase value="ds_error_maxsessions">Maximum sessions must be numeric and greater than zero.</cfcase>
+<cfcase value="linedebug_error_update">Unable to update debugging settings.</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

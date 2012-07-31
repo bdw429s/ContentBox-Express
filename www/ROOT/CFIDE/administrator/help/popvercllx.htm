@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 23, 2001 12:32:12 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Populate a Verity collection</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nColdFusion Collections\nVerity Collections\nPopulate a Verity collection");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"crevercllx.htm\">ColdFusion Collections<\/a> > <a href=\"overview_of_verity_collections.htm\">Verity Collections<\/a> > Populate a Verity collection<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Verity Collections 
+ Overview</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h2>Populate a Verity collection</h2>
+<h5>Data &amp; Services &gt; ColdFusion Collections</h5>
+<p>&#160;</p>
+<p>After you create a collection, use the Verity Collections section to 
+ populate (or index) it, with data from text and binary files, in a directory 
+ that you specify. A collection comprises metadata that describes indexed 
+ documents. Data from a ColdFusion query can be indexed only by using the 
+ ColdFusion <span style="font-family: 'Courier New', monospace;">cfindex</span> 
+ tag.</p>
+<h3 class="Procedure">Populate (index) a collection</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">In the list of Verity Collections, 
+	 click the name of the collection or its Index Collection button. The 
+	 Index Verity Collections page appears.</p></li>
+</ol>
+<ol start="2">
+	<li class="p-NumList"><p class="NumList">Review the extensions in the 
+	 File Extensions field. You can add, edit, or remove extensions for 
+	 files in the collection.</p></li>
+	<li class="p-NumList"><p class="NumList">In the Directory Path field, 
+	 enter the path to a directory to index. To locate and enter a path, 
+	 click Browse Server.</p></li>
+	<li class="p-NumList"><p class="NumList">To include subdirectories 
+	 of the specified directory, select the Recursively Index Sub Directories 
+	 option.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) In the Return URL 
+	 field, enter the URL prefix used to display documents found in the 
+	 search in a browser.</p></li>
+</ol>
+<p class="NumList" style="margin-left: 24px;">For example, if you index 
+ the ColdFusion documentation directory, the directory you index could 
+ be:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">C:\ColdFusion9\wwwroot\cfdocs</p>
+<p class="NormalIndented">You would enter the return URL as:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">http://localhost:8500/ cfdocs/</p>
+<p class="NormalIndented">This assumes that you are using the built-in 
+ web server on port 8500.</p>
+<p>&#160;</p>
+<ol start="6" type="1">
+	<li class="p-NumList"><p class="NumList">Click Submit. ColdFusion populates 
+	 the collection with data from the specified directory. Then the Verity 
+	 Collections page appears.</p></li>
+</ol>
+<p class="NumList">&#160;</p>
+<p>To close the page without saving changes, click Cancel.</p>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Verity 
+	 Collections overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="crevercllx.htm" title="crevercllx.htm">Create 
+	 a Verity collection</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verity_supported_file_types.htm" title="verity_supported_file_types.htm">Verity 
+	 supported file types</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="manage_verity_collections.htm" title="manage_verity_collections.htm">Manage 
+	 Verity collections</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verk2.htm" title="verk2.htm">Use 
+	 Verity K2 Server</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

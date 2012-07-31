@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 24, 2001 11:23:47 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Use connection string options</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nData Sources\nUse the connection string");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > <a href=\"overview_of_coldfusion_data_sources.htm\">Data Sources<\/a> > Use the connection string<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_coldfusion_data_sources.htm" title="overview_of_coldfusion_data_sources.htm">Overview</a></p>
+<hr align="left" width="100.145%" size="1" />
+<h2>Use connection string options</h2>
+<p>You can use the ColdFusion Administrator to specify connection string arguments for data sources that use the Microsoft Access, ODBC Socket, MySQL, or DB2 drivers.</p>
+<h3 class="Procedure">Specify connection string arguments</h3>
+<ol>
+<li class="p-NumList">
+<p class="NumList">Open the Advanced Settings page for a Microsoft Access, ODBC Socket, MySQL, or DB2 driver.</p>
+</li>
+<li class="p-NumList">
+<p class="NumList">Enter 
+name=value pairs in the Connection String field. Separate pairs with a semicolon (;), except for MySQL, in which case you use an ampersand (&amp;) as the separator.</p>
+</li>
+</ol>
+<p>&#160;</p>
+<p>For example, you can specify the application name and workstation ID for an ODBC Socket connection to SQL Server. If you enter:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">
+APP=RaiseGenerator;WSID=TWriter01</p>
+<p style="margin-left: 0px;">the Administrator configures the following ODBC connection string:</p>
+<p style="margin-left: 40px; font-family: 'Courier New', monospace;">
+DSN=odbcdsnname;
+APP=RaiseGenerator;WSID=TWriter01</p>
+<p>&#160;</p>
+<p>In the preceding string, 
+<span style="font-family: 'Courier New', monospace;">odbcdsnname</span> is the name of the ODBC DSN. This is the string that the Microsoft Access or ODBC Socket driver uses to connect to the data source at run-time.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> The <span style="font-family: 'Courier New', monospace;">connectstring</span> tag attribute is not supported in ColdFusion.</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

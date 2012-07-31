@@ -1,0 +1,261 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Verity
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="pagenameq8">ColdFusion コレクション</cfcase>
+<cfcase value="pageHeader_verity">データとサービス &gt; ColdFusion コレクション</cfcase>
+<cfcase value="verity_welcome">
+Verity または Solr のインデックス作成エンジンでは、ColdFusion アプリケーションの検索機能を簡単に開発できます。Verity または Solr のコレクションとは、セットとしてインデックス作成と検索が行える情報グループのことです。このフォームを使用して、Verity または Solr のコレクションの作成と管理を行えます。
+</cfcase>
+<cfcase value="l10n_add">新規 Verity/Solr コレクションの追加</cfcase>
+<cfcase value="name">名前</cfcase>
+<cfcase value="verity_name_required">コレクションの名前が必要です。</cfcase>
+<cfcase value="path">パス</cfcase>
+<cfcase value="verity_path_required">Verity コレクションのパスが必要です。</cfcase>
+<cfcase value="browse_button">サーバーのブラウズ</cfcase>
+<cfcase value="lang">言語</cfcase>
+<cfcase value="verity_enablecategories">カテゴリサポートの有効化</cfcase>
+<cfcase value="verity_selectengine">Verity コレクション</cfcase>
+<cfcase value="solr_selectengine">Solr コレクション</cfcase>
+<cfcase value="l10n_addcol">コレクションの作成</cfcase>
+<cfcase value="verity_optimize_warn"><cfoutput>コレクションの最適化に数分かかる場合があります。#CALLER.nl# 続行しますか。</cfoutput></cfcase>
+<cfcase value="verity_purge_warn"><cfoutput>コレクションを破棄すると、元に戻せません。#CALLER.nl# このコレクションのすべてのインデックスを削除しますか。</cfoutput></cfcase>
+<cfcase value="verity_delete_warn"><cfoutput>コレクションを削除すると、元に戻せません。#CALLER.nl# このコレクションを破棄しますか。</cfoutput></cfcase>
+<cfcase value="l10n_ioptimize3">コレクションの最適化</cfcase>
+<cfcase value="l10n_ipurge3">コレクションの破棄</cfcase>
+<cfcase value="l10n_idelete3">コレクションの削除</cfcase>
+<cfcase value="l10n_iindex3">コレクションのインデックス作成</cfcase>
+<cfcase value="conn1z2_verity">Verity コレクション</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="aliasname">名前</cfcase>
+<cfcase value="Documents">ドキュメント</cfcase>
+<cfcase value="size_kb">サイズ (Kb)</cfcase>
+<cfcase value="lastmod">最終更新日</cfcase>
+<cfcase value="language">言語</cfcase>
+<cfcase value="categories">カテゴリ</cfcase>
+<cfcase value="conn1z2_solr">Solr コレクション</cfcase>
+<cfcase value="no_server">
+いずれの検索サービスからもコレクションを取得できません。<br />
+少なくとも 1 つの ColdFusion 検索サービスがインストール済みで
+実行中であることを確認してください。
+</cfcase>
+<cfcase value="valid_collection_name">このコレクションの有効な名前を入力してください。</cfcase>
+<cfcase value="valid_collection_path">このコレクションの有効なディレクトリパスを入力してください。</cfcase>
+<cfcase value="collection_indexed"><cfoutput>コレクション<cfoutput>#CALLER.collectionname# インデックス済み :#CALLER.indexResult.inserted# ファイルが挿入され、#CALLER.indexResult.updated# ファイルが更新されました。</cfoutput></cfoutput></cfcase>
+<cfcase value="solr_alias_required">エイリアス名が必要です。</cfcase>
+<cfcase value="collection_aliased"><cfoutput>
+                  エイリアス <cfoutput>#FORM.SolrAliasName# が #CALLER.collectionname# に対して作成されました。</cfoutput>
+               </cfoutput></cfcase>
+<cfcase value="solr_newname_required">新しいコレクション名が必要です。</cfcase>
+<cfcase value="collection_renamed"><cfoutput>
+                  <cfoutput>#CALLER.collectionname# renamed to #FORM.SolrNewName#.</cfoutput>
+               </cfoutput></cfcase>
+<cfcase value="solr_highlighting_remote">コレクションのパスをローカルで確認できませんでした。ドキュメント全体で検索語の強調表示を有効にする方法については、『Coldfusion 9 アプリケーションの開発』<i></i>の「検索語の強調表示」のセクションを参照してください。</cfcase>
+<cfcase value="collection_hightlightenabled"><cfoutput>
+                  <cfoutput>#CALLER.collectionname# に対して検索語の強調表示が有効になっています。これらの変更を反映するには、コレクションのインデックスを再作成してください</cfoutput>
+               </cfoutput></cfcase>
+<cfcase value="pagename_indexveritycollection">Verity コレクションのインデックス作成</cfcase>
+<cfcase value="indexcollection_pageHeader_manage">データとサービス &gt; ColdFusion コレクション &gt; コレクションの管理</cfcase>
+<cfcase value="indexcollection_pageHeader_index">データとサービス &gt; ColdFusion コレクション &gt; コレクションのインデックス作成</cfcase>
+<cfcase value="solrindex_welcome">
+メモ : リモート Solr サーバーが設定されているので、ColdFusion サーバーと
+Solr 検索サービスが動作するコンピュータから、インデックスを作成するドキュメントに
+アクセスできることを確認する必要があります。また、ローカルとリモートのファイルパスが完全に一致しない場合は、
+[リモートディレクトリパス] フィールドを使用して、ローカルパスをリモート Solr ホスト上のパスに
+マッピングするための接頭辞を定義できます。
+</cfcase>
+<cfcase value="verityindex_welcome">
+メモ :リモート K2 サーバーが設定されているので、ColdFusion サーバーと K2 検索サービスが動作するコンピュータから、インデックスを作成するドキュメントにアクセスできることを確認する必要があります。また、ローカルとリモートのファイルパスが完全に一致しない場合は、[リモートディレクトリパス] フィールドを使用して、ローカルパスをリモート K2 ホスト上のパスにマッピングするための接頭辞を定義できます。
+</cfcase>
+<cfcase value="l10n_indexcollection">コレクションのインデックス作成:</cfcase>
+<cfcase value="l10n_indexextensions">ファイル拡張子</cfcase>
+<cfcase value="l10n_indexdirpath">ディレクトリパス</cfcase>
+<cfcase value="l10n_LocalIndexdirpath">ローカルディレクトリパス</cfcase>
+<cfcase value="browser_server">サーバーのブラウズ</cfcase>
+<cfcase value="l10n_indexdirprefix">リモートディレクトリパス</cfcase>
+<cfcase value="recurse_index_sub_dirs">サブディレクトリを再帰的にインデックス</cfcase>
+<cfcase value="l10n_indexreturnurl">返信先 URL</cfcase>
+<cfcase value="10n_indexlanguage">言語</cfcase>
+<cfcase value="cancel">キャンセル</cfcase>
+<cfcase value="submit">送信</cfcase>
+<cfcase value="l10n_termhighlight_title">検索語の強調表示の有効化 :</cfcase>
+<cfcase value="termhighlight_desc">
+<p>Solr のデフォルトでは、要約コンテンツで使用できる検索語が強調表示されます。ドキュメント全体でコンテンツを強調表示するには、[有効化] をクリックしてください。有効または無効にした後は、コレクションのインデックスを再作成してください。</p>
+</cfcase>
+<cfcase value="Enable">有効化</cfcase>
+<cfcase value="Disable">無効化</cfcase>
+<cfcase value="termhighlight_note">
+メモ : 検索語の強調表示をドキュメント全体で有効にすると、インデックスサイズが大きくなります。
+</cfcase>
+<cfcase value="termhighlight_remote_note">
+<p>Solr のデフォルトでは、要約コンテンツ内でのみ検索語が強調表示されます。ドキュメント全体で検索語の強調表示を有効にする方法については、『Coldfusion 9 アプリケーションの開発』<i></i>の「検索語の強調表示」のセクションを参照してください。</p>
+</cfcase>
+<cfcase value="l10n_aliascollection">コレクションのエイリアス作成 :</cfcase>
+<cfcase value="l10n_aliasname">コレクションのエイリアス</cfcase>
+<cfcase value="l10n_renamecollection">コレクション名の変更 :</cfcase>
+<cfcase value="l10n_corerename">コレクションの新しい名前</cfcase>
+<cfcase value="k2updated">
+Verity K2 サーバー設定情報が更新されました。
+</cfcase>
+<cfcase value="k2_pagename">Verity K2 サーバー</cfcase>
+<cfcase value="pageHeader_k2verity">データとサービス &gt; Verity K2 サーバー</cfcase>
+<cfcase value="K2config_welcome">
+ColdFusion が動作しているホスト以外のホストに Verity K2 検索サービスをインストールして設定できます。この場合、検索オペレーションの実行時に ColdFusion が使用するホストを設定できます。Verity K2 Enterprise 製品を購入した場合は、ColdFusion が使用するサービスのエイリアス、ポートおよびログイン情報を設定しなければならない場合があります。これらの値を設定する場合は、[詳細設定] ボタンをクリックします。ColdFusion がインストールした Verity で実行している場合は、詳細設定の値を変更する必要はありません。
+</cfcase>
+<cfcase value="l10n_addk2">Verity K2 サーバーの設定</cfcase>
+<cfcase value="k2_host">Verity ホスト名</cfcase>
+<cfcase value="k2_adminalias">K2 Admin エイリアス</cfcase>
+<cfcase value="k2_adminport">K2 Admin ポート</cfcase>
+<cfcase value="k2_serveralias">K2 サーバーエイリアス</cfcase>
+<cfcase value="k2_serverport">K2 サーバーポート</cfcase>
+<cfcase value="k2_indexalias">K2 インデックスエイリアス</cfcase>
+<cfcase value="k2_indexport">K2 インデックスポート</cfcase>
+<cfcase value="k2desc">
+デフォルトでは、K2 エンタープライズ製品には K2 Administration サーバーに対する認証が必要です。K2 製品をインストールした場合は認証が必要になるため、下にユーザー名とパスワードを入力する必要があります。
+</cfcase>
+<cfcase value="k2_user">K2 Admin ユーザー名</cfcase>
+<cfcase value="k2_adminpassword">K2 Admin パスワード</cfcase>
+<cfcase value="hideAdvancedSettings">詳細設定を閉じる</cfcase>
+<cfcase value="showAdvancedSettings">詳細設定の表示</cfcase>
+<cfcase value="solrEnglish">英語</cfcase>
+<cfcase value="uni">多言語</cfcase>
+<cfcase value="arabic">アラビア語</cfcase>
+<cfcase value="bulgaria">ブルガリア語</cfcase>
+<cfcase value="simpcb">中国語 (Simplified)</cfcase>
+<cfcase value="tradcb">中国語 (Traditional)</cfcase>
+<cfcase value="czech">チェコ語</cfcase>
+<cfcase value="danishx">デンマーク語</cfcase>
+<cfcase value="dutchx">オランダ語</cfcase>
+<cfcase value="englishx">英語 (高度 - Englishx)</cfcase>
+<cfcase value="finnishx">フィンランド語</cfcase>
+<cfcase value="frenchx">フランス語</cfcase>
+<cfcase value="germanx">ドイツ語</cfcase>
+<cfcase value="greek">ギリシャ語</cfcase>
+<cfcase value="hebrew">ヘブライ語</cfcase>
+<cfcase value="hungarian">ハンガリー語</cfcase>
+<cfcase value="italianx">イタリア語</cfcase>
+<cfcase value="japanb">日本語</cfcase>
+<cfcase value="koreab">韓国語</cfcase>
+<cfcase value="bokmalx">ノルウェー語 (Bokmal)</cfcase>
+<cfcase value="nynorskx">ノルウェー語 (Nynorsk)</cfcase>
+<cfcase value="polish">ポーランド語</cfcase>
+<cfcase value="portugx">ポルトガル語</cfcase>
+<cfcase value="russian">ロシア語</cfcase>
+<cfcase value="russian2">ロシア語 (koi8-r)</cfcase>
+<cfcase value="spanishx">スペイン語</cfcase>
+<cfcase value="swedishx">スウェーデン語</cfcase>
+<cfcase value="turkish">トルコ語</cfcase>
+<cfcase value="english_basic">英語 (基本)</cfcase>
+<cfcase value="pagename_migrate_verity">Verity コレクションの移行</cfcase>
+<cfcase value="pageHeader_VerityMigrate">データとサービス &gt; Verity コレクションの移行</cfcase>
+<cfcase value="migrate_welcome">
+このページを使用して Verity コレクションを Solr コレクションに移行できます。<br />
+</cfcase>
+<cfcase value="migrate_verity_to_solr">Verity コレクションの移行</cfcase>
+<cfcase value="verity_migration">移行する Verity コレクション</cfcase>
+<cfcase value="solr_name_required">Solr コレクションの名前が必要です。</cfcase>
+<cfcase value="solr_path_required">Solr コレクションのパスが必要です。</cfcase>
+<cfcase value="no_verity_server">
+ColdFusion 検索サービスからコレクションを取得できません。<br />
+ColdFusion 検索サービスがインストールされ、稼働していることを確認してください。
+</cfcase>
+<cfcase value="no_verity_collections">
+移行する Verity コレクションがありません<br />
+</cfcase>
+<cfcase value="solrupdated">
+Solr サーバー設定情報が更新されました。
+</cfcase>
+<cfcase value="solr_pagename">Solr サーバー</cfcase>
+<cfcase value="pageHeader_solr">データとサービス &gt; Solr サーバー</cfcase>
+<cfcase value="Solrconfig_welcome">
+ColdFusion が動作しているホスト以外のホストに Solr 検索サービスを
+インストールして設定することもできます。その場合は、検索オペレーション
+の実行時に ColdFusion が使用するホストを設定できます。
+これらの値を設定するには、[詳細設定の表示] をクリックしてください。
+ColdFusion がインストールした Solr を実行している場合は、詳細設定の
+値を変更する必要はありません。
+</cfcase>
+<cfcase value="l10n_addsolr">Solr サーバーの設定</cfcase>
+<cfcase value="solr_host">Solr ホスト名</cfcase>
+<cfcase value="solr_home">Solr ホーム</cfcase>
+<cfcase value="solr_adminport">Solr Admin ポート</cfcase>
+<cfcase value="solr_webapp">Solr Webapp</cfcase>
+<cfcase value="solr_buffersize">Solr バッファー制限</cfcase>
+<cfcase value="error_create"><cfoutput>
+コレクション #FORM.NewCollectionName# を作成できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+  </cfoutput></cfcase>
+<cfcase value="col_optimized"><cfoutput>#URL.CollectionName# は最適化されました</cfoutput></cfcase>
+<cfcase value="error_optimize"><cfoutput>
+コレクション #URL.CollectionName# を最適化できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="col_purged"><cfoutput>#URL.CollectionName# は廃棄されました。</cfoutput></cfcase>
+<cfcase value="error_purge"><cfoutput>
+コレクション #URL.CollectionName# を破棄できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="col_deleted"><cfoutput>#URL.CollectionName# は削除されました。</cfoutput></cfcase>
+<cfcase value="errorDeleteCollection"><cfoutput>
+コレクション #URL.CollectionName# を削除できません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="errors_get"><cfoutput>
+デフォルトのコレクションディレクトリを取り出せません。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="error_indexing_collection"><cfoutput>
+このコレクションのインデックスを作成する際に、エラーが発生しました。<br/> #CALLER.cfcatch.message#<br/> #CALLER.cfcatch.detail#
+</cfoutput></cfcase>
+<cfcase value="error_aliasing_collection"><cfoutput>
+このコレクションのエイリアスを作成する際に、エラーが発生しました。<br />
+#CALLER.cfcatch.message#<br />
+   </cfoutput></cfcase>
+<cfcase value="error_renaming_collection"><cfoutput>
+このコレクションの名前を変更する際に、エラーが発生しました。<br />
+#CALLER.cfcatch.message#<br />
+   </cfoutput></cfcase>
+<cfcase value="error_enable_higlighting_collection"><cfoutput>
+このコレクションの強調表示を有効にする際にエラーが発生しました。<br />
+#CALLER.cfcatch.message#<br />
+   </cfoutput></cfcase>
+<cfcase value="error_disable_higlighting_collection"><cfoutput>
+このコレクションの強調表示を無効にする際にエラーが発生しました。<br />
+#CALLER.cfcatch.message#<br />
+   </cfoutput></cfcase>
+<cfcase value="error_disble_higlighting_collection"><cfoutput>
+このコレクションの強調表示を無効にする際にエラーが発生しました。<br />
+#CALLER.cfcatch.message#<br />
+   </cfoutput></cfcase>
+<cfcase value="error_k2update"><cfoutput>
+変更を保存しようとする際に、エラーが発生しました。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="error_host">有効なホスト名または IP アドレス (xxx.xxx.xxx.xxx) を入力してください。</cfcase>
+<cfcase value="error_adminalias">エイリアスを入力してください。デフォルトの K2 Admin エイリアスは 'ColdFusionK2' です。</cfcase>
+<cfcase value="error_adminport">有効な K2 Admin ポートを入力してください。デフォルトの K2 Admin ポートは 9950 です。</cfcase>
+<cfcase value="error_serveralias">エイリアスを入力してください。デフォルトの K2 サーバーエイリアスは 'ColdFusionK2_server1' です。</cfcase>
+<cfcase value="error_serverport">有効な K2 サーバーポートを入力してください。デフォルトの K2 サーバーポートは 9920 です。</cfcase>
+<cfcase value="error_indexalias">エイリアスを入力してください。デフォルトの K2 インデックスエイリアスは 'ColdFusionK2_indexserver1' です。</cfcase>
+<cfcase value="error_indexport">有効な K2 インデックスポートを入力してください。デフォルトの K2 インデックスポートは 9960 です。</cfcase>
+<cfcase value="error_migrate"><cfoutput>
+  Verity コレクション #FORM.NewCollectionName# を移行できません。<br />
+  #CALLER.CFCATCH.Message#<br />
+  #CALLER.CFCATCH.Detail#<br />
+  </cfoutput></cfcase>
+<cfcase value="col_migrated"><cfoutput>Verity コレクション "#CALLER.verityname#" が "#FORM.NewCollectionName#" に移行されました</cfoutput></cfcase>
+<cfcase value="error_solr_down">
+Solr サーバーに到達できません。<br />
+  </cfcase>
+<cfcase value="error_solrupdate"><cfoutput>
+変更を保存しようとする際に、エラーが発生しました。<br/> #CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+<cfcase value="error_solradminport">有効な Solr Admin ポートを入力してください。デフォルトの Admin ポートは 8983 です。</cfcase>
+<cfcase value="error_solrwebapp">webapp を入力してください。デフォルトの Solr webapp は「solr」です。</cfcase>
+<cfcase value="error_solrbuffersize">バッファーの上限を MB 単位で入力してください。デフォルト値は 40 MB です。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

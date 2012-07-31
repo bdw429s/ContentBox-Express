@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 26, 2001 9:48:05 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Performance monitoring overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nGetting Started \nBasic Configuration\nPerformance Monitor\nOverview of ColdFusion performance monitoring");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"what_you_can_do_in_coldfusion_administrator.htm\">Introduction<\/a> > <a href=\"overview_of_basic_configuration.htm\">Getting Started <\/a> > <a href=\"overview_of_basic_configuration.htm\">Basic Configuration<\/a> > <a href=\"overview_of_coldfusion_performance_monitoring.htm\">Performance Monitor<\/a> > Overview of ColdFusion performance monitoring<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Performance monitoring overview</h1>
+<p><span style="font-weight: bold;"><b>Note:</b></span> This discussion does not 
+ apply when deploying ColdFusion on a J2EE server.</p>
+<p>&#160;</p>
+<p>If you install ColdFusion in Windows, you can use the Windows Performance 
+ Monitor utility to track the performance of your server. This utility 
+ installs automatically as part of the ColdFusion installation, and works 
+ with a set of <a href="#counter" title="#counter">counters</a> to monitor server performance.</p>
+<h3><a name="counter" id="counter" title="counter"></a>Available ColdFusion counters</h3>
+<p>ColdFusion supports the following counters that you can enable in the 
+ Windows Performance Monitor:</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>Average database transaction 
+	 time</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Average queue time</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Average request time</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Bytes incoming per second</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Bytes outgoing per second</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Database hits per second</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Page hits per second</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Cache pops per second</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Number of queued requests</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Number of running requests</p></li>
+	<li class="p" style="margin-left: -20px;"><p>Number of timed out requests</p></li>
+</ul>
+<h3 class="Procedure">Use performance monitoring</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">Select the Enable Performance 
+	 Monitoring option on the <a href="debgopt.htm" title="debgopt.htm">Debug Output Settings</a> 
+	 page. For quick details, see <a href="enable_performance_monitoring.htm" title="enable_performance_monitoring.htm">Enable 
+	 performance monitoring</a>.</p></li>
+	<li class="p-NumList"><p class="NumList">Configure the Performance 
+	 Monitor. For details, see <a href="configure_the_performance_monitor.htm" title="configure_the_performance_monitor.htm">Configure 
+	 the Performance Monitor</a>.</p></li>
+</ol>
+<h3 class="Procedure"><a name="Related" id="Related" title="Related"></a>Related topics</h3>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="debgopt.htm" title="debgopt.htm">Configure 
+	 debugging settings</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="enable_performance_monitoring.htm" title="enable_performance_monitoring.htm">Enable 
+	 performance monitoring</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="configure_the_performance_monitor.htm" title="configure_the_performance_monitor.htm">Configure 
+	 the Performance Monitor</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

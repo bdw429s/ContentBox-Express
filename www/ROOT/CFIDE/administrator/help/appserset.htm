@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 27, 2001 8:43:36 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Apply server settings</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Server Settings\nApply server settings");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_server_settings.htm\">Server Settings<\/a> > Apply server settings<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server Settings</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Apply server settings</h1>
+<h5>Server Settings &gt; Settings</h5>
+<p>&#160;</p>
+<p>The following table describes the server settings. Click Submit Changes 
+ to save your changes.</p>
+<p>&#160;</p>
+<table cellspacing="0" width="100%">
+	<col style="width: 30.272%;" />
+	<col style="width: 49.864%;" />
+	<col style="width: 19.864%;" />
+	<tr valign="top">
+		<td style="border: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Setting</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 49.864%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Description</p></td>
+		<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 19.864%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="font-weight: bold;">Default</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Timeout Requests after seconds </p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to prevent unusually lengthy requests from consuming 
+		 server resources. Enter a number of seconds to limit the amount 
+		 of time that ColdFusion waits before terminating a request. Requests 
+		 that take longer than the timeout period are terminated.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled; 
+		 60</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Per App Settings</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to let developers programmatically define ColdFusion 
+		 setting such as mappings and debugging per application. See <a href="setting_per_application_settings.htm" title="setting_per_application_settings.htm">Setting per application 
+		 settings</a>.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Use UUID for cftoken</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to configure the cftoken cookie to use a Universally 
+		 Unique Identification number (UUID), rather than a random number, 
+		 as a token identifier. A UUID guarantees a unique identifier for 
+		 the token.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable HTTP status codes</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to configure ColdFusion to set a status code of 500 
+		 Internal Server Error for an unhandled error. Disable this option 
+		 to configure ColdFusion to set a status code of 200 OK for everything, 
+		 including unhandled errors.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Enable Whitespace Management</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to compress runs of spaces, tabs, and carriage return/line 
+		 feeds into a single space. Compressing whitespace can significantly 
+		 compact the output of a CFML template. You can locally override 
+		 this setting for a template, such as to omit preformatted data, 
+		 by using the <span style="font-family: 'Courier New', monospace;">cfprocessingdirective</span> 
+		 tag.</p>
+		<p>&#160;</p>
+		<p><span style="font-weight: bold;"><b>Note:</b></span> Restart the server 
+		 when you enable or disable this option.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Disable CFC 
+		 Type Check</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to turn off &#160;verifying the CFC type when calling 
+		 methods &#160;with CFCs as arguments. It also disables verifying 
+		 an object that implements the right interface.</p>
+		<p>&#160;</p>
+		<p><span style="font-weight: bold;"><b>Note:</b></span> Although enabling 
+		 this option can improve your application's performance, you should 
+		 enable it only on a production server when you are not making 
+		 changes to your application.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Enable Generated 
+		 UDF Registration</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 Implicit UDFs to avoid adding implicit setters/getters into CFC's 
+		 'variable' scope, 'this' scope, or metadata. You will be able 
+		 to invoke the implicit UDFs but this will improve CFC creation 
+		 performance.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Disable access 
+		 to internal ColdFusion Java components</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to prevent CFML code from accessing and creating Java 
+		 objects that are part of the internal ColdFusion implementation. 
+		 This prevents a non-authenticated CFML template from reading or 
+		 modifying administration and configuration information for this 
+		 server.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Prefix serialized 
+		 JSON with</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Protects 
+		 web services which return JSON data from cross-site scripting 
+		 attacks by prefixing serialized JSON strings with a custom prefix.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Enable InMemory 
+		 File System</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Enables 
+		 the InMemory File System support. &#160;</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Memory Limit 
+		 for InMemory Virtual File System</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specify 
+		 the memory limit for RAM-based Virtual File System</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Enabled 
+		 100</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Watch configuration 
+		 files for changes (check every &#160;[n] seconds )</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Select 
+		 this option to make &#160;ColdFusion &#160;watch its configuration 
+		 files and automatically reload them if they change. This is required 
+		 if you deploy ColdFusion in a Websphere ND vertical cluster, because 
+		 multiple instances of ColdFusion share the same configuration 
+		 files. Most installations should not enable this feature.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled 
+		 120</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Enable Global 
+		 Script Protection</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 whether ColdFusion automatically protects Form, URL, CGI, and 
+		 Cookie scope variables from cross-site scripting attacks.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Allow Extra 
+		 Attributes in AttributeCollection</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><span 
+		 style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Specify whether ColdFusion tags can pass 
+		 non-standard attributes in the attributecollection structure.</font></span> 
+		 </td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><span 
+		 style="font-size: 10pt;"><font size="2" style="font-size:10pt;">Enabled</font></span></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p style="color: #000000;">Default ScriptSrc 
+		 Directory</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the absolute web server path to the directory that contains the 
+		 cfform.js file. Developers reference this file in the <span style="font-family: 'Courier New', monospace;">ScriptSrc</span> 
+		 attribute of the <span style="font-family: 'Courier New', monospace;">cfform</span> 
+		 tag.</p>
+		<p>&#160;</p>
+		<p>In a hosted environment, you may need to move the cfform.js 
+		 file to a directory other than CFIDE.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><span 
+		 style="font-size: 10pt;"><font size="2" style="font-size:10pt;">/CFIDE/scripts/</font></span></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Google Map API Key</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specify 
+		 the license key to be able to access Google Maps.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Blank</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Component with onServerStart() method</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specify 
+		 the absolute path to a CFC having onServerStart() method, like 
+		 &quot;c:\server.cfc&quot;. Or specify a dot delimited CFC path 
+		 under webroot, like &quot;a.b.server&quot;. By default, ColdFusion 
+		 will look for server.cfc under webroot.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Disabled</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Application.cfc/Application.cfm lookup 
+		 order</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>The 
+		 order in which ColdFusion searches for application.cfm or application.cfc 
+		 files, if it is not found in the directory. The available options 
+		 are:</p>
+		<ul type="disc">
+			<li style="font-size: 10pt;">Default order</li>
+			<li style="font-size: 10pt;">Until webroot</li>
+			<li style="font-size: 10pt;">In webroot</li>
+		</ul></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Default 
+		 order</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Missing Template Handler</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specify 
+		 a template to execute when ColdFusion cannot find the requested 
+		 template. This specification is relative to the web root. If the 
+		 user is running Microsoft Internet Explorer with &quot;Show Friendly 
+		 HTTP error messages&quot; enabled in advanced settings (the default), 
+		 Internet Explorer displays this page only if it contains more 
+		 than 512 bytes.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Blank</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Site-wide Error Handler</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specify 
+		 a template to execute when ColdFusion encounters errors while 
+		 processing a request. This specification is relative to the web 
+		 root. If the user is running Internet Explorer with &quot;Show 
+		 Friendly HTTP error messages&quot; enabled in advanced settings 
+		 (the default), Internet Explorer displays this page only if it 
+		 contains more than 512 bytes.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>Blank</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Maximum size of post data</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Specifies 
+		 the maximum amount of data that can be posted to the server in 
+		 a single request. ColdFusion rejects requests larger than the 
+		 specified limit.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>100 
+		 MB</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Request Throttle Threshold</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Requests 
+		 smaller than the specified limit are neither queued nor counted 
+		 as part of the total memory. Requests larger than the specified 
+		 limit are counted as part of total memory and are queued if the 
+		 request throttle memory size has been exceeded.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>4 
+		 MB</p></td>
+	</tr>
+	<tr valign="top">
+		<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; 
+			 border-bottom: Solid 1px #c0c0c0; width: 30.272%; padding-right: 10px; 
+			 padding-left: 10px;"><p>Request Throttle Memory</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 49.864%; padding-right: 10px; padding-left: 10px;"><p>Limits 
+		 total memory size for the throttle. If there is not enough total 
+		 memory available, Coldfusion queues requests until enough memory 
+		 is free.</p></td>
+		<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; 
+			 width: 19.864%; padding-right: 10px; padding-left: 10px;"><p>200 
+		 MB</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<p style="margin-left: 0px;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ Some options require you to restart ColdFusion after making changes.</p>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server 
+	 Settings overview</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

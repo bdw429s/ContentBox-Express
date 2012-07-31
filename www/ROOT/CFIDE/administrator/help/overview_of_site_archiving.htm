@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="03 19, 2002 2:43:39 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Archiving and deployment overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Packaging and Deployment\nColdFusion Archives\nColdFusion Archives overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_site_archiving.htm\">Packaging and Deployment<\/a> > <a href=\"overview_of_site_archiving.htm\">ColdFusion Archives<\/a> > ColdFusion Archives overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>ColdFusion Archives overview</h1>
+<h5>Packaging and Deployment &gt; ColdFusion Archives</h5>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>ColdFusion archives (CAR) let you archive and deploy website configuration 
+ information, files, and applications. Use this features to deploy your 
+ website applications to another location or to back up your files quickly 
+ and easily.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> CAR file archiving and 
+ deployment is different from J2EE archiving and packaging through EAR 
+ and WAR files. &#160;&#160;</p>
+&#160; 
+<br /><span style="font-size: 10pt; font-weight: bold;"><font size="2" style="font-size:10pt;"><b>Archive 
+ and deploy site information</b></font></span> 
+<br /><br />
+
+<ol type="1">
+	<li class="p"><p><span><a href="creating_site_archive.htm" style="font-weight: normal;" title="creating_site_archive.htm">Create 
+	 the archive definition</a></span>. Creating the archive definition 
+	 involves identifying the type of information to archive about a site. 
+	 You can archive almost anything about the site, such as directories, 
+	 files, CFX tags, ColdFusion mappings, Verity collections, automated 
+	 tasks, and server settings. Each archive definition that you create 
+	 is assigned a name. You use this name each time you modify or archive 
+	 its content. &#160;<br />
+	&#160;</p></li>
+	<li class="p"><p><a href="generating_archive.htm" title="generating_archive.htm">Build the archive</a>. 
+	 &#160;Building the archive involves selecting the name of the archive 
+	 definition to archive and specifying a location to which you store 
+	 the archive (CAR file).<br />
+	&#160;</p></li>
+	<li class="p"><p><a href="restoring_an_archive.htm" title="restoring_an_archive.htm">Deploy the archive</a>. 
+	 Deploying the archive involves specifying the location of the archive 
+	 filename (CAR file) and the location to which you restore the archive 
+	 file (CAR).</p></li>
+</ol>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Notes:</b></span></p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p>ColdFusion does not deploy 
+	 Administrator and RDS passwords.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>ColdFusion does not unpack 
+	 archives created in previous versions of ColdFusion.</p></li>
+	<li class="p" style="margin-left: -20px;"><p>When you migrate from 
+	 a previous version of ColdFusion to ColdFusion 9 and then create a 
+	 CAR file, if you customized the log directory setting, it is not included 
+	 in the archive.</p></li>
+</ul>
+<p>&#160;</p>
+<h5><a name="Related" id="Related" title="Related"></a>Related topics</h5>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="modifying_a_site_archive.htm" title="modifying_a_site_archive.htm">Modify 
+	 an archive definition</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="delete_archive_definition.htm" title="delete_archive_definition.htm">Delete 
+	 an archive definition</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="j2ee_packaging_overview.htm" title="j2ee_packaging_overview.htm">J2EE 
+	 packaging</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="05 10, 2001 3:14:46 PM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Optional configuration overview</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nGetting Started \nOptional Configuration\nOptional configuration overview");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"what_you_can_do_in_coldfusion_administrator.htm\">Introduction<\/a> > <a href=\"overview_of_basic_configuration.htm\">Getting Started <\/a> > <a href=\"overview_of_optional_configuration.htm\">Optional Configuration<\/a> > Optional configuration overview<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Optional configuration overview</h1>
+<p>After you perform <a href="overview_of_basic_configuration.htm" title="overview_of_basic_configuration.htm">basic 
+ configuration tasks</a> in the Administrator pages, consider taking these 
+ actions:</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Determine the identity of a website visitor: 
+ <span style="font-weight: normal;">ColdFusion lets you use client variables 
+ to determine the identity of a client visiting your site. By managing 
+ client variables, you can use this information to customize page content 
+ for your clients. Select Server Settings &gt; Client Variables in the 
+ ColdFusion Administrator navigation pane to specify a default storage 
+ mechanism for client variables and to optionally specify the data source 
+ used to store client information. For details, see <a href="client_variable_planning.htm" title="client_variable_planning.htm">Client 
+ variable planning</a> and <a href="mgeclivar.htm" title="mgeclivar.htm">Manage client variables</a>.</span></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Create logical aliases for physical 
+ directories: </b></span>You can create logical aliases for paths to directories 
+ on your server. Select Server Settings &gt; Mappings in the ColdFusion 
+ Administrator navigation pane. For details, see <a href="about_logical_aliases_for_physical_directories.htm" title="about_logical_aliases_for_physical_directories.htm">About 
+ logical aliases for physical directories</a> and <a href="crelogmap.htm" title="crelogmap.htm">Create 
+ logical mappings</a>.</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">Register Java applets and CFX tags: <span 
+	 style="font-weight: normal;">You can use Java applets and CFX tags 
+ in your ColdFusion applications. Register the applets on the appropriate 
+ Extensions pages by selecting Extensions &gt; Java Applets or Extensions 
+ &gt; CFX Tags in the ColdFusion Administrator navigation pane. After they 
+ are &#160;registered, you can incorporate the applets and tags in your 
+ applications. For details, see <a href="javaapplet.htm" title="javaapplet.htm">Java applets</a> 
+ and the <a href="cftags.htm" title="cftags.htm">CFX Tags</a>.</span></p>
+<p style="font-size: 11pt; font-weight: normal;">&#160;</p>
+<p><span style="font-weight: bold;"><b>Configure standard debugging options:</b></span> 
+ You can get useful debugging information about your application page requests 
+ from browsers by setting debugging preferences. Select Debugging &amp; 
+ Logging &gt; Debug Output Settings in the ColdFusion Administrator navigation 
+ pane to set up debugging. For details, see <a href="debgopt.htm" title="debgopt.htm">Select 
+ debugging options</a>.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Perform advanced administration tasks:</b></span> 
+ If you require granular security control over your ColdFusion resources, 
+ or need to decentralize ColdFusion administrative responsibilities, implement 
+ ColdFusion Security. In the ColdFusion Administrator navigation pane, 
+ select Security &gt; Sandbox Security (Enterprise Edition) or Security 
+ &gt; Resource Security (Standard Edition). To take advantage of additional 
+ capabilities that ColdFusion provides for controlling access by applications 
+ to resources on the server (such as data sources, files, directories, 
+ and IP addresses), consider configuring Sandbox Security. For details, 
+ see <a href="sandbox_sec.htm" title="sandbox_sec.htm">Configure ColdFusion security</a>.</p>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_basic_configuration.htm" title="overview_of_basic_configuration.htm">Basic 
+	 configuration overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="client_variable_planning.htm" title="client_variable_planning.htm">Client 
+	 variable planning</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="mgeclivar.htm" title="mgeclivar.htm">Manage 
+	 client variables</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="addeditjavaapplet.htm" title="addeditjavaapplet.htm">Register 
+	 the Java applets page</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="debgopt.htm" title="debgopt.htm">Select 
+	 debugging options</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="sandbox_sec.htm" title="sandbox_sec.htm">Configure 
+	 ColdFusion security</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

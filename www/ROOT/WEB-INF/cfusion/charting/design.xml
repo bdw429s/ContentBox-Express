@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<options expertMode="false" lastProject="null" recentProjects="null" license="241S-0AEO-1LV0-0R6B" autoSave="true"
+     embeddedServerPort="8802" useColorSpaces="true" language="en" browser="C:\Program Files\Internet Explorer\IEXPLORE.EXE">
+          <gui useSystemLF="false">
+               <theme primary1="#666699" primary2="#3388DD" primary3="#CCCCFF" secondary1="#666666" secondary2="#999999"
+                    secondary3="#DDDDDD" controlFont="Arial-12" userFont="Arial-12" systemFont="Arial-12" windowFont="Arial-12"
+                    subtextFont="Arial-11" menuFont="Arial-11" helpFont="Arial-11" menuBackground="#DDDDDD" menuForeground="black"
+                    menuSelectedBackground="#6666BB" menuSelectedForeground="white" menuDisabledForeground="gray" menuSeparatorBackground="white" menuSeparatorForeground="#666699"
+                    menuAcceleratorForeground="#333399" menuAcceleratorSelectedForeground="white"
+               />
+          </gui>
+          <xml base="None" basefile="" encoding="UTF-8" useBuiltinParser="true" parser="org.apache.xerces.parsers.SAXParser"
+               writeExpanded="true"/>
+          <server webServerRoot="null" jarLocation="null" tagLocation="null" getImageURL="/getImage.jsp" pageLocation="null"/>
+</options>

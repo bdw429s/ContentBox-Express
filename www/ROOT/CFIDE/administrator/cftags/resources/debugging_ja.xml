@@ -1,0 +1,195 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Debugging
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="options_pagename">デバッグ出力の設定</cfcase>
+<cfcase value="pageHeader_debugging">デバッグとロギング &gt; デバッグ出力の設定</cfcase>
+<cfcase value="enable_robust">Robust 例外情報の有効化</cfcase>
+<cfcase value="enable_robust_desc">
+例外ページで、訪問者は次の情報を見ることができます。
+<ul>
+<li>テンプレートの物理パス</li>
+<li>テンプレートの URI</li>
+<li>行番号と行スニペット</li>
+<li>使用される SQL ステートメント (ある場合)</li>
+<li>データソース名 (ある場合)</li>
+<li>Java スタックトレース</li>
+</ul>
+</cfcase>
+<cfcase value="ajax_enabled">AJAX デバッグログウィンドウの有効化</cfcase>
+<cfcase value="ajax_enabled_tip">
+URL で cfdebug フラグが渡された場合に AJAX デバッグログウィンドウを表示
+します。このオプションを無効にすると、cfdebug フラグが指定されている場合でも
+ AJAX デバッグログウィンドウは表示されません。
+</cfcase>
+<cfcase value="enable">リクエストのデバッグ出力の有効化</cfcase>
+<cfcase value="enable_tip">
+CFML ページに対するページレベルのデバッグ出力を有効にします。
+次の設定をすべて上書きするには、このチェックボックスをオフにします。
+デバッグ情報は各リクエストの最後に追加されます。
+</cfcase>
+<cfcase value="customDebugOutput">デバッグ出力の設定</cfcase>
+<cfcase value="debug_template_output">デバッグ出力形式の選択</cfcase>
+<cfcase value="debug_template_tip">
+ColdFusion にはいくつかのデバッグ出力形式があります。<br />
+<b>classic.cfm</b> - この形式は ColdFusion 5 とそれ以前のバージョンで使用可能です。この形式では基本的な表示が出力され、ブラウザの制限はほとんどありません。<br />
+<b>dockable.cfm</b> - どこにでも配置できるツリーベースのデバッグパネル。パネルとブラウザの制限については、オンラインヘルプを参照。</cfcase>
+<cfcase value="template">実行時間のレポート</cfcase>
+<cfcase value="debugslowtemplathighlight">以下の時間 (ミリ秒) を超過したテンプレートを強調表示</cfcase>
+<cfcase value="template_using">以下の出力モードの使用</cfcase>
+<cfcase value="template_mode_summary">summary</cfcase>
+<cfcase value="template_mode_tree">tree</cfcase>
+<cfcase value="template_tip">
+テンプレート、インクルード、モジュール、カスタムタグ、コンポーネントメソッド呼び出し用の実行時間。この最小強調表示時間を超えたテンプレート実行時間は、赤で表示されます。デフォルトは 250 ミリ秒です。ColdFusion には次のテンプレートモードがあります。
+<br />
+<b>summary</b> - 呼び出された各ページの要約。合計時間、平均時間、カウント、テンプレートがカラムに含まれます。合計時間の大きい順に並び替えられます。<br />
+<b>tree</b> - ページ実行ごとの階層ツリー表示。メモ : 処理時間と出力は summary より長くなります。
+</cfcase>
+<cfcase value="general">一般デバッグ情報</cfcase>
+<cfcase value="general_tip">
+このリクエストについての一般情報を表示する場合は、このオプションを選択してください。
+一般項目は、ColdFusion のサーバーバージョン、テンプレート、タイムスタンプ、ユーザーロケール、ユーザーエージェント、ユーザー IP、ホスト名です。
+</cfcase>
+<cfcase value="da">データベースアクティビティ</cfcase>
+<cfcase value="da_tip">
+SQL クエリーイベントとストアドプロシージャイベント用のデータベースアクティビティをデバッグ出力に表示する場合は、このオプションを選択します。
+</cfcase>
+<cfcase value="exception">例外情報</cfcase>
+<cfcase value="exception_tip">
+リクエストで発生した ColdFusion 例外をデバッグ出力に記録する場合は、このオプションを選択します。
+</cfcase>
+<cfcase value="trace">トレース情報</cfcase>
+<cfcase value="trace_tip">
+トレースイベント情報をデバッグ出力に表示する場合は、このオプションを選択します。
+トレース操作により、開発者は CFTRACE タグを使用して、プログラムフローと効率を追跡できます。
+</cfcase>
+<cfcase value="timer">タイマー情報</cfcase>
+<cfcase value="timer_tip">
+タイマーイベント情報をデバッグ出力に表示する場合は、このオプションを選択します。
+タイマーにより、開発者は CFTIMER タグの開始タグから終了タグまでのコードの実行時間を追跡できます。
+</cfcase>
+<cfcase value="vars">変数</cfcase>
+<cfcase value="vars_tip">
+変数レポートを有効にする場合は、このオプションを選択します。以下の変数を選択してください。
+</cfcase>
+<cfcase value="applicationvar">アプリケーション</cfcase>
+<cfcase value="cookievar">Cookie</cfcase>
+<cfcase value="servervar">サーバー</cfcase>
+<cfcase value="cgivar">CGI</cfcase>
+<cfcase value="formvar">フォーム</cfcase>
+<cfcase value="sessionvar">セッション</cfcase>
+<cfcase value="clientvar">クライアント</cfcase>
+<cfcase value="requestvar">リクエスト</cfcase>
+<cfcase value="urlvar">URL</cfcase>
+<cfcase value="enable_perfmon">パフォーマンス監視の有効化</cfcase>
+<cfcase value="enable_perfmon_desc">
+このオプションを選択すると、標準の NT パフォーマンスモニタアプリケーションは、実行中の ColdFusion アプリケーションサーバーに関する情報を表示します。
+</cfcase>
+<cfcase value="enable_cfstat">CFSTAT の有効化</cfcase>
+<cfcase value="enable_cfstat_desc">
+cfstat コマンドラインユーティリティは、ColdFusion のパフォーマンス測定値をリアルタイムで提供します。
+cfstat は測定値データを得るためにソケット接続を使用し、
+システムモニタアプリケーションを
+実際に使用することなく、ColdFusion からシステムモニタに書き込まれた情報を表示します。
+</cfcase>
+<cfcase value="hf_apply">これらの変更を有効にするために、ColdFusion を再起動する必要があります。</cfcase>
+<cfcase value="ip_pagename">デバッグする IP アドレス</cfcase>
+<cfcase value="pageHeader_iplist">デバッグとロギング &gt; デバッグする IP アドレス</cfcase>
+<cfcase value="ip_welcometext">
+AJAX デバッグログウィンドウのメッセージを含むデバッグメッセージを
+受け取る IP アドレスを指定してください。
+リスト内に IP アドレスを追加する場合は、アドレスを入力して [追加] をクリックしてください。
+リストから IP アドレスを削除する場合は、アドレスを選択して [選択の削除] をクリックしてください。
+IP アドレスが選択されない場合は、すべてのユーザーがデバッグ情報を受け取ります。
+</cfcase>
+<cfcase value="selectIP">デバッグ出力用の IP アドレスの選択</cfcase>
+<cfcase value="ip_address">IP アドレス</cfcase>
+<cfcase value="add_button">追加</cfcase>
+<cfcase value="add_current_button">現在のものを追加</cfcase>
+<cfcase value="viewdeleteIP">デバッグ出力用に選択した IP アドレスの表示 / 削除</cfcase>
+<cfcase value="remove_button">選択の削除</cfcase>
+<cfcase value="ds_msg_restartServer">このページで指定した変更を有効にするには、ColdFusion を再起動する必要があります。</cfcase>
+<cfcase value="ds_msg_selectUnusedPort">警告 :既に使用中のデバッガポートを指定すると、ColdFusion サーバーは起動しません。</cfcase>
+<cfcase value="options_pagename_linedebug">デバッガの設定</cfcase>
+<cfcase value="pageHeader_lineDebugger">デバッグとロギング &gt; デバッガの設定</cfcase>
+<cfcase value="linedebugsettings">ラインデバッガの設定</cfcase>
+<cfcase value="allow_line_debugging">ラインデバッグの許可</cfcase>
+<cfcase value="ip_debugger_port">デバッガポート :</cfcase>
+<cfcase value="linedebugger_debugport_warning">アプリケーションサーバーの JVM 設定で、このデバッガポートを指定する必要があります。次に例を示します。
+ <br>-Xdebug -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=</cfcase>
+<cfcase value="linedebugger_debugport_warning_part2">その後、サーバーを再起動します。</cfcase>
+<cfcase value="max_debugging_sessions">同時デバッグセッションの最大数 :</cfcase>
+<cfcase value="debugger_server">デバッガサーバー</cfcase>
+<cfcase value="debugger_server_desc">デバッガサーバーは ColdFusion サーバーとは別のプロセスとして動作します。
+このページからデバッガサーバーを起動、停止、または再起動できますが、デバッグセッションが開始されるとデバッグプロセスは自動的に管理されるので、通常は必要ありません。</cfcase>
+<cfcase value="start_debugger_server">デバッガサーバーの起動</cfcase>
+<cfcase value="stop_debugger_server">デバッガサーバーの停止</cfcase>
+<cfcase value="restart_debugger_server">デバッガサーバーの再起動</cfcase>
+<cfcase value="page_desc">Eclipse で動作する ColdFusion デバッガを使用するために、[ラインデバッグの許可] オプションを有効にします。ポートおよび同時デバッグセッションの最大数を指定します。</cfcase>
+<cfcase value="port_in_use_warning">デバッガ用に指定されたポート番号は、ColdFusion デバッガによって現在使用中である可能性があります。この ColdFusion サーバーのデバッグ以外の目的でこのポートを使用している場合は、使用可能なポート番号を入力してサーバーを再起動してくださいます。</cfcase>
+<cfcase value="debug_error_update"><cfoutput>
+デバッグ設定を更新できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="debug_error_get"><cfoutput>
+デバッグ設定を取得できません。<br />
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#<br />
+</cfoutput></cfcase>
+<cfcase value="flashformcompileerrors">Flash フォームコンパイルエラーとメッセージ</cfcase>
+<cfcase value="flashformcompileerrors_tip">
+(開発用のみ) このオプションを選択すると、ColdFusion は Flash フォームのコンパイル時に ActionScript エラーを
+ブラウザに表示するようになり、ページの表示時間に影響します。
+</cfcase>
+<cfcase value="ip_error_invalid"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。
+</cfoutput></cfcase>
+<cfcase value="ip_error_add"><cfoutput>
+追加しようとした IP (#FORM.IPtoBeAdded#) は有効ではありません。
+IP は、IPv4 アドレス指定形式ではピリオドで区切られた 0 から 255 までの 4 つの数字で (例 : 127.0.0.1)、IPv6 
+アドレス指定形式ではコロンで区切られた 0 から FFFF までの 16 進の 8 つの数字です (例 : 0:0:0:0:0:0:0:1)。<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_add_current"><cfoutput>
+現在の IP (#CGI.Remote_Addr#) をデバッグサービスに追加する際に、
+エラーが発生しました。<br />
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_remove"><cfoutput>
+リクエストされた IP をデバッグサービスから削除する際に、
+エラーが発生しました。<br/>
+#CALLER.CFCATCH.Message# <br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ip_error_get"><cfoutput>
+制限された IP アドレスのリストをデバッグサービスから取得する際に、
+エラーが発生しました。<br/>
+#CALLER.CFCATCH.Message#<br />
+#CALLER.CFCATCH.Detail#
+</cfoutput></cfcase>
+<cfcase value="ds_error_portnum">ポート番号はゼロより大きい数値である必要があります。</cfcase>
+<cfcase value="ds_error_maxsessions">セッションの最大数はゼロより大きい数値である必要があります。</cfcase>
+<cfcase value="linedebug_error_update">デバッグ設定を更新できません。</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

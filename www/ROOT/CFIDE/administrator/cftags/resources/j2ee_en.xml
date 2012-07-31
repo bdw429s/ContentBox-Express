@@ -1,0 +1,113 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: J2EE
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="available_data_sources">Available Data Sources</cfcase>
+<cfcase value="archive_data_sources">Archive Data Sources</cfcase>
+<cfcase value="delbadchar"><cfoutput>
+The archive name <i>#CALLER.HTMLEditFormat(url.name)#</i> contains invalid characters. Archive names must contain letters or numbers; they cannot contain punctuation or other non-alpha characters and they cannot be zero length
+</cfoutput></cfcase>
+<cfcase value="message">
+Archive config data not found, please recreate (did you delete config.xml?)
+</cfcase>
+<cfcase value="dupedetail"><cfoutput>#FORM.name# already exists, please choose another name</cfoutput></cfcase>
+<cfcase value="badchar"><cfoutput>
+The archive name <i>#FORM.archivename#</i> contains invalid characters. Archive names must contain letters or numbers; they cannot contain punctuation or other non-alpha characters and they cannot be zero length
+</cfoutput></cfcase>
+<cfcase value="addEdit_j2ee_archives">Add/Edit J2EE Archive</cfcase>
+<cfcase value="addeditj2eearchive">
+Add/Edit J2EE Archive
+</cfcase>
+<cfcase value="req">
+* denotes required field
+</cfcase>
+<cfcase value="addnewarch">Add New Archive</cfcase>
+<cfcase value="archname">Archive Name</cfcase>
+<cfcase value="appdir">Application Directory</cfcase>
+<cfcase value="button_browse">Browse Server</cfcase>
+<cfcase value="distdir">Distribution Directory</cfcase>
+<cfcase value="archtype">Archive Type</cfcase>
+<cfcase value="ctxroot">Context Root (valid for EAR)</cfcase>
+<cfcase value="serialnum">Serial Number</cfcase>
+<cfcase value="oldserialnum">Previous Serial Number (if upgrade)</cfcase>
+<cfcase value="comsupport">Include COM Support</cfcase>
+<cfcase value="disdebug">Disable Debugging</cfcase>
+<cfcase value="cfmlsrc">Include CFML Source</cfcase>
+<cfcase value="inludeadmin">Include CF Administrator</cfcase>
+<cfcase value="configdsn">Configure Data Sources to be Included in Archive</cfcase>
+<cfcase value="button_create">Submit</cfcase>
+<cfcase value="button_cancel">Cancel</cfcase>
+<cfcase value="button_working">Working...</cfcase>
+<cfcase value="j2ee_archives_no_odbc">NOTE: ODBC Datasources cannot be included in J2EE archives. They are not displayed in this page.</cfcase>
+<cfcase value="j2ee_archives">J2EE Archives</cfcase>
+<cfcase value="pageHeader_j2eearchives">Packaging &amp; Deployment &gt; J2EE Archives</cfcase>
+<cfcase value="createnewarear">
+Create a J2EE archive (EAR or WAR) file.
+</cfcase>
+<cfcase value="archivenamerequired">
+Archive name required
+</cfcase>
+<cfcase value="button_add"> Add </cfcase>
+<cfcase value="configdarch">Configured Archives</cfcase>
+<cfcase value="actions">Actions</cfcase>
+<cfcase value="type">Type</cfcase>
+<cfcase value="lastbuilt">Last Built</cfcase>
+<cfcase value="arch_noarch">No Archives have been defined</cfcase>
+<cfcase value="button_edit">Edit</cfcase>
+<cfcase value="button_delete">Delete</cfcase>
+<cfcase value="delete_arch_confirmation">Are you sure you want to delete this archive?</cfcase>
+<cfcase value="oldlicense_empty">
+The serial number is for an upgrade.  The old serial number must also be specified.
+</cfcase>
+<cfcase value="oldlicense"><cfoutput>
+<i>#FORM.oldserial#</i> is not a valid serial number for an upgrade to #CALLER.cfversion#.
+</cfoutput></cfcase>
+<cfcase value="not_upgradelicense"><cfoutput>
+The serial number is not for an upgrade to #CALLER.cfversion#.  The old serial number is not required.
+</cfoutput></cfcase>
+<cfcase value="invalidlicense"><cfoutput>
+<i>#FORM.serial#</i> is not a valid #CALLER.cfversion# Enterprise serial number.
+</cfoutput></cfcase>
+<cfcase value="invalidlicensedetail">invalid license</cfcase>
+<cfcase value="oldlicense_not_required">
+The old serial number is not required.
+</cfcase>
+<cfcase value="badchar1"><cfoutput>
+The archive name <i>#FORM.archive#</i> contains invalid characters. Archive names must contain letters or numbers; they cannot contain punctuation or other non-alpha characters and they cannot be zero length
+</cfoutput></cfcase>
+<cfcase value="nodistdir">The specified target directory for the archive does not exist</cfcase>
+<cfcase value="noappdir">The specified target application directory for the archive does not exist</cfcase>
+<cfcase value="pagenamemsg_buildingpackage">Building Package</cfcase>
+<cfcase value="headlinePleasewait">Please wait this may take a few minutes.</cfcase>
+<cfcase value="dir_error">
+Please enter a valid application directory
+</cfcase>
+<cfcase value="distdir_error">
+Please enter a valid distribution directory
+</cfcase>
+<cfcase value="sn_error">
+Please enter a valid serial number
+</cfcase>
+<cfcase value="oldsn_error">
+Please enter your previous serial number
+</cfcase>
+<cfcase value="archive_error"><cfoutput>
+There was a problem<br />
+<cfoutput>
+<b>Message</b>: #CALLER.exceptions.message#<br />
+<b>Detail</b>: #CALLER.exceptions.detail#
+</cfoutput>
+</cfoutput></cfcase>
+<cfcase value="configerror">Error getting type, config not available</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

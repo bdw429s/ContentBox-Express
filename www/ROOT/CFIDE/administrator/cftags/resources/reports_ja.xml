@@ -1,0 +1,282 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: reports
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="server_settings_tip">
+クリックすると、サーバー設定を使用して新しいウィンドウに PDF が生成されます。
+    </cfcase>
+<cfcase value="GetPDF">PDF として保存</cfcase>
+<cfcase value="Settings_Summary">設定要約</cfcase>
+<cfcase value="report_generated">レポート生成時刻</cfcase>
+<cfcase value="settings_description">
+このレポートは、すべての ColdFusion 設定のステータスを示します。
+各項目についての設定を編集することができる ColdFusion Administrator のページを表示する場合は、
+レポート内の任意のグループ名をクリックしてください。
+</cfcase>
+<cfcase value="rendering">表示中</cfcase>
+<cfcase value="pageHeader_settingSummary">サーバーの設定 &gt; 設定要約</cfcase>
+<cfcase value="systemInfo">システム情報</cfcase>
+<cfcase value="serverDetails">サーバーの詳細</cfcase>
+<cfcase value="serverProduct">サーバー製品</cfcase>
+<cfcase value="version">バージョン</cfcase>
+<cfcase value="edition">エディション</cfcase>
+<cfcase value="serialNumber">シリアル番号</cfcase>
+<cfcase value="os">オペレーティングシステム</cfcase>
+<cfcase value="osversion">OS バージョン</cfcase>
+<cfcase value="updlevel">更新レベル</cfcase>
+<cfcase value="adobedriverversion">Adobe ドライバのバージョン</cfcase>
+<cfcase value="jvmdetails">JVM 詳細</cfcase>
+<cfcase value="javaversion">Java バージョン</cfcase>
+<cfcase value="javavendor">Java ベンダ</cfcase>
+<cfcase value="javavendorurl">Java ベンダ URL</cfcase>
+<cfcase value="javahome">Java ホーム</cfcase>
+<cfcase value="javafileEncoding">Java ファイルエンコード</cfcase>
+<cfcase value="javaDefaultLocale">Java デフォルトロケール</cfcase>
+<cfcase value="fileSeparator">ファイルセパレータ</cfcase>
+<cfcase value="pathSeparator">パスセパレータ</cfcase>
+<cfcase value="lineSeparator">行セパレータ</cfcase>
+<cfcase value="username1">ユーザー名</cfcase>
+<cfcase value="userhome">ユーザーホーム</cfcase>
+<cfcase value="userdir">ユーザーディレクトリ</cfcase>
+<cfcase value="jvmSpecVersion">Java VM 仕様バージョン</cfcase>
+<cfcase value="jvmSpecVendor">Java VM 仕様ベンダ</cfcase>
+<cfcase value="jvmSpecName">Java VM 仕様名</cfcase>
+<cfcase value="jvmVersion">Java VM バージョン</cfcase>
+<cfcase value="jvmVendor">Java VM ベンダ</cfcase>
+<cfcase value="jvmName">Java VM 名</cfcase>
+<cfcase value="javaSpecVersion">Java 仕様バージョン</cfcase>
+<cfcase value="javaSpecVendor">Java 仕様ベンダ</cfcase>
+<cfcase value="javaSpecName">Java 仕様名</cfcase>
+<cfcase value="javaClassVersion">Java クラスバージョン</cfcase>
+<cfcase value="CFServerJavaClassPath">CF サーバー Java クラスパス</cfcase>
+<cfcase value="javaClassPath">Java クラスパス</cfcase>
+<cfcase value="javaExtDir">Java 拡張ディレクトリ</cfcase>
+<cfcase value="l10n_printerdetails">プリンタの詳細</cfcase>
+<cfcase value="defaultprinter">デフォルトプリンタ</cfcase>
+<cfcase value="printers">プリンタ</cfcase>
+<cfcase value="serverInfo">サーバー情報</cfcase>
+<cfcase value="generalSettings">一般設定</cfcase>
+<cfcase value="timeoutRequests">リクエストタイムアウト</cfcase>
+<cfcase value="perappsettings">アプリケーションごとの設定の有効化</cfcase>
+<cfcase value="requestTimeLimit">リクエストの時間制限</cfcase>
+<cfcase value="seconds">秒</cfcase>
+<cfcase value="useUUIDForCFToken">CFToken 用の UUID の使用</cfcase>
+<cfcase value="whitespaceMngmt">空白抑制の有効化</cfcase>
+<cfcase value="serviceFactory">サービスファクトリの無効化</cfcase>
+<cfcase value="secureJSON">シリアル化 JSON の保護</cfcase>
+<cfcase value="secureJSONPrefix">シリアル化 JSON 接頭辞の保護</cfcase>
+<cfcase value="missingTemplate">見つからないテンプレートハンドラ</cfcase>
+<cfcase value="enableHTTPStatusCodes">HTTP ステータスコードの有効化</cfcase>
+<cfcase value="enableGlobalScriptProtection">グローバルなスクリプト保護</cfcase>
+<cfcase value="cfformScriptSrcDir">デフォルト CFForm ScriptSrc ディレクトリ</cfcase>
+<cfcase value="GoogleMapKey">Google Map Key </cfcase>
+<cfcase value="postSizeLimit">送信データの最大サイズ</cfcase>
+<cfcase value="mb">MB</cfcase>
+<cfcase value="throttleThreshold">リクエストのスロットルしきい値</cfcase>
+<cfcase value="throttleMemory">リクエストのスロットルメモリ</cfcase>
+<cfcase value="limits">リクエストの調整</cfcase>
+<cfcase value="simultaniousRequestLimit">同時リクエスト制限</cfcase>
+<cfcase value="FlashRemotingLimit">Flash Remoting リクエスト制限</cfcase>
+<cfcase value="WebServiceLimit">Web サービスリクエスト制限</cfcase>
+<cfcase value="CFCLimit">CFC リクエスト制限</cfcase>
+<cfcase value="CFthreadlimit">CFThread プールサイズ</cfcase>
+<cfcase value="reportThreads">レポートスレッドの最大数</cfcase>
+<cfcase value="queueTimeout">リクエストキューのタイムアウト</cfcase>
+<cfcase value="queueTimeoutPage">リクエストキューのタイムアウトページ</cfcase>
+<cfcase value="maxJrun">実行中の JRun スレッドの最大数</cfcase>
+<cfcase value="maxQueued">実行待ちの JRun スレッドの最大数</cfcase>
+<cfcase value="caching">キャッシュ機能</cfcase>
+<cfcase value="templateCacheSize">テンプレートキャッシュサイズ</cfcase>
+<cfcase value="templates">テンプレート</cfcase>
+<cfcase value="enableTrustedCache">信頼できるキャッシュの有効化</cfcase>
+<cfcase value="cachedQuerylimit">キャッシュされたクエリー制限</cfcase>
+<cfcase value="saveClassFiles">クラスファイルの保存</cfcase>
+<cfcase value="cacheWebServerPath">Web サーバーパスのキャッシュ</cfcase>
+<cfcase value="clientVarSettings">クライアント変数設定</cfcase>
+<cfcase value="defaultClientVariableStore">デフォルトのクライアント変数ストア</cfcase>
+<cfcase value="ClientVariablePugeInterval">破棄の間隔</cfcase>
+<cfcase value="hours">時間</cfcase>
+<cfcase value="minutes">分</cfcase>
+<cfcase value="clientStores">クライアントストア</cfcase>
+<cfcase value="type">タイプ</cfcase>
+<cfcase value="description">説明</cfcase>
+<cfcase value="purgeData">時間制限後データを破棄</cfcase>
+<cfcase value="timelimit">時間制限</cfcase>
+<cfcase value="days">日</cfcase>
+<cfcase value="disableGlobalupdates">グローバルな更新の無効化</cfcase>
+<cfcase value="memoryVariables">メモリ変数</cfcase>
+<cfcase value="j2eesessions">J2EE セッション</cfcase>
+<cfcase value="appVariables">アプリケーション変数</cfcase>
+<cfcase value="enableAppVariables">アプリケーション変数の有効化</cfcase>
+<cfcase value="defaultTimeout">デフォルトのタイムアウト</cfcase>
+<cfcase value="maxTimeout">最大タイムアウト</cfcase>
+<cfcase value="sessionVar">セッション変数</cfcase>
+<cfcase value="enableSessionVar">セッション変数の有効化</cfcase>
+<cfcase value="CFMappings">ColdFusion マッピング</cfcase>
+<cfcase value="mailConnectionSettings">メール接続の設定</cfcase>
+<cfcase value="defaultserverPort">デフォルトのサーバーポート</cfcase>
+<cfcase value="ConnectionTimeout">接続タイムアウト</cfcase>
+<cfcase value="SpoolInterval">スプール間隔</cfcase>
+<cfcase value="mailDeliveryThreads">メール配達スレッド</cfcase>
+<cfcase value="maintainConnectionsToMailServer">メールサーバーへの接続を維持</cfcase>
+<cfcase value="spoolMessagesTo">メッセージのスプール先</cfcase>
+<cfcase value="messagesSpooledToMemory">メモリにスプールされるメッセージの最大数</cfcase>
+<cfcase value="defaultMailCharset">デフォルト CFMail 文字設定</cfcase>
+<cfcase value="useSSL">SSL 接続の使用</cfcase>
+<cfcase value="useTLS">TLS の使用</cfcase>
+<cfcase value="defaultMailServer">デフォルトのメールサーバー</cfcase>
+<cfcase value="BackupMailServer">バックアップメールサーバー</cfcase>
+<cfcase value="server">サーバー</cfcase>
+<cfcase value="port">ポート</cfcase>
+<cfcase value="username">ユーザー名</cfcase>
+<cfcase value="password">パスワード</cfcase>
+<cfcase value="mailLoggingSettings">メールロギングの設定</cfcase>
+<cfcase value="logSeverity">ログの厳格度</cfcase>
+<cfcase value="logEmailMessages">ColdFusion から送信された電子メールメッセージをすべてロギング</cfcase>
+<cfcase value="charting">チャート</cfcase>
+<cfcase value="cachetype">キャッシュタイプ</cfcase>
+<cfcase value="images">イメージ</cfcase>
+<cfcase value="maxImagesinCache">キャッシュ内のイメージの最大数</cfcase>
+<cfcase value="maxNumberofChartThreads">チャートを処理するスレッドの最大数</cfcase>
+<cfcase value="diskCacheLocation">ディスクキャッシュの位置</cfcase>
+<cfcase value="javaAndJVM">Java と JVM</cfcase>
+<cfcase value="jvmPath">Java 仮想マシンのパス</cfcase>
+<cfcase value="initMemorySize">初期メモリサイズ</cfcase>
+<cfcase value="maxMemorySize">最大メモリサイズ</cfcase>
+<cfcase value="ClassPath1">クラスパス</cfcase>
+<cfcase value="jvmArgs">JVM 引数</cfcase>
+<cfcase value="dataServices">データとサービス</cfcase>
+<cfcase value="dbDataSources">データベースのデータソース</cfcase>
+<cfcase value="CFDSNName">CF データソース名</cfcase>
+<cfcase value="driver">ドライバ</cfcase>
+<cfcase value="jdbcurrl">JDBC URL</cfcase>
+<cfcase value="loginTimeout">ログインタイムアウト</cfcase>
+<cfcase value="longTextBuffer">長いテキストのバッファーサイズ</cfcase>
+<cfcase value="timeout2">タイムアウト</cfcase>
+<cfcase value="maintainConnections">接続の維持</cfcase>
+<cfcase value="interval">間隔</cfcase>
+<cfcase value="restrictedSQLOperations">制限された SQL オペレーション</cfcase>
+<cfcase value="disableConnections">接続の無効化</cfcase>
+<cfcase value="webServices">Web サービス</cfcase>
+<cfcase value="debuggingAndLogging">デバッグとロギング</cfcase>
+<cfcase value="debuggingSettings">デバッグの設定</cfcase>
+<cfcase value="enableDebugging">デバッグの有効化</cfcase>
+<cfcase value="enableRobustExceptionInfo">Robust 例外情報の有効化</cfcase>
+<cfcase value="displayFormat">形式の表示</cfcase>
+<cfcase value="executionTimes">実行時間</cfcase>
+<cfcase value="executionTimeFormat">実行時間形式</cfcase>
+<cfcase value="executionTimeHighlightThreshold">実行時間強調表示限度</cfcase>
+<cfcase value="dbActivity">データベースアクティビティ</cfcase>
+<cfcase value="exceptioninfo">例外情報</cfcase>
+<cfcase value="tracingInfo">トレース情報</cfcase>
+<cfcase value="timerInfo">タイマー情報</cfcase>
+<cfcase value="variables">変数</cfcase>
+<cfcase value="application">アプリケーション</cfcase>
+<cfcase value="cgi">CGI</cfcase>
+<cfcase value="client">クライアント</cfcase>
+<cfcase value="cookie">Cookie</cfcase>
+<cfcase value="form">フォーム</cfcase>
+<cfcase value="request">リクエスト</cfcase>
+<cfcase value="session">セッション</cfcase>
+<cfcase value="url">URL</cfcase>
+<cfcase value="debuggingIpAddr">デバッグする IP アドレス</cfcase>
+<cfcase value="debugIPAddrRestriction">デバッグする IP アドレスの制限</cfcase>
+<cfcase value="linedebuggersettings">ラインデバッガの設定</cfcase>
+<cfcase value="LineDebuggerEnabled">ラインデバッグの許可</cfcase>
+<cfcase value="lineDebuggerPort">デバッガポート</cfcase>
+<cfcase value="maxDebuggingSessions">同時デバッグセッションの最大数</cfcase>
+<cfcase value="loggingSettings">ロギングの設定</cfcase>
+<cfcase value="logDir">ログディレクトリ</cfcase>
+<cfcase value="maxFileSize">ファイルの最大サイズ</cfcase>
+<cfcase value="maxNumbOfActivities">アーカイブの最大数</cfcase>
+<cfcase value="useOSLogging">オペレーティングシステムのロギング機能の使用</cfcase>
+<cfcase value="logSlowPages">遅いページのロギング</cfcase>
+<cfcase value="slowPageTimeLimit">遅いページの時間制限</cfcase>
+<cfcase value="logCorbaCalls">CORBA 呼び出しのロギング</cfcase>
+<cfcase value="logScheduledTask">スケジュールされたタスクのロギング</cfcase>
+<cfcase value="scheduledTasksAndProbes">タスクとプローブのスケジューリング</cfcase>
+<cfcase value="scheduledTasks">スケジュールされたタスク</cfcase>
+<cfcase value="startDate">開始日</cfcase>
+<cfcase value="endDate">終了日</cfcase>
+<cfcase value="startTime">開始時刻</cfcase>
+<cfcase value="endTime">終了時刻</cfcase>
+<cfcase value="proxyServer">プロキシサーバー</cfcase>
+<cfcase value="proxyPort">プロキシポート</cfcase>
+<cfcase value="saveOutput">出力をファイルに保存</cfcase>
+<cfcase value="publishPath">パスのパブリッシュ</cfcase>
+<cfcase value="publishFilename">ファイル名のパブリッシュ</cfcase>
+<cfcase value="resolveURL">URL の変換</cfcase>
+<cfcase value="systemProbes">システムプローブ</cfcase>
+<cfcase value="probeSettings">設定のプローブ</cfcase>
+<cfcase value="notificationEmailRecipients">通知電子メールの受信者</cfcase>
+<cfcase value="notificationSentFrom">通知送信者</cfcase>
+<cfcase value="probeURL">probe.cfm URL</cfcase>
+<cfcase value="probeUsername">probe.cfm ユーザー名</cfcase>
+<cfcase value="enabled">有効</cfcase>
+<cfcase value="requestTimeout">リクエストのタイムアウト</cfcase>
+<cfcase value="sendEmailNotifications">電子メール通知の送信</cfcase>
+<cfcase value="excuseTheProgram">プログラムの実行</cfcase>
+<cfcase value="extensions">拡張機能</cfcase>
+<cfcase value="javaApplets">Java アプレット</cfcase>
+<cfcase value="code">コード</cfcase>
+<cfcase value="method">メソッド</cfcase>
+<cfcase value="codeBase">コードベース</cfcase>
+<cfcase value="archive">アーカイブ</cfcase>
+<cfcase value="height">高さ</cfcase>
+<cfcase value="width">幅</cfcase>
+<cfcase value="vSpace">縦のスペース</cfcase>
+<cfcase value="hspace">横のスペース</cfcase>
+<cfcase value="alignment">整列</cfcase>
+<cfcase value="notSupportedMessage">サポートされないときのメッセージ</cfcase>
+<cfcase value="appletParams">アプレットパラメータ</cfcase>
+<cfcase value="cfxTags">CFX タグ</cfcase>
+<cfcase value="tagName">タグ名</cfcase>
+<cfcase value="severLibrary">サーバーライブラリ</cfcase>
+<cfcase value="keepLibraryLoaded">ロードしたライブラリの維持</cfcase>
+<cfcase value="Procedure">操作</cfcase>
+<cfcase value="classname">クラス名</cfcase>
+<cfcase value="customTagPaths">カスタムタグのパス</cfcase>
+<cfcase value="corba">CORBA</cfcase>
+<cfcase value="selectedConnector">選択されたコネクタ</cfcase>
+<cfcase value="none">なし</cfcase>
+<cfcase value="Connectors">コネクタ</cfcase>
+<cfcase value="orbClassName">ORB クラス名</cfcase>
+<cfcase value="classPath">クラスパス</cfcase>
+<cfcase value="orbPropFile">ORB プロパティファイル</cfcase>
+<cfcase value="eventGateways">イベントゲートウェイ</cfcase>
+<cfcase value="settings">設定</cfcase>
+<cfcase value="enableEventGateway">イベントゲートウェイの有効化</cfcase>
+<cfcase value="threadPoolSize">スレッドプールサイズ</cfcase>
+<cfcase value="maxQueueSize">キューの最大サイズ</cfcase>
+<cfcase value="gatewayTypes">ゲートウェイタイプ</cfcase>
+<cfcase value="Class">クラス</cfcase>
+<cfcase value="killOnTimeout">タイムアウト時にキル</cfcase>
+<cfcase value="Security">セキュリティ</cfcase>
+<cfcase value="passwordSecurity">CF Admin の認証</cfcase>
+<cfcase value="useCFAdminPassword">ColdFusion Administrator に対する認証の有効化</cfcase>
+<cfcase value="useSingleCFAdminPassword">単一のパスワードによる ColdFusion Administrator へのアクセスの許可</cfcase>
+<cfcase value="rdsPasswordSecurity">RDS の認証</cfcase>
+<cfcase value="useRdsPassword">RDS アクセスに対する認証の有効化</cfcase>
+<cfcase value="useSingleRdsPassword">単一のパスワードによる RDS 経由のアクセスの許可</cfcase>
+<cfcase value="securitySandbox">セキュリティサンドボックス</cfcase>
+<cfcase value="enableCFSecurity">ColdFusion セキュリティの有効化</cfcase>
+<cfcase value="enabledDatasources">有効化されたデータソース</cfcase>
+<cfcase value="disabledTags">無効化されたタグ</cfcase>
+<cfcase value="disabledFunctions">無効化された関数</cfcase>
+<cfcase value="fileDirPermissions">ファイル / ディレクトリアクセス権</cfcase>
+<cfcase value="allFileDirectories">すべてのファイル / ディレクトリ</cfcase>
+<cfcase value="serverPortPermissions">サーバー / ポートアクセス権</cfcase>
+<cfcase value="allServersPorts">すべてのサーバー / ポート</cfcase>
+<cfcase value="siteWideError">サイト全体のエラーハンドラ</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

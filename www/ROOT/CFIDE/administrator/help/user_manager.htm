@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Add User</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Security \nUser Manager\nAdd User");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"why_security_is_important.htm\">Security <\/a> > <a href=\"user_manager.htm\">User Manager<\/a> > Add User<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="edit_user_configuration.htm" title="edit_user_configuration.htm">Edit User Configuration</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h1>Add a User</h1>
+<p>The User Manager lets you create users that have individually tailored 
+ access to portions of the ColdFusion Administrator, the Administrator 
+ API, or RDS access.</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Note:</b></span> To grant ColdFusion Administrator 
+ permissions to multiple users, in addition to creating users on the User 
+ Manager page, you must select the <b style="font-weight: normal;">Separate 
+ Username And Password Authentication</b> option on the Security &gt; Administrator 
+ page. Similarly, you must select the <span><b style="font-weight: normal;">Separate 
+ Username And Password Authentication</b></span> option on the RDS page 
+ to grant RDS access to multiple users.</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<ol type="1">
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Enter 
+	 the username.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Enter 
+	 and confirm the user's password.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Optionally, 
+	 enter a description.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Select 
+	 from the following options:</p>
+	<ul type="disc">
+		<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Allow 
+		 RDS access</p></li>
+		<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Allow 
+		 Administrative access: Select one of the following:</p></li>
+		<ul type="disc">
+			<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Administrator 
+			 Console &amp; API Access </p></li>
+			<li class="p" style="font-weight: bold;"><p style="font-weight: normal;"><span>API 
+			 Access Only</span></p></li>
+		</ul>
+	</ul></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Select 
+	 the ColdFusion Administrator pages that you want the user to be able 
+	 to access.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Select 
+	 any sandboxes that you want the user to be able to access.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Select 
+	 the services that you want the user to be able to access.</p></li>
+	<li class="p" style="font-weight: bold;"><p style="font-weight: normal;">Click 
+	 Add User.</p></li>
+</ol>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;"><span style="font-weight: bold;"><b>Note:</b></span> 
+ To select multiple contiguous sandboxes or roles, press the Shift key 
+ while making selections. To select multiple non-contiguous sandboxes or 
+ roles, press the Control key while making selections.</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">After you create a user, you must log into 
+ the ColdFusion Administrator using both a username and password. The default 
+ username for the root administrator is admin. To change it, you must edit 
+ the neo-security.xml &#160;file by changing the string &quot;admin&quot; 
+ in admin.userid.root, as follows:</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">&lt;var name=&quot;admin.userid.root&quot;&gt;</p>
+<p style="font-weight: normal;">&#160;&#160;&#160;&lt;string&gt;admin&lt;/string&gt;</p>
+<p style="font-weight: normal;">&lt;/var&gt;</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">When you grant access to specific Administrator 
+ pages, the user sees only those pages after logging in to the Administrator. 
+ When you grant Administrator API access and select roles, the user can 
+ access the API only for the pages you specified.</p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">For information editing existing user configuration, 
+ see <a href="edit_user_configuration.htm" title="edit_user_configuration.htm">Edit User Configuration</a>.</p>
+<h3>User Sandboxes</h3>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">If you change the pages or sandboxes to 
+ which a user is allowed access while that user is logged in to the Administrator, 
+ the changes take effect only after the user logs out, and then logs in 
+ again. </p>
+<p style="font-weight: normal;">&#160;</p>
+<p style="font-weight: normal;">For details about creating sandboxes, see 
+ <a href="sandbox_sec.htm" title="sandbox_sec.htm">Configure ColdFusion security</a>.</p>
+<p style="font-weight: normal;">&#160;</p>
+<h3><a name="Exposed_Services" title="Exposed_Services"></a>Exposed Services</h3>
+<p>&#160;</p>
+<p>ColdFusion exposes existing enterprise services as web services. You 
+ can access these services using SOAP and AMF/Flash remoting. You can select 
+ the services available to a user from the Exposed Services section. By 
+ default, all the services are listed in the Allowed Services list box. 
+ Press CTRL and select the services that you do not want the user to avail 
+ and click the &gt;&gt; button. Now, click Edit User to implement the changes 
+ to the user settings. </p>
+<p>The following are the exposed services:</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Allowed Services</b></span>:</p>
+<p>&#160;</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Mail Service </p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Document Service</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>PDF Service</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Image Service</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Chard Service</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>POP Service </p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;"><b>Prohibited Services</b></span>:</p>
+<p><span class="rls-1-Bullets"><span style="font-family:'Symbol'">&#183;</span></span><span style='font:6.0pt "Times New Roman"'><font size="1" style="font-size:6pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span>Exchange Service</p>
+<p>&#160;</p>
+<p>You can secure the exposed services to prevent access by unknown applications 
+ or users. This can be done by configuring the client IP address range 
+ to which services are accessible. Also, you can set up user access control 
+ for the services.</p>
+<p>On the Security &gt; User Manager page, you can select the services 
+ available to a user from the Exposed Services section. </p>
+<p>By default, all the services are listed in the Prohibited Services list 
+ box. </p>
+<p>&#160;</p>
+<p>Press CTRL and select the services that you want the user to avail and 
+ click the &lt;&lt; button. </p>
+<p>Now, click Edit User to implement the changes to the user settings.</p>
+<p>&#160;</p>
+<p style="font-weight: normal;">&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

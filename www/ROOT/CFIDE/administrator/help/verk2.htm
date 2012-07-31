@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="02 15, 2002 11:10:58 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Use Verity K2 Server</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Data & Services\nUse Verity K2 server");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"overview_of_coldfusion_data_sources.htm\">Data & Services<\/a> > Use Verity K2 server<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Overview of Verity Collections</a></p>
+<hr size="1" width="100.145%" align="left" />
+<h2>Use Verity K2 Server</h2>
+<p style="font-weight: bold;">Data &amp; Services &gt; Verity K2 Server</p>
+<h5>&#160;</h5>
+<p>You can optionally install the Verity server on a different host from 
+ ColdFusion. Use the Verity K2 Server page to establish a link to a Verity 
+ server that is running on a different host from ColdFusion. If so, use 
+ this page to specify the IP address of that host computer.</p>
+<p>&#160;</p>
+<p>If you purchased the Verity product, you may have to display advanced 
+ settings and configure the aliases and ports of the services that ColdFusion 
+ uses. However, if you installed the Verity server that ships with ColdFusion 
+ on a different host, the IP address alone is usually enough; you do not 
+ have to specify advanced settings.</p>
+<h3 class="Procedure">Configure a Verity server that is running on a different 
+ host from ColdFusion</h3>
+<ol>
+	<li class="p-NumList"><p class="NumList">In the Verity Host Name box, 
+	 enter the IP Address of the Verity Server.</p></li>
+	<li class="p-NumList"><p class="NumList">(Optional) Click Show Advanced 
+	 Settings to configure the following information:</p>
+	<ul type="disc">
+		<li class="p"><p style="text-indent: -26px;">K2 Admin Alias - The 
+		 name that K2 assigned to the Verity Admin server.</p></li>
+		<li class="p"><p style="text-indent: -26px;">K2 Admin Port - The 
+		 port used by the Verity Admin server.</p></li>
+		<li class="p"><p style="text-indent: -26px;">K2 Server Alias - 
+		 The name that K2 assigned to the Verity Server server.</p></li>
+		<li class="p"><p style="text-indent: -26px;">K2 Server Port - The 
+		 port used by the Verity Server server.</p></li>
+		<li class="p"><p style="text-indent: -26px;">K2 Index Alias - The 
+		 name that K2 assigned to the Verity Index server.</p></li>
+		<li class="p"><p style="text-indent: -26px;">K2 Index Port - The 
+		 port used by the Verity Index server.</p></li>
+	</ul>
+	<p style="margin-left: 15px;">The Index server is not started if you 
+	 purchase Verity and run in the default configuration. If this is the 
+	 case, the <span style="font-family: 'Courier New', monospace;">cfindex</span> 
+	 tag does not work, nor can you populate a collection using the ColdFusion 
+	 Administrator.</p></li>
+	<li class="p-NumList"><p class="NumList">Click Submit Changes.</p></li>
+</ol>
+<p class="RelatedTopics">Related topics</p>
+<ul type="disc">
+	<li class="p" style="margin-left: -20px;"><p><a href="overview_of_verity_collections.htm" title="overview_of_verity_collections.htm">Verity 
+	 collections overview</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="crevercllx.htm" title="crevercllx.htm">Create 
+	 a Verity collection</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="popvercllx.htm" title="popvercllx.htm">Populate 
+	 a Verity collection</a></p></li>
+	<li class="p" style="margin-left: -20px;"><p><a href="verity_supported_file_types.htm" title="verity_supported_file_types.htm">Verity 
+	 supported file types</a></p></li>
+</ul>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

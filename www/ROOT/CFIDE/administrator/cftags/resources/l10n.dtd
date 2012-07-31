@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CF Admin Localization File DTD -->
+<!-- Possible HTML elements -->
+<!ELEMENT a (#PCDATA | b | font | p | i | br | ol | ul | li | span)*>
+<!ATTLIST a
+	href CDATA #IMPLIED
+	target CDATA #IMPLIED
+	name CDATA #IMPLIED
+	class CDATA #IMPLIED
+	style CDATA #IMPLIED
+>
+<!ELEMENT b (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ATTLIST b
+	style CDATA #IMPLIED
+	class CDATA #IMPLIED
+>
+<!ELEMENT br EMPTY>
+<!ELEMENT font (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ATTLIST font
+	size CDATA #IMPLIED
+	class CDATA #IMPLIED
+>
+<!ELEMENT i (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ELEMENT li (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ELEMENT ol (li+)>
+<!ELEMENT p (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ATTLIST span
+	class CDATA #IMPLIED
+	style CDATA #IMPLIED
+>
+<!ELEMENT span (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ATTLIST span
+	class CDATA #IMPLIED
+	style CDATA #IMPLIED
+	name CDATA #IMPLIED
+>
+<!ELEMENT ul (li+)>
+<!-- CFML elements -->
+<!ELEMENT cfcase ANY>
+<!ATTLIST cfcase
+	value CDATA #REQUIRED
+>
+<!ELEMENT cfcontent (cfsilent, cfswitch)>
+<!ATTLIST cfcontent
+	type CDATA #REQUIRED
+>
+<!ELEMENT cfprocessingdirective (cfsilent, cfswitch)>
+<!ATTLIST cfprocessingdirective
+	suppresswhitespace CDATA #IMPLIED
+	pageencoding CDATA #IMPLIED
+>
+<!ELEMENT cfdefaultcase (cfset)>
+<!ELEMENT cfoutput (#PCDATA | a | b | font | p | i | br | ol | ul | li | span)*>
+<!ELEMENT cfset EMPTY>
+<!ATTLIST cfset
+	bSuccess CDATA #IMPLIED
+>
+<!ELEMENT cfsilent ANY>
+<!ELEMENT cfswitch (cfcase+, cfdefaultcase)>
+<!ATTLIST cfswitch
+	expression CDATA #REQUIRED
+>

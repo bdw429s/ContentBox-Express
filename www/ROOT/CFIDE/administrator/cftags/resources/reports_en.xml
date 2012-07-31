@@ -1,0 +1,282 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="ISO-8859-1">
+<cfsilent>
+<!--
+L10N Resource File
+Section: reports
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="server_settings_tip">
+When clicked generates a PDF with the ServerSettings in a new Window.
+    </cfcase>
+<cfcase value="GetPDF">Save As PDF</cfcase>
+<cfcase value="Settings_Summary">Settings Summary</cfcase>
+<cfcase value="report_generated">Report generated on</cfcase>
+<cfcase value="settings_description">
+This report shows the status of all ColdFusion configuration settings.
+To display the area of the ColdFusion Administrator where you can edit the group settings,
+click any of the groups in the report.
+</cfcase>
+<cfcase value="rendering">Rendering</cfcase>
+<cfcase value="pageHeader_settingSummary">Server Settings &gt; Settings Summary</cfcase>
+<cfcase value="systemInfo">System Information</cfcase>
+<cfcase value="serverDetails">Server Details</cfcase>
+<cfcase value="serverProduct">Server Product</cfcase>
+<cfcase value="version">Version</cfcase>
+<cfcase value="edition">Edition</cfcase>
+<cfcase value="serialNumber">Serial Number</cfcase>
+<cfcase value="os">Operating System</cfcase>
+<cfcase value="osversion">OS Version</cfcase>
+<cfcase value="updlevel">Update Level</cfcase>
+<cfcase value="adobedriverversion">Adobe Driver Version</cfcase>
+<cfcase value="jvmdetails">JVM Details</cfcase>
+<cfcase value="javaversion">Java Version</cfcase>
+<cfcase value="javavendor">Java Vendor</cfcase>
+<cfcase value="javavendorurl">Java Vendor URL</cfcase>
+<cfcase value="javahome">Java Home</cfcase>
+<cfcase value="javafileEncoding">Java File Encoding</cfcase>
+<cfcase value="javaDefaultLocale">Java Default Locale</cfcase>
+<cfcase value="fileSeparator">File Separator</cfcase>
+<cfcase value="pathSeparator">Path Separator</cfcase>
+<cfcase value="lineSeparator">Line Separator</cfcase>
+<cfcase value="username1">User Name</cfcase>
+<cfcase value="userhome">User Home</cfcase>
+<cfcase value="userdir">User Dir</cfcase>
+<cfcase value="jvmSpecVersion">Java VM Specification Version</cfcase>
+<cfcase value="jvmSpecVendor">Java VM Specification Vendor</cfcase>
+<cfcase value="jvmSpecName">Java VM Specification Name</cfcase>
+<cfcase value="jvmVersion">Java VM Version</cfcase>
+<cfcase value="jvmVendor">Java VM Vendor</cfcase>
+<cfcase value="jvmName">Java VM Name</cfcase>
+<cfcase value="javaSpecVersion">Java Specification Version</cfcase>
+<cfcase value="javaSpecVendor">Java Specification Vendor</cfcase>
+<cfcase value="javaSpecName">Java Specification Name</cfcase>
+<cfcase value="javaClassVersion">Java Class Version</cfcase>
+<cfcase value="CFServerJavaClassPath">CF Server Java Class Path</cfcase>
+<cfcase value="javaClassPath">Java Class Path</cfcase>
+<cfcase value="javaExtDir">Java Ext Dirs</cfcase>
+<cfcase value="l10n_printerdetails">Printer Details</cfcase>
+<cfcase value="defaultprinter">Default Printer</cfcase>
+<cfcase value="printers">Printers</cfcase>
+<cfcase value="serverInfo">Server Information</cfcase>
+<cfcase value="generalSettings">General Settings</cfcase>
+<cfcase value="timeoutRequests">Timeout requests</cfcase>
+<cfcase value="perappsettings">Enable Per App Settings</cfcase>
+<cfcase value="requestTimeLimit">Request Time Limit</cfcase>
+<cfcase value="seconds">seconds</cfcase>
+<cfcase value="useUUIDForCFToken">Use UUID for CFToken</cfcase>
+<cfcase value="whitespaceMngmt">Enable Whitespace Management</cfcase>
+<cfcase value="serviceFactory">Disable Service Factory</cfcase>
+<cfcase value="secureJSON">Protect serialized JSON</cfcase>
+<cfcase value="secureJSONPrefix">Protect Serialized JSON Prefix</cfcase>
+<cfcase value="missingTemplate">Missing Template Handler</cfcase>
+<cfcase value="enableHTTPStatusCodes">Enable HTTP status codes</cfcase>
+<cfcase value="enableGlobalScriptProtection">Enable Global Script Protection</cfcase>
+<cfcase value="cfformScriptSrcDir">Default CFForm ScriptSrc Directory</cfcase>
+<cfcase value="GoogleMapKey">Google Map Key </cfcase>
+<cfcase value="postSizeLimit">Maximum size of post data</cfcase>
+<cfcase value="mb">MB</cfcase>
+<cfcase value="throttleThreshold">Request Throttle Threshold</cfcase>
+<cfcase value="throttleMemory">Request Throttle Memory</cfcase>
+<cfcase value="limits">Request Tuning</cfcase>
+<cfcase value="simultaniousRequestLimit">Simultaneous request limit</cfcase>
+<cfcase value="FlashRemotingLimit">Flash Remoting request limit</cfcase>
+<cfcase value="WebServiceLimit">Web Service request limit</cfcase>
+<cfcase value="CFCLimit">CFC request limit</cfcase>
+<cfcase value="CFthreadlimit">CFThread Pool Size</cfcase>
+<cfcase value="reportThreads">Maximum number of report threads</cfcase>
+<cfcase value="queueTimeout">Request Queue Timeout</cfcase>
+<cfcase value="queueTimeoutPage">Request Queue Timeout Page</cfcase>
+<cfcase value="maxJrun">Maximum number of running JRun threads</cfcase>
+<cfcase value="maxQueued">Maximum number of queued JRun threads</cfcase>
+<cfcase value="caching">Caching</cfcase>
+<cfcase value="templateCacheSize">Template cache size</cfcase>
+<cfcase value="templates">templates</cfcase>
+<cfcase value="enableTrustedCache">Enable trusted cache</cfcase>
+<cfcase value="cachedQuerylimit">Cached query limit</cfcase>
+<cfcase value="saveClassFiles">Save Class Files</cfcase>
+<cfcase value="cacheWebServerPath">Cache web server paths</cfcase>
+<cfcase value="clientVarSettings">Client Variable Settings</cfcase>
+<cfcase value="defaultClientVariableStore">Default client variable store</cfcase>
+<cfcase value="ClientVariablePugeInterval">Purge Interval</cfcase>
+<cfcase value="hours">hours</cfcase>
+<cfcase value="minutes">minutes</cfcase>
+<cfcase value="clientStores">Client Stores</cfcase>
+<cfcase value="type">Type</cfcase>
+<cfcase value="description">Description</cfcase>
+<cfcase value="purgeData">Purge data after time limit</cfcase>
+<cfcase value="timelimit">Time limit</cfcase>
+<cfcase value="days">days</cfcase>
+<cfcase value="disableGlobalupdates">Disable global updates</cfcase>
+<cfcase value="memoryVariables">Memory Variables</cfcase>
+<cfcase value="j2eesessions">J2EE Sessions</cfcase>
+<cfcase value="appVariables">Application Variables</cfcase>
+<cfcase value="enableAppVariables">Enable Application Variables</cfcase>
+<cfcase value="defaultTimeout">Default Timeout</cfcase>
+<cfcase value="maxTimeout">Maximum Timeout</cfcase>
+<cfcase value="sessionVar">Session Variables</cfcase>
+<cfcase value="enableSessionVar">Enable session variables</cfcase>
+<cfcase value="CFMappings">ColdFusion Mappings</cfcase>
+<cfcase value="mailConnectionSettings">Mail Connection Settings</cfcase>
+<cfcase value="defaultserverPort">Default Server Port</cfcase>
+<cfcase value="ConnectionTimeout">Connection Timeout</cfcase>
+<cfcase value="SpoolInterval">Spool Interval</cfcase>
+<cfcase value="mailDeliveryThreads">Mail Delivery Threads</cfcase>
+<cfcase value="maintainConnectionsToMailServer">Maintain Connection to Mail Server</cfcase>
+<cfcase value="spoolMessagesTo">Spool Messages To</cfcase>
+<cfcase value="messagesSpooledToMemory">Max Messages Spooled to Memory</cfcase>
+<cfcase value="defaultMailCharset">Default CFMail Charset</cfcase>
+<cfcase value="useSSL">Use SSL Connection</cfcase>
+<cfcase value="useTLS">Use TLS</cfcase>
+<cfcase value="defaultMailServer">Default Mail Server</cfcase>
+<cfcase value="BackupMailServer">Backup Mail Servers</cfcase>
+<cfcase value="server">Server</cfcase>
+<cfcase value="port">Port</cfcase>
+<cfcase value="username">Username</cfcase>
+<cfcase value="password">Password</cfcase>
+<cfcase value="mailLoggingSettings">Mail Logging Settings</cfcase>
+<cfcase value="logSeverity">Log Severity</cfcase>
+<cfcase value="logEmailMessages">Log all E-mail messages sent by ColdFusion</cfcase>
+<cfcase value="charting">Charting</cfcase>
+<cfcase value="cachetype">Cache Type</cfcase>
+<cfcase value="images">images</cfcase>
+<cfcase value="maxImagesinCache">Maximum number of images in cache</cfcase>
+<cfcase value="maxNumberofChartThreads">Maximum number of charting threads</cfcase>
+<cfcase value="diskCacheLocation">Disk cache location</cfcase>
+<cfcase value="javaAndJVM">Java and JVM</cfcase>
+<cfcase value="jvmPath">Java virtual machine path</cfcase>
+<cfcase value="initMemorySize">Initial memory size</cfcase>
+<cfcase value="maxMemorySize">Maximum memory size</cfcase>
+<cfcase value="ClassPath1">Class path</cfcase>
+<cfcase value="jvmArgs">JVM arguments</cfcase>
+<cfcase value="dataServices">Data &amp; Services</cfcase>
+<cfcase value="dbDataSources">Database Data Sources</cfcase>
+<cfcase value="CFDSNName">CF data source name</cfcase>
+<cfcase value="driver">Driver</cfcase>
+<cfcase value="jdbcurrl">JDBC URL</cfcase>
+<cfcase value="loginTimeout">Login timeout</cfcase>
+<cfcase value="longTextBuffer">Long text buffer size</cfcase>
+<cfcase value="timeout2">Timeout</cfcase>
+<cfcase value="maintainConnections">Maintain connections</cfcase>
+<cfcase value="interval">Interval</cfcase>
+<cfcase value="restrictedSQLOperations">Restricted SQL operations</cfcase>
+<cfcase value="disableConnections">Disable connections</cfcase>
+<cfcase value="webServices">Web Services</cfcase>
+<cfcase value="debuggingAndLogging">Debugging &amp; Logging</cfcase>
+<cfcase value="debuggingSettings">Debugging Settings</cfcase>
+<cfcase value="enableDebugging">Enable debugging</cfcase>
+<cfcase value="enableRobustExceptionInfo">Enable Robust Exception Information</cfcase>
+<cfcase value="displayFormat">Display format</cfcase>
+<cfcase value="executionTimes">Execution times</cfcase>
+<cfcase value="executionTimeFormat">Execution time format</cfcase>
+<cfcase value="executionTimeHighlightThreshold">Execution time highlight threshold</cfcase>
+<cfcase value="dbActivity">Database activity</cfcase>
+<cfcase value="exceptioninfo">Exception information</cfcase>
+<cfcase value="tracingInfo">Tracing information</cfcase>
+<cfcase value="timerInfo">Timer Information</cfcase>
+<cfcase value="variables">Variables</cfcase>
+<cfcase value="application">Application</cfcase>
+<cfcase value="cgi">CGI</cfcase>
+<cfcase value="client">Client</cfcase>
+<cfcase value="cookie">Cookie</cfcase>
+<cfcase value="form">Form</cfcase>
+<cfcase value="request">Request</cfcase>
+<cfcase value="session">Session</cfcase>
+<cfcase value="url">URL</cfcase>
+<cfcase value="debuggingIpAddr">Debugging IP Addresses</cfcase>
+<cfcase value="debugIPAddrRestriction">Debugging IP Address Restrictions</cfcase>
+<cfcase value="linedebuggersettings">Line Debugger Settings</cfcase>
+<cfcase value="LineDebuggerEnabled">Allow Line Debugging</cfcase>
+<cfcase value="lineDebuggerPort">Debugger Port</cfcase>
+<cfcase value="maxDebuggingSessions">Max Simultaneous Debugging Sessions</cfcase>
+<cfcase value="loggingSettings">Logging Settings</cfcase>
+<cfcase value="logDir">Log directory</cfcase>
+<cfcase value="maxFileSize">Maximum file size</cfcase>
+<cfcase value="maxNumbOfActivities">Maximum number of archives</cfcase>
+<cfcase value="useOSLogging">Use operating system logging facilities</cfcase>
+<cfcase value="logSlowPages">Log slow pages</cfcase>
+<cfcase value="slowPageTimeLimit">Slow page time limit</cfcase>
+<cfcase value="logCorbaCalls">Log CORBA calls</cfcase>
+<cfcase value="logScheduledTask">Log scheduled tasks</cfcase>
+<cfcase value="scheduledTasksAndProbes">Schedule Tasks &amp; Probes</cfcase>
+<cfcase value="scheduledTasks">Scheduled Tasks</cfcase>
+<cfcase value="startDate">Start Date</cfcase>
+<cfcase value="endDate">End Date</cfcase>
+<cfcase value="startTime">Start Time</cfcase>
+<cfcase value="endTime">End Time</cfcase>
+<cfcase value="proxyServer">Proxy Server</cfcase>
+<cfcase value="proxyPort">Proxy Port</cfcase>
+<cfcase value="saveOutput">Save output to file</cfcase>
+<cfcase value="publishPath">Publish path</cfcase>
+<cfcase value="publishFilename">Publish filename</cfcase>
+<cfcase value="resolveURL">Resolve URLs</cfcase>
+<cfcase value="systemProbes">System Probes</cfcase>
+<cfcase value="probeSettings">Probe Settings</cfcase>
+<cfcase value="notificationEmailRecipients">Notification Email Recipients</cfcase>
+<cfcase value="notificationSentFrom">Notification Sent From</cfcase>
+<cfcase value="probeURL">Probe.cfm URL</cfcase>
+<cfcase value="probeUsername">Probe.cfm Username</cfcase>
+<cfcase value="enabled">Enabled</cfcase>
+<cfcase value="requestTimeout">Request Timeout</cfcase>
+<cfcase value="sendEmailNotifications">Send Email Notifications</cfcase>
+<cfcase value="excuseTheProgram">Execute the Program</cfcase>
+<cfcase value="extensions">Extensions</cfcase>
+<cfcase value="javaApplets">Java Applets</cfcase>
+<cfcase value="code">Code</cfcase>
+<cfcase value="method">Method</cfcase>
+<cfcase value="codeBase">Codebase</cfcase>
+<cfcase value="archive">Archive</cfcase>
+<cfcase value="height">Height</cfcase>
+<cfcase value="width">Width</cfcase>
+<cfcase value="vSpace">Vertical Space</cfcase>
+<cfcase value="hspace">Horizontal Space</cfcase>
+<cfcase value="alignment">Alignment</cfcase>
+<cfcase value="notSupportedMessage">Not supported message</cfcase>
+<cfcase value="appletParams">Applet Parameters</cfcase>
+<cfcase value="cfxTags">CFX Tags</cfcase>
+<cfcase value="tagName">Tag name</cfcase>
+<cfcase value="severLibrary">Server library</cfcase>
+<cfcase value="keepLibraryLoaded">Keep library loaded</cfcase>
+<cfcase value="Procedure">Procedure</cfcase>
+<cfcase value="classname">Class name</cfcase>
+<cfcase value="customTagPaths">Custom Tag Paths</cfcase>
+<cfcase value="corba">CORBA</cfcase>
+<cfcase value="selectedConnector">Selected connector</cfcase>
+<cfcase value="none">none</cfcase>
+<cfcase value="Connectors">Connectors</cfcase>
+<cfcase value="orbClassName">ORB class name</cfcase>
+<cfcase value="classPath">Classpath</cfcase>
+<cfcase value="orbPropFile">ORB property file</cfcase>
+<cfcase value="eventGateways">Event Gateways</cfcase>
+<cfcase value="settings">Settings</cfcase>
+<cfcase value="enableEventGateway">Enable Event Gateway</cfcase>
+<cfcase value="threadPoolSize">Thread Pool Size</cfcase>
+<cfcase value="maxQueueSize">Max Queue Size</cfcase>
+<cfcase value="gatewayTypes">Gateway Types</cfcase>
+<cfcase value="Class">Class</cfcase>
+<cfcase value="killOnTimeout">Kill On Timeout</cfcase>
+<cfcase value="Security">Security</cfcase>
+<cfcase value="passwordSecurity">CF Admin Authentication</cfcase>
+<cfcase value="useCFAdminPassword">Enable authentication for the ColdFusion Administrator</cfcase>
+<cfcase value="useSingleCFAdminPassword">Allow access to ColdFusion Administrator with a Single password</cfcase>
+<cfcase value="rdsPasswordSecurity">RDS Authentication</cfcase>
+<cfcase value="useRdsPassword">Enable authentication for RDS access</cfcase>
+<cfcase value="useSingleRdsPassword">Allow access through RDS with Single password</cfcase>
+<cfcase value="securitySandbox">Security Sandboxes</cfcase>
+<cfcase value="enableCFSecurity">Enable ColdFusion Security</cfcase>
+<cfcase value="enabledDatasources">Enabled Data Sources</cfcase>
+<cfcase value="disabledTags">Disabled Tags</cfcase>
+<cfcase value="disabledFunctions">Disabled Functions</cfcase>
+<cfcase value="fileDirPermissions">File/Directory Permissions</cfcase>
+<cfcase value="allFileDirectories">All files/directories</cfcase>
+<cfcase value="serverPortPermissions">Sever/Port Permissions</cfcase>
+<cfcase value="allServersPorts">All servers/ports</cfcase>
+<cfcase value="siteWideError">Site-wide Error Handler</cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/></cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>
+

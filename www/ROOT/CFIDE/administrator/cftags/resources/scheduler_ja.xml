@@ -1,0 +1,165 @@
+<cfprocessingdirective suppresswhitespace="yes" pageencoding="UTF-8">
+<cfsilent>
+<!--
+L10N Resource File
+Section: Scheduler
+Locale: English (en)
+Find the requested resource by id
+-->
+</cfsilent>
+<cfswitch expression="#ATTRIBUTES.id#">
+
+<cfcase value="statmess">サーバーの更新に成功しました</cfcase>
+<cfcase value="click_normal">更新する場合は、右側のボタンをクリックします :</cfcase>
+<cfcase value="alert">警告 :</cfcase>
+<cfcase value="important_notice">最後の送信に関する重要な通知</cfcase>
+<cfcase value="click_return">変更を送信しないで戻る場合は、左側の矢印をクリックします</cfcase>
+<cfcase value="submit_changes">変更の送信</cfcase>
+<cfcase value="yes">はい</cfcase>
+<cfcase value="cancel">キャンセル</cfcase>
+<cfcase value="are_you_sure_delete_scheduledTask"><cfoutput>スケジュールされたタスク "#CALLER.task#" を削除してもよろしいですか。</cfoutput></cfcase>
+<cfcase value="pagename_runprobe">システムプローブの実行</cfcase>
+<cfcase value="proberun_ok">このプローブは成功しました。</cfcase>
+<cfcase value="proberun_fail">このプローブは失敗しました。</cfcase>
+<cfcase value="proberun_disabled">このプローブは無効であり、実行できません。</cfcase>
+<cfcase value="proberun_unknown">プローブステータスは不明です。</cfcase>
+<cfcase value="proberun_bad">プローブを実行する際に、問題がありました。</cfcase>
+<cfcase value="pagename_probes">システムプローブ</cfcase>
+<cfcase value="define_new_probe">新規のプローブの定義</cfcase>
+<cfcase value="pageHeader_systemprobes">デバッグとロギング &gt; システムプローブ</cfcase>
+<cfcase value="probes_blurb">システムプローブは、規則的な間隔で URL のコンテンツを調べることにより、Web アプリケーションの状態を監視できます。コンテンツが予期されたものではなかった場合、プローブは失敗を通知する電子メールを送信するか、スクリプトを実行できます。</cfcase>
+<cfcase value="system_probes">システムプローブ</cfcase>
+<cfcase value="actions">アクション</cfcase>
+<cfcase value="probe_name">プローブ名</cfcase>
+<cfcase value="status">ステータス</cfcase>
+<cfcase value="interval">間隔</cfcase>
+<cfcase value="URL">URL</cfcase>
+<cfcase value="l10n_noprobes">プローブが定義されていません。</cfcase>
+<cfcase value="delete_probe_confirmation">このシステムプローブを削除してもよろしいですか。</cfcase>
+<cfcase value="run_probe">プローブの実行</cfcase>
+<cfcase value="edit_probe">プローブの編集</cfcase>
+<cfcase value="delete_probe">プローブの削除</cfcase>
+<cfcase value="disable_probe">プローブの無効化</cfcase>
+<cfcase value="enable_probe">プローブの有効化</cfcase>
+<cfcase value="status_ok">OK</cfcase>
+<cfcase value="status_failed">失敗</cfcase>
+<cfcase value="status_disabled">無効</cfcase>
+<cfcase value="status_unknown">不明</cfcase>
+<cfcase value="every">頻度</cfcase>
+<cfcase value="hours">時間</cfcase>
+<cfcase value="mins">分</cfcase>
+<cfcase value="secs">秒</cfcase>
+<cfcase value="from">開始</cfcase>
+<cfcase value="to">終了</cfcase>
+<cfcase value="probe_email_recip">通知電子メールの受信者</cfcase>
+<cfcase value="probe_email_from">電子メール</cfcase>
+<cfcase value="probecfm_url">probe.cfm URL</cfcase>
+<cfcase value="probe_username">probe.cfm ユーザー名</cfcase>
+<cfcase value="probe_password">probe.cfm パスワード</cfcase>
+<cfcase value="pagename_addeditprobe">システムプローブの追加 / 編集</cfcase>
+<cfcase value="pagename_addedit">スケジュールされたタスクの追加 / 編集</cfcase>
+<cfcase value="need_valid_task_name">続行するには、有効なタスク名を入力する必要があります。</cfcase>
+<cfcase value="need_valid_start_date">続行するには、有効な開始日を入力する必要があります。</cfcase>
+<cfcase value="need_valid_start_time">続行するには、有効な開始時刻を入力する必要があります。有効時間は 24 時間形式または AM/PM を含む必要があります。</cfcase>
+<cfcase value="need_numeric_interval">続行するには、0 より大きい数値で時間の間隔を入力する必要があります。</cfcase>
+<cfcase value="interval_60second_minimum">タスクの間隔は 61 秒以上である必要があります。</cfcase>
+<cfcase value="need_valid_end_date">有効な終了日を入力する必要があります。</cfcase>
+<cfcase value="need_valid_end_time">続行するには、有効な終了時刻を入力する必要があります。有効時間は 24 時間形式または AM/PM を含む必要があります。</cfcase>
+<cfcase value="need_valid_request_timeout">リクエストタイムアウト用に指定する値は 0 より大きい必要があります。</cfcase>
+<cfcase value="need_file_path">このタスクの結果をパブリッシュする場合は、有効なファイルパスを指定する必要があります。</cfcase>
+<cfcase value="need_valid_file_path">このタスクの結果をパブリッシュする場合は、既存の有効なディレクトリ名を使用する必要があります。</cfcase>
+<cfcase value="need_valid_proxy_port">プロキシポート用に指定する値の範囲は 1 ～ 65535 である必要があります。</cfcase>
+<cfcase value="need_scheduled_url">アクセスする URL を指定する必要があります。</cfcase>
+<cfcase value="end_date_after_start">終了日は開始日の後である必要があります。</cfcase>
+<cfcase value="end_time_after_start">終了時間は開始時間の後である必要があります。</cfcase>
+<cfcase value="interval_one_day">間隔は 1 日以内である必要があります。</cfcase>
+<cfcase value="proxy_server_name">プロキシサーバー名には、文字、数字、ピリオドのみを使用できます。</cfcase>
+<cfcase value="proxy_port_and_server">プロキシポートを指定する場合は、プロキシサーバーを定義する必要があります。</cfcase>
+<cfcase value="strt_time">開始時刻</cfcase>
+<cfcase value="task_name">タスク名</cfcase>
+<cfcase value="scheduleedit_pageHeader"><cfoutput>デバッグとロギング &gt; #CALLER.pagename#</cfoutput></cfcase>
+<cfcase value="duration">期間</cfcase>
+<cfcase value="start_date">開始日</cfcase>
+<cfcase value="end_date">終了日</cfcase>
+<cfcase value="optional">(オプション)</cfcase>
+<cfcase value="l10n_frequency">頻度</cfcase>
+<cfcase value="one_time">1 回のみ</cfcase>
+<cfcase value="at">時刻</cfcase>
+<cfcase value="recurring">繰り返し</cfcase>
+<cfcase value="daily">毎日</cfcase>
+<cfcase value="weekly">毎週</cfcase>
+<cfcase value="monthly">毎月</cfcase>
+<cfcase value="daily_every">指定間隔</cfcase>
+<cfcase value="minutes">分</cfcase>
+<cfcase value="seconds">秒</cfcase>
+<cfcase value="l10n_dailystart">開始時刻</cfcase>
+<cfcase value="l10n_dailystop">終了時刻</cfcase>
+<cfcase value="l10n_ipschedule">URL</cfcase>
+<cfcase value="username">ユーザー名</cfcase>
+<cfcase value="password">パスワード</cfcase>
+<cfcase value="timeout_sec">タイムアウト (秒)</cfcase>
+<cfcase value="proxy_sever">プロキシサーバー</cfcase>
+<cfcase value="http_proxy_port">: ポート</cfcase>
+<cfcase value="pfailure">プローブの失敗</cfcase>
+<cfcase value="failIfTheResponse">レスポンスに以下が</cfcase>
+<cfcase value="contains">含まれる場合に失敗</cfcase>
+<cfcase value="does_not_contain">含まれない場合に失敗</cfcase>
+<cfcase value="the">その</cfcase>
+<cfcase value="string">文字列</cfcase>
+<cfcase value="regex">正規表現</cfcase>
+<cfcase value="faction">失敗時のアクション</cfcase>
+<cfcase value="sned_an_email_notification">電子メールによる通知の送信</cfcase>
+<cfcase value="execute_the_program">プログラムの実行</cfcase>
+<cfcase value="publish">パブリッシュ</cfcase>
+<cfcase value="save_output">出力をファイルに保存</cfcase>
+<cfcase value="file">ファイル</cfcase>
+<cfcase value="resolve_url">URL の変換</cfcase>
+<cfcase value="resolve_url_ins">リンクが変更されないように、内部 URL を変換</cfcase>
+<cfcase value="l10n_cancel">キャンセル</cfcase>
+<cfcase value="l10n_submit">送信</cfcase>
+<cfcase value="taskrun_ok">このスケジュールされたタスクの完了に成功しました。</cfcase>
+<cfcase value="taskrun_bad">
+スケジュールされたタスクを実行する際に、エラーが発生しました。スケジュールされたタスクが失敗する原因には、以下が考えられます。<br/><ul><li>スケジュールされたタスクが一時停止されている。</li> <li>URL が転送 URL である。</li><li>Microsoft IIS の Challenge/Response または Apache の .htaccess パスワードによって、URL が保護されている。スケジュールされたタスクを編集するための [ユーザー名] と [パスワード] のテキストフィールドでは、基本認証のみがサポートされます。</li><li>ドメイン名のルックアップに失敗した。可能なかぎり、ドメインの IP アドレスを使用するようにしてください。</li><li>URL は SSL サイトだが、SSL ポートが正しく指定されていなかった。</li> <li>Web サイトが反応していない。</li> <li>パブリッシュされる結果用に指定されたディレクトリが存在しない。</li></ul>
+</cfcase>
+<cfcase value="taskpause_ok">このスケジュールされたタスクの一時停止に成功しました。</cfcase>
+<cfcase value="taskresume_ok">このスケジュールされたタスクの再開に成功しました。</cfcase>
+<cfcase value="pagename_tasks">スケジュールされたタスク</cfcase>
+<cfcase value="schedule_new_task">新規タスクのスケジューリング</cfcase>
+<cfcase value="pageHeader_scheduledTasks">デバッグとロギング &gt; スケジュールされたタスク</cfcase>
+<cfcase value="tasks_blurb">スケジュールされたタスクにより、動的データソースから静的 Web ページを作成できます。また、タスクをスケジューリングして、Verity 検索を更新し、報告を作成することもできます。</cfcase>
+<cfcase value="scheduled_tasks">スケジュールされたタスク</cfcase>
+<cfcase value="l10n_notasks">タスクはスケジューリングされていません。</cfcase>
+<cfcase value="intervalDaily">毎日</cfcase>
+<cfcase value="delete_task_confirmation">この ColdFusion サーバータスクを削除してもよろしいですか。</cfcase>
+<cfcase value="run_scheduled_task">スケジュールされたタスクの実行</cfcase>
+<cfcase value="edit_scheduled_task">スケジュールされたタスクの編集</cfcase>
+<cfcase value="delete_scheduled_task">スケジュールされたタスクの削除</cfcase>
+<cfcase value="pause_scheduled_task">スケジュールされたタスクの一時停止</cfcase>
+<cfcase value="resume_scheduled_task">スケジュールされたタスクの再開</cfcase>
+<cfcase value="indefinitely">無期限</cfcase>
+<cfcase value="daily_at"><cfoutput>#CALLER.taskTime_l10n# で毎日</cfoutput></cfcase>
+<cfcase value="intervalWeekly">毎週</cfcase>
+<cfcase value="weekly_at"><cfoutput>#CALLER.taskTime_l10n# で毎週</cfoutput></cfcase>
+<cfcase value="intervalMonthly">毎月</cfcase>
+<cfcase value="monthly_at"><cfoutput>#CALLER.taskTime_l10n# で毎月</cfoutput></cfcase>
+<cfcase value="intervalDailyEvery">DailyEvery</cfcase>
+<cfcase value="intervalOnce">Once</cfcase>
+<cfcase value="one_time_timestamp"><cfoutput>#CALLER.taskTime_l10n# で 1 回のみ。</cfoutput></cfcase>
+<cfcase value="probeSettings">設定のプローブ</cfcase>
+<cfcase value="pub_path">ファイルパスのパブリッシュ</cfcase>
+<cfcase value="pub_filename">ファイル名のパブリッシュ</cfcase>
+<cfcase value="proxy_port">プロキシポート</cfcase>
+<cfcase value="probes">プローブ</cfcase>
+<cfcase value="enabled">有効</cfcase>
+<cfcase value="probe_email_from1">通知送信者</cfcase>
+<cfcase value="probe_username1">probe.cfm ユーザー名</cfcase>
+<cfcase value="username1">ユーザー名</cfcase>
+<cfcase value="request_timeout">リクエストのタイムアウト</cfcase>
+<cfcase value="no">いいえ</cfcase>
+<cfcase value="scheduling_error"><cfoutput>
+タスクをスケジュールする際に、エラーが発生しました。<br/>#CALLER.CFCATCH.Message#<br/> #CALLER.CFCATCH.Detail#<br/>
+</cfoutput></cfcase>
+
+<cfdefaultcase><cfset bSuccess="false"/> </cfdefaultcase>
+</cfswitch>
+</cfprocessingdirective>

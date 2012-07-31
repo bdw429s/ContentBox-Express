@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="date" content="04 12, 2001 1:38:14 AM" />
+<meta name="generator" content="Adobe RoboHelp 8" />
+<title>Client variable planning</title>
+<link rel="StyleSheet" href="cfstyles.css" type="text/css" />
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js"></script>
+<script type="text/javascript" language="javascript" src="whver.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js"></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.href = strUrl.substring(0, n);
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.setRelStartPage)
+	{
+	addTocInfo("Introduction\nGetting Started \nOptional Configuration\nClient variable planning");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"whd_show0.gif","whd_show2.gif","whd_show1.gif");
+addButton("hide",BTN_TEXT,"Hide","","","","",0,0,"whd_hide0.gif","whd_hide2.gif","whd_hide1.gif");
+
+	}
+
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("cfadminhelp.htm", "", ">", "Home", "what_s_new_in_this_release.htm");
+document.write("<a href=\"what_you_can_do_in_coldfusion_administrator.htm\">Introduction<\/a> > <a href=\"overview_of_basic_configuration.htm\">Getting Started <\/a> > <a href=\"overview_of_optional_configuration.htm\">Optional Configuration<\/a> > Client variable planning<\/p>");
+
+
+	if (window.setRelStartPage)
+	{
+	setRelStartPage("cfadminhelp.htm");
+
+		autoSync(0);
+		sendSyncInfo();
+		sendAveInfoOut();
+	}
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+//-->
+//]]></script>
+</head>
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(4);
+//-->
+//]]></script>
+<p align="right"><a href="#Related" title="#Related">Related topics</a></p>
+<hr align="left" width="100.145%" size="1" />
+<h2>Client variable planning</h2>
+<p style="font-size: 10pt;"><span><font size="2" style="font-size:10pt;">Using a series of methods and options, you can manage client variables in the following ways:</font></span></p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Use the system registry to store client variables.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Use browser cookies.</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Use an external data source of your choice.</p>
+</li>
+</ul>
+<p style="margin-left: 0px;">&#160;</p>
+<p>The method you use to store client variables depends on various factors. The following table describes some considerations:</p>
+<p>&#160;</p>
+<div align="left" >
+<table cellspacing="0" width="89.639%">
+<col style="width: 14.036%;" />
+<col style="width: 26.863%;" />
+<col style="width: 59.101%;" />
+<tr valign="top">
+<td style="border: Solid 1px #c0c0c0;width: 14.036%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; font-size: 10pt;">Storage type</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 26.863%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; font-size: 10pt;">Advantages</p>
+</td>
+<td style="border-top: Solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 59.101%; padding-right: 10px; padding-left: 10px;">
+<p style="font-weight: bold; font-size: 10pt;">Disadvantages</p>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 14.036%; padding-right: 10px; padding-left: 10px;">
+<p>System Registry</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 26.863%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Simple implementation</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Good performance</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Easy to export registry to other systems</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p style="margin-left: 0px;">Server-side control</p>
+</li>
+</ul>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 59.101%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>For Windows, must be aware of the registry's maximum size limit as defined in the System Control Panel</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Tied to the host system; not practical for clustered servers or a round-robin DNS configuration</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Not recommended for production applications</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 14.036%; padding-right: 10px; padding-left: 10px;">
+<p>Browser Cookies</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 26.863%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>Simple implementation</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Good performance</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Can set to expire automatically</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Client-side control</p>
+</li>
+</ul>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 59.101%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>Users can disallow cookies in their browser</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>ColdFusion limits individual cookie data to 4 KB</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Netscape Navigator allows only 20 cookies from any host; ColdFusion uses 3 cookies to store read-only data, which leaves 17 cookies available</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr valign="top">
+<td style="border-left: solid 1px #c0c0c0; border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 14.036%; padding-right: 10px; padding-left: 10px;">
+<p>External Repository</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 26.863%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>Can use existing data source</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Portable: not tied to a server</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>OS portability in a mixed environment</p>
+</li>
+</ul>
+<p>&#160;</p>
+</td>
+<td style="border-right: Solid 1px #c0c0c0; border-bottom: Solid 1px #c0c0c0; width: 59.101%; padding-right: 10px; padding-left: 10px;">
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p>Requires database transactions to read/write variables</p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p>Somewhat involved implementation</p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+<p class="RelatedTopics"><a name="Related" id="Related" title="Related"></a>Related topics</p>
+<ul type="disc">
+<li style="margin-left: -20px;" class="p">
+<p><a href="overview_of_server_settings.htm" title="overview_of_server_settings.htm">Server settings overview</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="about_coldfusion_data_sources.htm" title="about_coldfusion_data_sources.htm">ColdFusion data sources overview</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="mgeclivar.htm" title="mgeclivar.htm">Manage client variables</a></p>
+</li>
+<li style="margin-left: -20px;" class="p">
+<p><a href="migclivar.htm" title="migclivar.htm">Migrate client variable data</a></p>
+</li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
