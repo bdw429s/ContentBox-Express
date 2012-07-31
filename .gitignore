@@ -1,0 +1,6 @@
+.settings
+.DS_Store
+.project
+settings.xml
+logs/*.log
+www/ROOT/WEB-INF/cfclasses/*.*
