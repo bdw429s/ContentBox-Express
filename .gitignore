@@ -2,6 +2,8 @@
 .DS_Store
 .project
 settings.xml
-logs/*.log
+logs
 www/ROOT/WEB-INF/cfclasses/*.*
 icon*
+www/ROOT/WEB-INF/cfform/logs/*.*
+www/ROOT/WEB-INF/cfusion/logs/*.*
