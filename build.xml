@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<project name="contentbox.express" default="refactor" basedir=".">
+    <description>
+    	ContentBox Express Edition, removes indexes on db creation.
+    </description>
+	
+	<!-- Properties -->
+	<property name="dir.userlocation"	value="/Users/lmajano" />
+	<property name="dir.exports"		value="${dir.userlocation}/exports" />
+	<property name="dir.build" 			value="${dir.exports}/contentbox" />
+	<property name="dir.webroot"		value="www/ROOT" />
+	<property name="dir.downloadURL"	value="http://www.gocontentbox.org/builds/contentbox" />
+	
+	<!-- Init -->
+	<target name="init" description="Init">
+		<!-- Version -->
+		<input addproperty="contentbox.version" message="ContentBox Version" />
+	</target>
+
+	<!-- Build it -->
+	<target name="build" description="build the code" depends="init">
+		
+		<!-- Download ContentBox Tag -->
+		<get dest="${dir.webroot}/contentbox_${contentbox.version}.zip" src="${dir.downloadURL}_${contentbox.version}.zip" verbose="true"/>
+		<!-- Extract it -->
+		<unzip src="${dir.webroot}/contentbox_${contentbox.version}.zip" dest="${dir.webroot}"/>
+		<!-- Delete zip -->
+		<delete file="${dir.webroot}/contentbox_${contentbox.version}.zip" />
+
+	</target>
+	
+	<!-- Refactor -->
+	<target name="refactor" description="refactor the code for express edition usage." depends="build">
+		<!-- Remove indexes -->
+		<replaceregexp match='index="[^"]*"' replace="" flags="ig" byline="true">
+		  <fileset dir="${dir.webroot}/modules/contentbox/model">
+		  	<include name="**/*.cfc" />
+		  </fileset>
+		</replaceregexp>
+		
+	</target>
+
+</project>
