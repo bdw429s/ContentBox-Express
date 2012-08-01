@@ -15,6 +15,13 @@
 	<target name="init" description="Init">
 		<!-- Version -->
 		<input addproperty="contentbox.version" message="ContentBox Version" />
+		<!-- Cleanup Code -->
+		<delete includeEmptyDirs="true" verbose="true">
+	    	<fileset dir="${dir.webroot}">
+	    		<exclude name="CFIDE/" />
+	    		<exclude name="WEB-INF/" />
+			</fileset>
+	 	</delete>
 	</target>
 
 	<!-- Build it -->
