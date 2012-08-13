@@ -234,7 +234,7 @@ else
 fi
 
 #CONTENTBOX ADDITIONS
-JAVA_OPTS="$JAVA_OPTS -Xmx512m -Xmx512m -XX:MaxPermSize=192m -XX:PermSize=192m -XX:+UseParallelGC -XX:+UseParallelOldGC"
+JAVA_OPTS="$JAVA_OPTS -Xmx512m -Xmx512m -XX:MaxPermSize=192m -XX:PermSize=192m"
 
 # Uncomment the following line to make the umask available when using the
 # org.apache.catalina.security.SecurityListener
