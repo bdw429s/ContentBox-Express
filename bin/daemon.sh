@@ -34,9 +34,9 @@ while [ -h "$ARG0" ]; do
 done
 DIRNAME="`dirname $ARG0`"
 PROGRAM="`basename $ARG0`"
-for o
+while [ ".$1" != . ]
 do
-  case "$o" in
+  case "$1" in
     --java-home )
         JAVA_HOME="$2"
         shift; shift;
@@ -228,7 +228,7 @@ case "$1" in
       exit $?
     ;;
     *       )
-      echo "Unkown command: \`$1'"
+      echo "Unknown command: \`$1'"
       echo "Usage: $PROGRAM ( commands ... )"
       echo "commands:"
       echo "  run               Start Tomcat without detaching from console"
