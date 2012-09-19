@@ -35,12 +35,11 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 
 	function init(controller){
 		super.init( arguments.controller );
-		blogEntryPoint = "blog";
 	}
 
 	/************************************** settings *********************************************/
 
-	// get contentbox settings
+	// get contentbox setting value by key or by default value
 	function setting(required key,value){
 		var prc = getRequestCollection(private=true);
 
@@ -67,6 +66,10 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	// get contentbox codename URL
 	function getContentBoxCodeNameURL(){
 		return getModuleSettings("contentbox").settings.codenameLink;
+	}
+	// get blog entry point
+	function getBlogEntryPoint(){
+		return setting("cb_site_blog_entrypoint", "blog");
 	}
 
 	/**
@@ -273,7 +276,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 		var event = getRequestContext();
 		return event.getValue(name="missingPage",private="true",default="");
 	}
-	// Get Home Page slug set up by the administrator.  If the page slug equals 'blog', then it means the blog is your home page
+	// Get Home Page slug set up by the administrator.
 	any function getHomePage(){
 		return setting("cb_site_homepage");
 	}
@@ -419,7 +422,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* Create a link to your site blog
 	*/
 	function linkBlog(){
-		return getRequestContext().buildLink(linkto="#siteRoot()##sep()#blog");
+		return getRequestContext().buildLink(linkto="#siteRoot()##sep()##getBlogEntryPoint()#");
 	}
 
 	/**
@@ -444,7 +447,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* @entry You can optionally pass the entry to filter the comment's RSS feed
 	*/
 	function linkRSS(category,comments=false,entry){
-		var xehRSS = siteRoot() & sep() & "#blogEntryPoint#.rss";
+		var xehRSS = siteRoot() & sep() & "#getBlogEntryPoint()#.rss";
 
 		// do we have a category?
 		if( structKeyExists(arguments,"category") ){
@@ -543,7 +546,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* @category The category object to link to
 	*/
 	function linkCategory(category){
-		var xeh = siteRoot() & sep() & "#blogEntryPoint#.category/#arguments.category.getSlug()#";
+		var xeh = siteRoot() & sep() & "#getBlogEntryPoint()#.category/#arguments.category.getSlug()#";
 		return getRequestContext().buildLink(linkto=xeh);
 	}
 
@@ -554,7 +557,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* @day The day of the archive
 	*/
 	function linkArchive(year,month,day){
-		var xeh = siteRoot() & sep() & "#blogEntryPoint#.archives";
+		var xeh = siteRoot() & sep() & "#getBlogEntryPoint()#.archives";
 		if( structKeyExists(arguments,"year") ){ xeh &= "/#arguments.year#"; }
 		if( structKeyExists(arguments,"month") ){ xeh &= "/#arguments.month#"; }
 		if( structKeyExists(arguments,"day") ){ xeh &= "/#arguments.day#"; }
@@ -565,7 +568,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* Link to the search route for this blog
 	*/
 	function linkSearch(){
-		var xeh = siteRoot() & sep() & "#blogEntryPoint#.search";
+		var xeh = siteRoot() & sep() & "#getBlogEntryPoint()#.search";
 		return getRequestContext().buildLink(linkto=xeh);
 	}
 
@@ -585,7 +588,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 		if( isSimpleValue(arguments.entry) ){
 			return linkEntryWithSlug( arguments.entry );
 		}
-		var xeh = siteRoot() & sep() & "#blogEntryPoint#.#arguments.entry.getSlug()#";
+		var xeh = siteRoot() & sep() & "#getBlogEntryPoint()#.#arguments.entry.getSlug()#";
 		return getRequestContext().buildLink(linkTo=xeh);
 	}
 
@@ -595,7 +598,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	*/
 	function linkEntryWithSlug(slug){
 		arguments.slug = reReplace( arguments.slug, "^/","" );
-		var xeh = siteRoot() & sep() & "#blogEntryPoint#.#arguments.slug#";
+		var xeh = siteRoot() & sep() & "#getBlogEntryPoint()#.#arguments.slug#";
 		return getRequestContext().buildLink(linkTo=xeh);
 	}
 
@@ -821,7 +824,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* QuickView is a proxy to ColdBox's renderview method with the addition of prefixing the location of the view according to the
 	* layout theme you are using. All the arguments are the same as renderView()'s methods
 	*/
-	function quickView(required view,cache=false,cacheTimeout,cacheLastAccessTimeout,cacheSuffix,module,args,collection,collectionAs,prepostExempt){
+	function quickView(required view,cache=false,cacheTimeout,cacheLastAccessTimeout,cacheSuffix,module="contentbox",args,collection,collectionAs,prepostExempt){
 		arguments.view = "#layoutName()#/views/#arguments.view#";
 		return renderView(argumentCollection=arguments);
 	}
@@ -830,7 +833,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* QuickLayout is a proxy to ColdBox's renderLayout method with the addition of prefixing the location of the layout according to the
 	* layout theme you are using. All the arguments are the same as renderLayout()'s methods
 	*/
-	function quickLayout(required layout,view="",module="",args=structNew(),viewModule="",prePostExempt=false){
+	function quickLayout(required layout,view="",module="contentbox",args=structNew(),viewModule="",prePostExempt=false){
 		arguments.layout = "#layoutName()#/layouts/#arguments.layout#";
 		return renderLayout(argumentCollection=arguments);
 	}
@@ -881,8 +884,9 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 	* @levels.hint The number of levels to nest hierarchical pages, by default it does only 1 level, * does all levels
 	* @parentClass.hint The name of the CSS class to attach to the menu <li> element when it has nested elements, by default it is 'parent'
 	* @activeClass.hint The name of the CSS class to attach to the menu <li> element when that element is the current page you are on, by default it is 'active'
+	* @activeShowChildren.hint If true, then we will show the children of the active menu element, else we just show the active element
 	*/
-	function subPageMenu(any page, excludes="", type="ul", separator="", boolean showNone=true, levels="1", parentClass="parent", activeClass="active"){
+	function subPageMenu(any page, excludes="", type="ul", separator="", boolean showNone=true, levels="1", parentClass="parent", activeClass="active", activeShowChildren=false){
 		// If page not passed, then use current
 		if( !structKeyExists(arguments,"page") ){
 			arguments.page = getCurrentPage();
@@ -935,7 +939,7 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 
 	/************************************** PRIVATE *********************************************/
 
-	private function buildMenu(pageRecords, excludes="", type="ul", separator="", boolean showNone=true, levels="1", numeric currentLevel="1", parentClass="parent", activeClass="active"){
+	private function buildMenu(pageRecords, excludes="", type="ul", separator="", boolean showNone=true, levels="1", numeric currentLevel="1", parentClass="parent", activeClass="active", activeShowChildren=false){
 		// check type?
 		if( !reFindNoCase("^(ul|ol|li|none)$", arguments.type) ){ arguments.type="ul"; }
 		var pageResults = arguments.pageRecords;
@@ -963,10 +967,11 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 			classtext = [];
 			if( !len(arguments.excludes) OR !listFindNoCase(arguments.excludes, pageResults.pages[x].getTitle() )){
 				// Do we need to nest?
-				var doNesting = ( arguments.currentLevel lt arguments.levels AND pageResults.pages[x].hasChild() );
-
-				// class = active?
-				if( currentcontentID eq pageResults.pages[x].getContentID() ){ arrayAppend( classText, arguments.activeClass); }
+				var doNesting 		= ( arguments.currentLevel lt arguments.levels AND pageResults.pages[x].hasChild() );
+				// Is element active
+				var isElementActive = ( currentcontentID eq pageResults.pages[x].getContentID() );
+				// class = active? Then add to class text
+				if( isElementActive ){ arrayAppend( classText, arguments.activeClass); }
 				// class = parent nesting?
 				if( doNesting ){ arrayAppend(classText, arguments.parentClass); }
 
@@ -984,6 +989,17 @@ component extends="coldbox.system.Plugin" accessors="true" singleton threadSafe{
 											levels=arguments.levels,
 											currentLevel=arguments.currentLevel+1) );
 					}
+					// Do we nest active and activeShowChildren flag is activated?
+					else if( activeShowChildren AND isElementActive AND pageResults.pages[x].hasChild() ){ 
+						// If type is "li" then guess to do a nested ul list
+						b.append( buildMenu(pageRecords=pageService.findPublishedPages(parent=pageResults.pages[x].getContentID(), showInMenu=true),
+											excludes=arguments.excludes,
+											type=( arguments.type eq "li" ? "ul" : arguments.type ),
+											showNone=arguments.showNone,
+											levels=1,
+											currentLevel=arguments.currentLevel+1) );
+					}
+					
 					// Close it
 					b.append('</li>');
 				}
