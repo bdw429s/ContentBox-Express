@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0"?>
-<project name="contentbox.express" default="refactor" basedir=".">
+<project name="contentbox.express" default="build" basedir=".">
     <description>
     	ContentBox Express Edition, removes indexes on db creation.
     </description>
@@ -33,18 +33,19 @@
 		<unzip src="${dir.webroot}/contentbox_${contentbox.version}.zip" dest="${dir.webroot}"/>
 		<!-- Delete zip -->
 		<delete file="${dir.webroot}/contentbox_${contentbox.version}.zip" />
-
+		<!-- Refactor it-->
+		<antcall target="refactor" />
+		
 	</target>
 	
 	<!-- Refactor -->
-	<target name="refactor" description="refactor the code for express edition usage." depends="build">
+	<target name="refactor" description="refactor the code for express edition usage.">
 		<!-- Remove indexes -->
 		<replaceregexp match='index="[^"]*"' replace="" flags="ig" byline="true">
 		  <fileset dir="${dir.webroot}/modules/contentbox/model">
 		  	<include name="**/*.cfc" />
 		  </fileset>
 		</replaceregexp>
-		
 	</target>
 
 </project>

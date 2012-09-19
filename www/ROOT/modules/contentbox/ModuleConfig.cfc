@@ -122,6 +122,11 @@ component {
 		binder.map("CBHelper@cb").toDSL("coldbox:myplugin:CBHelper@contentbox");
 		binder.map("Widget@cb").to("contentbox.model.ui.Widget");
 		binder.map("AdminMenuService@cb").to("contentbox.model.ui.AdminMenuService");
+		// Editors
+		binder.map("EditorService@cb").to("contentbox.model.ui.editors.EditorService").asEagerInit();
+		binder.map("TextareaEditor@cb").to("contentbox.model.ui.editors.TextareaEditor");
+		binder.map("CKEditor@cb").to("contentbox.model.ui.editors.CKEditor");
+		binder.map("EditAreaEditor@cb").to("contentbox.model.ui.editors.EditAreaEditor");
 		// Modules
 		binder.map("moduleService@cb").to("contentbox.model.modules.ModuleService");
 		// utils
@@ -135,6 +140,7 @@ component {
 		binder.map("mangoImporter@cb").to("contentbox.model.importers.MangoImporter");
 		binder.map("wordpressImporter@cb").to("contentbox.model.importers.WordpressImporter");
 		binder.map("blogcfcImporter@cb").to("contentbox.model.importers.BlogCFCImporter");
+		binder.map("machblogImporter@cb").to("contentbox.model.importers.MachBlogImporter");
 		// ColdBox Integrations
 		binder.map("ColdBoxRenderer").toDSL("coldbox:plugin:Renderer");
 
