@@ -29,6 +29,9 @@ component extends="content" singleton{
 	property name="searchService"		inject="id:SearchService@cb";
 	property name="securityService"		inject="id:securityService@cb";
 	
+	// Pre Handler Exceptions
+	this.preHandler_except = "preview";
+	
 	// pre Handler
 	function preHandler(event,action,eventArguments){
 		super.preHandler(argumentCollection=arguments);
@@ -68,7 +71,7 @@ component extends="content" singleton{
 		index(event,rc,prc);
 
 		// verify if caching is possible by testing the page, also, page with comments are not cached.
-		if( prc.page.isLoaded() AND !prc.page.getAllowComments() AND prc.page.getCacheLayout() ){
+		if( prc.page.isLoaded() AND !prc.page.getAllowComments() AND prc.page.getCacheLayout() AND prc.page.getIsPublished() ){
 			var data = controller.getPlugin("Renderer")
 				.renderLayout(module=event.getCurrentLayoutModule(), viewModule=event.getCurrentViewModule());
 			cache.set(cachekey,
@@ -93,6 +96,7 @@ component extends="content" singleton{
 		prc.page.setSlug( rc.slug );
 		prc.page.setPublishedDate( now() );
 		prc.page.setAllowComments( false );
+		prc.page.setCache( false );
 		// Comments need to be empty
 		prc.comments = [];
 		// Create preview version
@@ -107,7 +111,6 @@ component extends="content" singleton{
 	* Present pages
 	*/
 	function index(event,rc,prc){
-
 		// incoming params
 		event.paramValue("pageSlug","");
 		var incomingURL  = "";
@@ -119,6 +122,7 @@ component extends="content" singleton{
 		else{
 			incomingURL	 = prc.pageOverride;
 		}
+		
 		// Entry point cleanup
 		if( len( prc.cbEntryPoint ) ){
 			incomingURL = replacenocase( incomingURL, prc.cbEntryPoint & "/", "" );

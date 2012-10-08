@@ -20,64 +20,28 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ********************************************************************************
-* Simple textarea editor
 */
-component implements="contentbox.model.ui.editors.IEditor" singleton{
+component{
+	// Application properties, modify as you see fit
+	this.name = "CBDSNCreator" & hash( getCurrentTemplatePath() );
 
-	property name="log" inject="logbox:logger:{this}";
-
-	function init(){
-		return this;
-	}
-
-	/**
-	* Get the internal name of an editor
-	*/
-	function getName(){
-		return "textarea";
-	}
+	// LOCATION MAPPINGS
+	request.APP_ROOT_PATH = getDirectoryFromPath( getCurrentTemplatePath() );
+	request.APP_ROOT_PATH = replacenocase( replace( request.APP_ROOT_PATH, "\", "/", "all"), "modules/contentbox-dsncreator/", "");
 	
-	/**
-	* Get the display name of an editor
-	*/
-	function getDisplayName(){
-		return "Textarea";
-	};
+	this.mappings["/appShell"] 		= request.APP_ROOT_PATH;
+	this.mappings["/contentbox"] 	= request.APP_ROOT_PATH & "modules/contentbox";
 	
-	/**
-	* This is fired once editor javascript loads, you can use this to return back functions, asset calls, etc. 
-	* return the appropriate JavaScript
-	*/
-	function loadAssets(){
-		var js = "";
-		
-		savecontent variable="js"{
-			writeOutput("
-			function checkIsDirty(){
-				return false;
-			}
-			function getEditorContent(){
-				return $('##content').val();
-			}
-			");
+	public boolean function onRequestStart(String targetPage){
+
+		// CF/Railo Helper
+		if( server.coldfusion.productName eq "ColdFusion Server" ){
+			request.cfHelper = new model.CFHelper(); 
+		}
+		else{
+			request.cfHelper = new model.RailoHelper();
 		}
 		
-		return js;
-	};
-	
-	/**
-	* Startup the editor(s) on a page
-	*/
-	function startup(){
-		log.info( getName() & " editor started up.");
+		return true;
 	}
-	
-	/**
-	* Shutdown the editor(s) on a page
-	*/
-	function shutdown(){
-		log.info( getName() & " editor shutdown.");
-	}
-
-
-} 
+}

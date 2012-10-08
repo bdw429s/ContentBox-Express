@@ -233,6 +233,7 @@
 
 			<!--- id --->
 			#html.hiddenField(name="contentID",bind=prc.page)#
+			#html.hiddenField(name="contentType",bind=prc.page)#
 			#html.hiddenField(name="sluggerURL",value=event.buildLink(prc.xehSlugify))#
 
 			<!--- title --->
@@ -258,9 +259,8 @@
 				
 				<!---Right References Panel --->
 				<div class="floatRight">
-					<a href="javascript:openRemoteModal('#event.buildLink(prc.xehAPIDocs&"/index/apislug/plugins/print/?_cfcviewer_cfc=CBHelper")#')" 
-					   class="button" title="Get some quick CBHelper API Goodness!">
-						<img src="#prc.cbRoot#/includes/images/help_small.png" alt="print" border="0"> CBHelper Docs
+					<a href="javascript:previewContent()" class="button">
+						<img src="#prc.cbRoot#/includes/images/eye.png" alt="print" border="0"> Preview
 					</a>
 				</div>
 			</div>

@@ -22,8 +22,11 @@ limitations under the License.
 ********************************************************************************
 */
 component{
+	// THIS LOADS THE DSN CREATOR WHEN INSTALLING CONTENTBOX FOR THE FIRST TIME
+	// THIS CAN BE REMOVED AFTER INSTALLATION
+	location("modules/contentbox-dsncreator");
 	// Application properties, modify as you see fit
-	this.name 				= "ContentBox-Shell-" & hash(getCurrentTemplatePath());
+	this.name 				= "ContentBox-Shell-" & hash( getCurrentTemplatePath() );
 	this.sessionManagement 	= true;
 	this.sessionTimeout 	= createTimeSpan(0,0,45,0);
 	this.setClientCookies 	= true;
@@ -36,10 +39,7 @@ component{
 	COLDBOX_APP_MAPPING		= "";
 	COLDBOX_CONFIG_FILE 	= "";
 	COLDBOX_APP_KEY 		= "";
-
-	// THE DATASOURCE FOR CONTENTBOX MANDATORY
-	this.datasource = "contentbox";
-
+	
 	// LOCATION MAPPINGS
 	this.mappings["/contentbox"] = COLDBOX_APP_ROOT_PATH & "modules/contentbox";
 	this.mappings["/contentbox-ui"] = COLDBOX_APP_ROOT_PATH & "modules/contentbox-ui";
@@ -47,6 +47,8 @@ component{
 	// THE LOCATION OF EMBEDDED COLDBOX
 	this.mappings["/coldbox"] 	 = COLDBOX_APP_ROOT_PATH & "coldbox";
 
+	// THE DATASOURCE FOR CONTENTBOX MANDATORY
+	this.datasource = "contentbox";
 	// CONTENTBOX ORM SETTINGS
 	this.ormEnabled = true;
 	this.ormSettings = {
@@ -60,7 +62,7 @@ component{
 		secondarycacheenabled = true,
 		cacheprovider		= "ehCache",
 		// ORM SESSION MANAGEMENT SETTINGS, DO NOT CHANGE
-		logSQL 				= true,
+		logSQL 				= false,
 		flushAtRequestEnd 	= false,
 		autoManageSession	= false,
 		// ORM EVENTS MUST BE TURNED ON FOR CONTENTBOX TO WORK
@@ -115,4 +117,6 @@ component{
 	public boolean function onMissingTemplate(template){
 		return application.cbBootstrap.onMissingTemplate(argumentCollection=arguments);
 	}
+	
+	//@cf9-onError@
 }
