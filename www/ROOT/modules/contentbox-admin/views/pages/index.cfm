@@ -128,9 +128,11 @@
 			#prc.pagingPlugin.renderit(prc.pagesCount,prc.pagingLink)#
 
 			<!--- Location Bar --->
-			<cfif structKeyExists(rc, "parent")>
+			<cfif structKeyExists(rc, "parent") AND len( rc.parent )>
 			<div class="infoBar">
-			  <a href="#event.buildLink(prc.xehPages)#">Root</a> #getMyPlugin(plugin="PageBreadcrumbVisitor",module="contentbox-admin").visit(prc.page, event.buildLink(prc.xehPages))#
+			  <a href="#event.buildLink(prc.xehPages)#">
+			  	<img src="#prc.cbRoot#/includes/images/home.png" alt="root" title="Home"/>
+			  </a> #getMyPlugin(plugin="PageBreadcrumbVisitor",module="contentbox-admin").visit(prc.page, event.buildLink(prc.xehPages))#
 			</div>
 			</cfif>
 
@@ -142,10 +144,9 @@
 						<th>Name</th>
 						<th width="150">Categories</th>
 						<th width="40" class="center"><img src="#prc.cbRoot#/includes/images/sort.png" alt="menu" title="Show in Menu"/></th>
-						<th width="40" class="center"><img src="#prc.cbRoot#/includes/images/parent_color_small.png" alt="order" title="Child Pages"/></th>
 						<th width="40" class="center"><img src="#prc.cbRoot#/includes/images/publish.png" alt="publish" title="Published"/></th>
 						<th width="40" class="center"><img src="#prc.cbRoot#/includes/images/glasses.png" alt="hits" title="Hits"/></th>
-						<th width="125" class="center {sorter:false}">Actions</th>
+						<th width="100" class="center {sorter:false}">Actions</th>
 					</tr>
 				</thead>
 
@@ -176,20 +177,8 @@
 							<cfelse>
 								#page.getTitle()#
 							</cfif>
-							<br>
-							Last edit by <a href="mailto:#page.getAuthorEmail()#">#page.getAuthorName()#</a></br>
-							<!--- password protect --->
-							<cfif page.isPasswordProtected()>
-								<img src="#prc.cbRoot#/includes/images/lock.png" alt="locked" title="Page is password protected"/>
-							<cfelse>
-								<img src="#prc.cbRoot#/includes/images/lock_off.png" alt="locked" title="Page is public"/>
-							</cfif>
-							&nbsp;
-							<!--- comments icon --->
-							<cfif page.getallowComments()>
-								<img src="#prc.cbRoot#/includes/images/comments.png" alt="locked" title="Commenting is Open!"/>
-							<cfelse>
-								<img src="#prc.cbRoot#/includes/images/comments_off.png" alt="locked" title="Commenting is Closed!"/>
+							<cfif page.getNumberOfChildren()>
+							(#page.getNumberOfChildren()#)
 							</cfif>
 						</td>
 						<td>#page.getCategoriesList()#</td>
@@ -201,14 +190,11 @@
 							</cfif>
 						</td>
 						<td class="center">
-							#page.getNumberOfChildren()#
-						</td>
-						<td class="center">
 							<cfif page.isExpired()>
-								<img src="#prc.cbRoot#/includes/images/button_cancel.png" alt="expired" title="Page has expired!" />
+								<img src="#prc.cbRoot#/includes/images/button_cancel.png" alt="expired" title="Page has expired on ( (#page.getDisplayExpireDate()#))" />
 								<span class="hidden">expired</span>
 							<cfelseif page.isPublishedInFuture()>
-								<img src="#prc.cbRoot#/includes/images/information.png" alt="published" title="Page Publishes in the future!" />
+								<img src="#prc.cbRoot#/includes/images/information.png" alt="published" title="Page Publishes in the future (#page.getDisplayPublishedDate()#)" />
 								<span class="hidden">published in future</span>
 							<cfelseif page.isContentPublished()>
 								<img src="#prc.cbRoot#/includes/images/button_ok.png" alt="published" title="Page Published!" />
@@ -220,26 +206,59 @@
 						</td>
 						<td class="center">#page.getHits()#</td>
 						<td class="center">
-							<cfif prc.oAuthor.checkPermission("PAGES_EDITOR") OR prc.oAuthor.checkPermission("PAGES_ADMIN")>
-							<!--- Clone Command --->
-							<a href="javascript:openCloneDialog('#page.getContentID()#','#URLEncodedFormat(page.getTitle())#')" title="Clone Page Including Descendants"><img src="#prc.cbroot#/includes/images/clone.png" alt="edit" border="0"/></a>
-							&nbsp;
-							<!--- Create Child --->
-							<a href="#event.buildLink(prc.xehPageEditor)#/parentID/#page.getContentID()#" title="Create Child Page"><img src="#prc.cbroot#/includes/images/parent.png" alt="edit" border="0"/></a>
-							&nbsp;
-							</cfif>
-							<!--- History Command --->
-							<a href="#event.buildLink(prc.xehPageHistory)#/contentID/#page.getContentID()#" title="Version History"><img src="#prc.cbroot#/includes/images/old-versions.png" alt="versions" border="0"/></a>
-							&nbsp;
-							<cfif prc.oAuthor.checkPermission("PAGES_ADMIN")>
-							<!--- Delete Command --->
-							<a title="Delete Page" href="javascript:remove('#page.getContentID()#')" class="confirmIt"
-							  data-title="Delete Page?" data-message="This will delete the page and all of its sub-pages, are you sure?"><img id="delete_#page.getContentID()#" src="#prc.cbroot#/includes/images/delete.png" border="0" alt="delete"/></a>
-							&nbsp;
-							</cfif>
-							<!--- View in Site --->
-							<a href="#prc.CBHelper.linkPage(page)#" title="View Page In Site" target="_blank"><img src="#prc.cbroot#/includes/images/eye.png" alt="edit" border="0"/></a>
-						</td>
+							<!---Info Panel --->
+							<button class="button" onclick="return toggleInfoPanel('#page.getContentID()#')" title="Page Info" ><img src="#prc.cbroot#/includes/images/gravatar.png" /></button>
+							<!---Info Panel --->
+							<div id="infoPanel_#page.getContentID()#" class="contentInfoPanel">
+								<img src="#prc.cbRoot#/includes/images/calendar_small.png" alt="calendar"/>  
+								Last edit by <a href="mailto:#page.getAuthorEmail()#">#page.getAuthorName()#</a> on 
+								#page.getActiveContent().getDisplayCreatedDate()#
+								</br>
+								<!--- password protect --->
+								<cfif page.isPasswordProtected()>
+									<img src="#prc.cbRoot#/includes/images/lock.png" alt="locked"/> Password Protected
+								<cfelse>
+									<img src="#prc.cbRoot#/includes/images/lock_off.png" alt="locked"/> Public Page
+								</cfif>
+								<br/>
+								<!--- comments icon --->
+								<cfif page.getallowComments()>
+									<img src="#prc.cbRoot#/includes/images/comments.png" alt="locked"/> Open Comments
+								<cfelse>
+									<img src="#prc.cbRoot#/includes/images/comments_off.png" alt="locked"/> Closed Comments
+								</cfif>
+								<!---Layouts --->
+								<br/>
+								<img src="#prc.cbRoot#/includes/images/layouts_small.png" alt="page layout"/> Layout: <strong>#page.getLayout()#</strong>
+								<br/>
+								<img src="#prc.cbRoot#/includes/images/iPad.png" alt="mobile layout"/> Mobile Layout: <strong>#page.getMobileLayout()#</strong>
+							</div>
+							
+							<!---Page Actions --->
+							<button class="button" onclick="return toggleActionsPanel('#page.getContentID()#')" title="Page Actions" ><img src="#prc.cbroot#/includes/images/settings_black.png" /></button>
+							<!---Page Actions Panel --->
+							<div id="pageActions_#page.getContentID()#" class="actionsPanel">
+								<cfif prc.oAuthor.checkPermission("PAGES_EDITOR") OR prc.oAuthor.checkPermission("PAGES_ADMIN")>
+								<!--- Clone Command --->
+								<a href="javascript:openCloneDialog('#page.getContentID()#','#URLEncodedFormat(page.getTitle())#')"><img src="#prc.cbroot#/includes/images/clone.png" alt="edit" border="0"/> Clone Page</a>
+								<br/>
+								<!--- Create Child --->
+								<a href="#event.buildLink(prc.xehPageEditor)#/parentID/#page.getContentID()#"><img src="#prc.cbroot#/includes/images/parent.png" alt="edit" border="0"/> Create Child</a>
+								<br/>
+								</cfif>
+								<!--- History Command --->
+								<a href="#event.buildLink(prc.xehPageHistory)#/contentID/#page.getContentID()#"><img src="#prc.cbroot#/includes/images/old-versions.png" alt="versions" border="0"/> Page History</a>
+								<br/>
+								<cfif prc.oAuthor.checkPermission("PAGES_ADMIN")>
+								<!--- Delete Command --->
+								<a href="javascript:remove('#page.getContentID()#')" class="confirmIt"
+								  data-title="Delete Page?" data-message="This will delete the page and all of its sub-pages, are you sure?"><img id="delete_#page.getContentID()#" src="#prc.cbroot#/includes/images/delete.png" border="0" alt="delete"/> Delete Page</a>
+								<br/>
+								</cfif>
+								<!--- View in Site --->
+								<a href="#prc.CBHelper.linkPage(page)#" target="_blank"><img src="#prc.cbroot#/includes/images/eye.png" alt="edit" border="0"/> View Page</a>
+							</div>
+							</td>
 					</tr>
 					</cfloop>
 				</tbody>

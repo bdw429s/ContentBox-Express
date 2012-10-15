@@ -29,7 +29,7 @@ component {
 	this.author 			= "Ortus Solutions, Corp";
 	this.webURL 			= "http://www.ortussolutions.com";
 	this.description 		= "An enterprise modular content platform";
-	this.version			= "1.0.9";
+	this.version			= "1.1.0";
 	this.viewParentLookup 	= true;
 	this.layoutParentLookup = true;
 	this.entryPoint			= "cbcore";
@@ -133,6 +133,7 @@ component {
 		binder.map("zipUtil@cb").to("coldbox.system.core.util.Zip");
 		binder.map("HQLHelper@cb").to("contentbox.model.util.HQLHelper");
 		binder.map("Validator@cb").to("coldbox.system.core.util.Validator");
+		binder.map("mobileDetector@cb").toDSL("coldbox:myplugin:MobileDetector@contentbox");
 		// Search
 		binder.map("SearchResults@cb").to("contentbox.model.search.SearchResults");
 		binder.map("SearchService@cb").to("contentbox.model.search.SearchService");

@@ -104,6 +104,7 @@
 				</div>
 				</cfif>
 				<!--- Page Options Panel --->
+				<cfif prc.oAuthor.checkPermission("EDITORS_DISPLAY_OPTIONS")>
 				<h2>
 					<img src="#prc.cbRoot#/includes/images/arrow_right.png" alt="" width="6" height="6" class="arrow_right" />
 					<img src="#prc.cbRoot#/includes/images/arrow_down.png" alt="" width="6" height="6" class="arrow_down" />
@@ -119,7 +120,16 @@
 					<!--- layout --->
 					#html.label(field="layout",content='Layout:')#
 					<select name="layout" id="layout" class="width98">
-						#html.options(values=prc.availableLayouts,selectedValue=prc.page.getLayoutWithDefault())#
+						<option value="-inherit-" <cfif prc.page.getLayoutWithDefault() eq "-inherit-">selected="selected"</cfif>>-inherit-</option>
+						#html.options(values=prc.availableLayouts, selectedValue=prc.page.getLayoutWithDefault())#
+					</select>
+					
+					<!--- mobile layout --->
+					#html.label(field="mobileLayout",content='Mobile Layout:')#
+					<select name="mobileLayout" id="mobileLayout" class="width98">
+						<option value="" <cfif prc.page.getMobileLayout() eq "">selected="selected"</cfif>>-None-</option>
+						<option value="-inherit-" <cfif prc.page.getMobileLayout() eq "-inherit-">selected="selected"</cfif>>-inherit-</option>
+						#html.options(values=prc.availableLayouts, selectedValue=prc.page.getMobileLayout())#
 					</select>
 
 					<!--- Show in Menu Builders --->
@@ -129,8 +139,12 @@
 					#html.inputfield(type="number",label="Menu Order: (0-99)",name="order",bind=prc.page,title="The ordering index used when building menus",class="textfield",size="5",maxlength="2",min="0",max="99")#
 
 				</div>
+				<cfelse>
+					#html.hiddenField(name="parentPage", value=prc.parentcontentID)#
+				</cfif>
 
 				<!--- Page Modifiers Panel --->
+				<cfif prc.oAuthor.checkPermission("EDITORS_MODIFIERS")>
 				<h2>
 					<img src="#prc.cbRoot#/includes/images/arrow_right.png" alt="" width="6" height="6" class="arrow_right" />
 					<img src="#prc.cbRoot#/includes/images/arrow_down.png" alt="" width="6" height="6" class="arrow_down" />
@@ -148,8 +162,10 @@
 					#html.textfield(name="passwordProtection",bind=prc.page,title="Password protect your page, leave empty for none",class="textfield",size="25",maxlength="100")#
 					<br>
 				</div>
-
+				</cfif>
+				
 				<!--- Page Cache Panel --->
+				<cfif prc.oAuthor.checkPermission("EDITORS_CACHING")>
 				<h2>
 					<img src="#prc.cbRoot#/includes/images/arrow_right.png" alt="" width="6" height="6" class="arrow_right" />
 					<img src="#prc.cbRoot#/includes/images/arrow_down.png" alt="" width="6" height="6" class="arrow_down" />
@@ -167,8 +183,10 @@
 					#html.inputField(type="numeric",name="cacheTimeout",label="Cache Timeout (0=Use Global):",bind=prc.page,title="Enter the number of minutes to cache your content, 0 means use global default",class="textfield",size="10",maxlength="100")#
 					#html.inputField(type="numeric",name="cacheLastAccessTimeout",label="Idle Timeout: (0=Use Global)",bind=prc.page,title="Enter the number of minutes for an idle timeout for your content, 0 means use global default",class="textfield",size="10",maxlength="100")#
 				</div>
-
+				</cfif>
+				
 				<!--- Categories --->
+				<cfif prc.oAuthor.checkPermission("EDITORS_CATEGORIES")>
 				<h2>
 					<img src="#prc.cbRoot#/includes/images/arrow_right.png" alt="" width="6" height="6" class="arrow_right" />
 					<img src="#prc.cbRoot#/includes/images/arrow_down.png" alt="" width="6" height="6" class="arrow_down" />
@@ -185,8 +203,10 @@
 					<!--- New Categories --->
 					#html.textField(name="newCategories",label="New Categories",size="30",title="Comma delimited list of new categories to create",class="textfield")#
 				</div>
-
+				</cfif>
+				
 				<!--- HTML Modifiers Panel --->
+				<cfif prc.oAuthor.checkPermission("EDITORS_HTML_ATTRIBUTES")>
 				<h2>
 					<img src="#prc.cbRoot#/includes/images/arrow_right.png" alt="" width="6" height="6" class="arrow_right" />
 					<img src="#prc.cbRoot#/includes/images/arrow_down.png" alt="" width="6" height="6" class="arrow_down" />
@@ -195,6 +215,8 @@
 					#html.textField(name="htmlKeywords",label="Keywords: (Max 160 characters)",title="HTML Keywords Comma Delimited (Good for SEO)",bind=prc.page,class="textfield width95",maxlength="160")#
 					#html.textArea(name="htmlDescription",label="Description: (Max 160 characters)",title="HTML Description (Good for SEO)",bind=prc.page,class="textfield",maxlength="160")#
 				</div>
+				</cfif>
+				
 				<!--- Event --->
 				#announceInterception("cbadmin_pageEditorSidebarAccordion")#
 			</div>
@@ -218,10 +240,10 @@
 
 			<div class="floatRight">
 				<!--- View Page In Site --->
-					<button class="button2" onclick="return to('#event.buildLink(prc.xehPages)#/parent/#prc.page.getParentID()#')" title="Back To Page Listing">Back To Listing</button>
+				<button class="button2" onclick="return to('#event.buildLink(prc.xehPages)#/parent/#prc.page.getParentID()#')">Back To Listing</button>
 				<cfif prc.page.isLoaded()>
 					<!--- View Page In Site --->
-					<button class="button2" onclick="window.open('#prc.CBHelper.linkPage( prc.page )#');return false;" title="Open page in site">View Page In Site</button>
+					<button class="button2" onclick="window.open('#prc.CBHelper.linkPage( prc.page )#');return false;">View Page In Site</button>
 				</cfif>
 			</div>
 		</div>
