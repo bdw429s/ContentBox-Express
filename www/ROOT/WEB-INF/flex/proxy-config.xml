@@ -17,7 +17,8 @@
     </adapters>
 
     <default-channels>
-        <channel ref="java-amf"/>
+        <channel ref="java-http"/>
+        <!-- <channel ref="java-amf"/> -->
     </default-channels>
 
     <destination id="DefaultHTTP">
