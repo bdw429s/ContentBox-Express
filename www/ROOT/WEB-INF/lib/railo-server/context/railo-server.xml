@@ -263,4 +263,4 @@ Path placeholders:
 	-->
 	<flex configuration="xml"/>
 
-</railo-configuration>
+<charset resource-charset="UTF-8" template-charset="UTF-8" web-charset="UTF-8"/><setting allow-compression="true" content-length="" suppress-content="false" suppress-whitespace="true"/><extensions><provider url="http://preview.getrailo.org/ExtensionProvider.cfc"/></extensions></railo-configuration>
