@@ -68,6 +68,10 @@
 
 	<servlet-mapping>
 		<servlet-name>CFMLServlet</servlet-name>
+		<url-pattern>/index.cfm/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CFMLServlet</servlet-name>
 		<url-pattern>*.cfm</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
