@@ -8,3 +8,4 @@ icon*
 www/ROOT/WEB-INF/cfform/logs/*.*
 www/ROOT/WEB-INF/cfusion/logs/*.*
 work/
+www/ROOT/WEB-INF/railo/cfclasses

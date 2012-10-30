@@ -1,4 +1,0 @@
-grant Principal * * {
-	permission java.security.AllPermission;
-};
-
