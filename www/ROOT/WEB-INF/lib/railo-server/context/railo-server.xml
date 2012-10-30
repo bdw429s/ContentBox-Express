@@ -35,7 +35,7 @@ Path placeholders:
 <!--	 - http://sourceforge.net 																		-->
 <!--	or ask your database distributor 																-->
 	<data-sources psq="false">
-	</data-sources>
+	<data-source allow="511" blob="true" class="org.hsqldb.jdbcDriver" clob="true" connectionTimeout="1" custom="path=contentboxDB%2F" database="contentbox" dsn="jdbc:hsqldb:file:{path}{database}" host="" metaCacheTimeout="60000" name="contentbox" storage="false" username="sa" validate="false"/></data-sources>
 
 	<!--
 		deploy-directory - directory where java classes will be deployed
